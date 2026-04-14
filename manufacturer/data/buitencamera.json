@@ -1,0 +1,11 @@
+{
+    "name": "Buitencamera",
+    "models": [
+        {
+            "model": "nonaam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

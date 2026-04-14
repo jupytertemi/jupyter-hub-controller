@@ -1,0 +1,11 @@
+{
+    "name": "Viewscan",
+    "models": [
+        {
+            "model": "vewscan",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

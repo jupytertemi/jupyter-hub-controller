@@ -1,0 +1,11 @@
+{
+    "name": "Asti",
+    "models": [
+        {
+            "model": "sed-2120",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

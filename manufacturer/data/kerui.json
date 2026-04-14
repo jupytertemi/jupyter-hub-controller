@@ -1,0 +1,23 @@
+{
+    "name": "Kerui",
+    "models": [
+        {
+            "model": "bombillo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0/h264"
+        },
+        {
+            "model": "gk7102s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0/h264"
+        },
+        {
+            "model": "CIPC-GQC09HE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        }
+    ]
+}

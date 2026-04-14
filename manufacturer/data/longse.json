@@ -1,0 +1,179 @@
+{
+    "name": "Longse",
+    "models": [
+        {
+            "model": "106",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "BMSDFG400W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "LBF30S200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "LBH30HSF200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "LBH30S100W4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "LBH30S400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "LBH30SV500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "lirdls100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "LIRDNS200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "112233",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "CMSBFG200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "CS-C60A200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Fixed 2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LBH24T200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LBH30FK500W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LBH30HFG200W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LIRDCS400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LIRDNTA200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LIRDT200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "2Mpx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "LBH30SS500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "lhb30sv500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "FLI521Z-DYA5XJJ500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "lbp60sf200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "lirdnhtc200f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "xvr2008d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "LIRDCS130 ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "LIZMB20T200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "LVWDB20T200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        }
+    ]
+}

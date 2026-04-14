@@ -1,0 +1,23 @@
+{
+    "name": "Smartec",
+    "models": [
+        {
+            "model": "IPM3672 A/1 Xaro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "STC-IPM3550A/1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/1?videoCodecType=MPEG4"
+        },
+        {
+            "model": "STC-IPX2050A/1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

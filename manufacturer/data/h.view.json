@@ -1,0 +1,113 @@
+{
+    "name": "H.view",
+    "models": [
+        {
+            "model": "1301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "H-400EV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HD DVR 4CH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-500D1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-500E6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-500G2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-E3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "hv-E800A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-WF800A1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-WF800A5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-XM801-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "IPC-H0817",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "avr-ae108",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "HV-XM502",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "IPC_NT98566_N8F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "TV-CB6010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "TV-IP1011",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Conico",
+    "models": [
+        {
+            "model": "F330",
+            "type": "MJPEG",
+            "protocol": "https://",
+            "url": "/ccm/ccm_pic_get.jpg?hfrom_handle=887330&dsess=1&dsess_nid=MHkMHqeZgXPcaHyOZ.AyecFCDdpjEF7g&dsess_sn=1jfiegbqtkbxa&dtoken=p1_xxxxxxxxxx"
+        }
+    ]
+}

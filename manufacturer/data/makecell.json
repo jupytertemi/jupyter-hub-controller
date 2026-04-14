@@ -1,0 +1,11 @@
+{
+    "name": "Makecell",
+    "models": [
+        {
+            "model": "K910L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

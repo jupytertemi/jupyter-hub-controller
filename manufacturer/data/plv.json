@@ -1,0 +1,101 @@
+{
+    "name": "Plv",
+    "models": [
+        {
+            "model": "dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "NC402CZE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "NC416ME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "NC801AW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "nc811bde",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "NC-813RW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV837",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV-NC318W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV-NC402CZE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV-NC416ME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV-NC713RW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV-NC811KE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV-NC813W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PLV-NC816ME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

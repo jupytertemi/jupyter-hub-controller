@@ -1,0 +1,11 @@
+{
+    "name": "Piper",
+    "models": [
+        {
+            "model": "Classic",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        }
+    ]
+}

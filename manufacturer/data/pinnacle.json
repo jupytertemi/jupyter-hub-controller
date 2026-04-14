@@ -1,0 +1,11 @@
+{
+    "name": "Pinnacle",
+    "models": [
+        {
+            "model": "phs-4516u",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Zkteco",
+    "models": [
+        {
+            "model": "ZKT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ZKIP472-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ZTMD470P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Pl-52D18E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        },
+        {
+            "model": "ZKMD-532",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        }
+    ]
+}

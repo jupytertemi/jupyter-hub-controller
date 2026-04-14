@@ -1,0 +1,17 @@
+{
+    "name": "Kip",
+    "models": [
+        {
+            "model": "100hv20h",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "20HI-960P-FL-W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

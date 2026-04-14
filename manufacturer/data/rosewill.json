@@ -1,0 +1,35 @@
+{
+    "name": "Rosewill",
+    "models": [
+        {
+            "model": "rscm-13701w",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "rcsm-13701w",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video1+audio1"
+        },
+        {
+            "model": "RSCM-11001",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video1+audio1"
+        },
+        {
+            "model": "RSCM-12001",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video1+audio1"
+        },
+        {
+            "model": "RSCM-15701W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video1+audio1"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Hawkcam",
+    "models": [
+        {
+            "model": "SP-FJ01W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "r09",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

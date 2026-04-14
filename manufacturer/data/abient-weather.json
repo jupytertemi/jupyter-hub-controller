@@ -1,0 +1,11 @@
+{
+    "name": "Abient Weather",
+    "models": [
+        {
+            "model": "SK7008-T1F1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/601"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Global Tech",
+    "models": [
+        {
+            "model": "2mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "901 20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        }
+    ]
+}

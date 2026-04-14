@@ -1,0 +1,11 @@
+{
+    "name": "Popp",
+    "models": [
+        {
+            "model": "Home",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/010129123.112borsti"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Kobert",
+    "models": [
+        {
+            "model": "KG26",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

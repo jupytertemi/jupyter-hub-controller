@@ -1,0 +1,1367 @@
+{
+    "name": "Panasonic",
+    "models": [
+        {
+            "model": "104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "105",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "122",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "135",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "164",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "165",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "222",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "311AL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "332",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "334",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "335",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "338",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "384",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "458",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "502s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "509",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "631",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "82*MJ3BR5JZz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "bb hcm531",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "BL-C111A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "BL-VP101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "BL-VP104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "BL-VP104W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "BL-VT164",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "BL-VT164W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "cam2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "DG-SC385",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "DG-SF135",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "DG-SF334",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "DG-SF335",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "DG-SP509",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "DG-SW314",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "external",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "K-EF234L01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "KELAS 1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "KELAS 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "KELAS 3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "Lobby",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "OnVif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "Otherr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "Panasonic_WV-SFN310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "Pan-onviv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SC384",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SF135",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SF-335",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SF538",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SP105",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SP306",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SP-509",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SPN-531",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "spw6ll",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "ST-165",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SW-155",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SW155_2.4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "SW316L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "sw395",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "VP104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "VT164W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "VW SF346",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WJ-GXE100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WJ-NV200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-2B131M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-335",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-384",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-NP502",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-NW502",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-NW502S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-S1510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-S153LT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SB131M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SC384",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SC385",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SC386",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SC588",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SF135",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SF135(640*480)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SF135(High)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "wv-sf135e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SF332",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SF336",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SF346",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SF438",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SF538",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SFR310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SFR531",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SP105",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SP305",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SP306",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SP509",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SPN310V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SPN531",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SPV781L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SPW532L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SPW611L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SPW631LT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-ST165",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW155",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW174W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW175",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW316",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW316L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW352",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW355",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW355E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW395",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW396",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW396A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW458",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW458E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW558",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW559",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW59",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "WV-SW598",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        },
+        {
+            "model": "1WV-SC384",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "504",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "AW-HE60",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "AW-HE60S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BACK",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BB-HCM705",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BB-HCM735",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BB-ST162",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BL-210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BL-C210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BL-C210A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BL-C230",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BL-C230A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BL-V101",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "DG-P304",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "EIGHT",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "GX500",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "K-EW214L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "kx-dt521x",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "N502",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "S2250L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "SF438",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "SFN-531",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "sfr310",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "SW-105",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "VLC RTSP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "VW-SW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WJ-GXE500",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WJ-GXE500-2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV385",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-NP304",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-S2550l",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-S3131",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SC385-PTZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SF*",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SF132",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SF138",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SF335",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SF348",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-Sf548",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SFN311",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SFN311A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SFN531",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SFN631",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SFV631LT",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SFV781L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SNF480",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SP102",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SP105E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SPN310",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SPN311A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SPN631",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SST165",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-ST162",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SW115",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SW158",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SW172",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SW332",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SW355 H264",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SW396E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SW397",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SW596A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-VC30",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-X6531",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WX-SW396A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "AW-UE4WG",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BB-HCM735A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-S2136L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "WV-SFV311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264"
+        },
+        {
+            "model": "BB-HCM531A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/nphMpeg4/g726-640x48"
+        },
+        {
+            "model": "BL-C10A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/nphMpeg4/g726-640x48"
+        },
+        {
+            "model": "BL-C131A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/nphMpeg4/g726-640x48"
+        },
+        {
+            "model": "BB-HCM701",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "BL-C230-1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "BL-C30A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "VW-SW395",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "WV-NP1004",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "WV-NP240",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "WV-NP240/G",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "WV-NP244",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "WV-NS202A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "WV-NS954",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "WV-NW484S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "WV-SF448",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/h264/stream_2"
+        },
+        {
+            "model": "BB-SW175",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput?profile=1_def_profile6"
+        },
+        {
+            "model": "sfv130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput?profile=1_def_profile6"
+        },
+        {
+            "model": "BL-C101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/0/h264/1"
+        },
+        {
+            "model": "DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "VCC SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "VDC SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "VDC SERİES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "k104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "K-EP104W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "K-EP104LWE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "K-NL308K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "PI-HPN206CL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "ntv160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "SANYO HD2100P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "Sanyo HD3300P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VCC SERİES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VCC-HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VCC-HD2300P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VCC-hd3300p",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VCC-hd3500p",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VCC-HD4600",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VDC-HD3100P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "PI-SFW401DL",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "PS-SFW401DL",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "Shinrai",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "WV-NW1531",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/src/mediainput/stream_1"
+        },
+        {
+            "model": "WV-NW1531L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/src/mediainput/stream_1"
+        },
+        {
+            "model": "WV-S1531L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/src/mediainput/stream_1"
+        },
+        {
+            "model": "WV-X2271L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput?profile=def_profile1"
+        }
+    ]
+}

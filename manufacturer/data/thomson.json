@@ -1,0 +1,17 @@
+{
+    "name": "Thomson",
+    "models": [
+        {
+            "model": "512391",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "DSC-723W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

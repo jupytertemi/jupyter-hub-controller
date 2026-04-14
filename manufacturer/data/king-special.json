@@ -1,0 +1,11 @@
+{
+    "name": "King Special",
+    "models": [
+        {
+            "model": "Dome",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Evviz",
+    "models": [
+        {
+            "model": "1dbc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        }
+    ]
+}

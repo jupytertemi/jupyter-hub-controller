@@ -1,0 +1,11 @@
+{
+    "name": "Hidetech",
+    "models": [
+        {
+            "model": "GTN-EYE01W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

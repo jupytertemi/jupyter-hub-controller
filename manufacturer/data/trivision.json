@@ -1,0 +1,197 @@
+{
+    "name": "Trivision",
+    "models": [
+        {
+            "model": "335PW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "336PW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC 335PW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-217WF",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-240WF-HD-1080P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-316W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-326PW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-326W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "nc-335",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "nc-335w",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-336PW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-336PW-HD-1080P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-336W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-336W HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "NC-336W-HD-1080P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "338wp-1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "cc 335pw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC-239WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC-240WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "nc-250hd 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC-250PW-HD 1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC-250WP HD 1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC-316PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC-335pw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC-335PW-HD-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "nc336",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC-336PW-HD-1080P SBR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "nc336w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "ntro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "TRI-VID23",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "TV-IP302PI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1/stream0"
+        },
+        {
+            "model": "TV-TY 308-2mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        }
+    ]
+}

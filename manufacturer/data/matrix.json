@@ -1,0 +1,11 @@
+{
+    "name": "Matrix",
+    "models": [
+        {
+            "model": "Satatya",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

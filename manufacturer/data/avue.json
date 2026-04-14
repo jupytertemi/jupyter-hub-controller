@@ -1,0 +1,17 @@
+{
+    "name": "Avue",
+    "models": [
+        {
+            "model": "2m bullet ipcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "AVD552MIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        }
+    ]
+}

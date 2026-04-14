@@ -1,0 +1,11 @@
+{
+    "name": "Cubitech",
+    "models": [
+        {
+            "model": "DOME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/streaming/video1"
+        }
+    ]
+}

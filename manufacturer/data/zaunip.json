@@ -1,0 +1,11 @@
+{
+    "name": "Zaunip",
+    "models": [
+        {
+            "model": "nvr-225",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        }
+    ]
+}

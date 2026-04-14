@@ -1,0 +1,17 @@
+{
+    "name": "Hauppauge",
+    "models": [
+        {
+            "model": "720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "mySmarthome Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

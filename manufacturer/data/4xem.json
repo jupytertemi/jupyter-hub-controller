@@ -1,0 +1,23 @@
+{
+    "name": "4xem",
+    "models": [
+        {
+            "model": "IpCamW45",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "KX SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "W45",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "name": "Sannce",
+    "models": [
+        {
+            "model": "1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "720 HD IP cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "i21 ag",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "l41GH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "PTZ camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "WIFICAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "141FK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/101"
+        },
+        {
+            "model": "DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/101"
+        },
+        {
+            "model": "I71BD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/101"
+        },
+        {
+            "model": "Mark 4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/101"
+        },
+        {
+            "model": "5323",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "960p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "l41CC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "DM81Z1T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "DT81BF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "I51FQ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "i61be",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "DX-8104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=0.sdp"
+        },
+        {
+            "model": "I41DC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "I61DD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Tysvance",
+    "models": [
+        {
+            "model": "B08LGWJD5Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Dvs",
+    "models": [
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "FULLHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "Lite wifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

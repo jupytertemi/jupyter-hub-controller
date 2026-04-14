@@ -1,0 +1,47 @@
+{
+    "name": "Yicam",
+    "models": [
+        {
+            "model": "1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.h264"
+        },
+        {
+            "model": "Yi Outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.h264"
+        },
+        {
+            "model": "49CN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "720p 27US",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Dome Camera 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Modified FW- YI-HACK 0.15",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "YYS.2016",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

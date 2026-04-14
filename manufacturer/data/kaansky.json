@@ -1,0 +1,11 @@
+{
+    "name": "Kaansky",
+    "models": [
+        {
+            "model": "domecam1.3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Linkit Security",
+    "models": [
+        {
+            "model": "IP-Viking",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

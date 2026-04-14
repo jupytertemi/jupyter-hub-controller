@@ -1,0 +1,17 @@
+{
+    "name": "Ness",
+    "models": [
+        {
+            "model": "NIP-200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NIP-300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

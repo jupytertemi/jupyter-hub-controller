@@ -1,0 +1,17 @@
+{
+    "name": "Shany",
+    "models": [
+        {
+            "model": "SNC-2202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "SNC-WD91M1322",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        }
+    ]
+}

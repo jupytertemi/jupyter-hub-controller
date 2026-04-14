@@ -1,0 +1,119 @@
+{
+    "name": "Camhi",
+    "models": [
+        {
+            "model": "5.5.56",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "TTTT-806651-VKNSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "at200dw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C6F0SgZ3N0P6L2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C9F0SgZ0N0P4L0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C9F0SGZ0N0P7L0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C9F0SgZ3N0P8L0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CA-690C-R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "GS-GHXFSTCMA-POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "MEGAPIXEL IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NL4T12-8OH18WYP-30X-128G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "R-QS2510-HG20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SD13W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "TTTT-362842-CJPLF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C6F0SoZ3N0PcL2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/2"
+        },
+        {
+            "model": "C6F0SoZ3N0PfL2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "C6F0SoZ3N0PnL2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Gemtek",
+    "models": [
+        {
+            "model": "B1100",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        }
+    ]
+}

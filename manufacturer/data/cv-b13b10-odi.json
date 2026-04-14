@@ -1,0 +1,11 @@
+{
+    "name": "Cv-b13b10-odi",
+    "models": [
+        {
+            "model": "Bullet Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

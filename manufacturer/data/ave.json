@@ -1,0 +1,11 @@
+{
+    "name": "Ave",
+    "models": [
+        {
+            "model": "SF Series",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

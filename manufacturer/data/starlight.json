@@ -1,0 +1,11 @@
+{
+    "name": "Starlight",
+    "models": [
+        {
+            "model": "amazon",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        }
+    ]
+}

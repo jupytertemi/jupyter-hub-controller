@@ -1,0 +1,11 @@
+{
+    "name": "Dbcam",
+    "models": [
+        {
+            "model": "dbpower",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

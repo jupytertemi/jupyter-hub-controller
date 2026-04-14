@@ -1,0 +1,11 @@
+{
+    "name": "Cootli",
+    "models": [
+        {
+            "model": "R80XD550-PQ_8M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Maxpixel",
+    "models": [
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

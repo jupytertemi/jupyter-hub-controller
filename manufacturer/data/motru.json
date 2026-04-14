@@ -1,0 +1,11 @@
+{
+    "name": "Motru",
+    "models": [
+        {
+            "model": "pni",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

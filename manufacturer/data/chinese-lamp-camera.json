@@ -1,0 +1,11 @@
+{
+    "name": "Chinese Lamp Camera",
+    "models": [
+        {
+            "model": "CAM HI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

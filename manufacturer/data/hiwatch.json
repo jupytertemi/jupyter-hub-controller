@@ -1,0 +1,623 @@
+{
+    "name": "Hiwatch",
+    "models": [
+        {
+            "model": "040",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "114w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "B020",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "B620",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I113",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I114W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I126",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I200(D)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "ds-i214w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I400(D)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I402",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I403(C)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I403(D)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-I850M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-L113",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DS-N211",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "ds-n241w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "HWC P120-D/W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "HWI-T221H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "i100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-B020",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "ipc-b120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-B140",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-B542-G2/4l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-B642-G2/ZS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-D120-I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-D640-Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-DG82-G2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-T020(B)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "ALL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "B220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "C6T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "D110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DS-H216Q",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DS-I102",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DS-I114",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "ds-i200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DS-I213",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "ds-i214",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DS-I214(B)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "ds-i214w(b)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "ds-i223",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DS-I400(C)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "ds-l122",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "i110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "I114",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "i114w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "I120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "IPC-B120-I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "IPC-B622-G2/ZS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "IPC-D082-G2/S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "IPC-D120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "IPC-T640-Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "l110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "VDP-D2211W(B)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "watch",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DS-I253",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ISAPI/Streaming/Channels/101"
+        },
+        {
+            "model": "ds-i458",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ISAPI/Streaming/Channels/101"
+        },
+        {
+            "model": "HiWatch DS-N208(C)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ISAPI/Streaming/Channels/101"
+        },
+        {
+            "model": "i450s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ISAPI/Streaming/Channels/101"
+        },
+        {
+            "model": "DC-I200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DS-I120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DS-I253M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DS-I452M(B)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IPC-B020(C)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IPC-C042-G0/W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IPC-D542-g0/SU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IPS-D542-g0/SU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DS-1405M(C)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "DS-I450",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "IPC-D220-IZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "DS-D100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I122",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I205M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I205M(B)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I256Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I420",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I45",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "ds-i452c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I452S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I458Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I653M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-N201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "HWI-D120H-M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "IPC-b040",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DS-I200(c)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "DS-I202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "DS-I252W(B)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "DS-I259M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "DS-I456",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "HDC-B020",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "i225",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "i259",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "DS-I405",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ISAPI/Streaming/Channels/102"
+        },
+        {
+            "model": "I-258",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "PT-Y2400I-DE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "I223",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "IPC-D140",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

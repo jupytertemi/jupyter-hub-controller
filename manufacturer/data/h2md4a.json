@@ -1,0 +1,11 @@
+{
+    "name": "H2md4a",
+    "models": [
+        {
+            "model": "tttt-203215-ucmrr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

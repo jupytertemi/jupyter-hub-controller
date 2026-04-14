@@ -1,0 +1,17 @@
+{
+    "name": "Neye",
+    "models": [
+        {
+            "model": "ABQ-6600G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Neye3c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

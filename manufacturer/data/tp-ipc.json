@@ -1,0 +1,179 @@
+{
+    "name": "Tp-ipc",
+    "models": [
+        {
+            "model": "100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "3d print",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "424-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "c100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "C110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "c200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "C200 TAPO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "C210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "C320WS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "C400HP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "cam2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "F782",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "IPC424-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "t100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Tapo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Tapo 200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Tapo C200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Tapo C200.",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Tapo C320WS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "tapo_c200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Tapo65",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "tapoc100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "TC60",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "TP-200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "C22",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        },
+        {
+            "model": "C320WS 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        },
+        {
+            "model": "tapo100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        },
+        {
+            "model": "tip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Digitalwatchdog",
+    "models": [
+        {
+            "model": "DWC-MTT4Wi36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        }
+    ]
+}

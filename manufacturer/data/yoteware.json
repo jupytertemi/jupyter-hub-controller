@@ -1,0 +1,11 @@
+{
+    "name": "Yoteware",
+    "models": [
+        {
+            "model": "1.2.1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/live/2"
+        }
+    ]
+}

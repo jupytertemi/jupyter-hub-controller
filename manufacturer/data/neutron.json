@@ -1,0 +1,53 @@
+{
+    "name": "Neutron",
+    "models": [
+        {
+            "model": "1955",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "211",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "212",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "giris",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "IPC222ER-F36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "ipc541e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "onwifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=6&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

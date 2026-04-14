@@ -1,0 +1,11 @@
+{
+    "name": "Husier",
+    "models": [
+        {
+            "model": "2455",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        }
+    ]
+}

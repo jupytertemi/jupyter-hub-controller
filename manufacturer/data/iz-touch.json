@@ -1,0 +1,11 @@
+{
+    "name": "Iz Touch",
+    "models": [
+        {
+            "model": "007",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Gadinan",
+    "models": [
+        {
+            "model": "6330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "G2106042040 POE 5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "N/A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "Z70B6125W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        }
+    ]
+}

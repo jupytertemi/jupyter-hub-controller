@@ -1,0 +1,95 @@
+{
+    "name": "Eyeplus",
+    "models": [
+        {
+            "model": "Alt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "CloudCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "EYEPLUS_DEV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "H9017D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "HIP291G Alt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "IL-HIP291G-2M-AI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "uggh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "C-P08-23(EN)A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "DEV_1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "HIP291G",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "C-P80-23",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "EYEPLUS_FRT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "zs-gx1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Eteplus-dev",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "eyeplus-DEV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        }
+    ]
+}

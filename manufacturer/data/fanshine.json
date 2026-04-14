@@ -1,0 +1,29 @@
+{
+    "name": "Fanshine",
+    "models": [
+        {
+            "model": "fahd1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "fahd3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "FiA027D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "FSWF03",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

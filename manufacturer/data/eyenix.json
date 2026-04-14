@@ -1,0 +1,11 @@
+{
+    "name": "Eyenix",
+    "models": [
+        {
+            "model": "EN672",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

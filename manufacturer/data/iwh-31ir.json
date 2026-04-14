@@ -1,0 +1,17 @@
+{
+    "name": "Iwh-31ir",
+    "models": [
+        {
+            "model": "MAZi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "MAZI1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/2"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Optimus",
+    "models": [
+        {
+            "model": "AHDR-2008NE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "IP-E042.1(3.6)PX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "IP-E021",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        }
+    ]
+}

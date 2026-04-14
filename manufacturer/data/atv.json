@@ -1,0 +1,29 @@
+{
+    "name": "Atv",
+    "models": [
+        {
+            "model": "CMIP7442-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "IPFD2MT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "IPVD2TW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "NB237",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        }
+    ]
+}

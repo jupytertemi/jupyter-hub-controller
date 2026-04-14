@@ -1,0 +1,11 @@
+{
+    "name": "Devant",
+    "models": [
+        {
+            "model": "C3X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

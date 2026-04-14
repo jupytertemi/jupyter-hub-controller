@@ -1,0 +1,17 @@
+{
+    "name": "Sv3p",
+    "models": [
+        {
+            "model": "SV-B02W-720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B06PoE-1080P-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

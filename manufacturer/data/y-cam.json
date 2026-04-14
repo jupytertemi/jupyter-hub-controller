@@ -1,0 +1,155 @@
+{
+    "name": "Y-cam",
+    "models": [
+        {
+            "model": "1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/h264.sdp"
+        },
+        {
+            "model": "Bullet HD 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/h264.sdp"
+        },
+        {
+            "model": "Cube HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/h264.sdp"
+        },
+        {
+            "model": "Cube HD 1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/h264.sdp"
+        },
+        {
+            "model": "Cube-HD-1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/h264.sdp"
+        },
+        {
+            "model": "Bullet HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "Bullet HD 1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "Bullet Range",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "Cube 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "Cube 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "Cube VGA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "Dome Range",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "HD720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "Y-CAM BLACK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "BulletHD1040",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "Cube 1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "Cube 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "Cube HD - 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "Cube HD750",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "HD 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "HD 720 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "WHITE CUBE 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "hd 1080",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "White",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4_1.sdp"
+        },
+        {
+            "model": "cube",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/mpeg4.sdp"
+        }
+    ]
+}

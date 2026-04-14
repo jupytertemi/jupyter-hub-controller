@@ -1,0 +1,11 @@
+{
+    "name": "Iqr",
+    "models": [
+        {
+            "model": "I32",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        }
+    ]
+}

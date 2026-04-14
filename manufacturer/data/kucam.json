@@ -1,0 +1,17 @@
+{
+    "name": "Kucam",
+    "models": [
+        {
+            "model": "K201B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "X Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

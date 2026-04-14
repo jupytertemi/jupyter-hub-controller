@@ -1,0 +1,11 @@
+{
+    "name": "Nixzen",
+    "models": [
+        {
+            "model": "h803",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        }
+    ]
+}

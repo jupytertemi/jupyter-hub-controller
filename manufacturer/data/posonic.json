@@ -1,0 +1,11 @@
+{
+    "name": "Posonic",
+    "models": [
+        {
+            "model": "3MP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

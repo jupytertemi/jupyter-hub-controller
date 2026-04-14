@@ -1,0 +1,11 @@
+{
+    "name": "Smartz",
+    "models": [
+        {
+            "model": "SCX1001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

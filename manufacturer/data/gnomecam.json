@@ -1,0 +1,17 @@
+{
+    "name": "Gnomecam",
+    "models": [
+        {
+            "model": "Gnome1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "M200HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

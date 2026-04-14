@@ -1,0 +1,53 @@
+{
+    "name": "Logilink",
+    "models": [
+        {
+            "model": "WC0010A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "WC0016",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "WC0020",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "WC0022",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "WC0047",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "WC0048",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "WC004",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "WC0040",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Abron",
+    "models": [
+        {
+            "model": "AB-IPR506NB-US",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        }
+    ]
+}

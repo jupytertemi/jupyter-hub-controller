@@ -1,0 +1,11 @@
+{
+    "name": "Oossxx",
+    "models": [
+        {
+            "model": "Home",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Odesys",
+    "models": [
+        {
+            "model": "OS-M201IR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/media.amp"
+        }
+    ]
+}

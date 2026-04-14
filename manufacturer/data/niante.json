@@ -1,0 +1,11 @@
+{
+    "name": "Niante",
+    "models": [
+        {
+            "model": "X SERIES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch1"
+        }
+    ]
+}

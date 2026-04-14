@@ -1,0 +1,11 @@
+{
+    "name": "Orosaurus",
+    "models": [
+        {
+            "model": "PTZ-12",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

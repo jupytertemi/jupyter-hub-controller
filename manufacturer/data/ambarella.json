@@ -1,0 +1,11 @@
+{
+    "name": "Ambarella",
+    "models": [
+        {
+            "model": "AB-201-HDW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

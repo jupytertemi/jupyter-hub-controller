@@ -1,0 +1,11 @@
+{
+    "name": "Axeon",
+    "models": [
+        {
+            "model": "HD 720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Bedee",
+    "models": [
+        {
+            "model": "CT0291",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CT0291BKEU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

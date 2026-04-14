@@ -1,0 +1,17 @@
+{
+    "name": "Sudvision",
+    "models": [
+        {
+            "model": "ib131w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "IP-Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

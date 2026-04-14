@@ -1,0 +1,185 @@
+{
+    "name": "Speco",
+    "models": [
+        {
+            "model": "02C1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "02MD2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "O2C1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "O2D10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "O2-MD1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "02MB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "O2MB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "O8D2M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "02vlb7",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "03VLD1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "04d1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "1234",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "DVR4WM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "O2-D4",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "O3VLB3",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "OID-4",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "TECH DVR-16IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "D16HS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "D8RS1TB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "O2DP14",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "O2DP14-242954",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "H4FB1M 4MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main_1"
+        },
+        {
+            "model": "OINT-56B1G",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "O4T7N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/chID=3&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "ZIP-2B",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/Live/Channel=[CHANNEL]"
+        },
+        {
+            "model": "VIP-2B1M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "VIP-2C1N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "VIP-2P1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "VIP-2PTZ12X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "VIP2P1N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        }
+    ]
+}

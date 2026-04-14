@@ -1,0 +1,11 @@
+{
+    "name": "Xka",
+    "models": [
+        {
+            "model": "Mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

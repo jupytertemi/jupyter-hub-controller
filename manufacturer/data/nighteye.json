@@ -1,0 +1,11 @@
+{
+    "name": "Nighteye",
+    "models": [
+        {
+            "model": "SIP-E03-200STA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

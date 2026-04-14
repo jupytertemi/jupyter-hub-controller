@@ -1,0 +1,35 @@
+{
+    "name": "Ventech",
+    "models": [
+        {
+            "model": "889ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "VT898IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/live/1"
+        },
+        {
+            "model": "VT-DM688IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/live/1"
+        },
+        {
+            "model": "ip889",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "VT-R889IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

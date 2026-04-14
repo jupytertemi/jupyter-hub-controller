@@ -1,0 +1,11 @@
+{
+    "name": "Wisevision",
+    "models": [
+        {
+            "model": "777",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01"
+        }
+    ]
+}

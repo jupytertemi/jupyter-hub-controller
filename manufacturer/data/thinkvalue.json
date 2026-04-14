@@ -1,0 +1,23 @@
+{
+    "name": "Thinkvalue",
+    "models": [
+        {
+            "model": "T8855",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "t8890",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "VBOF-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

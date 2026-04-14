@@ -1,0 +1,17 @@
+{
+    "name": "Zebronics",
+    "models": [
+        {
+            "model": "1MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "ZEB-IP1MB18L20M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Xvi",
+    "models": [
+        {
+            "model": "E5216CIP-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

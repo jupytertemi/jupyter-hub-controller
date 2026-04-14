@@ -1,0 +1,29 @@
+{
+    "name": "Robaxo",
+    "models": [
+        {
+            "model": "4RC204A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "RC204",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "RC204A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "RC360Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        }
+    ]
+}

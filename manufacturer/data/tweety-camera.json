@@ -1,0 +1,11 @@
+{
+    "name": "Tweety Camera",
+    "models": [
+        {
+            "model": "N895",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile0"
+        }
+    ]
+}

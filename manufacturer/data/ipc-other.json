@@ -1,0 +1,11 @@
+{
+    "name": "Ipc-other",
+    "models": [
+        {
+            "model": "V380 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

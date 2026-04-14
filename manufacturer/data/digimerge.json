@@ -1,0 +1,41 @@
+{
+    "name": "Digimerge",
+    "models": [
+        {
+            "model": "DNB13TF22",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "dne12tl2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "DNE12TL22",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "FLIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "Fortress",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "dnd13tl2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/1"
+        }
+    ]
+}

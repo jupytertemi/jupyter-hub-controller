@@ -1,0 +1,11 @@
+{
+    "name": "Lupes Electronics",
+    "models": [
+        {
+            "model": "LE228",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

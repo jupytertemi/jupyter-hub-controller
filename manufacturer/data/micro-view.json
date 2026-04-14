@@ -1,0 +1,17 @@
+{
+    "name": "Micro View",
+    "models": [
+        {
+            "model": "I13B",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "NVR16",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

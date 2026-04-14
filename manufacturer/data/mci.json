@@ -1,0 +1,11 @@
+{
+    "name": "Mci",
+    "models": [
+        {
+            "model": "MCI281C6",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

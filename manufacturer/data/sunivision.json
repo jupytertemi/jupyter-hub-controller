@@ -1,0 +1,29 @@
+{
+    "name": "Sunivision",
+    "models": [
+        {
+            "model": "360 5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "B1012",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "SV-B603W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "SW-B603W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

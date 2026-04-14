@@ -1,0 +1,17 @@
+{
+    "name": "Sklad",
+    "models": [
+        {
+            "model": "IP-200PHD-24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "IPT_IPL720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

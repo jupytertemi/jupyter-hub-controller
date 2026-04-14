@@ -1,0 +1,11 @@
+{
+    "name": "Group",
+    "models": [
+        {
+            "model": "rvi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

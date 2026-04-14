@@ -1,0 +1,401 @@
+{
+    "name": "Hiseeu",
+    "models": [
+        {
+            "model": "121w1w2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "fh2e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "WHD612",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "28DGPOE4MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "50X10_32M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "50x40-SW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "akit-4ahbb12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "B004-V2.0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "BP215-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "FH1D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "H.265",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "hb 215",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "hb 215-p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HB212",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HB215-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "hb612",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HB615-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HB624",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HB712-PZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HC615-p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "hc61x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HC725-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HD115-PZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HD812-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HM110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HS614-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "hsy-a1008nm",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "hsy-hb612-p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HYS-HB612-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD103Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD303",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD312B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD313",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD313B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD318",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD712",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD812B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WHD818B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HB215",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "hb613-p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "HB-613P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "HB815",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "HD918-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "IP-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "IPC_NT98566_80N80PS-R_S38",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "kaka223",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "WHD812",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "XM-103",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "HD685-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "fv4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "HC612",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "HD815-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "HI3516",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "HB312-p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream--rtp-caching=100"
+        },
+        {
+            "model": "whd312",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream--rtp-caching=100"
+        },
+        {
+            "model": "WHD813B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream--rtp-caching=100"
+        },
+        {
+            "model": "OUTSIDE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "WHDA14",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "HB848-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "k8208-3W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "WHD315",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "hsy-fhy-1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=0.sdp"
+        },
+        {
+            "model": "R80X20-PQ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=0.sdp"
+        },
+        {
+            "model": "WS318",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=0.sdp"
+        },
+        {
+            "model": "R80X30-PQ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=0_stream=0.sdp"
+        }
+    ]
+}

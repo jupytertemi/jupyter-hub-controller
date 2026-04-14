@@ -1,0 +1,383 @@
+{
+    "name": "Edimax",
+    "models": [
+        {
+            "model": "1510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "3010WG",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC_3030IPE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-1500WG",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ic-3005",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ic-3010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-3015WN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-3030IWN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-3030WN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-3110p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-3110W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-3115W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-7000 (2)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ic7000ptn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ic7010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-7010PTN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC7110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-9000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-9000 RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IC-BD45A4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "3010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3015WN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3030",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3110W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3116",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3116W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "7001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "7110W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "7112",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "ic 3110w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-3030",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC3030WN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC3100P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC3100W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-3116W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC3140W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-3140W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC5120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-5170SC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-7100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-7110P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-7110W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-7112W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "ic-7113w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-9000w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC9110W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC-9110W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IP Camera ic-3030wn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "UNCKNOW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3030poe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IC3030iPoE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "IR-112E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "IR113E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ire_112",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ND-233E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "PT-31E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "VS100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Zewnetrzna",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ic9000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        },
+        {
+            "model": "IR-112",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        },
+        {
+            "model": "MD111E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "PT-112E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        }
+    ]
+}

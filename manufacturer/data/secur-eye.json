@@ -1,0 +1,17 @@
+{
+    "name": "Secur Eye",
+    "models": [
+        {
+            "model": "32563456",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "S-C20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

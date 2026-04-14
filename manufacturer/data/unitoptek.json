@@ -1,0 +1,17 @@
+{
+    "name": "Unitoptek",
+    "models": [
+        {
+            "model": "bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "IPCX-BC40272",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

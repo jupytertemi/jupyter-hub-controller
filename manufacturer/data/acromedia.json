@@ -1,0 +1,35 @@
+{
+    "name": "Acromedia",
+    "models": [
+        {
+            "model": "009",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Acromedia IN-009",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "BLW-2004E-AHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IN-010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "in-009",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

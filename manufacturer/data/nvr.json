@@ -1,0 +1,53 @@
+{
+    "name": "Nvr",
+    "models": [
+        {
+            "model": "8 Channel",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "dahua",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "IPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "SMART",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "Snapvision",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "Some",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "LENOVO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=1.sdp"
+        },
+        {
+            "model": "xemey",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

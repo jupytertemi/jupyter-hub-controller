@@ -1,0 +1,23 @@
+{
+    "name": "V360",
+    "models": [
+        {
+            "model": "IPC-FH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile0"
+        },
+        {
+            "model": "nikytech",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

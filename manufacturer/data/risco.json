@@ -1,0 +1,11 @@
+{
+    "name": "Risco",
+    "models": [
+        {
+            "model": "1.3 MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

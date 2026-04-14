@@ -1,0 +1,11 @@
+{
+    "name": "Visualint",
+    "models": [
+        {
+            "model": "vim-1550",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        }
+    ]
+}

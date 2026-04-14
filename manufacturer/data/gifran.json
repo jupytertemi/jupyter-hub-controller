@@ -1,0 +1,11 @@
+{
+    "name": "Gifran",
+    "models": [
+        {
+            "model": "GF10247.IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

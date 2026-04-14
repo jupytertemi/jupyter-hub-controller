@@ -1,0 +1,23 @@
+{
+    "name": "Centrium",
+    "models": [
+        {
+            "model": "AVHN20H130C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

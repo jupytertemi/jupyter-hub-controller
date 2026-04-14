@@ -1,0 +1,29 @@
+{
+    "name": "Santec-video",
+    "models": [
+        {
+            "model": "53151",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "snc-6202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "snc-6302",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "SNC-6303",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

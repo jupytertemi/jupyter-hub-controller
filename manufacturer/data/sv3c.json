@@ -1,0 +1,863 @@
+{
+    "name": "Sv3c",
+    "models": [
+        {
+            "model": "1048HD PoE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "1080P POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "1080P PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "1080poe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "B06POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "B08POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "B08POE-5MPL-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "bo1poe-3mpl-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "D02POE-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "D02POE-3mpl-a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "sd9w-1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "SV-B01POE-5MPL-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "SV-B08POE-5MPL-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "SV-DO2POE-1080P-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "sw9d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "5MP PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        },
+        {
+            "model": "B08POE-8MP-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        },
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        },
+        {
+            "model": "SD8W-5MP-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        },
+        {
+            "model": "sv3c 5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        },
+        {
+            "model": "1080P HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "B01P0E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "HX1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SV-B06POE-4MP-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SV-D02POE-5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SV-DO2POE-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "1080p hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "B01POE-5MPL-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "B06W HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "B06W-5MP-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "B09W-5MP:",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "HX02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "N series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "SD10W-5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "SV-B01W-960P-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "SV-B06w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "sv-bo6w-720p-hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "1080P HX2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "1080P M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "1080P VArifocal",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "1080p Wifi Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "1080ps-hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "135",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "136SE42",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "1861080P PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "4k Poe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "4mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "5MP POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "960",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "960P HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "admin",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B01POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B01POE-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B01POE-5MPL-A2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "b01w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B01W-960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B01W-960P-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "b06",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B06POE-5MP-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "b06w720hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B08W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B08W-5MP-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B16VW-3MP-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B16VW-5MP-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B8-3MP-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "bp01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C25-UK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C6F0SoZ3N0PfL2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "D02POE-1080P-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "D05POE-1080P-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HD 960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HD WIFI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HI3518EV200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "hp1900",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HX Series (WiFi)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "idk",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "L series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "MMMM-231680-AFDAE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "poe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "poe 1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "POE1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "POE1081P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Property Entry",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Rea",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SC-B01-POE-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Sco",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SD10W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SD5W-1080PS-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SD7W-1080PS-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "sd7w-5mp-hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SD8POE-5MP-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "sd9w-1080p-hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SUPER HD 5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV3C 5MP PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV3C 720P WiFi Security Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV3C-SV-B06W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-806W-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B01-1080PL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B01POE-1080-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B01POE-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "sv-b01poe-1080p-l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B01W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B01W-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B01W-1080P-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B01W-906P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SVB01W-960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B01W-960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B06POE-1080P-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B06W-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B06W-1080P-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B06W-720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "sv-b06w-720p-hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B07W-1080P-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B11VPOE-1080-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B11VPOE-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-B11VPOE-1080P-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-BO1POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-BO1POE-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "sv-bo1w-960p-hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-BO6W-1080P-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-BO6W-720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "sv-d02w-720p-hx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SV-SD5W-1080PS-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B01POE-5MPL-T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "BO8POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "sv-b06poe-1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "SD6W-1080ps-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/TTTT-748045-HBNGS:ChickensRock21/main"
+        },
+        {
+            "model": "H.265",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "HD06-1080p",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        },
+        {
+            "model": "SV-D13POE-5MPL-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "2K WiFi Security Camera Outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "c16 cloud",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "c18",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "PTZ 5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "B10POE-5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        }
+    ]
+}

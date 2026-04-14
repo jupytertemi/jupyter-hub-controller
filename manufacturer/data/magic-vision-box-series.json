@@ -1,0 +1,11 @@
+{
+    "name": "Magic Vision Box Series",
+    "models": [
+        {
+            "model": "MV-81031IRWPR-3D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

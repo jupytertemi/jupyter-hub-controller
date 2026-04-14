@@ -1,0 +1,11 @@
+{
+    "name": "Youluke",
+    "models": [
+        {
+            "model": "p2-20x-5mp-wfat",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

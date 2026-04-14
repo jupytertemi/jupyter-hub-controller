@@ -1,0 +1,17 @@
+{
+    "name": "Eip",
+    "models": [
+        {
+            "model": "5MB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

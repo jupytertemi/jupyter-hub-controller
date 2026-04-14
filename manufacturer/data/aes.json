@@ -1,0 +1,11 @@
+{
+    "name": "Aes",
+    "models": [
+        {
+            "model": "rca",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        }
+    ]
+}

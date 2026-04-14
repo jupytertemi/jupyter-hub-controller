@@ -1,0 +1,11 @@
+{
+    "name": "Indexa",
+    "models": [
+        {
+            "model": "NWB6230F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264?dev=1"
+        }
+    ]
+}

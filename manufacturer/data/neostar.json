@@ -1,0 +1,23 @@
+{
+    "name": "Neostar",
+    "models": [
+        {
+            "model": "NTI-D3006IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "NTI-D3012IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NTI-D3015IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

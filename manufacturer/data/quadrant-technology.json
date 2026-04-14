@@ -1,0 +1,11 @@
+{
+    "name": "Quadrant Technology",
+    "models": [
+        {
+            "model": "qcp-a356",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/app/camera.html"
+        }
+    ]
+}

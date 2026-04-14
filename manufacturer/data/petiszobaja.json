@@ -1,0 +1,11 @@
+{
+    "name": "Petiszobaja",
+    "models": [
+        {
+            "model": "Huawei",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

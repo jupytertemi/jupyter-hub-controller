@@ -1,0 +1,353 @@
+{
+    "name": "Eufy",
+    "models": [
+        {
+            "model": "2c pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "2k indoor camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "2K Pan and Tilt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "C22",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Cam 2 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Cam 2C (Regular - USA)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Cam2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "E220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Eufy 2 pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "eufy Security Outdoor Cam E220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "EUFYCAM 2 PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "EUFYCAM 2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "FloodLight Cam Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Garage-Control Cam Plus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "indoor 2k pan tilt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Indoor Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Indoor Cam 2K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Indoor Cam 2K / T8400X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Indoor Cam 2K Pan and Tilt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Indoor Cam Pan and Tilt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Indoor Cam S350",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "IndoorCam C24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "indoorcam4k",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "modele E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Outdoor Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Outdoor Cam Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Outdoor Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Outdoor Wired Camera Pro 2k",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Pan and Tilt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Pan and tilt 2k",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "S350",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Security Outdoor Cam E220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Security Solo IndoorCam C24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Security Solo OutdoorCam C24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Solo OutdoorCam L40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "t8113",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "T8400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "T84001W1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "T8400X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "T8410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "T8410121",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "Tilt-Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0"
+        },
+        {
+            "model": "2k Doorbell Dual",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2"
+        },
+        {
+            "model": "C24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2"
+        },
+        {
+            "model": "Cam2c Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2"
+        },
+        {
+            "model": "EufyCam 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2"
+        },
+        {
+            "model": "eufyCam S330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2"
+        },
+        {
+            "model": "pan en tilt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2"
+        },
+        {
+            "model": "S330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2"
+        },
+        {
+            "model": "T8210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2"
+        },
+        {
+            "model": "Cam 2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1"
+        },
+        {
+            "model": "Cam 2C Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1"
+        },
+        {
+            "model": "Pro2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1"
+        },
+        {
+            "model": "eufycam2k",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "floodlight cam",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "t8401",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "HomeBase 2",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        },
+        {
+            "model": "Solo 2k",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

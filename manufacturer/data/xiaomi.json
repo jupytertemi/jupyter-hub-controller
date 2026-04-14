@@ -1,0 +1,191 @@
+{
+    "name": "Xiaomi",
+    "models": [
+        {
+            "model": "Anits",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "cctv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "Yi Ant",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "Yi Home",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "YICAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "AntCamera",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "antis",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Ants",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Dome",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Xiaofang",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "XIAOMI DAFANG HACKS",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Yi Home 1080p",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Mijia",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "SXJ01ZM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "Dafang",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        },
+        {
+            "model": "Dafang Hacks",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        },
+        {
+            "model": "Dafang3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        },
+        {
+            "model": "defang",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        },
+        {
+            "model": "T20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        },
+        {
+            "model": "Xiaofang RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        },
+        {
+            "model": "zecoj/fang-hacks-internal",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        },
+        {
+            "model": "Outdoor 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "MJSXJ02CM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mainstream"
+        },
+        {
+            "model": "MJSXJ05CM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mainstream"
+        },
+        {
+            "model": "MJSXJ02HL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "V380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "XiaoYi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Yi Dome 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Yi Home Camer 1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "yi_dome_1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "YI Home 1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.h264"
+        }
+    ]
+}

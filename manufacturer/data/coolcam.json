@@ -1,0 +1,11 @@
+{
+    "name": "Coolcam",
+    "models": [
+        {
+            "model": "nip09",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Triax",
+    "models": [
+        {
+            "model": "CM-MHL400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264?ch=1&subtype=0"
+        },
+        {
+            "model": "TBF 2IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264?ch=1&subtype=0"
+        },
+        {
+            "model": "TBV 4IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264?ch=1&subtype=0"
+        }
+    ]
+}

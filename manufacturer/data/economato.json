@@ -1,0 +1,11 @@
+{
+    "name": "Economato",
+    "models": [
+        {
+            "model": "AVTECH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile3"
+        }
+    ]
+}

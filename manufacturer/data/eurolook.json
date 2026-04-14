@@ -1,0 +1,23 @@
+{
+    "name": "Eurolook",
+    "models": [
+        {
+            "model": "DSB-8MP04E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "EDW-3450",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "EDW-5021",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

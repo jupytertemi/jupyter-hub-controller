@@ -1,0 +1,17 @@
+{
+    "name": "Lsvision",
+    "models": [
+        {
+            "model": "LS-HD2200C-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "lsvison",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        }
+    ]
+}

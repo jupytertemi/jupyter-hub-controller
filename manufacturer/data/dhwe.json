@@ -1,0 +1,17 @@
+{
+    "name": "Dhwe",
+    "models": [
+        {
+            "model": "960",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "DSR20H130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

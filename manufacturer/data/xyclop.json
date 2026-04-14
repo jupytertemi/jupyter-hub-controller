@@ -1,0 +1,17 @@
+{
+    "name": "Xyclop",
+    "models": [
+        {
+            "model": "Hal3 Buiten 24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "XC-BU-34F-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        }
+    ]
+}

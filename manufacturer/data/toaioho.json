@@ -1,0 +1,11 @@
+{
+    "name": "Toaioho",
+    "models": [
+        {
+            "model": "QB320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

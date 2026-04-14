@@ -1,0 +1,95 @@
+{
+    "name": "Vivint",
+    "models": [
+        {
+            "model": "520ir",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "ADC-520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "ADC-V510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "ADC-V520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "ADC-V520IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "ADC-V620PT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "hdp450",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "ADC-510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "ADC-V610PT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "adr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DBC2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "FIXED",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "V-DBC1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "IPC-117",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

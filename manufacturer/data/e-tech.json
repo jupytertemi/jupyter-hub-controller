@@ -1,0 +1,11 @@
+{
+    "name": "E-tech",
+    "models": [
+        {
+            "model": "Home 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Spycam",
+    "models": [
+        {
+            "model": "SQ29",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

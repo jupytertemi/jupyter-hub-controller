@@ -1,0 +1,11 @@
+{
+    "name": "Hubble",
+    "models": [
+        {
+            "model": "Focus 71",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/blinkhd"
+        }
+    ]
+}

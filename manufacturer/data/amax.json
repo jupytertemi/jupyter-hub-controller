@@ -1,0 +1,17 @@
+{
+    "name": "Amax",
+    "models": [
+        {
+            "model": "2110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp"
+        },
+        {
+            "model": "5210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

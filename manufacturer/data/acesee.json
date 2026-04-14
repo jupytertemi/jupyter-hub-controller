@@ -1,0 +1,59 @@
+{
+    "name": "Acesee",
+    "models": [
+        {
+            "model": "AC04",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "AVZM40P130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DSE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "EB225/SH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "acdsee",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "ST-316-2M-AI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "AMB36HL200W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/2"
+        },
+        {
+            "model": "AVP40P200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

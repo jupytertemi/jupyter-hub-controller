@@ -1,0 +1,29 @@
+{
+    "name": "Elro",
+    "models": [
+        {
+            "model": "C723IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_1"
+        },
+        {
+            "model": "WIFI IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_1"
+        },
+        {
+            "model": "C802IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        },
+        {
+            "model": "c903",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

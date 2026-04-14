@@ -1,0 +1,11 @@
+{
+    "name": "Clock",
+    "models": [
+        {
+            "model": "UNKOWN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

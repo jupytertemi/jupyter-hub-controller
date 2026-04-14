@@ -1,0 +1,11 @@
+{
+    "name": "Excelvan",
+    "models": [
+        {
+            "model": "IPCC-B15N-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

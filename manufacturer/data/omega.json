@@ -1,0 +1,17 @@
+{
+    "name": "Omega",
+    "models": [
+        {
+            "model": "51P22-6P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "PTZ-21P4-3P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

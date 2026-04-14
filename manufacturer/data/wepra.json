@@ -1,0 +1,11 @@
+{
+    "name": "Wepra",
+    "models": [
+        {
+            "model": "4000I",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

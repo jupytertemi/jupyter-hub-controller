@@ -1,0 +1,11 @@
+{
+    "name": "Idis Global",
+    "models": [
+        {
+            "model": "MNC222SH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/media"
+        }
+    ]
+}

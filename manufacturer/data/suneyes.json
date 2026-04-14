@@ -1,0 +1,179 @@
+{
+    "name": "Suneyes",
+    "models": [
+        {
+            "model": "Q701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1083WP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1802",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1802SWPT2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1802SWPTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1803SW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1803SWZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1804SW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1804SWZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P1806SZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P701EWPT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P702W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P703W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-P901W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-Q701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-Q701W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-Q702",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-TM01WP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-V1802W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-V1806SW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SP-V701W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "sw-1803sw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "outside",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "SP-HS01W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "SP-HS02W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "P703",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "SP-P701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "SP-P701EW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "SP-V1801W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

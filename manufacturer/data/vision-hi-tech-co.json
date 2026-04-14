@@ -1,0 +1,17 @@
+{
+    "name": "Vision Hi-tech Co",
+    "models": [
+        {
+            "model": "727",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg&basic_auth=[AUTH]"
+        },
+        {
+            "model": "VisionXIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg&basic_auth=[AUTH]"
+        }
+    ]
+}

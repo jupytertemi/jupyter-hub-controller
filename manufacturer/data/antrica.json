@@ -1,0 +1,17 @@
+{
+    "name": "Antrica",
+    "models": [
+        {
+            "model": "CMBC MIMIC 4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "Encoder",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Noname Chinese",
+    "models": [
+        {
+            "model": "chinese",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

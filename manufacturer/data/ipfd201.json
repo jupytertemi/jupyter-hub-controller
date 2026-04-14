@@ -1,0 +1,11 @@
+{
+    "name": "Ipfd201",
+    "models": [
+        {
+            "model": "201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream.sdp1"
+        }
+    ]
+}

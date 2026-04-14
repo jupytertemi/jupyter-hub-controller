@@ -1,0 +1,53 @@
+{
+    "name": "Phylink",
+    "models": [
+        {
+            "model": "Bullet HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "HD PLC-223W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "PLC-128PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "PLC-132PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "PLC-233W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "PLC-335PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "plc-335spw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "PLC-336PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        }
+    ]
+}

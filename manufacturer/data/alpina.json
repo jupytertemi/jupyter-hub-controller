@@ -1,0 +1,17 @@
+{
+    "name": "Alpina",
+    "models": [
+        {
+            "model": "4024CSW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "904",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "name": "Heimvision",
+    "models": [
+        {
+            "model": "201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "hm202A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Protect B2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Protect D1 HM612 PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "HM 241",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "hm203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "hm311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "HMA2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "hme311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "protect D1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "241",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "cloudcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "311",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Protect ID1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "92.168.0.18",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MainStream"
+        },
+        {
+            "model": "HM211",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MainStream"
+        },
+        {
+            "model": "HE6800SB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "HM 245",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "mh612",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Littleadd",
+    "models": [
+        {
+            "model": "LA-WL0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        }
+    ]
+}

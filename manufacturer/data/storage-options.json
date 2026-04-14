@@ -1,0 +1,17 @@
+{
+    "name": "Storage Options",
+    "models": [
+        {
+            "model": "Homeguard 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SON-IPC1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        }
+    ]
+}

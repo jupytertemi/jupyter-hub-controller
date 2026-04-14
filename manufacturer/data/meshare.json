@@ -1,0 +1,11 @@
+{
+    "name": "Meshare",
+    "models": [
+        {
+            "model": "1080p",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

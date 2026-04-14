@@ -1,0 +1,17 @@
+{
+    "name": "Vcatch",
+    "models": [
+        {
+            "model": "VC-MIC720HM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        },
+        {
+            "model": "VC-MIC720HK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

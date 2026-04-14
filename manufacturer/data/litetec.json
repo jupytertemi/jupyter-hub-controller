@@ -1,0 +1,11 @@
+{
+    "name": "Litetec",
+    "models": [
+        {
+            "model": "LM IP924CK40p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Pacidal",
+    "models": [
+        {
+            "model": "NBL306",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream"
+        }
+    ]
+}

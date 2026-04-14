@@ -1,0 +1,17 @@
+{
+    "name": "Louwice",
+    "models": [
+        {
+            "model": "720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "LWS-DS-5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

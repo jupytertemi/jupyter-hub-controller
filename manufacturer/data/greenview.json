@@ -1,0 +1,11 @@
+{
+    "name": "Greenview",
+    "models": [
+        {
+            "model": "F3G/IPG-8930PGS-AI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

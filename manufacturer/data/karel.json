@@ -1,0 +1,23 @@
+{
+    "name": "Karel",
+    "models": [
+        {
+            "model": "CKB423-PM2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "ivs-4200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "wbxid136vrt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Meriva",
+    "models": [
+        {
+            "model": "MFD-400S4L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "MOB-400S3L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        }
+    ]
+}

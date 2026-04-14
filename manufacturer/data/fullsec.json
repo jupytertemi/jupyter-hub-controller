@@ -1,0 +1,17 @@
+{
+    "name": "Fullsec",
+    "models": [
+        {
+            "model": "FS-IP13E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "FS-IP1EW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

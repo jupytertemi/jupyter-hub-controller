@@ -1,0 +1,83 @@
+{
+    "name": "Harex",
+    "models": [
+        {
+            "model": "1.3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "1MP HD 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "720p 1mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "720p IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "HD IP 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "HRX103",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "HRX-I5024P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "HRX-I524C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "HRX-IA604-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "IPCamIndoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "NVT-HI3518EP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

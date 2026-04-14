@@ -1,0 +1,59 @@
+{
+    "name": "Nexus",
+    "models": [
+        {
+            "model": "115vw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "2004PD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "3516D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "alt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "WIFI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "235",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "501fw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "IP-D50VP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "N-VIEW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

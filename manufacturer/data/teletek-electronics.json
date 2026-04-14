@@ -1,0 +1,11 @@
+{
+    "name": "Teletek Electronics",
+    "models": [
+        {
+            "model": "HD-313",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

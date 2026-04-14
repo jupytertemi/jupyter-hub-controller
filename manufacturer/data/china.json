@@ -1,0 +1,299 @@
+{
+    "name": "China",
+    "models": [
+        {
+            "model": "1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "12345",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "30xzoom",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C9f0se",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CAM-IP1402DV19l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "china2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "custem",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "goke",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HDIPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IPCAM P2P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "nr1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "P2P IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Robotics",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SOME_ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "V380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "wifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "1080P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        },
+        {
+            "model": "ONVIF",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        },
+        {
+            "model": "boavision",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "jk-phd54fdm523hs",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "360eyes",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "720",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "dome",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "GENERAL AREA",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "H264DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "aussen",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        },
+        {
+            "model": "chinaEingang",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "ct-902",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "IH13-KW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "Tag_Nacht",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "wireless",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "Xing Ling",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "DSSS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        },
+        {
+            "model": "HDIPCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        },
+        {
+            "model": "IPC4311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        },
+        {
+            "model": "eyeplus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "minispycamera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "MSC316DM-V02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Generic Chinese Onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "hc615-p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "H210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "H246",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "y5a-wa",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "idk",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "noname 130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "inocom",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ROH/channel/11"
+        },
+        {
+            "model": "IPD-D53M02-BS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4?user=[USERNAME]&pwd=[PASSWORD]"
+        },
+        {
+            "model": "PST-WHM10E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

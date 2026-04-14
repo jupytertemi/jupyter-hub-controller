@@ -1,0 +1,17 @@
+{
+    "name": "Lotus",
+    "models": [
+        {
+            "model": "LT-C008",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream2"
+        },
+        {
+            "model": "LT-C009",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

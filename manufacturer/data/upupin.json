@@ -1,0 +1,11 @@
+{
+    "name": "Upupin",
+    "models": [
+        {
+            "model": "IP Xam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        }
+    ]
+}

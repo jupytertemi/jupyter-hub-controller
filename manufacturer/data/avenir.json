@@ -1,0 +1,11 @@
+{
+    "name": "Avenir",
+    "models": [
+        {
+            "model": "AV-DS2CD1021I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

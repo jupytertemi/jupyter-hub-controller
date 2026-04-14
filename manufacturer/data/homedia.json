@@ -1,0 +1,17 @@
+{
+    "name": "Homedia",
+    "models": [
+        {
+            "model": "DID-VIEW-218037-STSLJ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "X Series IP Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

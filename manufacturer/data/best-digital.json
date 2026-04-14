@@ -1,0 +1,11 @@
+{
+    "name": "Best Digital",
+    "models": [
+        {
+            "model": "BNC-771BR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ssnadmin_0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Lightdow",
+    "models": [
+        {
+            "model": "LD6000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "name": "Eneo",
+    "models": [
+        {
+            "model": "GLS-2302H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "IEB-62F0036M0A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "Jukola 1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "IED63",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "NLC-1401",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/stream[CHANNEL]"
+        },
+        {
+            "model": "NLD/NXC/NXD camera",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/1/stream[CHANNEL]"
+        },
+        {
+            "model": "NXC-1402",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1/stream0"
+        },
+        {
+            "model": "NXD-1602M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1/stream0"
+        },
+        {
+            "model": "PLD-2012PTZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "PXD-1010F021",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "PXD-5360F01IR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "PTB Series",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_[CHANNEL]"
+        },
+        {
+            "model": "PXB/PXD-2020/2080",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_[CHANNEL]"
+        },
+        {
+            "model": "PXD-2018PTZ1080",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

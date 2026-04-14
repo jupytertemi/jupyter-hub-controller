@@ -1,0 +1,11 @@
+{
+    "name": "Jeinuo",
+    "models": [
+        {
+            "model": "JN-IP67AR-D-wifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

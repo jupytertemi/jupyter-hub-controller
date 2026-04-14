@@ -1,0 +1,17 @@
+{
+    "name": "Grand",
+    "models": [
+        {
+            "model": "3610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "wiifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        }
+    ]
+}

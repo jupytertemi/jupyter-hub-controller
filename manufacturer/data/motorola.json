@@ -1,0 +1,35 @@
+{
+    "name": "Motorola",
+    "models": [
+        {
+            "model": "Droid RAZR HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_ulaw.sdp"
+        },
+        {
+            "model": "focus 66",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "Focus 66 HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/blinkhd"
+        },
+        {
+            "model": "Focus 68",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/blinkhd"
+        },
+        {
+            "model": "Focus 72",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/blinkhd"
+        }
+    ]
+}

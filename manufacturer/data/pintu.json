@@ -1,0 +1,11 @@
+{
+    "name": "Pintu",
+    "models": [
+        {
+            "model": "CCD DOME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

@@ -1,0 +1,179 @@
+{
+    "name": "Siqura",
+    "models": [
+        {
+            "model": "2f2002f2-ei",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ProfileToken_1_4"
+        },
+        {
+            "model": "HSD-626",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ProfileToken_1_4"
+        },
+        {
+            "model": "900",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "BC-620",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "BC829v2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "C-60 E-MC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "HD-66APT/N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "HSD-620",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "HSD-622",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "HSD-820",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "MSD-620",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "MSD-622",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "BC-20",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "BC-22",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "BC-24",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "FD-20",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "FD-22",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "FD-24",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "FD27",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "FD-28",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "FD67",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "MD-20",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "BL860",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "fd2002f2-ei",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "FD62",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HD626",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ProfileToken_1_1"
+        },
+        {
+            "model": "HSD-620PRH",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "HSD-621PRH",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "HSD-628EXP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        }
+    ]
+}

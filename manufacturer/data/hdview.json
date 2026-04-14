@@ -1,0 +1,17 @@
+{
+    "name": "Hdview",
+    "models": [
+        {
+            "model": "dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "IPVD3MS-2.8-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

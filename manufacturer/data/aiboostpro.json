@@ -1,0 +1,11 @@
+{
+    "name": "Aiboostpro",
+    "models": [
+        {
+            "model": "2K ProHD 3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

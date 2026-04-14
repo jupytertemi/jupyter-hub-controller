@@ -1,0 +1,17 @@
+{
+    "name": "Mercury",
+    "models": [
+        {
+            "model": "cw017-101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "MIPC4312(P)-4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        }
+    ]
+}

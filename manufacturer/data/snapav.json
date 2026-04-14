@@ -1,0 +1,35 @@
+{
+    "name": "Snapav",
+    "models": [
+        {
+            "model": "750",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "WPS-300-CUB-IP-WH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "WPS-750-DOM-IP-WH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "LUM-500-TUR-IP-BL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "WPS-750-DOM-IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        }
+    ]
+}

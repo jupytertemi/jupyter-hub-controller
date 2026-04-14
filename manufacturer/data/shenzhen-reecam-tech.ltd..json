@@ -1,0 +1,11 @@
+{
+    "name": "Shenzhen Reecam Tech.ltd.",
+    "models": [
+        {
+            "model": "SPOT-WIFI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

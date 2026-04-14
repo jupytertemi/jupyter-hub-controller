@@ -1,0 +1,11 @@
+{
+    "name": "Raspberry Pi",
+    "models": [
+        {
+            "model": "Zero W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        }
+    ]
+}

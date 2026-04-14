@@ -1,0 +1,11 @@
+{
+    "name": "Iseeu",
+    "models": [
+        {
+            "model": "Analog",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/101"
+        }
+    ]
+}

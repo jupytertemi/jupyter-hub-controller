@@ -1,0 +1,11 @@
+{
+    "name": "Oculus",
+    "models": [
+        {
+            "model": "CVIP2MVDFW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        }
+    ]
+}

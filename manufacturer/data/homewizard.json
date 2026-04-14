@@ -1,0 +1,17 @@
+{
+    "name": "Homewizard",
+    "models": [
+        {
+            "model": "C271IP",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        },
+        {
+            "model": "C924IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        }
+    ]
+}

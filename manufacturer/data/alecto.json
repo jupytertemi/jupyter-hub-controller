@@ -1,0 +1,125 @@
+{
+    "name": "Alecto",
+    "models": [
+        {
+            "model": "dbvc-215IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "DVC 135IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc 154ip",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "DVC 215IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "DVC_125IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc-1000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "DVC-125IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc135IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc-135IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "DVC154IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc210IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc-210IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc-215",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc215IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc-215IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "dvc-315IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "Voordeur",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "DVC-105IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DVC-255-IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SMARTBABY10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

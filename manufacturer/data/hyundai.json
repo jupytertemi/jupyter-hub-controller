@@ -1,0 +1,41 @@
+{
+    "name": "Hyundai",
+    "models": [
+        {
+            "model": "414",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "HYU-145",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "HYU-751",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "HYU-914",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "HNO-6020R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        },
+        {
+            "model": "HYU-414",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        }
+    ]
+}

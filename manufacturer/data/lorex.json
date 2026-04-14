@@ -1,0 +1,623 @@
+{
+    "name": "Lorex",
+    "models": [
+        {
+            "model": "2K Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "B451AJD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "B451AJDBC-F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "E893AB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "LHA4216LC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "LNB4421",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "LNB8005-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "lnb8963",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "LNB8963B 4K 8MP 4X Optical Zoom IP Bullet Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "LNE3142R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "LNE3142RB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "LNE9292B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "LNR6108",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "mcnb3143",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "W482CAD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "W881AA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "9393",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "E841CA-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "HD DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "LNB3163B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "LNB4421B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "LNB8105",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "LNZ44P4B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "W261AS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "W462AQC-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "a261as-z",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        },
+        {
+            "model": "B451AJD-F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "MCND 2152",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "D1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "D241A8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "D841A6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LNB4173b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LNB4173SB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "lnb8105x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LNB8105x-c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LNR8105x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LNWCM22Y",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LNWCX-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LNWZ6A3DD2594F7",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LX1081-44ADR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "W282cad",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "d861a8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=1;subtype:1"
+        },
+        {
+            "model": "LH070",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=1;subtype:1"
+        },
+        {
+            "model": "LHA4104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=1;subtype:1"
+        },
+        {
+            "model": "LNB9252B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=1"
+        },
+        {
+            "model": "LNZ32P4B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=1"
+        },
+        {
+            "model": "LNZ32P4-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=1"
+        },
+        {
+            "model": "DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        },
+        {
+            "model": "LHB926",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        },
+        {
+            "model": "ln1100",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        },
+        {
+            "model": "LNE8950AB",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        },
+        {
+            "model": "LNR632",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        },
+        {
+            "model": "MPX",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        },
+        {
+            "model": "Rea",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        },
+        {
+            "model": "ront",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        },
+        {
+            "model": "LHV1000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "lmb",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "lnb8973b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "lnz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "MCNB2151",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "MCNB2153",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "IPSC SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "L23WD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LIVE PING",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "lnb3143",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LNE1001",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LNE3003",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LNX IP CAMS",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LNZ4001",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LOREX IP1240",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "MCND2152",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LBH926",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "LHV2008",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "LHV2108",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "LNZ32P4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "LVH1000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "Other-Scan",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "lhwf1000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "lkb343",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "LKB343C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "LNK7216",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "WireFree",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "LNB2153",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "LNB3143R-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "MCNB2152",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "lhv5100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=11&subtype=1"
+        },
+        {
+            "model": "ln3003",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "LNB2184",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "LNC204",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "MCN2153",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "lne4422s-c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46U3RyYXRmb3JkMjAyMQ=="
+        },
+        {
+            "model": "LNB9232S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46Ymx1ZXByNTE2"
+        },
+        {
+            "model": "lnb9292b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46Ymx1ZXByNTE2"
+        },
+        {
+            "model": "LNB9393",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46Ymx1ZXByNTE2"
+        },
+        {
+            "model": "NR916X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46Ymx1ZXByNTE2"
+        },
+        {
+            "model": "w282ca",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46Ymx1ZXByNTE2"
+        },
+        {
+            "model": "LND3374B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "ND02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "W281AAC-681F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "LNE8964AB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46RXdhVmFu"
+        },
+        {
+            "model": "LNZ44P12B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1?subtype=0"
+        },
+        {
+            "model": "M5100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=2&subtype=0"
+        },
+        {
+            "model": "WS261AS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=0&subtype=0"
+        }
+    ]
+}

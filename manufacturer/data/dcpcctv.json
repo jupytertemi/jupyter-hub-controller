@@ -1,0 +1,11 @@
+{
+    "name": "Dcpcctv",
+    "models": [
+        {
+            "model": "DS-2CD1023",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

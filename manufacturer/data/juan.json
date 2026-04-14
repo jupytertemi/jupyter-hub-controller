@@ -1,0 +1,35 @@
+{
+    "name": "Juan",
+    "models": [
+        {
+            "model": "ipc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "Ja7204",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "PE2010-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "R5108-AHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "WT4020",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

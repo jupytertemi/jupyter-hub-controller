@@ -1,0 +1,11 @@
+{
+    "name": "Voor/keuken",
+    "models": [
+        {
+            "model": "Mini PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

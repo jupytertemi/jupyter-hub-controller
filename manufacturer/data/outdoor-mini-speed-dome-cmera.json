@@ -1,0 +1,11 @@
+{
+    "name": "Outdoor Mini Speed Dome Cmera",
+    "models": [
+        {
+            "model": "cc-p11-68enc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

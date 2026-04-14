@@ -1,0 +1,11 @@
+{
+    "name": "Reotech",
+    "models": [
+        {
+            "model": "I712-POE-HS-4MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

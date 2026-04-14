@@ -1,0 +1,17 @@
+{
+    "name": "Vatel",
+    "models": [
+        {
+            "model": "1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HT-N$K1080P-9313",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

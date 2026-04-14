@@ -1,0 +1,29 @@
+{
+    "name": "Adj",
+    "models": [
+        {
+            "model": "700-00048",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DVR (Channel 1)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "DVR (Channel 2)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=2&subtype=0"
+        },
+        {
+            "model": "DVR (Channel 3)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=3&subtype=0"
+        }
+    ]
+}

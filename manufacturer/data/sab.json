@@ -1,0 +1,11 @@
+{
+    "name": "Sab",
+    "models": [
+        {
+            "model": "2600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

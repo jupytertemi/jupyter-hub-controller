@@ -1,0 +1,17 @@
+{
+    "name": "Ovislink",
+    "models": [
+        {
+            "model": "IP-200PHD-24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "propia",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

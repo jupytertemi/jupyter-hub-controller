@@ -1,0 +1,35 @@
+{
+    "name": "Blaupunkt",
+    "models": [
+        {
+            "model": "D30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "VIO-B30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "vio-D40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "VIO-DP20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "Vio-HS20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46MTNWV2JyMjg="
+        }
+    ]
+}

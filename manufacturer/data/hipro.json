@@ -1,0 +1,17 @@
+{
+    "name": "Hipro",
+    "models": [
+        {
+            "model": "007",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "A006",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

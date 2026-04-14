@@ -1,0 +1,203 @@
+{
+    "name": "Uokoo",
+    "models": [
+        {
+            "model": "10809",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "1080P IP camera Black 620",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "1080white",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "309146-TGCHU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "632kc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "720P IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "ard",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "B01MZ14YWP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "CHINA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "EMENT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "HD IP CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "IP 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "IP Camera 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "IP/NETWORK CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "Mini IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "Mini IP Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "Mini IP camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "NOA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "pan",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "smartp2p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "wifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "X series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "x series ip camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "X000WFZORD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "X001AND3PV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "XSERIES IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "lr pan",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch1"
+        },
+        {
+            "model": "view-279143-lybbh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch1"
+        },
+        {
+            "model": "H02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ROH/channel/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Fossi",
+    "models": [
+        {
+            "model": "9903",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

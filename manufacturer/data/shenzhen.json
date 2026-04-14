@@ -1,0 +1,221 @@
+{
+    "name": "Shenzhen",
+    "models": [
+        {
+            "model": "3516F0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "C112WX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "D200-SW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "HD-IPC smart cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "i6032b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "IPCAME BILLIAN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "P05",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "P2PIPCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "P2PWIFICAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "reecam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "TC55",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "V380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "XM82-8MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "HuiYanIPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "SMARTEYE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "TC20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "V380S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "xseries",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "B SERIES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CTIPC-285C-Z4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SD5W 1080PS HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SPOT-WIFI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CP05",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "cvafa-i465",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/4"
+        },
+        {
+            "model": "EYE_PLUS (YCC365 Plus app)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "GWIPC-19664444",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "icomm",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "v380 pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        },
+        {
+            "model": "YCC365 Plus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        },
+        {
+            "model": "Shixin",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "SMART WIFI CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "XD07",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "SV-B01-1080p-poe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "Trolink",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Surveilist",
+    "models": [
+        {
+            "model": "CAMID203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CAMID401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "Surveilist PTDA4XHL200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

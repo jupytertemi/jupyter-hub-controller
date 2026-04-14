@@ -1,0 +1,29 @@
+{
+    "name": "Elsys",
+    "models": [
+        {
+            "model": "ESC-WB3F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        },
+        {
+            "model": "ESC-WY3F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ESL-WR2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ESL-VPW1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

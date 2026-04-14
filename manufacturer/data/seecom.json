@@ -1,0 +1,11 @@
+{
+    "name": "Seecom",
+    "models": [
+        {
+            "model": "SNP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        }
+    ]
+}

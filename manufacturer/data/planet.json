@@ -1,0 +1,323 @@
+{
+    "name": "Planet",
+    "models": [
+        {
+            "model": "101",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "107",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ICA-107",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ICA-108",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ICA-108W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ICA-150 MPEG4",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ICA-350",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ICA-HM100",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ICA-HM132/136/316",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "ICA-HM230",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "IVS-H125",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/1"
+        },
+        {
+            "model": "bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/1"
+        },
+        {
+            "model": "dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/1"
+        },
+        {
+            "model": "ICA 3250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/1"
+        },
+        {
+            "model": "ICA-4500v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/1"
+        },
+        {
+            "model": "ICA-HM350",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/1"
+        },
+        {
+            "model": "3250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        },
+        {
+            "model": "admin",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        },
+        {
+            "model": "ICA-3150",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        },
+        {
+            "model": "ICA-3250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        },
+        {
+            "model": "ica-4250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        },
+        {
+            "model": "550",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        },
+        {
+            "model": "ICA-HM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        },
+        {
+            "model": "ICA-HM132",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        },
+        {
+            "model": "BC-5010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "HM-227W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ICA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ICA-2200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ICA-700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ICA-E5550V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ICA-HM101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ICA-HM317",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ICA-M227",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "hm.130",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "ICA-100C",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "ICA-210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "ICA-500",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "ICA-HM120",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "ICA-M220",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "HM-126",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "hm-131",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "hm-31",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "ica-hm126",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "PLANET ICA-H652",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "HM-316w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "ICA-5250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "ICA-HM136",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "ica3350V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IVS-H125P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ICA-510",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "ICA-HM718",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "ICA-W8100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Vanderbilt",
+    "models": [
+        {
+            "model": "GATOTHER",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "STANF OTHER",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

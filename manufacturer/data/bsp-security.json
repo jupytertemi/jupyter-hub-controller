@@ -1,0 +1,23 @@
+{
+    "name": "Bsp Security",
+    "models": [
+        {
+            "model": "2.8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "2.8.60.4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "bo20-fl-03",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/2"
+        }
+    ]
+}

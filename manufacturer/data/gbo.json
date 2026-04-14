@@ -1,0 +1,23 @@
+{
+    "name": "Gbo",
+    "models": [
+        {
+            "model": "cam1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "One",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "S1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        }
+    ]
+}

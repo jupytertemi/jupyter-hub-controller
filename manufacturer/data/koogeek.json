@@ -1,0 +1,11 @@
+{
+    "name": "Koogeek",
+    "models": [
+        {
+            "model": "tv-6024h-2mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        }
+    ]
+}

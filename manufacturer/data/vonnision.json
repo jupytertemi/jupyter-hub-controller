@@ -1,0 +1,17 @@
+{
+    "name": "Vonnision",
+    "models": [
+        {
+            "model": "7963",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "VS-IP305BRWM5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Jialite",
+    "models": [
+        {
+            "model": "IPC-E3600",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

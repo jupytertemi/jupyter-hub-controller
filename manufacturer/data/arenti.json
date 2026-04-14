@@ -1,0 +1,35 @@
+{
+    "name": "Arenti",
+    "models": [
+        {
+            "model": "GO mini 2k",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "IN1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "Outdoor OP1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "P2 Indoor Smart Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "M4T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

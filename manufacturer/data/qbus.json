@@ -1,0 +1,17 @@
+{
+    "name": "Qbus",
+    "models": [
+        {
+            "model": "FASTTEL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "FT600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

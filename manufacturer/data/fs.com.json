@@ -1,0 +1,17 @@
+{
+    "name": "Fs.com",
+    "models": [
+        {
+            "model": "FS-VCD-3M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "FS-VCF-4M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

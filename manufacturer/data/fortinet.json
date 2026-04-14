@@ -1,0 +1,11 @@
+{
+    "name": "Fortinet",
+    "models": [
+        {
+            "model": "FortiCam-MD20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_1"
+        }
+    ]
+}

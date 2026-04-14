@@ -1,0 +1,17 @@
+{
+    "name": "Storex",
+    "models": [
+        {
+            "model": "D-10H",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "DN-20H",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        }
+    ]
+}

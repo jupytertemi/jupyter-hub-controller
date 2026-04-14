@@ -1,0 +1,11 @@
+{
+    "name": "Amarine",
+    "models": [
+        {
+            "model": "rigger cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Kogan",
+    "models": [
+        {
+            "model": "HD IP Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "KAIPCHDSLVA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "PNP IP CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZH-IXA15-WC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

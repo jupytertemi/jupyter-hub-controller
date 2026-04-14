@@ -1,0 +1,11 @@
+{
+    "name": "Kocom",
+    "models": [
+        {
+            "model": "cr351f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile/profile01"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Etrovision",
+    "models": [
+        {
+            "model": "ev3151",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "EV6355",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "EV8180F",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/rtpvideo[CHANNEL].sdp"
+        },
+        {
+            "model": "EV8781a",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/rtpvideo[CHANNEL].sdp"
+        },
+        {
+            "model": "EV8780U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtpvideo1.sdp"
+        },
+        {
+            "model": "N76F-M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtpvideoch12.sdp"
+        }
+    ]
+}

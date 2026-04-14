@@ -1,0 +1,11 @@
+{
+    "name": "Camery",
+    "models": [
+        {
+            "model": "h.264 network dvr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam2/mpeg4"
+        }
+    ]
+}

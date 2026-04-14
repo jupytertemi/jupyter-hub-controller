@@ -1,0 +1,11 @@
+{
+    "name": "Smonet",
+    "models": [
+        {
+            "model": "single 960p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Honic",
+    "models": [
+        {
+            "model": "Dome Poe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "HN-4KA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "HN-IRDNS200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "HN-DC5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "HN-IRDN200F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

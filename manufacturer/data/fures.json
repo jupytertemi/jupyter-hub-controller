@@ -1,0 +1,11 @@
+{
+    "name": "Fures",
+    "models": [
+        {
+            "model": "gc13h",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Q6 Wifi Smart Camera",
+    "models": [
+        {
+            "model": "51127207",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_01"
+        },
+        {
+            "model": "V380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_01"
+        }
+    ]
+}

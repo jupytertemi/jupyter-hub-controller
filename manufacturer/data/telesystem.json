@@ -1,0 +1,11 @@
+{
+    "name": "Telesystem",
+    "models": [
+        {
+            "model": "TVedo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Ipd",
+    "models": [
+        {
+            "model": "E1C2L18",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

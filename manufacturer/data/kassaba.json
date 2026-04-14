@@ -1,0 +1,17 @@
+{
+    "name": "Kassaba",
+    "models": [
+        {
+            "model": "TRX20WIFI-50",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "TRX-ROBOT25",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

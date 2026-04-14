@@ -1,0 +1,11 @@
+{
+    "name": "Chapel",
+    "models": [
+        {
+            "model": "Onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

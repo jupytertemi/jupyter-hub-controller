@@ -1,0 +1,11 @@
+{
+    "name": "Omnibase",
+    "models": [
+        {
+            "model": "minidome4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Huisun",
+    "models": [
+        {
+            "model": "dm-rdc305fhpt-ks20hc2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DM-SCB405IDP-V 10-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

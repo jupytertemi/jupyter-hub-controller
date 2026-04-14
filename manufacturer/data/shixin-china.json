@@ -1,0 +1,77 @@
+{
+    "name": "Shixin China",
+    "models": [
+        {
+            "model": "10921",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/101"
+        },
+        {
+            "model": "129HW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/101"
+        },
+        {
+            "model": "IP-05HW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/101"
+        },
+        {
+            "model": "IP-129HW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/101"
+        },
+        {
+            "model": "X9300-MH36",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "333",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "IP Series (Other)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IP-108H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/video[CHANNEL]"
+        },
+        {
+            "model": "IP-109H RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/video[CHANNEL]"
+        },
+        {
+            "model": "ONVIF",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "IPCAM P2P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "ptz1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Prok Electronics",
+    "models": [
+        {
+            "model": "CVCIP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

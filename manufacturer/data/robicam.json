@@ -1,0 +1,11 @@
+{
+    "name": "Robicam",
+    "models": [
+        {
+            "model": "st-392-2m",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/live/2"
+        }
+    ]
+}

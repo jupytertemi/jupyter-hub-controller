@@ -1,0 +1,11 @@
+{
+    "name": "Bonvision",
+    "models": [
+        {
+            "model": "hd22m102m",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

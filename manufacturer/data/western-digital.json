@@ -1,0 +1,17 @@
+{
+    "name": "Western Digital",
+    "models": [
+        {
+            "model": "WD ReadyView",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "WNAS49",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

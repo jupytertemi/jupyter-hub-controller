@@ -1,0 +1,11 @@
+{
+    "name": "Senao",
+    "models": [
+        {
+            "model": "EXT1025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

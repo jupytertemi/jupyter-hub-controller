@@ -1,0 +1,17 @@
+{
+    "name": "Jenimex",
+    "models": [
+        {
+            "model": "5MPx",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "JENCMPP205",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        }
+    ]
+}

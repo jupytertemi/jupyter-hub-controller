@@ -1,0 +1,3131 @@
+{
+    "name": "Axis",
+    "models": [
+        {
+            "model": "1_GENERIC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "IP8362",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "1010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "1034",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "1034W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "1114",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "1144",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "207",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "207mw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "211D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "215 ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "216 FD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "240",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "3005",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "3045",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "3905",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "5014",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "7011",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "7614",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "A8004",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "a8105",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Axis 211M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS M1034-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS M20-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS M3057-PLVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS P1214-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS P1357",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS P1427-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS P1428-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS P3364",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "axis p3807-pve",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS P5534",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AXIS Q1755",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "axiss",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "BLF3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "CAU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Doorbell2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "F34",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "F44",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Group1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "m1004",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1004-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1013",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1034",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1034-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1051",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "m1054",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1065-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1065-LW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "m1113",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1114",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M1124",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M2025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M2025-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M2026-LE Mk II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M2026-LE mk2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3004",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3004V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3005",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3005-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3006",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3006-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3006-V Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "m3007",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3014",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3024-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "m3025ve",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3025-VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "m3026",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3037",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3044-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3045",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3046-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3047-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3105-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3106-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3106-LVE MK II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3113",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3114",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M3204",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M327-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M5014",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M5054",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M5525",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M5525-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M7010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M7011",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M7014",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M7016",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "M7104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "max",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1204",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1214",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1344",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1346",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "p1353",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1354",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1364",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1365",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1365 MK II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1427 LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1435-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P1435-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3214-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3215-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3225-LV Mk II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3225-V Mk II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3228",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3245-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3245-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3304",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3343",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3344",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "p3346",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3353",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3354",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3364",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3364-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3365",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3367",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "p3384",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3807-PVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3905",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3915",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P3915R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "p5414-e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P5415-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P5512",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P5512-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P5515",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P5532",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P5534",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P7214 VIDEO ENCODER",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "p7224",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "p7304",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "P8514",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q1602",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q1604",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q1615",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q1615 Mk II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q1635",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q1755",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q1765-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q1941-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q3505-v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q3708-PVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q3819-PVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6032-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "q6042",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6044",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6044-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6045",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6045-EMkII",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6055-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6114-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6125",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q6215",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q7401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q7404",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q7406",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "q7411",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q7424-R-MkII",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "Q8741-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "V5915",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "1011",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1011W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1031",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1031-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1354",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1356",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1367",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1435",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1645",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "286H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "297",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "3004",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "3106",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "3114",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "3301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "3355",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "3364",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "3517",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "5635-e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "7-1031-rtsp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "a8105-e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "AXIS M3044-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "AXIS M3204",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "axism3203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "AXIS-P3115",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "AXIS-P5624",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Edge",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "f1005-3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "F1005-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M 1765",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1011",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1011-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1014",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1031",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1031-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1033-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1045-LW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1054 NETWORK CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "m1103",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "m1105",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1124-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1125",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M113",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1135",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M1145-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M2014-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M20-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "m2206",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3044V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3045v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3045-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3046",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3064",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3065- V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "m3065-v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3066-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3075-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3085",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3105-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3106",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3106-LVE MKII",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3114-r",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M5013",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M5065",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "m5525e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M5526-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "N243EW2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1214-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1344-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1347-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p-1354",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p1355",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1357",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1368-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1375",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1375-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1378-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1405E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p1428-e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1448-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1455-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P20/30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p3175",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p3214",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3224-V MK II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3225 LV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3225 VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3225-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3245",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3247-LV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3265-LV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3334",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3346-VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3364 L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p-3364-l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3364-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3375",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3375-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3707-PE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3719-PLE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3905-R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P5414",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P5514",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p5534-e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P5544",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P5624-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P5635-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "pp3374-v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1615 MK III",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1615E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1645",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1775",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1785-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1786-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1798-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q3505",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q3515",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q3517",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q6034",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q-6035",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q6075-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q6115-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q6125-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q6215-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q6315-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "205",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "206",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "206M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "206W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "207mine",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "207w",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "209FD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "210 225",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "210 252",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "2100",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "210A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "211",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "211 W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "2110",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "211a",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "211M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "211W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "212 ptz",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "2120",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "213",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "213 ptz",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "213PTZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "214 PTZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "214ptz",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "215",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "215 ptz network camera",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "216 MFD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "216fd",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "216MFD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "221",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "223m",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "225FD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "232D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "233D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "2400 SERVER SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "2401 SERVER SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "2401+ VIDEO SERVER",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "241Q",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "241S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "241s server",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "243Q Video Server",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "AXIS 221",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "AXIS TEICH",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "IP VIDEO SERVER",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "M1011W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "M-1034W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "M3114-VE",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "P1311",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "PTZ 212",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "PTZ 214",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "1054",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1103",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1125",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1343",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1344",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1346",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1357",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1365",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1435-le",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1615E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1755",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "2130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "3204",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "7001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "7001 m",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "AXIS 1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "AXIS M1054",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "axis p322-lve mk",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "AXIS Q3505",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Axius",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "F9111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M1031W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M1134",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M1137",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M2026-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3024",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3024-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3027",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3027-PVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3058-PLVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3085-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3105LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3113-VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3114-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "m3402",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M5014 PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M5055",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M5085",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M7001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "OQ6032-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1224-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1245",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1343",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1347",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1425-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1427-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1445-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "p1445-le",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3215-VE NETWORK CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3225-LV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3225-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3227-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "p3364 VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "p33xx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3717",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3717-PLE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3904-R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P5514-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P5522",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "p5522-e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P5532-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P5534E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "p5534-vlc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P7214",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P7216",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q1604-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q1910",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "q2901-e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q3708",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q3709",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q6035",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "q6035-e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q6042-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q6045-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q6055",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q6155-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q7041",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q7XXX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "1014",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "m1101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=mpeg4"
+        },
+        {
+            "model": "1447",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "axis M2525-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "AXIS M3047-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "AXIS M7010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "AXIS P3343",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "I8016-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M2035-LE Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M2036-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3015",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3020",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3086V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3104L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "m3105",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3115",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3115-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M3205",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M4206-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "M-5525-E PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P12-MkII",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1377-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1447-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P1467",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p3214 ve",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3255-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3265",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3265-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3267-LV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3267-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "p3301m",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3375-VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3707",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3807",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3915-R mk ii",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3925-R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P5624",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P5635E Mk II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P5655-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q 1602",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1612",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q1614",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "q1715",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q3505MK2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "q615ee",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "Q6705-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "1135",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "Area View",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "Axis M-5525-E PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "c360p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "M3066",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "M4216-LV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "P3225-V MkII",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "P3364-LV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "P5654-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "vsavfsa",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264"
+        },
+        {
+            "model": "1301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "214 svt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "215ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "225 FD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "3203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "axis p1343",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "MK3225",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "3005v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "F41",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3057-PLVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "m3113-r",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "M3116 LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "ME2025-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "ME-2025-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "ML3106-L Mk II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P12 MkII",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1367",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1367-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1405-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1405-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3204",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3225-VE Mk II",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3228-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P3245-LV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "p3265-lve",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P5220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q3536-LVE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q6034-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "q60xx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Q6135-LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "rad",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Shop",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "Stange",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "dsDS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

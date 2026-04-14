@@ -1,0 +1,17 @@
+{
+    "name": "Hengda",
+    "models": [
+        {
+            "model": "HD-119",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HIP-31L2J",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Gwelltimes",
+    "models": [
+        {
+            "model": "4056085",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif2"
+        },
+        {
+            "model": "HIKAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "IPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "X7200-MJ36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

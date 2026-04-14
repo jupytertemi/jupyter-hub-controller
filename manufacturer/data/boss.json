@@ -1,0 +1,11 @@
+{
+    "name": "Boss",
+    "models": [
+        {
+            "model": "IP3W-2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

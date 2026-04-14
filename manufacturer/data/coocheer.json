@@ -1,0 +1,17 @@
+{
+    "name": "Coocheer",
+    "models": [
+        {
+            "model": "Keller",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "SP012 HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

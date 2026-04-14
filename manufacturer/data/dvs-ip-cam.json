@@ -1,0 +1,29 @@
+{
+    "name": "Dvs-ip-cam",
+    "models": [
+        {
+            "model": "2028HT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/:554"
+        },
+        {
+            "model": "20xx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "FULLHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DVS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

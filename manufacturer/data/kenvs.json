@@ -1,0 +1,23 @@
+{
+    "name": "Kenvs",
+    "models": [
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "IPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "GJ-6075P 1080p",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Deecam",
+    "models": [
+        {
+            "model": "200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "D200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

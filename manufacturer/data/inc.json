@@ -1,0 +1,17 @@
+{
+    "name": "Inc",
+    "models": [
+        {
+            "model": "INC-MP30VC-0280",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "MP20V",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        }
+    ]
+}

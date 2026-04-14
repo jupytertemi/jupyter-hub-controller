@@ -1,0 +1,11 @@
+{
+    "name": "Gecko Security",
+    "models": [
+        {
+            "model": "GD-328",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

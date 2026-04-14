@@ -1,0 +1,11 @@
+{
+    "name": "Ie-link-0",
+    "models": [
+        {
+            "model": "KHAN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        }
+    ]
+}

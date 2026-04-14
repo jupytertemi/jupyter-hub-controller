@@ -1,0 +1,11 @@
+{
+    "name": "Amopm",
+    "models": [
+        {
+            "model": "TH38C4-ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

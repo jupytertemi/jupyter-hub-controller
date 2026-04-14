@@ -1,0 +1,29 @@
+{
+    "name": "Ltv",
+    "models": [
+        {
+            "model": "LTV-1CNT40-F40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "LTV-ICDM2-623LH-V3-9",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "LTV-ICDM2-823-F2.1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "LTV-ICDV-723-V3.3-12",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Zencam",
+    "models": [
+        {
+            "model": "Ranger Cam",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

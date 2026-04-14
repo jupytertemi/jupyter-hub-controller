@@ -1,0 +1,47 @@
+{
+    "name": "Ptzoptics",
+    "models": [
+        {
+            "model": "12X-SDI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Zcam20X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "20X-SDI Gen2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "Box Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "PT20X-SDI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "cc11-sc-i-poe-505",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/stream0"
+        }
+    ]
+}

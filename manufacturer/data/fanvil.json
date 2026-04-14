@@ -1,0 +1,59 @@
+{
+    "name": "Fanvil",
+    "models": [
+        {
+            "model": "i10v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream.live0"
+        },
+        {
+            "model": "i31S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream.live0"
+        },
+        {
+            "model": "i62",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream.live0"
+        },
+        {
+            "model": "i63",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream.live0"
+        },
+        {
+            "model": "i64",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream.live0"
+        },
+        {
+            "model": "i16V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "i30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "i32V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "i18s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

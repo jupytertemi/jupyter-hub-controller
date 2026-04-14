@@ -1,0 +1,29 @@
+{
+    "name": "Hanwha",
+    "models": [
+        {
+            "model": "ANV-L7012R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile02/media.smp"
+        },
+        {
+            "model": "QNV-8080R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/profile4/media.smp"
+        },
+        {
+            "model": "wisenet",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        },
+        {
+            "model": "xrn-810s",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/stw-cgi/video.cgi?msubmenu=snapshot&action=view&channel=5&profile=1"
+        }
+    ]
+}

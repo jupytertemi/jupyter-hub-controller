@@ -1,0 +1,11 @@
+{
+    "name": "Videoiq",
+    "models": [
+        {
+            "model": "VIQ-HD-CRD200-3-8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

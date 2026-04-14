@@ -1,0 +1,11 @@
+{
+    "name": "Spigen",
+    "models": [
+        {
+            "model": "E300W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

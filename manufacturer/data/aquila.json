@@ -1,0 +1,11 @@
+{
+    "name": "Aquila",
+    "models": [
+        {
+            "model": "Vizion",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

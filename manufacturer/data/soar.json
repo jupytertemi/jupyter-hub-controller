@@ -1,0 +1,11 @@
+{
+    "name": "Soar",
+    "models": [
+        {
+            "model": "971",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

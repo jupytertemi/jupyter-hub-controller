@@ -1,0 +1,41 @@
+{
+    "name": "Mustcam",
+    "models": [
+        {
+            "model": "807",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "816",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "818P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "H-806P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "H809P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "IP-86",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        }
+    ]
+}

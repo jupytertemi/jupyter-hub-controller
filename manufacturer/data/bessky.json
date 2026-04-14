@@ -1,0 +1,11 @@
+{
+    "name": "Bessky",
+    "models": [
+        {
+            "model": "BE-IPWB200ZW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Tas-tech",
+    "models": [
+        {
+            "model": "IPHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

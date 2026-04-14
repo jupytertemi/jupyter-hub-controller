@@ -1,0 +1,11 @@
+{
+    "name": "August",
+    "models": [
+        {
+            "model": "doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/stream1"
+        }
+    ]
+}

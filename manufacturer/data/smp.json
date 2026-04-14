@@ -1,0 +1,11 @@
+{
+    "name": "Smp",
+    "models": [
+        {
+            "model": "P3-5MP-RWF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

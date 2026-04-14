@@ -1,0 +1,11 @@
+{
+    "name": "Idis",
+    "models": [
+        {
+            "model": "DC-D1223FR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/media"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Hama",
+    "models": [
+        {
+            "model": "M360",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

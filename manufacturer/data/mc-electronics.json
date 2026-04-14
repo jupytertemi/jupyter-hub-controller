@@ -1,0 +1,23 @@
+{
+    "name": "Mc Electronics",
+    "models": [
+        {
+            "model": "CTIPC-245C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CTIPC-275C1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HISI_002",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video0.sdp"
+        }
+    ]
+}

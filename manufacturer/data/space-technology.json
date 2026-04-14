@@ -1,0 +1,53 @@
+{
+    "name": "Space Technology",
+    "models": [
+        {
+            "model": "171 M IP Home",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ST-110 IP Home",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ST-171 M IP HOME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ST-901 IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ST-V5603",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        },
+        {
+            "model": "ST-V5603 PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "st-v2611 pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "ST-v2703",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        }
+    ]
+}

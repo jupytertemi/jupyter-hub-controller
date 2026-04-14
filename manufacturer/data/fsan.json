@@ -1,0 +1,11 @@
+{
+    "name": "Fsan",
+    "models": [
+        {
+            "model": "WD662",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

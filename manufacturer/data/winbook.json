@@ -1,0 +1,59 @@
+{
+    "name": "Winbook",
+    "models": [
+        {
+            "model": "720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "c1066",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "c1066dn2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "MC 896662",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "C1066DN4-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "t7838wip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "Useful",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "Special",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/OVProfile02"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "H-cam",
+    "models": [
+        {
+            "model": "MZoom",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

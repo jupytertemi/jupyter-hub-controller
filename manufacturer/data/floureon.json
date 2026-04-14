@@ -1,0 +1,455 @@
+{
+    "name": "Floureon",
+    "models": [
+        {
+            "model": "1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "DM523H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "DM523HK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "H.264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "IPD-L26Y02-BS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "PTZ HD IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "A6808NHS-EU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "dvr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "H.264 -JSN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "H.264 WIRELESS P2P NVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "H264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "IPD-E24Y02-BS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "n816",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "N817",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "1080P Patio",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "7 1080P 30X ZOOM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "908HF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "b27w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "BT-H51F/IPD-L26Y02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "BT-HD54F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "BT-HD817",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "Camhi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "DID-908HF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "DID-N49-200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "DM326HS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "DM326HT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "DM523HS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "DMM523HS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "HD54F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "HD-IPC 18x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "HT54",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "III-724294-ECEBB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "IPCAM HIP2P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "IPD-C30Y02-BS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "IPD-C34Y02-BS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "IPD-L24Y02-BS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "LN5810HH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "M32B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "PTZ Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "PTZ IP camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "sd 26w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "SD17W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "SD26W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "SD27W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "SD37W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "ZD-CH130B-F9",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "zd-chi130b-f9",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "6afd097cdc912bb3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HD 720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "MB32b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "MH32b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "N5810HH-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Q3-UK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "QF510-UK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "sd13w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SD17",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Camera 1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "1080n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "blk",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "ka6004ns4n-a-516a-us",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "SP012",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "TTTT-309727-SVDWR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "wxhi100w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "1080pPVTW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=0_stream=0.sdp"
+        },
+        {
+            "model": "1600TVL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=5&stream=0.sdp?real_stream--rtp-caching=100"
+        },
+        {
+            "model": "FIW1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "IPC365",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "PD203B-Y1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "PT 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "HiP2P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "Q3-AU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "IPC_700323",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif2"
+        }
+    ]
+}

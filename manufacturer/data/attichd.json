@@ -1,0 +1,11 @@
+{
+    "name": "Attichd",
+    "models": [
+        {
+            "model": "hosafe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Svplus",
+    "models": [
+        {
+            "model": "SVIP PT100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SVIP-432P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

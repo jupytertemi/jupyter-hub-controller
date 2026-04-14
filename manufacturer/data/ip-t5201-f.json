@@ -1,0 +1,11 @@
+{
+    "name": "Ip-t5201-f",
+    "models": [
+        {
+            "model": "Escam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

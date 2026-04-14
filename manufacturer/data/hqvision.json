@@ -1,0 +1,23 @@
+{
+    "name": "Hqvision",
+    "models": [
+        {
+            "model": "EYE-4HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "HQ-MP3028BD-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "HQ-MP3040T-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

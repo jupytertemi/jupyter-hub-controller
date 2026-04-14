@@ -1,0 +1,17 @@
+{
+    "name": "Eyesight",
+    "models": [
+        {
+            "model": "ES-IP902W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "ES-IP-MP2-DM1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Fb-100ap",
+    "models": [
+        {
+            "model": "fd100a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        }
+    ]
+}

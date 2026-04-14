@@ -1,0 +1,17 @@
+{
+    "name": "Soullife",
+    "models": [
+        {
+            "model": "PS6Lite",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "SL-03",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

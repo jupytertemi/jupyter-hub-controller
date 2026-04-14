@@ -1,0 +1,17 @@
+{
+    "name": "Raycam",
+    "models": [
+        {
+            "model": "720 X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "L100P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

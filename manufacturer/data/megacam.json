@@ -1,0 +1,11 @@
+{
+    "name": "Megacam",
+    "models": [
+        {
+            "model": "IPD-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Eyesurv",
+    "models": [
+        {
+            "model": "PTZ1080ipIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

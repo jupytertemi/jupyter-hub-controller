@@ -1,0 +1,11 @@
+{
+    "name": "Citronix",
+    "models": [
+        {
+            "model": "380C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

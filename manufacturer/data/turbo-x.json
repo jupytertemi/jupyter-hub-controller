@@ -1,0 +1,35 @@
+{
+    "name": "Turbo X",
+    "models": [
+        {
+            "model": "EZ-10W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "IIPC-10HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "IIPC-20HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "IIPC-35FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "IPC-720C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

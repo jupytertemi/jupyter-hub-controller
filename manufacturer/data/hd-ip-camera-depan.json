@@ -1,0 +1,17 @@
+{
+    "name": "Hd Ip Camera Depan",
+    "models": [
+        {
+            "model": "IPCC N13NW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPCC-B15N-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

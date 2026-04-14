@@ -1,0 +1,23 @@
+{
+    "name": "Jaytech",
+    "models": [
+        {
+            "model": "DH43",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/Streaming/channels/0_a/unicast"
+        },
+        {
+            "model": "Ding",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "IPC019",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

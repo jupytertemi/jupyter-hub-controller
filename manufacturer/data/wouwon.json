@@ -1,0 +1,11 @@
+{
+    "name": "Wouwon",
+    "models": [
+        {
+            "model": "WiFi Smart Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

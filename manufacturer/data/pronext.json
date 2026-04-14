@@ -1,0 +1,11 @@
+{
+    "name": "Pronext",
+    "models": [
+        {
+            "model": "Anibal",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

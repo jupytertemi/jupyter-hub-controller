@@ -1,0 +1,11 @@
+{
+    "name": "Nadatel",
+    "models": [
+        {
+            "model": "ip1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0/Channel=0;Profile=0"
+        }
+    ]
+}

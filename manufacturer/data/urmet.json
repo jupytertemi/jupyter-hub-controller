@@ -1,0 +1,17 @@
+{
+    "name": "Urmet",
+    "models": [
+        {
+            "model": "1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "M-12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        }
+    ]
+}

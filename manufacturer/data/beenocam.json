@@ -1,0 +1,11 @@
+{
+    "name": "Beenocam",
+    "models": [
+        {
+            "model": "SN-PC-4007W10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

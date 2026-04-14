@@ -1,0 +1,11 @@
+{
+    "name": "Zvision",
+    "models": [
+        {
+            "model": "zvd-5204hz-h1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

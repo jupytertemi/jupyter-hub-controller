@@ -1,0 +1,11 @@
+{
+    "name": "Acm-v3002",
+    "models": [
+        {
+            "model": "Fine",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        }
+    ]
+}

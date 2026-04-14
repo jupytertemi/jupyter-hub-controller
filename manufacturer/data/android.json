@@ -1,0 +1,35 @@
+{
+    "name": "Android",
+    "models": [
+        {
+            "model": "1809",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Galaxy S7",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "IP Webcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "IP WEBCAM ANDROID",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "Ip Webcam for Android",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Saewit",
+    "models": [
+        {
+            "model": "seaw-20z37e-nh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

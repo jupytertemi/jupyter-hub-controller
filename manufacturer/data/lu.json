@@ -1,0 +1,11 @@
+{
+    "name": "Lu",
+    "models": [
+        {
+            "model": "LUX",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        }
+    ]
+}

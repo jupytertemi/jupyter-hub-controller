@@ -1,0 +1,11 @@
+{
+    "name": "Ingeek",
+    "models": [
+        {
+            "model": "1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

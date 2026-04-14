@@ -1,0 +1,11 @@
+{
+    "name": "Handy Ip Cam",
+    "models": [
+        {
+            "model": "3454",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        }
+    ]
+}

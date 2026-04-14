@@ -1,0 +1,11 @@
+{
+    "name": "Nesuniq",
+    "models": [
+        {
+            "model": "ipc-p18fb",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        }
+    ]
+}

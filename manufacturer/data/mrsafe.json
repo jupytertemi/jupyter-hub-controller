@@ -1,0 +1,17 @@
+{
+    "name": "Mrsafe",
+    "models": [
+        {
+            "model": "PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "PRO1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/2.3gp"
+        }
+    ]
+}

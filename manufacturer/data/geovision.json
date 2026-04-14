@@ -1,0 +1,1523 @@
+{
+    "name": "Geovision",
+    "models": [
+        {
+            "model": "1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "3402",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "8711",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "ABD1300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "ABL2703",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "adb1300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "ADR1300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "ASSEMBLY",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "BL110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "Bl2501",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "BL320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "bx110d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "BX2700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "BX-4700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "CB120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "Cube220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "domo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "EBD2702",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "EBD4711",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "EBL 1100 2F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "EBL 2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "EBL 2100E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "EBL1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "edr2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "EDR-2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "FE520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "Fisheye 3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV CB220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV EBX1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV_FD2400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV2500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-ADR2701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-BL220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-BX2400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-BX520D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-CB120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EBD4700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EBD4711",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EBL 1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EDR1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EDR2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EDR2700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EDR-4700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "gv-efd2101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EFER3700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-EVD2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-FER3402",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-FX120D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-MDF120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-MDF130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-MDR120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-MFD130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "gv-mfd2700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "gv-mfd520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-PPTZ7300-SD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-TDR2700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-tdr4700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-VD2530",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-VD2540",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-VD2712",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-VD3400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "GV-VD5340",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "gv-vs2800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "HCW-120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "MFD120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "neye",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "SD2322",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "SNVR 1600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "use",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "VD-2712",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        },
+        {
+            "model": "1.3 MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "1220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "1224",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "1501",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "2211",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "2401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "360_Fish",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "6.0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "BL1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "BL1300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "BL-2400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "bl2410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "BL-5310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Box Camear",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "BX120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "bx130d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "BX520D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "BX5300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "cam 201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "cam 202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "caw120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "cb 220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "CB220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "CBW220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Cube",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "DS-2CD2432F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "DS-2CD63C2F-IVS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "ebd-4711",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EBL-1100 2F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EBL1100F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EBX1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EBX2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EDF1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "edr2001-of",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EDR2100-0F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EFD1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EFER3700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EVD3100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "FD120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "FD-2500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "FER521",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "FER5701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "ffi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "fish",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "fisheye",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Geo120D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GeoBX1300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV FE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV_CB220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV=EBL 1100-1f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "gv-1100-2f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "gv-1300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "gv220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-ABL2701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BL1200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BL120D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BL130D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "gv-bl1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BL-1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BL3400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BL3410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BL5311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BX110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BX130D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BX1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "gv-bx2500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BX320D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-BX-3400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-CA220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-CAW220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-CW220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GVEBL1100F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EBL2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EBL2100-2F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EBL2101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EDR1100-0f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EDR2100-0f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EFD1100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EFD1100-0f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EFD2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EFD2700-2F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "gv-EFD4700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EFD4700-0F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EFR3700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EVD3100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EVD5100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-EVD5700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FD1200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FD120D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FD1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FD2200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FD-220D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FD2410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FE2301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FE3402",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FE520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FER521",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FER5303",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-FER5701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-GA220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-IPCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-LPC2011",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-LPR1200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-MDR220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-MDR320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-MDR530",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-MFD110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-MFD1501",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-MFD320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-MFP1501",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-SD220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-TBL4810",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-UBL1211",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-UBL3401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-UBX1301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-UNP2500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-VCBW-1201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-VD120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-VD120D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-VD1540",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "GV-VD4711",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "h234",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Hilera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Lager",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "LPR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "mfd2401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "nl test s220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "normal",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Part",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Server",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "stair",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "TVD4710",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "UBL1211",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "UBX1320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Upstairs",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "VD1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "Video Server",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "VS2400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "way",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "ebd8711",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "EDR-2100-0F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "GV-ABL4703",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "GV-ADR2702",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "GV-BL320D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "GV-EBL3101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "GV-EFD2700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "gv-fd2400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "GVTBL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "GV-VD220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "MSJ10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "PT220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "SD2301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "vd320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "vd-mdr220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "250`",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "BX1111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GV-BX110D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GV-FD5300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GV-FE420",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GV-MFD120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GV-MFD220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GV-MFD3401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "7.02",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/CH00[CHANNEL].sdp"
+        },
+        {
+            "model": "8.X",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/CH00[CHANNEL].sdp"
+        },
+        {
+            "model": "ebd4700",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/CH00[CHANNEL].sdp"
+        },
+        {
+            "model": "GV-Hybrid LPR 10R",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/CH00[CHANNEL].sdp"
+        },
+        {
+            "model": "gv-4700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "GV-AVD2700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "tbl",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/1?videoCodecType=MPEG4"
+        },
+        {
+            "model": "GV-EBD2702",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "GV-BL3700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "BL2072",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "GV-BL3411",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "GV-TR2700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/[USERNAME]:[PASSWORD]/main"
+        },
+        {
+            "model": "GV-AVD4710",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH000.sdp"
+        },
+        {
+            "model": "GV-EBD2704",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH000.sdp"
+        },
+        {
+            "model": "YU6TTR6TRG",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/Pinology101:has2bepuyyps/main"
+        }
+    ]
+}

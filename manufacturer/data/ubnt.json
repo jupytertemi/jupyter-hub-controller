@@ -1,0 +1,23 @@
+{
+    "name": "Ubnt",
+    "models": [
+        {
+            "model": "aircam",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/61875a64848eba80bb89a72d_0"
+        },
+        {
+            "model": "mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch01_0"
+        }
+    ]
+}

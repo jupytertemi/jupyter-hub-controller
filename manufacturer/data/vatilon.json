@@ -1,0 +1,41 @@
+{
+    "name": "Vatilon",
+    "models": [
+        {
+            "model": "P03H42",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        },
+        {
+            "model": "PA2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        },
+        {
+            "model": "P05",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "PB4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "YC-W608",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "pb1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

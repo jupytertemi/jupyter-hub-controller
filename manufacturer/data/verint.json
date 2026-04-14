@@ -1,0 +1,29 @@
+{
+    "name": "Verint",
+    "models": [
+        {
+            "model": "3520 fd-dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "5620PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0/h264"
+        },
+        {
+            "model": "v3320fd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/h264"
+        },
+        {
+            "model": "v3320fdw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/h264"
+        }
+    ]
+}

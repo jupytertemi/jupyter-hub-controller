@@ -1,0 +1,17 @@
+{
+    "name": "Kdt",
+    "models": [
+        {
+            "model": "Eacd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mode=real&idc=1&ids=1"
+        },
+        {
+            "model": "T10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        }
+    ]
+}

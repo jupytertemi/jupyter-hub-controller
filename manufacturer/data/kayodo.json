@@ -1,0 +1,17 @@
+{
+    "name": "Kayodo",
+    "models": [
+        {
+            "model": "2Mp",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        },
+        {
+            "model": "KYD-IPD200M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

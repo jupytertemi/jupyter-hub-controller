@@ -1,0 +1,11 @@
+{
+    "name": "Viking",
+    "models": [
+        {
+            "model": "5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

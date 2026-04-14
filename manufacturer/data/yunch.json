@@ -1,0 +1,17 @@
+{
+    "name": "Yunch",
+    "models": [
+        {
+            "model": "yc-110ar",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam2/mpeg4"
+        },
+        {
+            "model": "yc-11ar",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam2/mpeg4"
+        }
+    ]
+}

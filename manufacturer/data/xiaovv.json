@@ -1,0 +1,53 @@
+{
+    "name": "Xiaovv",
+    "models": [
+        {
+            "model": "8ch 3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp"
+        },
+        {
+            "model": "outdoor360",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "q1 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "Q10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "q12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "v380 pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "V380",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "xiaovv 8ch 3mp nvr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/ch1/main/av_stream"
+        }
+    ]
+}

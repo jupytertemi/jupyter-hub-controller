@@ -1,0 +1,11 @@
+{
+    "name": "Centechia",
+    "models": [
+        {
+            "model": "v360pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

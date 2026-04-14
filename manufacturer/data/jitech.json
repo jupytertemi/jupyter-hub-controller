@@ -1,0 +1,11 @@
+{
+    "name": "Jitech",
+    "models": [
+        {
+            "model": "POE IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

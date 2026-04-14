@@ -1,0 +1,23 @@
+{
+    "name": "Histream",
+    "models": [
+        {
+            "model": "HH9801",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "HH9801B-MPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "RTSP IP Camera",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/av0_[CHANNEL]"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Smarthome",
+    "models": [
+        {
+            "model": "noname",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

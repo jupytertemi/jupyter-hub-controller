@@ -1,0 +1,11 @@
+{
+    "name": "Delcatec",
+    "models": [
+        {
+            "model": "CNE3CDF1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

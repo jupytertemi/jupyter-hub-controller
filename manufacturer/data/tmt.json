@@ -1,0 +1,11 @@
+{
+    "name": "Tmt",
+    "models": [
+        {
+            "model": "W200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.h264"
+        }
+    ]
+}

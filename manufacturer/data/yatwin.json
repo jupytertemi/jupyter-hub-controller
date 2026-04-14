@@ -1,0 +1,11 @@
+{
+    "name": "Yatwin",
+    "models": [
+        {
+            "model": "C24H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/udp/av0_0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Aomg",
+    "models": [
+        {
+            "model": "CBSKY FI-831",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

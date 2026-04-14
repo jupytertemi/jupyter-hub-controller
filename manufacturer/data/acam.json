@@ -1,0 +1,17 @@
+{
+    "name": "Acam",
+    "models": [
+        {
+            "model": "C2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "imp2irmptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

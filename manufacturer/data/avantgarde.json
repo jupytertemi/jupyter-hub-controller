@@ -1,0 +1,53 @@
+{
+    "name": "Avantgarde",
+    "models": [
+        {
+            "model": "123456",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "ip100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "px-3720-675",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "pyle",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "S631",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "Sumpple",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "Sumpple S650",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "S610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av1"
+        }
+    ]
+}

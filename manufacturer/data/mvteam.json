@@ -1,0 +1,17 @@
+{
+    "name": "Mvteam",
+    "models": [
+        {
+            "model": "2129",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "Nisarga",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

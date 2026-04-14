@@ -1,0 +1,41 @@
+{
+    "name": "Carcam",
+    "models": [
+        {
+            "model": "10x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile0"
+        },
+        {
+            "model": "5905",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "CAM-2898SD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IPC3516",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Cam-5905MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "svn-840",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

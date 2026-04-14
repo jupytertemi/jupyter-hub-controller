@@ -1,0 +1,23 @@
+{
+    "name": "X10",
+    "models": [
+        {
+            "model": "airsight",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "XX62A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "XX-59A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

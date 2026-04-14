@@ -1,0 +1,77 @@
+{
+    "name": "Concord",
+    "models": [
+        {
+            "model": "5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "CNC5IDP-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "CNC8IBP-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "CNCK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "floodlight",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "CDC5ABP-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "CNC5IBP-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "CNC8IBPFA-V2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "CNC8IDP-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "Concord 1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "Concord 4K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "RS-CM-317D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        }
+    ]
+}

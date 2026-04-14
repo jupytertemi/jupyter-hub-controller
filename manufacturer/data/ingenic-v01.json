@@ -1,0 +1,11 @@
+{
+    "name": "Ingenic-v01",
+    "models": [
+        {
+            "model": "IPCAM-100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

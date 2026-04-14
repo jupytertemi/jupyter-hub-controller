@@ -1,0 +1,23 @@
+{
+    "name": "Short 8ch Nvr",
+    "models": [
+        {
+            "model": "adt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/201"
+        },
+        {
+            "model": "NBD8016RA-UL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "Nvr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        }
+    ]
+}

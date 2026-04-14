@@ -1,0 +1,11 @@
+{
+    "name": "Concept Pro",
+    "models": [
+        {
+            "model": "CVP9324DNIR-IP4M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/1"
+        }
+    ]
+}

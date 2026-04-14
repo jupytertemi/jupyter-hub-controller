@@ -1,0 +1,11 @@
+{
+    "name": "Tic",
+    "models": [
+        {
+            "model": "1.3MPX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        }
+    ]
+}

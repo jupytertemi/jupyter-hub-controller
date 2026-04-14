@@ -1,0 +1,71 @@
+{
+    "name": "Hview",
+    "models": [
+        {
+            "model": "1312",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "HV-800G2A5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "HV-PTZ502",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "850PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "MC500L_5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "HV-500E6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-500G2A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-800E6A5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-E800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-PTZ500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "HV-WF500G2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

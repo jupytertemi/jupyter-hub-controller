@@ -1,0 +1,17 @@
+{
+    "name": "Nobelic",
+    "models": [
+        {
+            "model": "nblc-1210f-wmsd/p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Video"
+        },
+        {
+            "model": "NBLC-2421F-MSD",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

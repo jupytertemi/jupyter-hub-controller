@@ -1,0 +1,59 @@
+{
+    "name": "Smc",
+    "models": [
+        {
+            "model": "1010-W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-1010W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-8021",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-8120",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "SMC-1010W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "1011-W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "SMC-1011W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "SMC-1011W2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "SMCWIPCAM-PZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

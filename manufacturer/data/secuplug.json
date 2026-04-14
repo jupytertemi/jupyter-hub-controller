@@ -1,0 +1,65 @@
+{
+    "name": "Secuplug",
+    "models": [
+        {
+            "model": "IPC-B130P-30X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "IPD-D53Y0701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "SP-APHD46F-4K3X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "SPEED DOME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "IPD-D53M02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "IPD-D53M02-BS series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "SP-MG03AR-5.0MP-B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "IPD-E2A5Y04-BS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4?user=[USERNAME]&pwd=[PASSWORD]"
+        },
+        {
+            "model": "SP-AMPHD48FDM324SP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4?user=[USERNAME]&pwd=[PASSWORD]"
+        }
+    ]
+}

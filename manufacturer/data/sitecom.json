@@ -1,0 +1,35 @@
+{
+    "name": "Sitecom",
+    "models": [
+        {
+            "model": "150-NWL-405",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "WL405",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "WL-405",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "LN-406",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "WLC1000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        }
+    ]
+}

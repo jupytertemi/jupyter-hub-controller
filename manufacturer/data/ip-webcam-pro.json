@@ -1,0 +1,11 @@
+{
+    "name": "Ip Webcam Pro",
+    "models": [
+        {
+            "model": "PSI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

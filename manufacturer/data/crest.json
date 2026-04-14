@@ -1,0 +1,11 @@
+{
+    "name": "Crest",
+    "models": [
+        {
+            "model": "CCN-4824s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

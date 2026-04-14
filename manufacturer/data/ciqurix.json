@@ -1,0 +1,17 @@
+{
+    "name": "Ciqurix",
+    "models": [
+        {
+            "model": "FCam",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "FCamX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Smart Industry",
+    "models": [
+        {
+            "model": "27X",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "DOZ27",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "Doz27w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

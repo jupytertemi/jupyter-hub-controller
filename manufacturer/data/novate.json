@@ -1,0 +1,11 @@
+{
+    "name": "Novate",
+    "models": [
+        {
+            "model": "TS898sH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

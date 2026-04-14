@@ -1,0 +1,11 @@
+{
+    "name": "Antifurto365",
+    "models": [
+        {
+            "model": "X Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

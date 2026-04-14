@@ -1,0 +1,11 @@
+{
+    "name": "Sunnex",
+    "models": [
+        {
+            "model": "sx-ip-dm412f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

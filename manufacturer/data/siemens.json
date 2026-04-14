@@ -1,0 +1,89 @@
+{
+    "name": "Siemens",
+    "models": [
+        {
+            "model": "CCIC-1410-ST",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "CCMC-1315-LP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "CFMS-2025",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "CCIS1345",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "CCIS1425",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "CCMX-1315",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "CFMC-1315LP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "CCIS-1345",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video"
+        },
+        {
+            "model": "CCMS-1315",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.asf"
+        },
+        {
+            "model": "CCMS-1315-LP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.asf"
+        },
+        {
+            "model": "CCMS-2025",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "CFMS2025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/livestream/trackID=1"
+        },
+        {
+            "model": "CVMS2025-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/livestream/trackID=1"
+        },
+        {
+            "model": "CVMW-3025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

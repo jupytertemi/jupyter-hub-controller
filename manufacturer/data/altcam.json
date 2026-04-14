@@ -1,0 +1,17 @@
+{
+    "name": "Altcam",
+    "models": [
+        {
+            "model": "IBC13IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "icv51ir",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

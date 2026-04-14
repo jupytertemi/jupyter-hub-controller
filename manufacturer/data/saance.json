@@ -1,0 +1,17 @@
+{
+    "name": "Saance",
+    "models": [
+        {
+            "model": "DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "WIFICAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

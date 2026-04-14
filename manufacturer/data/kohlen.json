@@ -1,0 +1,17 @@
+{
+    "name": "Kohlen",
+    "models": [
+        {
+            "model": "TV-CTZY9825A-GKA-2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "TV-CZTY9825A-GKA-2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

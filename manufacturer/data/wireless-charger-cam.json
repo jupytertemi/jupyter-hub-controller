@@ -1,0 +1,11 @@
+{
+    "name": "Wireless Charger Cam",
+    "models": [
+        {
+            "model": "Lizvie",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

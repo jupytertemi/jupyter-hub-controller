@@ -1,0 +1,35 @@
+{
+    "name": "Moxa",
+    "models": [
+        {
+            "model": "vport 351",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/multicaststream"
+        },
+        {
+            "model": "VPort 36-2L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/multicaststream"
+        },
+        {
+            "model": "VPort 36-2L-3X-T",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/multicaststream"
+        },
+        {
+            "model": "VPort_36-1MP-T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "VPort_P26A-1MP-T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        }
+    ]
+}

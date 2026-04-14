@@ -1,0 +1,17 @@
+{
+    "name": "Sinovision",
+    "models": [
+        {
+            "model": "SN-IPCH20-MPT09",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "SN-MFPT20-ICS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

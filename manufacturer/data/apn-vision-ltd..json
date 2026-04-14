@@ -1,0 +1,11 @@
+{
+    "name": "Apn Vision Ltd.",
+    "models": [
+        {
+            "model": "QC16",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

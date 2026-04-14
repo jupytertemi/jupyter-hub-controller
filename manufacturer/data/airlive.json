@@ -1,0 +1,263 @@
+{
+    "name": "Airlive",
+    "models": [
+        {
+            "model": "2060hd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "BU-2026",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "CW-720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "Gabinet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "OD2025HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "OD-325HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "OD-600HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "WN/POE-2600HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "WN-200HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "325hd",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "IP-200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "325hd640",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        },
+        {
+            "model": "400152",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "720ir",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "AirliveCW-720IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "CW-720IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "OD-2060HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "BC-5010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "BU-3025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "BU-3025V2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "BU-3026",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "BU-3026IVS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "BU5010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "CU-720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "h264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "MD-3025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "OD2025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "OD-2025HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "POE-100HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "POE-200HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "POE-5010HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "zadaj",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "BU-2015",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mobile"
+        },
+        {
+            "model": "BU-3026-IVS_MY",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "BU-720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "MD-720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "FE-201DM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "FE-210DM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "POE-260CAM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "WL-2600CAM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "OD300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "POE-280HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "POE-250HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/stream1"
+        }
+    ]
+}

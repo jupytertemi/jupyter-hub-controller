@@ -1,0 +1,17 @@
+{
+    "name": "Link",
+    "models": [
+        {
+            "model": "326G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC233W-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        }
+    ]
+}

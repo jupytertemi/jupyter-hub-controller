@@ -1,0 +1,17 @@
+{
+    "name": "Litmor",
+    "models": [
+        {
+            "model": "Battery",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Battery2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

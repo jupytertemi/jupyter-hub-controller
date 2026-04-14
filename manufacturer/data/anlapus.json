@@ -1,0 +1,17 @@
+{
+    "name": "Anlapus",
+    "models": [
+        {
+            "model": "FORDVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "model1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

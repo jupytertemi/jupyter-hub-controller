@@ -1,0 +1,11 @@
+{
+    "name": "Onepixel",
+    "models": [
+        {
+            "model": "OPXP-5371",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

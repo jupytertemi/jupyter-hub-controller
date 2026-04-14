@@ -1,0 +1,17 @@
+{
+    "name": "Ikegami",
+    "models": [
+        {
+            "model": "IPD-BX11",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "IPD-BX300",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

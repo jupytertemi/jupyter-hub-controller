@@ -1,0 +1,11 @@
+{
+    "name": "Encore",
+    "models": [
+        {
+            "model": "CITPC-275C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

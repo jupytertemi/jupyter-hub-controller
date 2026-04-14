@@ -1,0 +1,11 @@
+{
+    "name": "Laser",
+    "models": [
+        {
+            "model": "Smart Full HD Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

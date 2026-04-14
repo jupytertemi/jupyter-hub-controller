@@ -1,0 +1,53 @@
+{
+    "name": "Brillcam",
+    "models": [
+        {
+            "model": "20927/05",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "BRC-D150",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "BRC-B750DV2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "BRC-B782",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "BRC-B782W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "brc-s5194p2irwl",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "BRC-S8151P2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "D150",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

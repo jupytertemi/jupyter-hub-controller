@@ -1,0 +1,29 @@
+{
+    "name": "Amiccom",
+    "models": [
+        {
+            "model": "Z_22047",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "z_32001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Z_3201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Z_22041",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/ch0/stream0"
+        }
+    ]
+}

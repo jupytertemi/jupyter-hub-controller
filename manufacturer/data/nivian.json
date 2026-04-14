@@ -1,0 +1,11 @@
+{
+    "name": "Nivian",
+    "models": [
+        {
+            "model": "nvs-ipc-os2b",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/live/channel0"
+        }
+    ]
+}

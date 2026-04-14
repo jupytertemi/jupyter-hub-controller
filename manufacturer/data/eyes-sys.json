@@ -1,0 +1,11 @@
+{
+    "name": "Eyes-sys",
+    "models": [
+        {
+            "model": "4k POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        }
+    ]
+}

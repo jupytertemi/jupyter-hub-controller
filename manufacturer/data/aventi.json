@@ -1,0 +1,11 @@
+{
+    "name": "Aventi",
+    "models": [
+        {
+            "model": "1n1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        }
+    ]
+}

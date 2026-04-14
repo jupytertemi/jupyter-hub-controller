@@ -1,0 +1,11 @@
+{
+    "name": "Starvedia",
+    "models": [
+        {
+            "model": "IC-212w",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

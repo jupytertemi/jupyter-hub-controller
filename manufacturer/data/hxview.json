@@ -1,0 +1,17 @@
+{
+    "name": "Hxview",
+    "models": [
+        {
+            "model": "BU-E580",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Panomera",
+    "models": [
+        {
+            "model": "Panomera S4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/encoder1"
+        }
+    ]
+}

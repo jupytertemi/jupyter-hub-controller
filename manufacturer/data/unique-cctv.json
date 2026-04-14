@@ -1,0 +1,41 @@
+{
+    "name": "Unique-cctv",
+    "models": [
+        {
+            "model": "2212",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "IPC241L-IR-IN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "U-612W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IPC6222ER-X20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        },
+        {
+            "model": "IP-V-200H33P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        },
+        {
+            "model": "U-611W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

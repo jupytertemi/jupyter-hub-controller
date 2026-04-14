@@ -1,0 +1,11 @@
+{
+    "name": "Visicom",
+    "models": [
+        {
+            "model": "NWK-M9852W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4?user=[USERNAME]&pwd=[PASSWORD]"
+        }
+    ]
+}

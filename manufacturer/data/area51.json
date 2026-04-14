@@ -1,0 +1,11 @@
+{
+    "name": "Area51",
+    "models": [
+        {
+            "model": "SK7008-T1F1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/301"
+        }
+    ]
+}

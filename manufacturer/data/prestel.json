@@ -1,0 +1,11 @@
+{
+    "name": "Prestel",
+    "models": [
+        {
+            "model": "HD-PTZ8IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

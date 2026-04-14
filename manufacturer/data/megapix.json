@@ -1,0 +1,11 @@
+{
+    "name": "Megapix",
+    "models": [
+        {
+            "model": "DWC_PB2M4TIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile/profile01"
+        }
+    ]
+}

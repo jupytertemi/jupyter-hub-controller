@@ -1,0 +1,11 @@
+{
+    "name": "Blackfirst",
+    "models": [
+        {
+            "model": "Hi3507",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        }
+    ]
+}

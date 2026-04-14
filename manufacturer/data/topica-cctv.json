@@ -1,0 +1,35 @@
+{
+    "name": "Topica Cctv",
+    "models": [
+        {
+            "model": "MY-310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "top-23xip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "TOP-757VPC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "TOP-788HMP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "TOP-757VPC-MIR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

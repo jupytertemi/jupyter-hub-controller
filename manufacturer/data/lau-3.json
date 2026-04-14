@@ -1,0 +1,11 @@
+{
+    "name": "Lau 3",
+    "models": [
+        {
+            "model": "VT-6200HV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

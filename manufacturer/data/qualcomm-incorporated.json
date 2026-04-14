@@ -1,0 +1,17 @@
+{
+    "name": "Qualcomm Incorporated",
+    "models": [
+        {
+            "model": "ESCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "IP3M952E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        }
+    ]
+}

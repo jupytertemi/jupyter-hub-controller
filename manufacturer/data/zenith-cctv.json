@@ -1,0 +1,11 @@
+{
+    "name": "Zenith Cctv",
+    "models": [
+        {
+            "model": "ZPI-132P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        }
+    ]
+}

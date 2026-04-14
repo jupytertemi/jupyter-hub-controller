@@ -1,0 +1,23 @@
+{
+    "name": "Mvs",
+    "models": [
+        {
+            "model": "cam01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "CAM04",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "ipeye",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

@@ -1,0 +1,737 @@
+{
+    "name": "Sercomm",
+    "models": [
+        {
+            "model": "0c432",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "0C-432",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "0C835",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "1000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "1000W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "1010",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "1CAMERA2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "2E4819F",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8020",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8021",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8026W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8110",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8221",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8221D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8230",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "age",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "CR8026",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ICAMEA2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ICAMERA 2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ICAMERA-1000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "icamera2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ICAMERA-2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ICAMERA2-C",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "IPCAMERA2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "np12e9ce",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "oc342",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC380",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC431",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "oc432",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC-432",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "oc-801adt",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC-810",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "oc810adt",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC810-ADT",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC-810V",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC-821",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "oc8210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC821D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "oc-830",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC830",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC835-V2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "oct 432",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "R8026W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "rc 8111",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-1445",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC4030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-4551",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "rc8021",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-8021",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8021`",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-8021v",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8021W-ADT",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8025",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "rc8026",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8026E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8026W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-8061V",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8110",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8221",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-8221",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8221D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8221W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "rc82226w",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-8230",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "rc8230d",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-8230D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RS8026W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RS8221",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "SC79D0F8",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "SCEC073A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "Sercomm: RC8030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "sr8026",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "XCAM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "XHC1-1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "XHC1-SE",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "1010W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "30.0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "8025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "8025B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "820",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "821 D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "ALL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "DBC831V2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "i2000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "icam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "icamera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "icamera 1000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "ICamers2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "oc 821",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "OC421",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "oc810",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "QTY6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-1467",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC4551",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-802",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-8021 w/Mic",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "rc-8025b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "rc-8026w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-8030",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-8110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-8221D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC8230",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC8261",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "rc85",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC8520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RT8230D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "SC72C088",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "0c830",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ICAMERA2-4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "OC432 (SC27B611)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "xCam1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "81110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RT8021",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "scfe8a4a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "WCO200NX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "8310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "F-HACAM01A 0-WN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "SCF8767C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

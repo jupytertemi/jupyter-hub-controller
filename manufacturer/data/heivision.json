@@ -1,0 +1,41 @@
+{
+    "name": "Heivision",
+    "models": [
+        {
+            "model": "02EN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "HM203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "2.0mp IP Camera",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mjpeg"
+        },
+        {
+            "model": "HM202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "HM205",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "protect d 1 ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

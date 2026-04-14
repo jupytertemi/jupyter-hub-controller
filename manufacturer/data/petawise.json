@@ -1,0 +1,11 @@
+{
+    "name": "Petawise",
+    "models": [
+        {
+            "model": "PW424F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

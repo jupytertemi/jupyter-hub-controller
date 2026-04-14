@@ -1,0 +1,11 @@
+{
+    "name": "Robocam",
+    "models": [
+        {
+            "model": "robocam 4",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

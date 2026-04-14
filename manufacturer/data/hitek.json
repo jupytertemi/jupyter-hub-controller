@@ -1,0 +1,11 @@
+{
+    "name": "Hitek",
+    "models": [
+        {
+            "model": "572",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

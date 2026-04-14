@@ -1,0 +1,11 @@
+{
+    "name": "Vesta Alarms",
+    "models": [
+        {
+            "model": "TMC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        }
+    ]
+}

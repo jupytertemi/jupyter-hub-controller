@@ -1,0 +1,17 @@
+{
+    "name": "Ctvision",
+    "models": [
+        {
+            "model": "5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "IP-255F36A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        }
+    ]
+}

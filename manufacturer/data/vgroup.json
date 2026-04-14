@@ -1,0 +1,11 @@
+{
+    "name": "Vgroup",
+    "models": [
+        {
+            "model": "VG-S6236TCS-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

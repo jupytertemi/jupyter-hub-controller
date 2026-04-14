@@ -1,0 +1,11 @@
+{
+    "name": "Silicon Labs",
+    "models": [
+        {
+            "model": "RS-6W10IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

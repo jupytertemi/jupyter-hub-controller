@@ -1,0 +1,29 @@
+{
+    "name": "Infinity",
+    "models": [
+        {
+            "model": "253L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "ISE-2000EX Z22",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "i82",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "IPB-TDN540SL",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

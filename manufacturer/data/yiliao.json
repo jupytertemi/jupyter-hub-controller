@@ -1,0 +1,11 @@
+{
+    "name": "Yiliao",
+    "models": [
+        {
+            "model": "y8a-wa",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Motioneye",
+    "models": [
+        {
+            "model": "icloud",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video/profile1"
+        }
+    ]
+}

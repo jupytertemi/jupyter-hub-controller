@@ -1,0 +1,17 @@
+{
+    "name": "Zivif",
+    "models": [
+        {
+            "model": "P115",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "PR 115",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

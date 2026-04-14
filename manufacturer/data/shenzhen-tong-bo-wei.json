@@ -1,0 +1,11 @@
+{
+    "name": "Shenzhen Tong Bo Wei",
+    "models": [
+        {
+            "model": "V380S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

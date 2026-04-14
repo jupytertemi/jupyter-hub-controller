@@ -1,0 +1,17 @@
+{
+    "name": "Spytecinc",
+    "models": [
+        {
+            "model": "IP-20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "SPYPIR32WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

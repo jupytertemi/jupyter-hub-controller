@@ -1,0 +1,17 @@
+{
+    "name": "Eurovideo",
+    "models": [
+        {
+            "model": "bx213d",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "d213d",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

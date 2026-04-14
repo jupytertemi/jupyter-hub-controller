@@ -1,0 +1,17 @@
+{
+    "name": "Jasboom",
+    "models": [
+        {
+            "model": "JAS130-F01G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "JAS130-F030",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

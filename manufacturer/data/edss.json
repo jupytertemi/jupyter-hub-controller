@@ -1,0 +1,11 @@
+{
+    "name": "Edss",
+    "models": [
+        {
+            "model": "FR-R8R1-NI1I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

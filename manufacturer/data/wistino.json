@@ -1,0 +1,11 @@
+{
+    "name": "Wistino",
+    "models": [
+        {
+            "model": "wifi camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

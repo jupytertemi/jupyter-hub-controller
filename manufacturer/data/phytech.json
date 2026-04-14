@@ -1,0 +1,11 @@
+{
+    "name": "Phytech",
+    "models": [
+        {
+            "model": "plc-128w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        }
+    ]
+}

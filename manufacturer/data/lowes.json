@@ -1,0 +1,17 @@
+{
+    "name": "Lowes",
+    "models": [
+        {
+            "model": "iris",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "VLC-withaudio",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        }
+    ]
+}

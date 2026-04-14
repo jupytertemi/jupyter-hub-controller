@@ -1,0 +1,11 @@
+{
+    "name": "Chakir",
+    "models": [
+        {
+            "model": "seetong",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

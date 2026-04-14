@@ -1,0 +1,137 @@
+{
+    "name": "Rvi",
+    "models": [
+        {
+            "model": "1nct4033",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/RVi/1/1"
+        },
+        {
+            "model": "RVi-1NCT4052",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/RVi/1/1"
+        },
+        {
+            "model": "RVI-1NCT4143",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/RVi/1/1"
+        },
+        {
+            "model": "RVi-1NCE2022",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/RVi/1/2"
+        },
+        {
+            "model": "1nct-4033",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "AL",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "HDR04LA-T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "zal",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/201"
+        },
+        {
+            "model": "HDR04LA-TA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "HDR04LA-TA-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC11S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "ips12sw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "RVi-IPC12SW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "RVi-IPC31S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC42S",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        },
+        {
+            "model": "ipc50dn12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel3"
+        },
+        {
+            "model": "ivc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel1"
+        },
+        {
+            "model": "IPC52Z30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "msi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46UFAxNTMzMDY="
+        },
+        {
+            "model": "R16LA",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "RVI-1NCT2025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "RVI-IPC32DNS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        }
+    ]
+}

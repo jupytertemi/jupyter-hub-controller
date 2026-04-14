@@ -1,0 +1,131 @@
+{
+    "name": "Unifi",
+    "models": [
+        {
+            "model": "G3 Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "G3 Flex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "G3Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "G4 BULLET",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "pro a3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "U3 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "unifi A3PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC G3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC G3 Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC G3 Flex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC-G3-Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVG G3 Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "G4 Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/7k9wbmWV4capQOJn"
+        },
+        {
+            "model": "g4 instant",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ZOeooeCNUzrdEMBB"
+        },
+        {
+            "model": "G4 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CfoWfNYSi2Uto1Va"
+        },
+        {
+            "model": "G4-KM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s1"
+        },
+        {
+            "model": "NVR-pro",
+            "type": "FFMPEG",
+            "protocol": "rtsps://",
+            "url": "/FDIahGtqNYurTDpc?enableSrtp"
+        },
+        {
+            "model": "UVC G3 MICRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s2"
+        },
+        {
+            "model": "UVC-G3-db73.localdomain",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s2"
+        },
+        {
+            "model": "UVC G3 BULLET",
+            "type": "FFMPEG",
+            "protocol": "rtsps://",
+            "url": "/C871oCwtXekmFfOJ"
+        }
+    ]
+}

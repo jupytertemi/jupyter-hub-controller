@@ -1,0 +1,23 @@
+{
+    "name": "Mibao",
+    "models": [
+        {
+            "model": "d100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "P450",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "P 450",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=0&subtype=1"
+        }
+    ]
+}

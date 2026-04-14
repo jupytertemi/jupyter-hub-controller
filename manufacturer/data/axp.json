@@ -1,0 +1,11 @@
+{
+    "name": "Axp",
+    "models": [
+        {
+            "model": "CC1280O4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

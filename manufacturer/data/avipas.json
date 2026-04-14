@@ -1,0 +1,23 @@
+{
+    "name": "Avipas",
+    "models": [
+        {
+            "model": "av1082w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "x1280",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        }
+    ]
+}

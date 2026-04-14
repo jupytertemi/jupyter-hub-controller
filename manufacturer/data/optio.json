@@ -1,0 +1,11 @@
+{
+    "name": "Optio",
+    "models": [
+        {
+            "model": "4MP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

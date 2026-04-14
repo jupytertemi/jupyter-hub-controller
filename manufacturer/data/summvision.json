@@ -1,0 +1,11 @@
+{
+    "name": "Summvision",
+    "models": [
+        {
+            "model": "hawkeye",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

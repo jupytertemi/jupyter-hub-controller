@@ -1,0 +1,29 @@
+{
+    "name": "Tecvoz",
+    "models": [
+        {
+            "model": "HLC-79AD/W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "HLC-83VW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "THK-IDM13",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "THK-ICB13",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

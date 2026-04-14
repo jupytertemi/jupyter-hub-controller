@@ -1,0 +1,95 @@
+{
+    "name": "Inqmega",
+    "models": [
+        {
+            "model": "1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "AKPRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CloudCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "H264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "HD 1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "HIP291L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "IL-HIP291L-2M-AI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "ST-381-2M-TY",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "ST-382-2M-YC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "11080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "HIP291",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "st-379",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "st-381",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "ycc365 plus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        }
+    ]
+}

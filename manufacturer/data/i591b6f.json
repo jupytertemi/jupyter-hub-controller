@@ -1,0 +1,17 @@
+{
+    "name": "I591b6f",
+    "models": [
+        {
+            "model": "HIV6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/record.sdp"
+        },
+        {
+            "model": "HIV67",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/mjpeg.sdp"
+        }
+    ]
+}

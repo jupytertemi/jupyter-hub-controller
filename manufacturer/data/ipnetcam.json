@@ -1,0 +1,53 @@
+{
+    "name": "Ipnetcam",
+    "models": [
+        {
+            "model": "floor1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "Messoa",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "IPC360",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/1:1/main"
+        },
+        {
+            "model": "OUVIS",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/1:1/main"
+        },
+        {
+            "model": "IXQ2-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NVT of netcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "WANSCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "WANSCAM0004",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

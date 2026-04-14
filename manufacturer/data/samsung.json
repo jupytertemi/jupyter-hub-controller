@@ -1,0 +1,521 @@
+{
+    "name": "Samsung",
+    "models": [
+        {
+            "model": "6084RP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "QNO-6010R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SN0-6084",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNB-6004P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNB-6400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNB-7000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SND-5080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SND-6011R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SND-6048R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SND-6084R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SND-L6013R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNH-1011N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNH-P6410BN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNH-P6412BN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNO-6011R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNO-6019",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNO-L6083R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNP-3370TH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNP-6320H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNV-6013",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNV-6048R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "snv-6084",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNV-6084R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "SNV-L6083R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "WiseNet III H.264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "galaxy",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "galaxy A9",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "galaxy ace",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Galaxy j7",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Galaxy s8+",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Mobile Phone",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "note 8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "S20 FE 5G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "SDR-B84300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "SNC-79440BW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "wisenet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "SDC-9441BC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "Galaxy Tab A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IP Smart Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile5/media.smp"
+        },
+        {
+            "model": "PoE Outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile5/media.smp"
+        },
+        {
+            "model": "snh-6440bn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile5/media.smp"
+        },
+        {
+            "model": "SNH-E6411BN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile5/media.smp"
+        },
+        {
+            "model": "SNH-E6440BN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile5/media.smp"
+        },
+        {
+            "model": "SNH-V6410PN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile5/media.smp"
+        },
+        {
+            "model": "SNH-V6414BN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile5/media.smp"
+        },
+        {
+            "model": "QNO-6020R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile5/media.smp"
+        },
+        {
+            "model": "Smartcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile5/media.smp"
+        },
+        {
+            "model": "SmartCam D1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile5/media.smp"
+        },
+        {
+            "model": "XNP-6120H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile5/media.smp"
+        },
+        {
+            "model": "ipolis",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "snb 6011N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "SNB-5000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "SND-6013RP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "snd-7004",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "SND-L6013R (H.264)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "snd-L6013R H.264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "snv*8080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "SNV-5080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "SNV-7084r",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "SPE-101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "XNF-8010RV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "XNV-6010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "iPolis-RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2/media.smp"
+        },
+        {
+            "model": "SDR-B73303P1T",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "SDR-B74301",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "SME DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4unicast"
+        },
+        {
+            "model": "SNB-2000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4unicast"
+        },
+        {
+            "model": "SNC-1300",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4unicast"
+        },
+        {
+            "model": "SNC-B5395",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4unicast"
+        },
+        {
+            "model": "SND-7080",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4unicast"
+        },
+        {
+            "model": "SNP-3301",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4unicast"
+        },
+        {
+            "model": "sm-a250f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_pcm.sdp"
+        },
+        {
+            "model": "SM-G900F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_pcm.sdp"
+        },
+        {
+            "model": "QNO-7080R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile4/media.smp"
+        },
+        {
+            "model": "snf7010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile4/media.smp"
+        },
+        {
+            "model": "SNF-8010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile4/media.smp"
+        },
+        {
+            "model": "XNO6085R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile4/media.smp"
+        },
+        {
+            "model": "sfd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile4/media.smp"
+        },
+        {
+            "model": "SNB-3000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MJPEG/media.smp"
+        },
+        {
+            "model": "SNB-6000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MJPEG/media.smp"
+        },
+        {
+            "model": "SNV-3081",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MJPEG/media.smp"
+        },
+        {
+            "model": "SNV-6084N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MJPEG/media.smp"
+        },
+        {
+            "model": "SND-3080F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/media.smp"
+        },
+        {
+            "model": "SNV-3080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/media.smp"
+        },
+        {
+            "model": "SND-1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1/media.smp"
+        },
+        {
+            "model": "SNB-6003",
+            "type": "VLC",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

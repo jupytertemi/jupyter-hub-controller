@@ -1,0 +1,11 @@
+{
+    "name": "Lenel",
+    "models": [
+        {
+            "model": "ICT-220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

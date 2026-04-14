@@ -1,0 +1,11 @@
+{
+    "name": "Visionstar",
+    "models": [
+        {
+            "model": "D3330IR-IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

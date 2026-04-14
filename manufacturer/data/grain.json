@@ -1,0 +1,11 @@
+{
+    "name": "Grain",
+    "models": [
+        {
+            "model": "IPCAM-100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

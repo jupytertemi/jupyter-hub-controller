@@ -1,0 +1,11 @@
+{
+    "name": "Thrifty Tech",
+    "models": [
+        {
+            "model": "Thrifty Tech 5MP IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=101.sdp?"
+        }
+    ]
+}

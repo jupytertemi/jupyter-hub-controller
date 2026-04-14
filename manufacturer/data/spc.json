@@ -1,0 +1,29 @@
+{
+    "name": "Spc",
+    "models": [
+        {
+            "model": "720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mode=real&idc=1&ids=1"
+        },
+        {
+            "model": "DOME6340C28WD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mode=real&idc=1&ids=1"
+        },
+        {
+            "model": "KST4-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mode=real&idc=1&ids=1"
+        },
+        {
+            "model": "streethome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mode=real&idc=1&ids=1"
+        }
+    ]
+}

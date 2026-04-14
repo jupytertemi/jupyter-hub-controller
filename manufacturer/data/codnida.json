@@ -1,0 +1,17 @@
+{
+    "name": "Codnida",
+    "models": [
+        {
+            "model": "PTZ Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "PTZ Security Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

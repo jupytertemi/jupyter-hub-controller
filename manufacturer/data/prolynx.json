@@ -1,0 +1,17 @@
+{
+    "name": "Prolynx",
+    "models": [
+        {
+            "model": "PL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "PL-4NBC35",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

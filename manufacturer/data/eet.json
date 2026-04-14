@@ -1,0 +1,11 @@
+{
+    "name": "Eet",
+    "models": [
+        {
+            "model": "Etuovi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Chambre",
+    "models": [
+        {
+            "model": "SA-IPC1200HG",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

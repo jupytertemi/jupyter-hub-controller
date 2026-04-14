@@ -1,0 +1,17 @@
+{
+    "name": "Seculink",
+    "models": [
+        {
+            "model": "HD IPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "SA-IPC1100HI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Matchpoint",
+    "models": [
+        {
+            "model": "DVR-1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "DVR-CAM1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "Zaandam",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        }
+    ]
+}

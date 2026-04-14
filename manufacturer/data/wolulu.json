@@ -1,0 +1,11 @@
+{
+    "name": "Wolulu",
+    "models": [
+        {
+            "model": "AS-51227",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

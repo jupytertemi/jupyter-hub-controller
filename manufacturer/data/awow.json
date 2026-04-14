@@ -1,0 +1,11 @@
+{
+    "name": "Awow",
+    "models": [
+        {
+            "model": "E97A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

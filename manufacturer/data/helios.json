@@ -1,0 +1,29 @@
+{
+    "name": "Helios",
+    "models": [
+        {
+            "model": "2n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "IP Force",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "IP Vario",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "IP-54-1190-0554",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg_stream"
+        }
+    ]
+}

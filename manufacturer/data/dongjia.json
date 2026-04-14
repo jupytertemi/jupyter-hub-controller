@@ -1,0 +1,23 @@
+{
+    "name": "Dongjia",
+    "models": [
+        {
+            "model": "DA-IP3100HR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "DA-IP8532TD-POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "DA-IP8520TR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

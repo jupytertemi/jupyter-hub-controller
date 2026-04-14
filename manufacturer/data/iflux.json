@@ -1,0 +1,11 @@
+{
+    "name": "Iflux",
+    "models": [
+        {
+            "model": "IC12R3-F4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

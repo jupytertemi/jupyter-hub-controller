@@ -1,0 +1,17 @@
+{
+    "name": "Isd Jaguar",
+    "models": [
+        {
+            "model": "ISDcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/stream1"
+        },
+        {
+            "model": "JDV-AF-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/stream1"
+        }
+    ]
+}

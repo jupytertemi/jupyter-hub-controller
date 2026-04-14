@@ -1,0 +1,11 @@
+{
+    "name": "Ring",
+    "models": [
+        {
+            "model": "Ring Dorbell Wired",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/343ea4d97645_live"
+        }
+    ]
+}

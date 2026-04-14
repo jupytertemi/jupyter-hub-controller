@@ -1,0 +1,11 @@
+{
+    "name": "Smart Cloud Camera",
+    "models": [
+        {
+            "model": "c-p11-68",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

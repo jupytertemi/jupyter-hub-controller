@@ -1,0 +1,11 @@
+{
+    "name": "Amway",
+    "models": [
+        {
+            "model": "IPC1000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

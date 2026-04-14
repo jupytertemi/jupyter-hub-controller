@@ -1,0 +1,11 @@
+{
+    "name": "Trantech",
+    "models": [
+        {
+            "model": "DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ufirststream"
+        }
+    ]
+}

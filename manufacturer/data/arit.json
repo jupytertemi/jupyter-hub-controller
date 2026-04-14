@@ -1,0 +1,11 @@
+{
+    "name": "Arit",
+    "models": [
+        {
+            "model": "ipcd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

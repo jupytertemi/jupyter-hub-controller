@@ -1,0 +1,11 @@
+{
+    "name": "Eyu",
+    "models": [
+        {
+            "model": "360",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

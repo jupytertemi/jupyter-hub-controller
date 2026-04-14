@@ -1,0 +1,11 @@
+{
+    "name": "Enscam",
+    "models": [
+        {
+            "model": "Brick",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

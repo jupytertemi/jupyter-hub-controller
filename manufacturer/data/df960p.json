@@ -1,0 +1,11 @@
+{
+    "name": "Df960p",
+    "models": [
+        {
+            "model": "DFR960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

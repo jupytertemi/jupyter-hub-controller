@@ -1,0 +1,11 @@
+{
+    "name": "Jlb",
+    "models": [
+        {
+            "model": "KZ2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

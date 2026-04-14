@@ -1,0 +1,11 @@
+{
+    "name": "Fiptec",
+    "models": [
+        {
+            "model": "LO22-PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

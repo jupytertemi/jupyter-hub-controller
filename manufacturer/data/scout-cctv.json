@@ -1,0 +1,17 @@
+{
+    "name": "Scout Cctv",
+    "models": [
+        {
+            "model": "SC-MDB3-13",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SC-SBT8108",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

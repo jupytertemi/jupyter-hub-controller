@@ -1,0 +1,11 @@
+{
+    "name": "Linovision",
+    "models": [
+        {
+            "model": "V7163F-EPT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

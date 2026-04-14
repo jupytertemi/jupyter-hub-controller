@@ -1,0 +1,17 @@
+{
+    "name": "Bionics",
+    "models": [
+        {
+            "model": "ROBOCAM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "Robocam 4",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

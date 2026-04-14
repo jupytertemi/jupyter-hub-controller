@@ -1,0 +1,119 @@
+{
+    "name": "Guudgo",
+    "models": [
+        {
+            "model": "720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "BANGOOD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "C-P08-10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "SC-03",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "sc-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "v380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "VT380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        },
+        {
+            "model": "GD-SC03",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "GD-SC11 960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "GD -SC11",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "GD01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "GD-SC01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "SC03",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Tuya",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0/h264"
+        },
+        {
+            "model": "H265",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch01_0:554"
+        },
+        {
+            "model": "HD 1080P E27",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SC01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "SD-01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "V380pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Rinin",
+    "models": [
+        {
+            "model": "3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "3mp ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "SH035-BL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

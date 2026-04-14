@@ -1,0 +1,143 @@
+{
+    "name": "Unview",
+    "models": [
+        {
+            "model": "6415SR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "IPC2122SR3-F40W-D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "IPC2324LB-ADZK-G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "ipc3605sb-adf16km",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "IPC3612ER3-PF28-B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "IPC3612LR3-PF28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "C1L-2WN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "IPC2122LR3-PF28M-D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "IPC2325SB-DZK-I0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "IPC3235ER3-DUVZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "IPC3612LB-ADF28K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "DPF36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "IPC2122LR3-PF40-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast/c1/s1/live"
+        },
+        {
+            "model": "IPC2122SR3-F40W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IPC3615SR3-ADF28K-G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ipc2124sr3-dpf36",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "IPC322SR3-DVPF28-MX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "UNV ipc2122LB-sf-40-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IPC328LE-ADF28K-G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video2"
+        },
+        {
+            "model": "IPC328SB-ADF28K-I0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "IPC3614LE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "IPC3614SR3-ADPF28-F",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "IPC3F12P-RU3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

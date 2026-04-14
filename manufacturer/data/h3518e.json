@@ -1,0 +1,11 @@
+{
+    "name": "H3518e",
+    "models": [
+        {
+            "model": "AR0130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

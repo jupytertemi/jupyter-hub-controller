@@ -1,0 +1,11 @@
+{
+    "name": "Brama",
+    "models": [
+        {
+            "model": "C6F0SgZ3N0P6L2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

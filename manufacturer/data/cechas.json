@@ -1,0 +1,11 @@
+{
+    "name": "Cechas",
+    "models": [
+        {
+            "model": "IC202",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

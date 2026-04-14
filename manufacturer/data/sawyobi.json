@@ -1,0 +1,11 @@
+{
+    "name": "Sawyobi",
+    "models": [
+        {
+            "model": "ezviz",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        }
+    ]
+}

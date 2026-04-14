@@ -1,0 +1,11 @@
+{
+    "name": "Intelligent Network",
+    "models": [
+        {
+            "model": "CN-PT200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

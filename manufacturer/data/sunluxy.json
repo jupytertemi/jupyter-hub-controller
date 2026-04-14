@@ -1,0 +1,113 @@
+{
+    "name": "Sunluxy",
+    "models": [
+        {
+            "model": "Dual-HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "H 265",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "Netcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "Netcam highres",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "SL-C702",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ip security cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "SL-701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "SL-C704",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "SL-C709",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "T8809",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "IPC_714838",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "SL-C707-4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "SL-C708",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "SP-009",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "SP-009A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "Netcam lowres",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_1"
+        },
+        {
+            "model": "PTZ ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SUNLUXY720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

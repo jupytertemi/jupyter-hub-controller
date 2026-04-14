@@ -1,0 +1,11 @@
+{
+    "name": "Gynoii",
+    "models": [
+        {
+            "model": "GPW-1025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

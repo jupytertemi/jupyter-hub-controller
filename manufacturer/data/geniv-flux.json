@@ -1,0 +1,11 @@
+{
+    "name": "Geniv Flux",
+    "models": [
+        {
+            "model": "IPX2.3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Akaso",
+    "models": [
+        {
+            "model": "B60",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "EK7000 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "IPIM-902",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "cs300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

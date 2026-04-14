@@ -1,0 +1,11 @@
+{
+    "name": "Cs2link",
+    "models": [
+        {
+            "model": "SY-8001WR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

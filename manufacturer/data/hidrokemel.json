@@ -1,0 +1,11 @@
+{
+    "name": "Hidrokemel",
+    "models": [
+        {
+            "model": "greatek",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

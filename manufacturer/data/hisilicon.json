@@ -1,0 +1,47 @@
+{
+    "name": "Hisilicon",
+    "models": [
+        {
+            "model": "3518",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HI3516C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "Hi3518E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "RTSP(TCP) DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "works",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Hi3507",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "HYV3804",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        }
+    ]
+}

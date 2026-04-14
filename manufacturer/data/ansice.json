@@ -1,0 +1,29 @@
+{
+    "name": "Ansice",
+    "models": [
+        {
+            "model": "DS-2CD3T20D-I3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "H.264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "IPC-NT98562_80N40_S38",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "MI-IP19",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        }
+    ]
+}

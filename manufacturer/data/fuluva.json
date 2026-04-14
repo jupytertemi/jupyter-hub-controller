@@ -1,0 +1,11 @@
+{
+    "name": "Fuluva",
+    "models": [
+        {
+            "model": "X-DFH710",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp?real_stream"
+        }
+    ]
+}

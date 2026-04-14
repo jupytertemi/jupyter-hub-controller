@@ -1,0 +1,17 @@
+{
+    "name": "Minnray",
+    "models": [
+        {
+            "model": "UV100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "UV510A-12-ST",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        }
+    ]
+}

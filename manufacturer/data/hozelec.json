@@ -1,0 +1,11 @@
+{
+    "name": "Hozelec",
+    "models": [
+        {
+            "model": "Fine acm-R3002",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

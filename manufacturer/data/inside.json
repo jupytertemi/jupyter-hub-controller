@@ -1,0 +1,11 @@
+{
+    "name": "Inside",
+    "models": [
+        {
+            "model": "NC-1200 SERIES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

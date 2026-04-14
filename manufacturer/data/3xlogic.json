@@ -1,0 +1,83 @@
+{
+    "name": "3xlogic",
+    "models": [
+        {
+            "model": "3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "vsx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "CMC-3MP-OD-I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "VSX-2MP-MVD40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "VX-3P28-OD-I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "AVTECH",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "vsx-2mp-d",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "VX-3PV-B-I",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "VX-4S28-MD-I",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "vsx-2m-d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "VX-3P28-MD-IA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "VX-3M-F-AWD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "VX-3m-OD2-RIAWD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

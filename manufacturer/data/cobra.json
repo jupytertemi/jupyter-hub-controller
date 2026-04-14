@@ -1,0 +1,11 @@
+{
+    "name": "Cobra",
+    "models": [
+        {
+            "model": "63843",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/MediaInput"
+        }
+    ]
+}

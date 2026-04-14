@@ -1,0 +1,11 @@
+{
+    "name": "Niceborn",
+    "models": [
+        {
+            "model": "BabyMonitor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/streamtype=1"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Hills",
+    "models": [
+        {
+            "model": "NVC-BM1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "NVC-DF1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "VSD1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

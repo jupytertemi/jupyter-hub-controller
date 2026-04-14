@@ -1,0 +1,11 @@
+{
+    "name": "Iris",
+    "models": [
+        {
+            "model": "S460",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        }
+    ]
+}

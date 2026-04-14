@@ -1,0 +1,11 @@
+{
+    "name": "Aper",
+    "models": [
+        {
+            "model": "nc e3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        }
+    ]
+}

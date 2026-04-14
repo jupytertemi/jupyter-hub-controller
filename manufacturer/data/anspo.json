@@ -1,0 +1,41 @@
+{
+    "name": "Anspo",
+    "models": [
+        {
+            "model": "ASP 8836-200Bulb",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ASP-32130TPOE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ASP-8404XVR-1080N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ASP-IP70130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ASP-8016XVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "ASP-82200P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        }
+    ]
+}

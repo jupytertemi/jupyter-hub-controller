@@ -1,0 +1,11 @@
+{
+    "name": "Jensen",
+    "models": [
+        {
+            "model": "SL1000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

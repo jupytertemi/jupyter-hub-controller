@@ -1,0 +1,17 @@
+{
+    "name": "Iztouch",
+    "models": [
+        {
+            "model": "0009",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "iz-009",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

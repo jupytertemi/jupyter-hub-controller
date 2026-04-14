@@ -1,0 +1,17 @@
+{
+    "name": "Activecam",
+    "models": [
+        {
+            "model": "ac-d4121ir1v2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "AC-D7111IR1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/streaming/video0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Light-in-the-box",
+    "models": [
+        {
+            "model": "2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

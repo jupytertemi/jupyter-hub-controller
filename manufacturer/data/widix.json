@@ -1,0 +1,11 @@
+{
+    "name": "Widix",
+    "models": [
+        {
+            "model": "WDX-IPD4028K3C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        }
+    ]
+}

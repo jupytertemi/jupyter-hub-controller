@@ -1,0 +1,17 @@
+{
+    "name": "Gise",
+    "models": [
+        {
+            "model": "gs-2cm4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        },
+        {
+            "model": "GS-IP5S-V2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "name": "Adc",
+    "models": [
+        {
+            "model": "700x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "723",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "V510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "v520ir",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "V521IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "V721W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "V820",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "ADCi400-X002",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "D064",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "Ilustra400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        }
+    ]
+}

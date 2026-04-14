@@ -1,0 +1,11 @@
+{
+    "name": "Smart Security",
+    "models": [
+        {
+            "model": "OUT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

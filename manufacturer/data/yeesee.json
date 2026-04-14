@@ -1,0 +1,17 @@
+{
+    "name": "Yeesee",
+    "models": [
+        {
+            "model": "dome cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "K8210-3ws-566500917",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

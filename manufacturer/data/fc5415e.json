@@ -1,0 +1,17 @@
+{
+    "name": "Fc5415e",
+    "models": [
+        {
+            "model": "winbok",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "winbook",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

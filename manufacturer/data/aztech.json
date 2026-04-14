@@ -1,0 +1,71 @@
+{
+    "name": "Aztech",
+    "models": [
+        {
+            "model": "AZTECH WIPC409HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "WIPC409HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "WIPC411FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "WIPC401",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "WIPC408HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "WIPCawrrm",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "WIPC 480HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStream/[CHANNEL]"
+        },
+        {
+            "model": "WIPC408",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStream/[CHANNEL]"
+        },
+        {
+            "model": "WPC408HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStream/[CHANNEL]"
+        },
+        {
+            "model": "wipc402",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "WIPC408HD2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        }
+    ]
+}

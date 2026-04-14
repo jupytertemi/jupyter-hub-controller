@@ -1,0 +1,11 @@
+{
+    "name": "Hjshi",
+    "models": [
+        {
+            "model": "h651",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

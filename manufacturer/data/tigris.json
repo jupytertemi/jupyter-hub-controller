@@ -1,0 +1,17 @@
+{
+    "name": "Tigris",
+    "models": [
+        {
+            "model": "S2M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "Ti-S2M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

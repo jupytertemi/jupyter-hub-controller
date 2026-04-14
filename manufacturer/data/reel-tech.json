@@ -1,0 +1,11 @@
+{
+    "name": "Reel Tech",
+    "models": [
+        {
+            "model": "RT-732-200H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

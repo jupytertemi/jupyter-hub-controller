@@ -1,0 +1,17 @@
+{
+    "name": "Qtech",
+    "models": [
+        {
+            "model": "27C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "QVC-IPC-401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264?ch=1&subtype=0"
+        }
+    ]
+}

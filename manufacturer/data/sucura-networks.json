@@ -1,0 +1,17 @@
+{
+    "name": "Sucura Networks",
+    "models": [
+        {
+            "model": "IPCAM1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "Standard 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264/ch01/main/av_stream"
+        }
+    ]
+}

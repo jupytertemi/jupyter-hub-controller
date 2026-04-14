@@ -1,0 +1,11 @@
+{
+    "name": "Flexidome",
+    "models": [
+        {
+            "model": "BULLET",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

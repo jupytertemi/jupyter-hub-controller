@@ -1,0 +1,11 @@
+{
+    "name": "Feit Electric",
+    "models": [
+        {
+            "model": "Floodlight",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Eescam",
+    "models": [
+        {
+            "model": "icsee",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

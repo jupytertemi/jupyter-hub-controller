@@ -1,0 +1,11 @@
+{
+    "name": "Microlino",
+    "models": [
+        {
+            "model": "10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

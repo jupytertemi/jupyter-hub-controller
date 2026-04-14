@@ -1,0 +1,11 @@
+{
+    "name": "Amatek",
+    "models": [
+        {
+            "model": "I5NT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

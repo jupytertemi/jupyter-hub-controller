@@ -1,0 +1,11 @@
+{
+    "name": "Gkb",
+    "models": [
+        {
+            "model": "D6122p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        }
+    ]
+}

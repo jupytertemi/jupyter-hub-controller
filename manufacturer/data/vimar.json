@@ -1,0 +1,11 @@
+{
+    "name": "Vimar",
+    "models": [
+        {
+            "model": "46238.036",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

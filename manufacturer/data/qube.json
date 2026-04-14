@@ -1,0 +1,11 @@
+{
+    "name": "Qube",
+    "models": [
+        {
+            "model": "H.264",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

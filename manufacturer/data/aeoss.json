@@ -1,0 +1,11 @@
+{
+    "name": "Aeoss",
+    "models": [
+        {
+            "model": "610W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

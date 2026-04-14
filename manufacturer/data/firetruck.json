@@ -1,0 +1,11 @@
+{
+    "name": "Firetruck",
+    "models": [
+        {
+            "model": "N99102",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        }
+    ]
+}

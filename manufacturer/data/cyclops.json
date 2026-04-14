@@ -1,0 +1,11 @@
+{
+    "name": "Cyclops",
+    "models": [
+        {
+            "model": "IP1200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

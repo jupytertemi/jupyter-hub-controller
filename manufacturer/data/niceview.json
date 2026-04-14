@@ -1,0 +1,17 @@
+{
+    "name": "Niceview",
+    "models": [
+        {
+            "model": "1080L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "1080WL-4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

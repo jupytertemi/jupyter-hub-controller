@@ -1,0 +1,11 @@
+{
+    "name": "Hanbang",
+    "models": [
+        {
+            "model": "HW-A01S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Mc-cam",
+    "models": [
+        {
+            "model": "FTT800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

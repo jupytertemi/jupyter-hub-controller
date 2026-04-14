@@ -1,0 +1,11 @@
+{
+    "name": "Leocam",
+    "models": [
+        {
+            "model": "HOSAFE 1MD4P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Elecom",
+    "models": [
+        {
+            "model": "SCB-ED2M01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

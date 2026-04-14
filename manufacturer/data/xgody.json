@@ -1,0 +1,17 @@
+{
+    "name": "Xgody",
+    "models": [
+        {
+            "model": "QX59",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "y4a-za",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

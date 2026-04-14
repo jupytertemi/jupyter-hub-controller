@@ -1,0 +1,23 @@
+{
+    "name": "Sanan-cctv",
+    "models": [
+        {
+            "model": "B-Series",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "dl81a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "IPCAM-100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

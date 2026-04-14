@@ -1,0 +1,11 @@
+{
+    "name": "Neos",
+    "models": [
+        {
+            "model": "Smartcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        }
+    ]
+}

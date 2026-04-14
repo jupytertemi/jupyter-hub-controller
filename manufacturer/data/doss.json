@@ -1,0 +1,11 @@
+{
+    "name": "Doss",
+    "models": [
+        {
+            "model": "IR-30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        }
+    ]
+}

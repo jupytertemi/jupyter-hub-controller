@@ -1,0 +1,11 @@
+{
+    "name": "Ingressosede",
+    "models": [
+        {
+            "model": "IP1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

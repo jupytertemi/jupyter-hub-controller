@@ -1,0 +1,11 @@
+{
+    "name": "Retina",
+    "models": [
+        {
+            "model": "iPro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

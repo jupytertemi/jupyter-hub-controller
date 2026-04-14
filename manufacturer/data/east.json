@@ -1,0 +1,17 @@
+{
+    "name": "East",
+    "models": [
+        {
+            "model": "365IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/h264"
+        },
+        {
+            "model": "IP-5IRD4S02-W-2.8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/h264"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Katway",
+    "models": [
+        {
+            "model": "3516C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/sub"
+        },
+        {
+            "model": "3518C0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/ch1/sub"
+        },
+        {
+            "model": "cam20-a-2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Comcast",
+    "models": [
+        {
+            "model": "xcam",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        }
+    ]
+}

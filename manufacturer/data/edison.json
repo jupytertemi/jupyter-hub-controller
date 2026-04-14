@@ -1,0 +1,11 @@
+{
+    "name": "Edison",
+    "models": [
+        {
+            "model": "VK1MPx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

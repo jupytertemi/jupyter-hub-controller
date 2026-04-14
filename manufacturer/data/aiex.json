@@ -1,0 +1,11 @@
+{
+    "name": "Aiex",
+    "models": [
+        {
+            "model": "ext p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

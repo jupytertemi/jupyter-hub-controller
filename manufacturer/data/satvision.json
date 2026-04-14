@@ -1,0 +1,59 @@
+{
+    "name": "Satvision",
+    "models": [
+        {
+            "model": "143",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "svi-223a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "SVI-D223A SD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "SVI-S223A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "SVI-S223S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "SVI-D343V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "SVI-S123 SD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "SVN-6625-PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "SVI-S112",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

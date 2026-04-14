@@ -1,0 +1,11 @@
+{
+    "name": "Home Life",
+    "models": [
+        {
+            "model": "C310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

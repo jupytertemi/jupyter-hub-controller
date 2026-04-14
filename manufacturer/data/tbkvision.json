@@ -1,0 +1,11 @@
+{
+    "name": "Tbkvision",
+    "models": [
+        {
+            "model": "TBK-BUL8841Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

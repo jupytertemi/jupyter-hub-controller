@@ -1,0 +1,11 @@
+{
+    "name": "Hai",
+    "models": [
+        {
+            "model": "720P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        }
+    ]
+}

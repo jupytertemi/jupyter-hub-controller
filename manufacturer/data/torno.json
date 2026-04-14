@@ -1,0 +1,11 @@
+{
+    "name": "Torno",
+    "models": [
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        }
+    ]
+}

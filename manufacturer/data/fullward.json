@@ -1,0 +1,11 @@
+{
+    "name": "Fullward",
+    "models": [
+        {
+            "model": "DC-001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

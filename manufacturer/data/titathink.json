@@ -1,0 +1,65 @@
+{
+    "name": "Titathink",
+    "models": [
+        {
+            "model": "Clock",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "GF-H100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "TT531W-N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "TT520PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "Pinhole",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "TT522PW-PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "TT522W-PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "TT525PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "TT525PW 108",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "TT730PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        }
+    ]
+}

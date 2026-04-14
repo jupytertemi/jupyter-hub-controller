@@ -1,0 +1,11 @@
+{
+    "name": "Skvision",
+    "models": [
+        {
+            "model": "IPC-115HAP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

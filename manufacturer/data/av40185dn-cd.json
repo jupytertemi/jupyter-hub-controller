@@ -1,0 +1,11 @@
+{
+    "name": "Av40185dn-cd",
+    "models": [
+        {
+            "model": "av40185dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp4"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Aviosis",
+    "models": [
+        {
+            "model": "9070csw",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam3/mpeg4"
+        }
+    ]
+}

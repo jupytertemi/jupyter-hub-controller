@@ -1,0 +1,11 @@
+{
+    "name": "Ameta",
+    "models": [
+        {
+            "model": "eyeonet 7942",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

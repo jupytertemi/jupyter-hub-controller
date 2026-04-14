@@ -1,0 +1,41 @@
+{
+    "name": "Airlink",
+    "models": [
+        {
+            "model": "1777W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "AICN777W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SkyIPCam 777 Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "600w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "AIC600W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        },
+        {
+            "model": "AIC650W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        }
+    ]
+}

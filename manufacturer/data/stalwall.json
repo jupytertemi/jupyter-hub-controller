@@ -1,0 +1,17 @@
+{
+    "name": "Stalwall",
+    "models": [
+        {
+            "model": "N648",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "N817",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=0_stream=0.sdp?real_stream"
+        }
+    ]
+}

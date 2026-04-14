@@ -1,0 +1,11 @@
+{
+    "name": "Camon",
+    "models": [
+        {
+            "model": "v380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video/h264"
+        }
+    ]
+}

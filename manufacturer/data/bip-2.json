@@ -1,0 +1,17 @@
+{
+    "name": "Bip-2",
+    "models": [
+        {
+            "model": "1280c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "1920",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

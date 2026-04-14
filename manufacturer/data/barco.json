@@ -1,0 +1,11 @@
+{
+    "name": "Barco",
+    "models": [
+        {
+            "model": "BC30003",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Ca-ip400mp",
+    "models": [
+        {
+            "model": "IP400MP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        }
+    ]
+}

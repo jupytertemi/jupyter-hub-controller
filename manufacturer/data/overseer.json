@@ -1,0 +1,11 @@
+{
+    "name": "Overseer",
+    "models": [
+        {
+            "model": "S3VC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

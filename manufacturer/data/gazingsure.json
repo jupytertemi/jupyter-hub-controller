@@ -1,0 +1,11 @@
+{
+    "name": "Gazingsure",
+    "models": [
+        {
+            "model": "smart camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

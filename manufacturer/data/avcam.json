@@ -1,0 +1,11 @@
+{
+    "name": "Avcam",
+    "models": [
+        {
+            "model": "AVM2220SE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video/profile1"
+        }
+    ]
+}

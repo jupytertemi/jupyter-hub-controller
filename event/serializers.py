@@ -1,0 +1,68 @@
+import logging
+
+from rest_framework import serializers
+
+from event.models import Event
+from utils.update_env import read_env_file
+
+
+class EventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = "__all__"
+        extra_kwargs = {
+            "id": {"read_only": True},
+        }
+
+
+class EventDetailSerializer(EventSerializer):
+    hls_url = serializers.SerializerMethodField()
+    local_url = serializers.SerializerMethodField()
+
+    class Meta(EventSerializer.Meta):
+        fields = "__all__"
+
+    def get_hls_url(self, obj):
+        host = ""
+        try:
+            host = read_env_file("REMOTE_HOST")
+        except Exception as e:
+            logging.error(f"read cloudflared fail: {e}")
+        logging.info(f"cloudflared host: {host}")
+        if host and host != "":
+            host = "https://" + host
+            value = f"{host}/frigate/vod/event/{obj.event_id}/index-v1.m3u8"
+            if obj.label == "PARCEL":
+                value = f"{host}/frigate/vod/event/{obj.parcel_id}/index-v1.m3u8"
+            logging.info(f"get_hls_url: {value}")
+            return value
+        return ""
+
+    def get_local_url(self, obj):
+        logging.info(f"video_path raw: {obj.video_path}")
+        host = ""
+        prefix = "/media/frigate/"
+        try:
+            host = read_env_file("REMOTE_HOST")
+        except Exception as e:
+            logging.error(f"read cloudflared fail: {e}")
+        logging.info(f"cloudflared host: {host}")
+        if host and host != "":
+            if prefix in obj.video_path:
+                host = "https://" + host
+                replace_prefix = f"{host}/local/"
+                value = obj.video_path.replace(prefix, replace_prefix)
+            # ===== CASE 2: frigate internal API =====
+            elif obj.video_path.startswith("http://frigate:5000/api/"):
+                value = obj.video_path.replace(
+                    "http://frigate:5000/api/",
+                    "http://frigate:5000/frigate/api/",
+                    1
+                )
+
+            # ===== DEFAULT =====
+            else:
+                value = obj.video_path
+            logging.info(f"get_local_url: {value}")
+            return value
+        return ""

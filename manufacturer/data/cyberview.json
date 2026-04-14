@@ -1,0 +1,11 @@
+{
+    "name": "Cyberview",
+    "models": [
+        {
+            "model": "CVI-AI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video_feed"
+        }
+    ]
+}

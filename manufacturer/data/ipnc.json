@@ -1,0 +1,257 @@
+{
+    "name": "Ipnc",
+    "models": [
+        {
+            "model": "1010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.ch"
+        },
+        {
+            "model": "IPDOME_MEGA200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.ch"
+        },
+        {
+            "model": "spy",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.ch"
+        },
+        {
+            "model": "1322",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        },
+        {
+            "model": "chiu",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        },
+        {
+            "model": "Cool",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        },
+        {
+            "model": "shani",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        },
+        {
+            "model": "shanyh2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        },
+        {
+            "model": "SNC-WD91M1322",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        },
+        {
+            "model": "TECHSON",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264main"
+        },
+        {
+            "model": "3Mega",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "jano",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "jano-24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "jano3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "764",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ccd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "CCD CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "escam knockoff",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "EVERVOX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "hi1602",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "hislicon",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IVS-D6000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "kinietis",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "senzor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Testi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Web Cam Hi3518",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Acunico",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/dev=IPC-00000000/media=0/channel=0&level=0"
+        },
+        {
+            "model": "ARCUNICO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/dev=IPC-00000000/media=0/channel=0&level=0"
+        },
+        {
+            "model": "Aoshidi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0.ch"
+        },
+        {
+            "model": "Aoshido",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0.ch"
+        },
+        {
+            "model": "H20237",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0.ch"
+        },
+        {
+            "model": "oma",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0.ch"
+        },
+        {
+            "model": "suchinko",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0.ch"
+        },
+        {
+            "model": "teset",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0.ch"
+        },
+        {
+            "model": "KK_IP_CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "nima",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "p1001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "Robocam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "SOAR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "TESTJPEG",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg"
+        },
+        {
+            "model": "TH32E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

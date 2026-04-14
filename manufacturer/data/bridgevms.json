@@ -1,0 +1,17 @@
+{
+    "name": "Bridgevms",
+    "models": [
+        {
+            "model": "CV1300-PH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "bm3000-ir-od",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

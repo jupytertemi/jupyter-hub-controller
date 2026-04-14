@@ -1,0 +1,11 @@
+{
+    "name": "Auwer",
+    "models": [
+        {
+            "model": "BE-IPH11W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

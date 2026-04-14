@@ -1,0 +1,257 @@
+{
+    "name": "Alhua",
+    "models": [
+        {
+            "model": "1320SP-0360B",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "DH-IPC-HDBW4300E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "DH-IPC-HF2100P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "DH-IPC-HFW1120RMP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "HFW5200EP-Z12",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "IPC-HDBW1320E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "IPC-HDBW4200E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "4433C-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "dh_hac_hdw1200r",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH_IPC_HFW1320SP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-IPC-HDBW1320EP-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-IPC-HDBW2431RP-ZS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-IPC-HDBW4431R-AS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-IPC-HDW4631C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-IPC-HDW4631C-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-IPC-HDW4641C-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-IPC-HFW1220SP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-IPC-HFW1320SP-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DHI-XVR5116HS-S2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "DH-SD22204T-GN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "dh-xvr4104hs-x1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HDBW1420EP-0280B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HDW4433CA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "hfw 1120 sw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPC-HDW1230S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPC-HDW2431T-ZS-S2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPC-HDW4433C-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPC-HFW1320S-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPC-HFW2431R-ZS-IRE6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPC-T1B40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "DH-IPC-HFW4300S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "IPC-2200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "IPC-HFW3200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "DH-IPC-HFW1200S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "DH-IPC-HFW3441 TP-ZAS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46MzIyMzExNjEzMVNoYXl0YW4="
+        },
+        {
+            "model": "DH-ipc-hfw3441TP-ZAS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46MzIyMzExNjEzMVNoYXl0YW4="
+        },
+        {
+            "model": "IPC-HDBW3541F-AS-M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "IPC-HFW2201R-ZS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "IPC-HDW2320R-ZS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        }
+    ]
+}

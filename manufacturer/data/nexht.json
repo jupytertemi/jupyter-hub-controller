@@ -1,0 +1,11 @@
+{
+    "name": "Nexht",
+    "models": [
+        {
+            "model": "86336",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Esypop",
+    "models": [
+        {
+            "model": "EP-2142FWD-IS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/udp/av0_0"
+        }
+    ]
+}

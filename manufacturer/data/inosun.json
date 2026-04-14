@@ -1,0 +1,11 @@
+{
+    "name": "Inosun",
+    "models": [
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        }
+    ]
+}

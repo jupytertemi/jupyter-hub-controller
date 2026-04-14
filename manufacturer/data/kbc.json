@@ -1,0 +1,11 @@
+{
+    "name": "Kbc",
+    "models": [
+        {
+            "model": "ENC-H-WA",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Uxdsecurity",
+    "models": [
+        {
+            "model": "mos",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "UIB-D50",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

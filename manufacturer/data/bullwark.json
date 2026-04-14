@@ -1,0 +1,11 @@
+{
+    "name": "Bullwark",
+    "models": [
+        {
+            "model": "2101IP-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

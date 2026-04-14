@@ -1,0 +1,17 @@
+{
+    "name": "Witi",
+    "models": [
+        {
+            "model": "ip320/50",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "IP420/50",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

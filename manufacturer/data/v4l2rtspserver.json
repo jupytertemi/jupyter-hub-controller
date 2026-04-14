@@ -1,0 +1,17 @@
+{
+    "name": "V4l2rtspserver",
+    "models": [
+        {
+            "model": "raspberrpi3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast"
+        },
+        {
+            "model": "RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/geo/bali1/"
+        }
+    ]
+}

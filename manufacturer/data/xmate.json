@@ -1,0 +1,11 @@
+{
+    "name": "Xmate",
+    "models": [
+        {
+            "model": "vue",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        }
+    ]
+}

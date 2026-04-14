@@ -1,0 +1,11 @@
+{
+    "name": "Av12176dn-15",
+    "models": [
+        {
+            "model": "av12176dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp1"
+        }
+    ]
+}

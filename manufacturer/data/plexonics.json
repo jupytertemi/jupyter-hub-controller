@@ -1,0 +1,17 @@
+{
+    "name": "Plexonics",
+    "models": [
+        {
+            "model": "AMTKAN2573D-A4F4AAO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "PL 7573",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        }
+    ]
+}

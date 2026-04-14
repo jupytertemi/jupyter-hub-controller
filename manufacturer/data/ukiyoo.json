@@ -1,0 +1,11 @@
+{
+    "name": "Ukiyoo",
+    "models": [
+        {
+            "model": "Mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

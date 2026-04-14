@@ -1,0 +1,71 @@
+{
+    "name": "Mobotix",
+    "models": [
+        {
+            "model": "D12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "D26",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mobotix.h264"
+        },
+        {
+            "model": "M26B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mobotix.h264"
+        },
+        {
+            "model": "i25",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "M-15D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/mobotix.h264"
+        },
+        {
+            "model": "M72",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/mobotix.h264"
+        },
+        {
+            "model": "MOBOTIX c26B-AU-6D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/mobotix.h264"
+        },
+        {
+            "model": "MOBOTIX i26B-6D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/mobotix.h264"
+        },
+        {
+            "model": "Q24M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/mobotix.h264"
+        },
+        {
+            "model": "MOBOTIX c26B-6D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/stream3/mobotix.mjpeg"
+        },
+        {
+            "model": "V25",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0/mobotix.mjpeg"
+        }
+    ]
+}

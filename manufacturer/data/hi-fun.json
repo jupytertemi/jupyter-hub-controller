@@ -1,0 +1,11 @@
+{
+    "name": "Hi-fun",
+    "models": [
+        {
+            "model": "cooah",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

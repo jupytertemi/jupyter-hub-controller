@@ -1,0 +1,11 @@
+{
+    "name": "Unioncam",
+    "models": [
+        {
+            "model": "A000386",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

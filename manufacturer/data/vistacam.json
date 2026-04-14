@@ -1,0 +1,11 @@
+{
+    "name": "Vistacam",
+    "models": [
+        {
+            "model": "1200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

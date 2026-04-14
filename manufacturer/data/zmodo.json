@@ -1,0 +1,293 @@
+{
+    "name": "Zmodo",
+    "models": [
+        {
+            "model": "CMI-11123BK",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "CMI-12316GY",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "ZH-IXA15-WC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "ZMD-IDV-BFS",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "CS-S1T-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "IBH15-S1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "IBI-13",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "IXA15-WAC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "IXA15-WC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "Onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "Terassi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZHIBH-13W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZH-IBH13-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZH-IDP15-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZH-IXB15-WC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZH-IXC15-WC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZH-IXD15-WAC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZH-IXD15-WC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZH-IXU1D-WAC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZM-SH721",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-IBH13-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-IBH13-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-IBH15-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-IBH15-S1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-IBI13W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-IBI13-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-IBT15-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-IGH13-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "ZP-KEH104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_1"
+        },
+        {
+            "model": "ZP-NE14S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_1"
+        },
+        {
+            "model": "zp-ne14s1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_1"
+        },
+        {
+            "model": "I202W-95-NC8-2T-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/000100"
+        },
+        {
+            "model": "Indoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ZH-IXA1D-WAC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ZH-IXB1D-WAC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "ZH-IXC1D-WAC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "NULL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/streaming/mjpeg"
+        },
+        {
+            "model": "ZMD14G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/streaming/mjpeg"
+        },
+        {
+            "model": "ZM-SS7009D8-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/streaming/mjpeg"
+        },
+        {
+            "model": "uin",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "ZM-SS718",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "ZH-IXD1D-WAC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "ZH-IXA15-WAC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/udp/av0_0"
+        },
+        {
+            "model": "ZP-IHB13-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/udp/av0_0"
+        },
+        {
+            "model": "zhixy1d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/Duane:tittus/main"
+        },
+        {
+            "model": "ZMD14GIDA231708",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ZP-IBH23-W",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "ZP-IBI15-W",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        }
+    ]
+}

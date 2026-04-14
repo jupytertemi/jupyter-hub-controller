@@ -1,0 +1,11 @@
+{
+    "name": "Systemmax",
+    "models": [
+        {
+            "model": "SMB-2MPIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        }
+    ]
+}

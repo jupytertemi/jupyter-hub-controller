@@ -1,0 +1,11 @@
+{
+    "name": "Alexim",
+    "models": [
+        {
+            "model": "AXP CA640 O4/5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

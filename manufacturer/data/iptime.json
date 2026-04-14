@@ -1,0 +1,11 @@
+{
+    "name": "Iptime",
+    "models": [
+        {
+            "model": "C500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

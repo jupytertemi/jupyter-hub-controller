@@ -1,0 +1,11 @@
+{
+    "name": "Lumiere",
+    "models": [
+        {
+            "model": "EP-PD22W-HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

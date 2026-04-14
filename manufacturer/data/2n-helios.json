@@ -1,0 +1,17 @@
+{
+    "name": "2n Helios",
+    "models": [
+        {
+            "model": "IP-CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "Vario",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Mytech",
+    "models": [
+        {
+            "model": "ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam2/mpeg4"
+        }
+    ]
+}

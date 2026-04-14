@@ -1,0 +1,11 @@
+{
+    "name": "Hatake",
+    "models": [
+        {
+            "model": "VIGI C330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

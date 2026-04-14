@@ -1,0 +1,23 @@
+{
+    "name": "Cbc America",
+    "models": [
+        {
+            "model": "GANZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/gnz_media/main"
+        },
+        {
+            "model": "ZN-MD243M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/gnz_media/main"
+        },
+        {
+            "model": "ZN-DT2MA",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/gnz_media/main"
+        }
+    ]
+}

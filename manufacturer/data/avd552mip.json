@@ -1,0 +1,11 @@
+{
+    "name": "Avd552mip",
+    "models": [
+        {
+            "model": "Avue",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        }
+    ]
+}

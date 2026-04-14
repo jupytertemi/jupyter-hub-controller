@@ -1,0 +1,17 @@
+{
+    "name": "Ipeye",
+    "models": [
+        {
+            "model": "B5-SNPR-2.8-12-13",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "TH38C4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

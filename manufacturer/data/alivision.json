@@ -1,0 +1,11 @@
+{
+    "name": "Alivision",
+    "models": [
+        {
+            "model": "HSP01h2Z20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

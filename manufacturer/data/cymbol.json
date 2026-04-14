@@ -1,0 +1,11 @@
+{
+    "name": "Cymbol",
+    "models": [
+        {
+            "model": "g3-2mpbl",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1/Profile1"
+        }
+    ]
+}

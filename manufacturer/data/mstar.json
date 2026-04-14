@@ -1,0 +1,17 @@
+{
+    "name": "Mstar",
+    "models": [
+        {
+            "model": "AM8000NC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "mc500l_af",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

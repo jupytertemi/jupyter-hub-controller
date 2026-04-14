@@ -1,0 +1,11 @@
+{
+    "name": "Mocon",
+    "models": [
+        {
+            "model": "E-LOCK CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

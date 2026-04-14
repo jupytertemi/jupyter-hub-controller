@@ -1,0 +1,41 @@
+{
+    "name": "Comelit",
+    "models": [
+        {
+            "model": "IP162b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "IPC100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "IPCAM162A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "IPCAM168A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "IPCOM100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "IPNVR004CPOE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        }
+    ]
+}

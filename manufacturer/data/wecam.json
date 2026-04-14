@@ -1,0 +1,11 @@
+{
+    "name": "Wecam",
+    "models": [
+        {
+            "model": "360",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

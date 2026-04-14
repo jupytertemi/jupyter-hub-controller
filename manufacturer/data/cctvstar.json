@@ -1,0 +1,11 @@
+{
+    "name": "Cctvstar",
+    "models": [
+        {
+            "model": "CIVD-20MSI2812",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

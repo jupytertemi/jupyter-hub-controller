@@ -1,0 +1,59 @@
+{
+    "name": "Leadtek",
+    "models": [
+        {
+            "model": "8025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "8025B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "A-ADT-4HS2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ICAMERA 1000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ICAMERA-1000-ADT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC8025B-ADT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "C512",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "C522",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "c541",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        }
+    ]
+}

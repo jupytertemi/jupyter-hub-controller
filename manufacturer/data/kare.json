@@ -1,0 +1,17 @@
+{
+    "name": "Kare",
+    "models": [
+        {
+            "model": "CSST-DIT",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "D3044",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

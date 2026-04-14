@@ -1,0 +1,11 @@
+{
+    "name": "Dante",
+    "models": [
+        {
+            "model": "Smart IPCamera",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Uranium",
+    "models": [
+        {
+            "model": "D1011C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

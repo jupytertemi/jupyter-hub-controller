@@ -1,0 +1,41 @@
+{
+    "name": "Going",
+    "models": [
+        {
+            "model": "gt-nhs-dia48w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "x5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "GT-NMS-D2W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "X39C20M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "X39C13M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp"
+        },
+        {
+            "model": "X3-HF^B20M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

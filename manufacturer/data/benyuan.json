@@ -1,0 +1,17 @@
+{
+    "name": "Benyuan",
+    "models": [
+        {
+            "model": "bn-hip100hcvl/ir",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "BN-HIP200HDV-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

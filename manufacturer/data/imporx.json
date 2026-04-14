@@ -1,0 +1,83 @@
+{
+    "name": "Imporx",
+    "models": [
+        {
+            "model": "GartenCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IMP-HC7286-K20X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "HC7286-K20X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/RtspTranslator.25"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/RtspTranslator.25"
+        },
+        {
+            "model": "IMP-2MP755",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "IMP-HD5MP73-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "IMP-3MP98A-AMZ-H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "IMP-3MP98A-H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "imp3mp98-amz-l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "imp-scb405ip-v10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "YC-110AR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "YC-HD785R-20X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        },
+        {
+            "model": "IMP-HC7P08",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

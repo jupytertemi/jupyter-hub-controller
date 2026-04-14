@@ -1,0 +1,11 @@
+{
+    "name": "Dedicated Micros",
+    "models": [
+        {
+            "model": "CamVu DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Firstcam",
+    "models": [
+        {
+            "model": "FCE-IP-20MDW3.60",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "FCE-IP-20MEW3.60",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

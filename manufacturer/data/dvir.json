@@ -1,0 +1,11 @@
+{
+    "name": "Dvir",
+    "models": [
+        {
+            "model": "VIDO.AT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

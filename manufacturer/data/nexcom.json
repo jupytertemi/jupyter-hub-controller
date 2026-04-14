@@ -1,0 +1,35 @@
+{
+    "name": "Nexcom",
+    "models": [
+        {
+            "model": "2560",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "2MP-Box",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/stream1"
+        },
+        {
+            "model": "3MP-Mobile",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/stream1"
+        },
+        {
+            "model": "nex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/stream1"
+        },
+        {
+            "model": "NGMP0.3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

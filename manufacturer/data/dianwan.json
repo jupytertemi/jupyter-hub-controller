@@ -1,0 +1,11 @@
+{
+    "name": "Dianwan",
+    "models": [
+        {
+            "model": "v380",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

@@ -1,0 +1,173 @@
+{
+    "name": "Wyzecam",
+    "models": [
+        {
+            "model": "cam v2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Pan",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "V2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "V2 RTSP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze Cam Pan",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "wyze cam v2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze cam V2 RTSP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze Cam V3 RTSP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Pan Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "pan-tilt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "V2 Dafang",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "V2 Webcam Firmware",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "V3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "V3 RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze Cam Pan RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "wyze cam v3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze Cam V3 RTSO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze Cam-Pan",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze Cam-Pan RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze v2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze v3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "WYZEC1-JZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "WYZEC2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyzecam V3 RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "Wyze-docker-bridge",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "v2 openmiko",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video3/unicast"
+        },
+        {
+            "model": "Wyze-Bridge",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/living-room-cam"
+        }
+    ]
+}

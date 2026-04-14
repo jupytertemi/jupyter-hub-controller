@@ -1,0 +1,41 @@
+{
+    "name": "Uniarch",
+    "models": [
+        {
+            "model": "114",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/unicast/c1/s0/live"
+        },
+        {
+            "model": "IPC-B112-PF28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "IPC-T122-APF28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "IPC-T314-APKZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Uho-S2E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "ipc-b222",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

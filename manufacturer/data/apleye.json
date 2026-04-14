@@ -1,0 +1,11 @@
+{
+    "name": "Apleye",
+    "models": [
+        {
+            "model": "HC414",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

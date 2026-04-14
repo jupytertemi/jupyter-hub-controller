@@ -1,0 +1,41 @@
+{
+    "name": "Visiotech",
+    "models": [
+        {
+            "model": "dvr-6008",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "ipc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "IPC2012I-HIK",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        },
+        {
+            "model": "IPC809I-H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/2"
+        },
+        {
+            "model": "SF-IPCU 102",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "Nivian ONV515",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Yoko Tech",
+    "models": [
+        {
+            "model": "IP-1800",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "RYK-IP 8/D/H",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/3gpp"
+        }
+    ]
+}

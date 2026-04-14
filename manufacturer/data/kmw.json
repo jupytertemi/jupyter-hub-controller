@@ -1,0 +1,17 @@
+{
+    "name": "Kmw",
+    "models": [
+        {
+            "model": "SPES-01",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "SPES-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/second"
+        }
+    ]
+}

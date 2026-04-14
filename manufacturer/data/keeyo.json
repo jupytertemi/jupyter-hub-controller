@@ -1,0 +1,11 @@
+{
+    "name": "Keeyo",
+    "models": [
+        {
+            "model": "lv-ip50w-ii",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

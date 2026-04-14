@@ -1,0 +1,11 @@
+{
+    "name": "Lof-v",
+    "models": [
+        {
+            "model": "8177",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

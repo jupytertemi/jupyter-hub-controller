@@ -1,0 +1,17 @@
+{
+    "name": "Lc Security",
+    "models": [
+        {
+            "model": "LC-256-IPPOE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        },
+        {
+            "model": "LC-350 IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        }
+    ]
+}

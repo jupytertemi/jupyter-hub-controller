@@ -1,0 +1,11 @@
+{
+    "name": "Taller",
+    "models": [
+        {
+            "model": "C320WS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

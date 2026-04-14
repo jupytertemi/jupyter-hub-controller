@@ -1,0 +1,17 @@
+{
+    "name": "Ledvance",
+    "models": [
+        {
+            "model": "SMART+ Wifi Wall Camera Control",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "wifi smart +",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

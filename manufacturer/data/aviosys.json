@@ -1,0 +1,41 @@
+{
+    "name": "Aviosys",
+    "models": [
+        {
+            "model": "9000/9100 SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "9060 I/O/MP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "9060A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "9060-I",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "9070",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "9070 SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

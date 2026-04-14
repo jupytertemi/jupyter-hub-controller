@@ -1,0 +1,11 @@
+{
+    "name": "Securecam",
+    "models": [
+        {
+            "model": "SS-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

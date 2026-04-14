@@ -1,0 +1,23 @@
+{
+    "name": "Bascom",
+    "models": [
+        {
+            "model": "HD-18",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "HD-19",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "HD40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        }
+    ]
+}

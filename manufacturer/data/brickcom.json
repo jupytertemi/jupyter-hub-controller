@@ -1,0 +1,197 @@
+{
+    "name": "Brickcom",
+    "models": [
+        {
+            "model": "150",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "50xA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "C2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "CB-200Ap",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "OB-200AF-A1-v5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "ob-500af",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "VD-130AE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "VD-300Af",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "VD-302Np",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "VD-500Af",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "WCB-100Ae",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "WCB-100Ap",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "30xN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "C3103-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "CB-040Af",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "CB-100Ae",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "cb100ae-08",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "CB-100Ap",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "FB-100Ap",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "FD-130Ae",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "FD-200Ap",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "MB-300AP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "VD-100Ae",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "vd-500Af-A1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "VD-H200Np",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "WOB-100Ae",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "CB-100",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "OB-100AP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "OB-300Af",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "wcb-300ap",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "WFB-131Ap",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "XX-100 RTSP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        }
+    ]
+}

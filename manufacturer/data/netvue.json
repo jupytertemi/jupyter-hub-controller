@@ -1,0 +1,11 @@
+{
+    "name": "Netvue",
+    "models": [
+        {
+            "model": "Vigil",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Titanium",
+    "models": [
+        {
+            "model": "IP-5IRD5S44/28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

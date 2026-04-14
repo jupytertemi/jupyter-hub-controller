@@ -1,0 +1,11 @@
+{
+    "name": "Hiinakas",
+    "models": [
+        {
+            "model": "must 2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Ews1025",
+    "models": [
+        {
+            "model": "EWS1025-EnGenius",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

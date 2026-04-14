@@ -1,0 +1,65 @@
+{
+    "name": "Smartwares",
+    "models": [
+        {
+            "model": "C721",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=Djayden%2B2012"
+        },
+        {
+            "model": "C721IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//live/av0?"
+        },
+        {
+            "model": "c724ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "C923IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "c924ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "CIP3390",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "CIP-39220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "CIP39330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        },
+        {
+            "model": "CIP-37210at",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "CP35IP",
+            "type": "VLC",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

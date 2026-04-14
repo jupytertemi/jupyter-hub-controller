@@ -1,0 +1,17 @@
+{
+    "name": "Zoohi",
+    "models": [
+        {
+            "model": "AR-24W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "N20W1329",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

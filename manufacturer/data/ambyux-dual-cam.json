@@ -1,0 +1,11 @@
+{
+    "name": "Ambyux Dual Cam",
+    "models": [
+        {
+            "model": "P10-Q",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

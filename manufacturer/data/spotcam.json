@@ -1,0 +1,17 @@
+{
+    "name": "Spotcam",
+    "models": [
+        {
+            "model": "HD Eva",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "HD8MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

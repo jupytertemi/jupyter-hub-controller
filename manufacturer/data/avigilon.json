@@ -1,0 +1,47 @@
+{
+    "name": "Avigilon",
+    "models": [
+        {
+            "model": "1.0-H3-PO2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/defaultPrimary?streamType=u"
+        },
+        {
+            "model": "gjgj",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/defaultPrimary?streamType=u"
+        },
+        {
+            "model": "3.0C-H4A-BO2-IR-B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/defaultPrimary?streamType=m"
+        },
+        {
+            "model": "6.0MP H5A WDR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/defaultPrimary?streamType=m"
+        },
+        {
+            "model": "MP5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/defaultPrimary?streamType=m"
+        },
+        {
+            "model": "ENC-4P-H264",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/defaultPrimary3?streamType=u"
+        },
+        {
+            "model": "M4 Multisensor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/defaultPrimary-3?streamType=u"
+        }
+    ]
+}

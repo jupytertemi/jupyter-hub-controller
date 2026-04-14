@@ -1,0 +1,11 @@
+{
+    "name": "Mivision",
+    "models": [
+        {
+            "model": "Dome Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

@@ -1,0 +1,203 @@
+{
+    "name": "Momentum",
+    "models": [
+        {
+            "model": "2002",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "mocam",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "mocam01",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "MOCAM-01",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "mocam1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "MO-CAm-720-01",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "Mocam-720-1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "MOCAM-729-01",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "moc-cam01",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "Mocam 01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "MOCAM USB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "MOCAM12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "MOCAM3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "OtherBB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "Cory",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "moca-01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "MO-CAM 01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "MOCAM03",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "mocam720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "MOCAN-01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "MOGA-001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "Aria Outdoor Floodlight Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "CheapCams",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/sub"
+        },
+        {
+            "model": "MOCA MP1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/sub"
+        },
+        {
+            "model": "SIG02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/sub"
+        },
+        {
+            "model": "Cori",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "moam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "MOCAM 720-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "mocam-720-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Thames",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Mocam-1080.01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "MO-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        }
+    ]
+}

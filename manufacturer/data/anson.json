@@ -1,0 +1,29 @@
+{
+    "name": "Anson",
+    "models": [
+        {
+            "model": "ax-200dbi-ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        },
+        {
+            "model": "Ax-200PID-IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        },
+        {
+            "model": "AX-4201IPW-B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4cif"
+        },
+        {
+            "model": "AX-A005",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel=0;stream=1;user=[USERNAME];pass=[PASSWORD];"
+        }
+    ]
+}

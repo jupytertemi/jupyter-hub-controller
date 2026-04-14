@@ -1,0 +1,101 @@
+{
+    "name": "Aver",
+    "models": [
+        {
+            "model": "2012",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "SF2012H-B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "SF2012H-D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "TR311HN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "520Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "AVer CAM520 Pro2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "DL30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "FB2027-3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "FB3027",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "FD2020-M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "fv3808",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "ptc500s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "PTZ310N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "TR-311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        },
+        {
+            "model": "FX2000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st2"
+        },
+        {
+            "model": "SF1311H-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st2"
+        }
+    ]
+}

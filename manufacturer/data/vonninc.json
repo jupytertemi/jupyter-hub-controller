@@ -1,0 +1,11 @@
+{
+    "name": "Vonninc",
+    "models": [
+        {
+            "model": "DVR-C5508HMF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

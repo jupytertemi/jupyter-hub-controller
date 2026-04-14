@@ -1,0 +1,11 @@
+{
+    "name": "Ltek",
+    "models": [
+        {
+            "model": "LD40L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

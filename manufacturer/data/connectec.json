@@ -1,0 +1,11 @@
+{
+    "name": "Connectec",
+    "models": [
+        {
+            "model": "PE5577",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

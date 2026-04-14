@@ -1,0 +1,11 @@
+{
+    "name": "Maximus",
+    "models": [
+        {
+            "model": "8ch",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/[CHANNEL]/media.amp"
+        }
+    ]
+}

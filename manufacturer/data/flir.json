@@ -1,0 +1,299 @@
+{
+    "name": "Flir",
+    "models": [
+        {
+            "model": "14TF3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "6206",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "A310f",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "AX8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "cm-6206",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "d33",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "DNB13TF2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "ee3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "KENYON",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "Lorex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "N133ED",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "NVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "6202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "CB-6408-21-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "CC-3103-01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "cc-3308",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "CM-3102-11",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "CM-3202-11-I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "FB 695",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "FH-669",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "FXV101-H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "D Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "F-313",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "FC-317-ID",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "FC-363-PAL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "FC-645 S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "PT606",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "P143E4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=QWRtaW46MTIzNA=="
+        },
+        {
+            "model": "LNB4421B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LNE8950AB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "N258F5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "PE133E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "A400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/avc"
+        },
+        {
+            "model": "A50",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/avc"
+        },
+        {
+            "model": "A70",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/avc"
+        },
+        {
+            "model": "A700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/avc"
+        },
+        {
+            "model": "D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "F",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "FC-324-RN-NTSC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "PT Series",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        },
+        {
+            "model": "M3108EX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=2&subtype=0"
+        },
+        {
+            "model": "N233zc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=2&subtype=0"
+        },
+        {
+            "model": "M364C LR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ir.1"
+        },
+        {
+            "model": "N133BD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "N233EE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "ThermiCam 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "PB133F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true"
+        },
+        {
+            "model": "PTZ-35x140",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/vis"
+        },
+        {
+            "model": "Q-See",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/0"
+        }
+    ]
+}

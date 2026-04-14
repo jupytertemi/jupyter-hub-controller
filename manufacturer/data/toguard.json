@@ -1,0 +1,17 @@
+{
+    "name": "Toguard",
+    "models": [
+        {
+            "model": "AP10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "CE30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

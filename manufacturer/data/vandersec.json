@@ -1,0 +1,11 @@
+{
+    "name": "Vandersec",
+    "models": [
+        {
+            "model": "QB07",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Safer",
+    "models": [
+        {
+            "model": "3216",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        },
+        {
+            "model": "SN3216",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        },
+        {
+            "model": "SN326p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        },
+        {
+            "model": "SG-861",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

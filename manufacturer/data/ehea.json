@@ -1,0 +1,11 @@
+{
+    "name": "Ehea",
+    "models": [
+        {
+            "model": "fss",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

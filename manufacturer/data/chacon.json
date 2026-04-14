@@ -1,0 +1,11 @@
+{
+    "name": "Chacon",
+    "models": [
+        {
+            "model": "IPCAM FI02",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

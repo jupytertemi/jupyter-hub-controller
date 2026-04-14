@@ -1,0 +1,575 @@
+{
+    "name": "Grandstream",
+    "models": [
+        {
+            "model": "20-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "3601",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "3601HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "3610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "3610HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "3611",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "3611hd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "3662FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "9602",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GDS3710",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GKV3672HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GRX3611IR_HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GS3500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GSC3516",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "gsc-3610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GSC3610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GSC3615",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GSV3611",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GVX3610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GVX3611",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GVX3611HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GVX3611IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GVX3672",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV 3610FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3115wp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3504",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3601",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3601LL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3610_HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3611",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3611HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3611IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3611ir_hd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3611IRC_HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3615",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3615WP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3615WP_HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3651_FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3662_FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "gxv3672 fhd 36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3672_FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3672_FHD_36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3672_HD/FHD v2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "gxv3672-fhd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3672HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "gxv3674",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3674_FHD_VF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "gxv3674_hd/fhd_vf v2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV3674_HD_VF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "gxv3674fhd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GXV6310HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "hd3611",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IP Video Server",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IP1536B2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Medienraum",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "SouthEast Facing South",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "SVX3510_FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "VIDEO SERVER",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "West Side Facing South Ramp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "GVX3504",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "GXV3504DVS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "20-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/2"
+        },
+        {
+            "model": "3710",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/2"
+        },
+        {
+            "model": "20-3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/3"
+        },
+        {
+            "model": "25",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3611LL",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "GX3672HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "GXV 3611",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "GXV3601HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "GXV3651",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "GXV3651FHD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "GXV3672_FHD_fruitsmart",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "GXV3672_HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "3501",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "gvc1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "GXV3000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "GXV3610 FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "GXV3615W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "GXV3661",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "GXV3662",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "GXV3672",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "LLBM Inside",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "GSC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "GX3651_fhd",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "GXV3672FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/888888:888888/main"
+        },
+        {
+            "model": "lauvan",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/888888:888888/main"
+        },
+        {
+            "model": "GV3610v2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/4"
+        },
+        {
+            "model": "GXV3601_N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/4"
+        },
+        {
+            "model": "GXV3672_HD_36",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/0/"
+        },
+        {
+            "model": "HD5MP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "Lapa",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "GXV3672_FHD v2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/media.amp"
+        }
+    ]
+}

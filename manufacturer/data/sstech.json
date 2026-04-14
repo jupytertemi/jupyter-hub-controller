@@ -1,0 +1,11 @@
+{
+    "name": "Sstech",
+    "models": [
+        {
+            "model": "HX-HC450B72",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

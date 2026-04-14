@@ -1,0 +1,983 @@
+{
+    "name": "Sony",
+    "models": [
+        {
+            "model": "210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "300se",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "Boa",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "BRC-X400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "C6603",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CH180",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CH280",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "cns-cs20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CUWE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-140",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-240",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DM-110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "EM600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "EMC-EM642R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "ER-6032-VAP-B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "IPELA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "IPELA HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "Ipela SNC-EM632R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SG300se",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC CH-110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc eb600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC RZ25N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC VM601",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc_vb770",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-580",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc-630n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH140",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNCCH-160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH180",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH1810",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH240",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CH280",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CM120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-CX600W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH110T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH120 (kdp)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc-dh120T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH140",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH140-ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH160-arclight441",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH180",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH210T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-DH280",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNCDS-60",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EB600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EB602R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EB630",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EB630B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EB640",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EM 632R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EM601",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EM602R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc-em602rc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EM630",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EM631",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EM632",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EP 550",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EP520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EP521",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-EP580",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-ER521",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-ER550",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNCER-580",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-ER585",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-RH164",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-RX550P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc-vb600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-VB600B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-VB630",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-VM600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-VM601",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc-vm601b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-VM630",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-VM632R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc-WR600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNCWR-600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-WR630",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-XM631",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-XM632",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNC-Z25N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "snc-zp550",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SNT-EX104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "Sony cctv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SRG300SE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "SRG-X120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "srg-x400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "Timbues",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "VB-630",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "WR-630",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "XM-632",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "xrg x400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "RH-124",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video2"
+        },
+        {
+            "model": "SNC-WR632",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video2"
+        },
+        {
+            "model": "ALIEXPRESS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "DM160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "SNC-DF80N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "h.265x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "h265",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "IMX222",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "IMX222-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "imx335",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "snc cs50p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "SNC-EB632R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "sony imx335",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "star",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "bubo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg"
+        },
+        {
+            "model": "SNC-DF40N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg"
+        },
+        {
+            "model": "SNC-DS10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg"
+        },
+        {
+            "model": "ch-120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "CH-210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "SNC-EB600B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "SNC-EM600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "SNC-HM662",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "SNC-VB635",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "Snc-vm772r",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "Sony IPCAMsnc-hm662",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "SRG-300SE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "XM-631",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "CH-140",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CH-160",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CH-180",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CH-220",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CH-240",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CH-260",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "CH-280",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-110",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-180",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-220",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-260",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "DH-280",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "RH-164",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "Clock Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DOME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "FCB-EV7500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoinput_1:0/h264_1/onvif.stm"
+        },
+        {
+            "model": "IMX323",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoinput_1:0/h264_1/onvif.stm"
+        },
+        {
+            "model": "hi3516",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp?real_stream"
+        },
+        {
+            "model": "imx355",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp?real_stream"
+        },
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp?real_stream"
+        },
+        {
+            "model": "sip-k678a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "IPELA SNC-DM110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "SNC-RX-570P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "SNC-RZ50",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "sony-ccc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile"
+        },
+        {
+            "model": "VB-635",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile"
+        },
+        {
+            "model": "VB-65",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile"
+        },
+        {
+            "model": "Starvis IP 66",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "SNC-DM160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "SNC-RX550N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        }
+    ]
+}

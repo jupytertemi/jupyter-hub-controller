@@ -1,0 +1,11 @@
+{
+    "name": "Diske",
+    "models": [
+        {
+            "model": "dsk-642",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

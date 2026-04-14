@@ -1,0 +1,11 @@
+{
+    "name": "Veho",
+    "models": [
+        {
+            "model": "cave",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

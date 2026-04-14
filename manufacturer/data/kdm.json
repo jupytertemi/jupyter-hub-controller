@@ -1,0 +1,11 @@
+{
+    "name": "Kdm",
+    "models": [
+        {
+            "model": "KDM-A103",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

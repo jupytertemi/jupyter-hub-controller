@@ -1,0 +1,17 @@
+{
+    "name": "Technaxx",
+    "models": [
+        {
+            "model": "TX-145",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0/h264"
+        },
+        {
+            "model": "TX-23",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        }
+    ]
+}

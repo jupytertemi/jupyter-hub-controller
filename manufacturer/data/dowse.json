@@ -1,0 +1,11 @@
+{
+    "name": "Dowse",
+    "models": [
+        {
+            "model": "DS/HD8612",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

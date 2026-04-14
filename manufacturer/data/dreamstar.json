@@ -1,0 +1,17 @@
+{
+    "name": "Dreamstar",
+    "models": [
+        {
+            "model": "DSE-IPC213F",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "IPC213F",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Invidtech",
+    "models": [
+        {
+            "model": "ULT-P4DRIR28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

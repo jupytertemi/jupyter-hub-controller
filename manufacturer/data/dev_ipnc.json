@@ -1,0 +1,11 @@
+{
+    "name": "Dev_ipnc",
+    "models": [
+        {
+            "model": "DM368_IPNC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        }
+    ]
+}

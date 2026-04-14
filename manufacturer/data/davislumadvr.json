@@ -1,0 +1,11 @@
+{
+    "name": "Davislumadvr",
+    "models": [
+        {
+            "model": "LUM-500-DVR-16CH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/902"
+        }
+    ]
+}

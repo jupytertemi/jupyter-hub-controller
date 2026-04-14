@@ -1,0 +1,35 @@
+{
+    "name": "A-mtk",
+    "models": [
+        {
+            "model": "2570D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/media.amp"
+        },
+        {
+            "model": "6566",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/media.amp"
+        },
+        {
+            "model": "SUPER",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/media.amp"
+        },
+        {
+            "model": "AH2927T-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "AM2110D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp?streamprofile=Profile1"
+        }
+    ]
+}

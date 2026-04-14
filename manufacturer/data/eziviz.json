@@ -1,0 +1,17 @@
+{
+    "name": "Eziviz",
+    "models": [
+        {
+            "model": "C3C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "Ztube",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Jecurity",
+    "models": [
+        {
+            "model": "Je-q001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Je-q0012",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "name": "Canon",
+    "models": [
+        {
+            "model": "740",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile2=r"
+        },
+        {
+            "model": "CRN-300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile2=r"
+        },
+        {
+            "model": "VB-M50B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile2=r"
+        },
+        {
+            "model": "VB-C300",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "vb-h41",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile1=r"
+        },
+        {
+            "model": "vb-h630",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile1=r"
+        },
+        {
+            "model": "VB-H710F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile1=r"
+        },
+        {
+            "model": "VB-M42",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile1=r"
+        },
+        {
+            "model": "VB-M720F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile1=r"
+        },
+        {
+            "model": "VB-S900F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile1=r"
+        },
+        {
+            "model": "VB-S905F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile1=r"
+        },
+        {
+            "model": "VB-H43",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile0=r"
+        },
+        {
+            "model": "VB-S800D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/profile0=r"
+        },
+        {
+            "model": "VB-M40",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/profile1=u"
+        },
+        {
+            "model": "VB-M600D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/profile1=r"
+        }
+    ]
+}

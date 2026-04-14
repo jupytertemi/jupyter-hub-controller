@@ -1,0 +1,17 @@
+{
+    "name": "Securix",
+    "models": [
+        {
+            "model": "SME4",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "SMC4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

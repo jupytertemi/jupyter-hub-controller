@@ -1,0 +1,11 @@
+{
+    "name": "Citysync",
+    "models": [
+        {
+            "model": "CS40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/live/2"
+        }
+    ]
+}

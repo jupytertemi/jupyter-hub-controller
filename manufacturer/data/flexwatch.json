@@ -1,0 +1,35 @@
+{
+    "name": "Flexwatch",
+    "models": [
+        {
+            "model": "117x Cam",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_[CHANNEL]"
+        },
+        {
+            "model": "DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_[CHANNEL]"
+        },
+        {
+            "model": "FW11xx RTSP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_[CHANNEL]"
+        },
+        {
+            "model": "FW3170-PS-E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_[CHANNEL]"
+        },
+        {
+            "model": "FW7500-TXV-R",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_[CHANNEL]"
+        }
+    ]
+}

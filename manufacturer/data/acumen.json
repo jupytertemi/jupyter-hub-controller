@@ -1,0 +1,41 @@
+{
+    "name": "Acumen",
+    "models": [
+        {
+            "model": "AiP-B24N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "AiP-B34",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "AiP-M53",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "Y04",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "AIS-S22H-B1Y0W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=1.sdp"
+        },
+        {
+            "model": "ekran",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpg4/rtsp.amp"
+        }
+    ]
+}

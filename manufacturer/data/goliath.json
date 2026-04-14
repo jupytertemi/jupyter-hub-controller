@@ -1,0 +1,11 @@
+{
+    "name": "Goliath",
+    "models": [
+        {
+            "model": "IP Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Z-bravo",
+    "models": [
+        {
+            "model": "Z-IPD790-5M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Maxvision",
+    "models": [
+        {
+            "model": "LVWDB20S130",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        }
+    ]
+}

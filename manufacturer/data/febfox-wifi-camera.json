@@ -1,0 +1,11 @@
+{
+    "name": "Febfox Wifi Camera",
+    "models": [
+        {
+            "model": "UHD camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

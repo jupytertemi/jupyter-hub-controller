@@ -1,0 +1,11 @@
+{
+    "name": "Chineseptz",
+    "models": [
+        {
+            "model": "C9F0SeZ0N0P4L0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Jubson",
+    "models": [
+        {
+            "model": "720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "ES500-MIP-813A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        }
+    ]
+}

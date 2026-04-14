@@ -1,0 +1,17 @@
+{
+    "name": "Brovision",
+    "models": [
+        {
+            "model": "olsen",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "WH-D5208",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/202"
+        }
+    ]
+}

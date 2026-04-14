@@ -1,0 +1,11 @@
+{
+    "name": "Hs Ip Camera",
+    "models": [
+        {
+            "model": "YCW608FCZ49EA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

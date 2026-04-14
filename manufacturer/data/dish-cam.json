@@ -1,0 +1,11 @@
+{
+    "name": "Dish-cam",
+    "models": [
+        {
+            "model": "HD2500P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        }
+    ]
+}

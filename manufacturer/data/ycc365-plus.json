@@ -1,0 +1,11 @@
+{
+    "name": "Ycc365 Plus",
+    "models": [
+        {
+            "model": "Cloud Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

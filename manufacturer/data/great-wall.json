@@ -1,0 +1,17 @@
+{
+    "name": "Great Wall",
+    "models": [
+        {
+            "model": "GW5237",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "GW8436IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

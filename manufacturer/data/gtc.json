@@ -1,0 +1,11 @@
+{
+    "name": "Gtc",
+    "models": [
+        {
+            "model": "SY-IP962BMW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

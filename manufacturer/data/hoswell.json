@@ -1,0 +1,11 @@
+{
+    "name": "Hoswell",
+    "models": [
+        {
+            "model": "WJ01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream_0"
+        }
+    ]
+}

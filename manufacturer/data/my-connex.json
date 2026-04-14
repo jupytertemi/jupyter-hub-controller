@@ -1,0 +1,11 @@
+{
+    "name": "My Connex",
+    "models": [
+        {
+            "model": "C2006",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

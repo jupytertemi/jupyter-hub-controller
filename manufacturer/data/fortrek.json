@@ -1,0 +1,11 @@
+{
+    "name": "Fortrek",
+    "models": [
+        {
+            "model": "401ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Raysharp",
+    "models": [
+        {
+            "model": "960",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "MSK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch00/1"
+        },
+        {
+            "model": "B-RS-D214HR-NS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1/0"
+        },
+        {
+            "model": "Megalith Ultra Thermal 5million",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1/0"
+        },
+        {
+            "model": "rs-ch581h",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1/0"
+        }
+    ]
+}

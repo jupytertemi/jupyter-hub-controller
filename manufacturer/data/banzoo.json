@@ -1,0 +1,11 @@
+{
+    "name": "Banzoo",
+    "models": [
+        {
+            "model": "8021",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        }
+    ]
+}

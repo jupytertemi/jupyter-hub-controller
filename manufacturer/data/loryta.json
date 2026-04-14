@@ -1,0 +1,23 @@
+{
+    "name": "Loryta",
+    "models": [
+        {
+            "model": "IPC-B5442E-Z4E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0"
+        },
+        {
+            "model": "IPC-T2431T-AS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "ipc-t5442t-ze",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif"
+        }
+    ]
+}

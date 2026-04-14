@@ -1,0 +1,11 @@
+{
+    "name": "Targa",
+    "models": [
+        {
+            "model": "WAL 14 A1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/554/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0"
+        }
+    ]
+}

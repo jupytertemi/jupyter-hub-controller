@@ -1,0 +1,11 @@
+{
+    "name": "Gen",
+    "models": [
+        {
+            "model": "3200cp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

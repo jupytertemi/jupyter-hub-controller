@@ -1,0 +1,29 @@
+{
+    "name": "Avs",
+    "models": [
+        {
+            "model": "IP cameras",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SYSTEMS HD1024 SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "TITANAPOLLOATOM DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "Y4C-ZA",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

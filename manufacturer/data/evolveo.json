@@ -1,0 +1,11 @@
+{
+    "name": "Evolveo",
+    "models": [
+        {
+            "model": "Detective POE8 Smart",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1-1"
+        }
+    ]
+}

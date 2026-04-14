@@ -1,0 +1,11 @@
+{
+    "name": "Reobiux",
+    "models": [
+        {
+            "model": "K8Q",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

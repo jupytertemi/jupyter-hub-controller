@@ -1,0 +1,167 @@
+{
+    "name": "Cp Plus",
+    "models": [
+        {
+            "model": "1MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "cnp_unc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "CP-UAR-0804Q1-AB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "CP-UNC-CS10L1W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "CP-UNC-DP10L3C-V2-0280B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "CP-UNC-T2212L3-0360",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "CP-UNC-T2322L3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "CP-UNC-T5254L3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "CP-UNC-TP10L2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "Dine",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "dome camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "Infeed of automatic shot blasting",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "MODEL CB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "TP10L3C-V2-0360B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "CP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "CP-NC9W-K",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "CP-UNC-DP10L2C",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "CP-UNP-F4521L25-DAP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/mpeg4/1"
+        },
+        {
+            "model": "CP-UNC-DB21L3C-M-0360",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "CP-UNC-TA20L8S-V2-600",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "cp-unc-td41l5e-md-j",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "CP-UNC-VA51L3-MDS",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "IPC v 1.37",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "EPK-EP10L1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/av0?user=[USERNAME]&passwd=[PASSWORD]"
+        }
+    ]
+}

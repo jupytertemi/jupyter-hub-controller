@@ -1,0 +1,11 @@
+{
+    "name": "Spytech",
+    "models": [
+        {
+            "model": "NC128PW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        }
+    ]
+}

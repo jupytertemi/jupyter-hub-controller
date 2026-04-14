@@ -1,0 +1,17 @@
+{
+    "name": "Alfa",
+    "models": [
+        {
+            "model": "AIPC120M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "AIPC220M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "name": "Gadspot",
+    "models": [
+        {
+            "model": "200A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "GS-100A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "GS2102",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "gs-w220b",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "GS-W221A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "GS-W2311",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "N1000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "N1250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        }
+    ]
+}

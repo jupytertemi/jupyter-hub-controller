@@ -1,0 +1,17 @@
+{
+    "name": "Bitron",
+    "models": [
+        {
+            "model": "AV7002/0101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B-Focus Vari 2 AV7210/10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

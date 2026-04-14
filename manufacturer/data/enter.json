@@ -1,0 +1,11 @@
+{
+    "name": "Enter",
+    "models": [
+        {
+            "model": "e-d700ir",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        }
+    ]
+}

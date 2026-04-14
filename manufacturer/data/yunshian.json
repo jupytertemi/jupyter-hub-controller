@@ -1,0 +1,17 @@
+{
+    "name": "Yunshian",
+    "models": [
+        {
+            "model": "hg71",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "hg72",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

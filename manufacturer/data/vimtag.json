@@ -1,0 +1,17 @@
+{
+    "name": "Vimtag",
+    "models": [
+        {
+            "model": "CP1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "VT361",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

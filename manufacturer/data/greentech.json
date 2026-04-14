@@ -1,0 +1,23 @@
+{
+    "name": "Greentech",
+    "models": [
+        {
+            "model": "GT55",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "GT-IP21I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        },
+        {
+            "model": "GT-IP55HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        }
+    ]
+}

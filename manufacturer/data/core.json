@@ -1,0 +1,11 @@
+{
+    "name": "Core",
+    "models": [
+        {
+            "model": "Dum",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Ukc",
+    "models": [
+        {
+            "model": "B13",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

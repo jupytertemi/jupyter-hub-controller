@@ -1,0 +1,11 @@
+{
+    "name": "Unilook",
+    "models": [
+        {
+            "model": "ipc-d3a40w-s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

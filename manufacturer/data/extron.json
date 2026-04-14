@@ -1,0 +1,11 @@
+{
+    "name": "Extron",
+    "models": [
+        {
+            "model": "SMP352",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/extron3-HS-06"
+        }
+    ]
+}

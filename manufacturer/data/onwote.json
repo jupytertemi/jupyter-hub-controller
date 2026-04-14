@@ -1,0 +1,71 @@
+{
+    "name": "Onwote",
+    "models": [
+        {
+            "model": "4K Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        },
+        {
+            "model": "h800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        },
+        {
+            "model": "5 MP POE IP Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "5 MP POE Security Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "NULL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "PoE 5 MP Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "YC-9204K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "YC-920AHZ37",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "5MP POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/h264.sdp"
+        },
+        {
+            "model": "ym800n-n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/h264.sdp"
+        }
+    ]
+}

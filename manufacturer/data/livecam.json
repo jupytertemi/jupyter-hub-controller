@@ -1,0 +1,11 @@
+{
+    "name": "Livecam",
+    "models": [
+        {
+            "model": "Q920",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

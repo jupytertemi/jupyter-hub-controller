@@ -1,0 +1,11 @@
+{
+    "name": "Exom",
+    "models": [
+        {
+            "model": "EIPC-D354",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

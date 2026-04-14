@@ -1,0 +1,11 @@
+{
+    "name": "Ut Alert",
+    "models": [
+        {
+            "model": "x series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

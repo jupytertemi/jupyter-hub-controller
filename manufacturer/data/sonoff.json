@@ -1,0 +1,71 @@
+{
+    "name": "Sonoff",
+    "models": [
+        {
+            "model": "DW2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch0"
+        },
+        {
+            "model": "GBP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch0"
+        },
+        {
+            "model": "GK_200MP2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch0"
+        },
+        {
+            "model": "GK-200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch0"
+        },
+        {
+            "model": "GK-200MP2-B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch0"
+        },
+        {
+            "model": "S-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch0"
+        },
+        {
+            "model": "Slim",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch0"
+        },
+        {
+            "model": "GK-200MP2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "Pant-Tilt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "XXXX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "GK-200MP2B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch1"
+        }
+    ]
+}

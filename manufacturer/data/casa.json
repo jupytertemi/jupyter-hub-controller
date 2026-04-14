@@ -1,0 +1,17 @@
+{
+    "name": "Casa",
+    "models": [
+        {
+            "model": "Blue",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "p06",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Wtw",
+    "models": [
+        {
+            "model": "PRP29HE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

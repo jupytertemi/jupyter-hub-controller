@@ -1,0 +1,59 @@
+{
+    "name": "Vacron",
+    "models": [
+        {
+            "model": "2Mpx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video0.sdp"
+        },
+        {
+            "model": "5Mpx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video0.sdp"
+        },
+        {
+            "model": "VIG-DM755VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video0.sdp"
+        },
+        {
+            "model": "VIG-M723",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video0.sdp"
+        },
+        {
+            "model": "VIG-UM723",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video0.sdp"
+        },
+        {
+            "model": "629",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "VDH-DXG368",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "VIG-US731VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "VIT-UA629",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

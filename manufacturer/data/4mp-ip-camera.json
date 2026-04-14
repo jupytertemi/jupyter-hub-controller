@@ -1,0 +1,35 @@
+{
+    "name": "4mp Ip Camera",
+    "models": [
+        {
+            "model": "47680146",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "KEYE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Security",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ipc-2mpvd28w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "uniview",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream2"
+        }
+    ]
+}

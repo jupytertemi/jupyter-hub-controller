@@ -1,0 +1,11 @@
+{
+    "name": "Forti",
+    "models": [
+        {
+            "model": "md20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

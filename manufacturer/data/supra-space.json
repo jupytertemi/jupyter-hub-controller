@@ -1,0 +1,11 @@
+{
+    "name": "Supra Space",
+    "models": [
+        {
+            "model": "IPC 10AC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

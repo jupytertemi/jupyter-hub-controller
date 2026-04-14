@@ -1,0 +1,11 @@
+{
+    "name": "Verizon",
+    "models": [
+        {
+            "model": "EZIC-IBRF20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

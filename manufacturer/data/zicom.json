@@ -1,0 +1,17 @@
+{
+    "name": "Zicom",
+    "models": [
+        {
+            "model": "IC-502W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/CH00[CHANNEL].sdp"
+        },
+        {
+            "model": "ZNIP-C01",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/CH00[CHANNEL].sdp"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Myindoorcam",
+    "models": [
+        {
+            "model": "ADC-V520IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

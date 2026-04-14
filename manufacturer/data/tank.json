@@ -1,0 +1,11 @@
+{
+    "name": "Tank",
+    "models": [
+        {
+            "model": "6025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Lenovo",
+    "models": [
+        {
+            "model": "Dome X5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        },
+        {
+            "model": "JA-F10R-U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        },
+        {
+            "model": "JA-F10T-U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        },
+        {
+            "model": "PTZ DOME LENOVO 100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        },
+        {
+            "model": "X6T (Gimball)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        },
+        {
+            "model": "XW1-U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        }
+    ]
+}

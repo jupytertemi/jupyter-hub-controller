@@ -1,0 +1,11 @@
+{
+    "name": "Cpcam",
+    "models": [
+        {
+            "model": "5xx DVR Series",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        }
+    ]
+}

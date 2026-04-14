@@ -1,0 +1,11 @@
+{
+    "name": "Elinksmart Ip Camera",
+    "models": [
+        {
+            "model": "960p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Ap-tech",
+    "models": [
+        {
+            "model": "AP-D100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

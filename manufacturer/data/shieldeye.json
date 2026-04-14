@@ -1,0 +1,17 @@
+{
+    "name": "Shieldeye",
+    "models": [
+        {
+            "model": "ipb28w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "POSCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

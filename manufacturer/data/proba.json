@@ -1,0 +1,11 @@
+{
+    "name": "Proba",
+    "models": [
+        {
+            "model": "Mazi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

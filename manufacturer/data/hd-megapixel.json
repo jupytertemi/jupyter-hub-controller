@@ -1,0 +1,17 @@
+{
+    "name": "Hd Megapixel",
+    "models": [
+        {
+            "model": "H2MB4WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "IP Cloud Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

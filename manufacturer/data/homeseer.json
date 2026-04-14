@@ -1,0 +1,11 @@
+{
+    "name": "Homeseer",
+    "models": [
+        {
+            "model": "HS-CAM-O",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

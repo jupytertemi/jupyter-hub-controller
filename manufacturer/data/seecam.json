@@ -1,0 +1,11 @@
+{
+    "name": "Seecam",
+    "models": [
+        {
+            "model": "HS-6100-HD1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

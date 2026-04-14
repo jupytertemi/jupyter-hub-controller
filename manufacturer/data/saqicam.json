@@ -1,0 +1,11 @@
+{
+    "name": "Saqicam",
+    "models": [
+        {
+            "model": "SQ-D20CT30-POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/MAIN"
+        }
+    ]
+}

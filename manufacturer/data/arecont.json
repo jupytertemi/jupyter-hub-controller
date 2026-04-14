@@ -1,0 +1,665 @@
+{
+    "name": "Arecont",
+    "models": [
+        {
+            "model": "10115DNv1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "1325ir",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "20275DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "5115DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV10005",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV12176",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV12366",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV2105DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "av2216dn",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV2216PM-S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "av5115dn",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV8185",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "10355PMIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "20175DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "20185dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "2115DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "2216DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "2255pmir",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "2456dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "5225PMIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "5255AM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV 12366",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV10215PM-S-30-120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV10255AMIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "av10255pmir-sh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV1125IRV1X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV1305",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV20185dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV2110d/n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV2246M-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV2255",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV2255AM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV2256PM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV2455DN-AB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV2556",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV3115DNv1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV3155",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV5245",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV5245DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV5245PM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "av5456D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV5525",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV8185DN-HB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "rch Bach",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "Vision",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "12585PM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "2105DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "2110DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "AV8365",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "G5 Mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "12586PM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "3100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "3225PMIR-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "AV16F0833",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "av2115dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "1305",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "1355",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "2155",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "2155M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "AV Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "AV12176dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "AV12186dn ch1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "AV1355DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "AV8185DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.h264"
+        },
+        {
+            "model": "1305DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "2155DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "3155DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "av2100",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "AV5105DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "1555DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "5105DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "av12186av12186-0",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "2115",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "AV10655DN-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "2456",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "3246",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "5125",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "av10115dn-07",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "AV20185dn ch1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "AV20185DN CH3",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "AV20185dn Junk",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "av5115dn-2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "AV5215PM-S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        },
+        {
+            "model": "20365DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp1?res=half&doublescan=0&ssn=901"
+        },
+        {
+            "model": "2116dnv1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "AV10655DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "av12276dn-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "AV2825IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "AV3255DN-H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "2805",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "3256PMIR-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV 8365DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV10005DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "av10225PMIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV1255PMIR-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV2146DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV3115DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "AV12186",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        },
+        {
+            "model": "AV20365DN/65170",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        },
+        {
+            "model": "8185dn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "AV12276DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "AV12176DN-08",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp1"
+        },
+        {
+            "model": "av12376RS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "AV12586DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "AV129294",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "AV4655dn-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "AV3105DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "hdd",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "AV8365DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam4/mpeg4"
+        },
+        {
+            "model": "MicroDome G2 AV3556DN-S NL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp?res=half&x0=0&y0=0&x1=1600&y1=1200&quality=15&doublescan=0&ssn=1340443365044&id=1340443379230"
+        }
+    ]
+}

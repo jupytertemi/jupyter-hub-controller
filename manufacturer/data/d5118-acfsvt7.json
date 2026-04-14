@@ -1,0 +1,11 @@
+{
+    "name": "D5118-acfsvt7",
+    "models": [
+        {
+            "model": "pelco",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Dmp",
+    "models": [
+        {
+            "model": "OC-810",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Hi-jin",
+    "models": [
+        {
+            "model": "JN720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

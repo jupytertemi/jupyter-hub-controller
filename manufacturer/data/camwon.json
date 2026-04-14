@@ -1,0 +1,17 @@
+{
+    "name": "Camwon",
+    "models": [
+        {
+            "model": "C6F0SpZ3N0PgL2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "SSA-290980-BBFEF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

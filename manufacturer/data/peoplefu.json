@@ -1,0 +1,11 @@
+{
+    "name": "Peoplefu",
+    "models": [
+        {
+            "model": "FU 1010-I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

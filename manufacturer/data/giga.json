@@ -1,0 +1,11 @@
+{
+    "name": "Giga",
+    "models": [
+        {
+            "model": "gigacam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

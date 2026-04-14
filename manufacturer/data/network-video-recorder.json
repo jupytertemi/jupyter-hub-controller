@@ -1,0 +1,11 @@
+{
+    "name": "Network Video Recorder",
+    "models": [
+        {
+            "model": "NVR2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/101"
+        }
+    ]
+}

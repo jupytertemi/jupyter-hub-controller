@@ -1,0 +1,11 @@
+{
+    "name": "Convision",
+    "models": [
+        {
+            "model": "CC-6400 (RTSP)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

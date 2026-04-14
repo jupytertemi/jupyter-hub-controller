@@ -1,0 +1,11 @@
+{
+    "name": "Zeecam",
+    "models": [
+        {
+            "model": "CA-R11A-R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

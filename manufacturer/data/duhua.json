@@ -1,0 +1,17 @@
+{
+    "name": "Duhua",
+    "models": [
+        {
+            "model": "ipc",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "Mini Dome",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

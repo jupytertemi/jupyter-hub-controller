@@ -1,0 +1,11 @@
+{
+    "name": "Airtop",
+    "models": [
+        {
+            "model": "AT-LIR400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Bu-720",
+    "models": [
+        {
+            "model": "Airlive BU-720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        }
+    ]
+}

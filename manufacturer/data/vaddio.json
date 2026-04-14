@@ -1,0 +1,23 @@
+{
+    "name": "Vaddio",
+    "models": [
+        {
+            "model": "ConferenceShot 10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/vaddio-conferenceshot-stream"
+        },
+        {
+            "model": "roboshot 12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/vaddio-roboshot-usb-stream"
+        },
+        {
+            "model": "ROBOSHOT 30 HD-SDI WHITE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/vaddio-roboshot-hd-sdi-stream"
+        }
+    ]
+}

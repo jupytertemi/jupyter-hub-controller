@@ -1,0 +1,11 @@
+{
+    "name": "Top Vision",
+    "models": [
+        {
+            "model": "6026hec-xmw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Cyrus",
+    "models": [
+        {
+            "model": "P2P IP Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        }
+    ]
+}

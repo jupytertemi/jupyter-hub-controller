@@ -1,0 +1,11 @@
+{
+    "name": "Domecam",
+    "models": [
+        {
+            "model": "ian",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

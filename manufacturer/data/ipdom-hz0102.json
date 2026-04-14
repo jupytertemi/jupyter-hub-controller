@@ -1,0 +1,11 @@
+{
+    "name": "Ipdom-hz0102",
+    "models": [
+        {
+            "model": "Eyecam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

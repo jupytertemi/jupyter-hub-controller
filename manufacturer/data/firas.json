@@ -1,0 +1,11 @@
+{
+    "name": "Firas",
+    "models": [
+        {
+            "model": "P2P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

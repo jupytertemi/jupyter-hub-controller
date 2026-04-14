@@ -1,0 +1,11 @@
+{
+    "name": "Netvideo",
+    "models": [
+        {
+            "model": "2320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

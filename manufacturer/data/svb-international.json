@@ -1,0 +1,11 @@
+{
+    "name": "Svb International",
+    "models": [
+        {
+            "model": "SIP-018262-RYERR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

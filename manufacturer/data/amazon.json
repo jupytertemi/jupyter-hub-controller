@@ -1,0 +1,17 @@
+{
+    "name": "Amazon",
+    "models": [
+        {
+            "model": "B06W720HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "KFDOWI",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

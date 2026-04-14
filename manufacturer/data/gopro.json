@@ -1,0 +1,11 @@
+{
+    "name": "Gopro",
+    "models": [
+        {
+            "model": "Hero7",
+            "type": "MJPEG",
+            "protocol": "rtmp://",
+            "url": "/live"
+        }
+    ]
+}

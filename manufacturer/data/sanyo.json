@@ -1,0 +1,59 @@
+{
+    "name": "Sanyo",
+    "models": [
+        {
+            "model": "3300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "vcc-hd2500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        },
+        {
+            "model": "HD 5400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "hd5400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "hd-5400p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "HD5600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VCC HD2500P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VCC-MCH5600P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "VDC-HD3300P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Periscope App",
+    "models": [
+        {
+            "model": "",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

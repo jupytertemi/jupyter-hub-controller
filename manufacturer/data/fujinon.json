@@ -1,0 +1,17 @@
+{
+    "name": "Fujinon",
+    "models": [
+        {
+            "model": "sx800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "SX8000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

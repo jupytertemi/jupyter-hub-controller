@@ -1,0 +1,11 @@
+{
+    "name": "Jen-fu",
+    "models": [
+        {
+            "model": "HVB-2M-V3",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        }
+    ]
+}

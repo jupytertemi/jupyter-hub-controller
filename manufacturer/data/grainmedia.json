@@ -1,0 +1,11 @@
+{
+    "name": "Grainmedia",
+    "models": [
+        {
+            "model": "sam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

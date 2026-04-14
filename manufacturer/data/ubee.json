@@ -1,0 +1,11 @@
+{
+    "name": "Ubee",
+    "models": [
+        {
+            "model": "mini ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

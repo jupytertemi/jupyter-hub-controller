@@ -1,0 +1,11 @@
+{
+    "name": "Discovery",
+    "models": [
+        {
+            "model": "DCNB-F468DC2F-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

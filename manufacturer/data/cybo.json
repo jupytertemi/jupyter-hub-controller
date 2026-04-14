@@ -1,0 +1,11 @@
+{
+    "name": "Cybo",
+    "models": [
+        {
+            "model": "T554",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

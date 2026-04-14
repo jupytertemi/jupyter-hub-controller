@@ -1,0 +1,11 @@
+{
+    "name": "Gawell",
+    "models": [
+        {
+            "model": "ip106",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        }
+    ]
+}

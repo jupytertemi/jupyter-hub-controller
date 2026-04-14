@@ -1,0 +1,11 @@
+{
+    "name": "Eaglestar",
+    "models": [
+        {
+            "model": "EAGLESTAR PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

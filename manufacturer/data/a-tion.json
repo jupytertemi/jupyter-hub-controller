@@ -1,0 +1,11 @@
+{
+    "name": "A-tion",
+    "models": [
+        {
+            "model": "A0528",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

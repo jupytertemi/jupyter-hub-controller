@@ -1,0 +1,11 @@
+{
+    "name": "Bolin",
+    "models": [
+        {
+            "model": "SD522B4K-IRNA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        }
+    ]
+}

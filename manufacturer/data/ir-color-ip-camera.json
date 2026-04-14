@@ -1,0 +1,17 @@
+{
+    "name": "Ir Color Ip Camera",
+    "models": [
+        {
+            "model": "DS-2CD2420F-IW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "MCD-720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=1.sdp"
+        }
+    ]
+}

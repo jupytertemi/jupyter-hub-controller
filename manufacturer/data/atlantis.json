@@ -1,0 +1,17 @@
+{
+    "name": "Atlantis",
+    "models": [
+        {
+            "model": "A11-UX914A-BPV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "PlusCam HD Outdoor 7000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

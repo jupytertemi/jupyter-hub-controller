@@ -1,0 +1,11 @@
+{
+    "name": "Milestone",
+    "models": [
+        {
+            "model": "MP-13101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1-s1"
+        }
+    ]
+}

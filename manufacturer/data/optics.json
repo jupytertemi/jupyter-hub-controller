@@ -1,0 +1,11 @@
+{
+    "name": "Optics",
+    "models": [
+        {
+            "model": "PT12X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

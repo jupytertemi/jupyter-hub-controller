@@ -1,0 +1,11 @@
+{
+    "name": "Kingstar",
+    "models": [
+        {
+            "model": "WLA-01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Door",
+    "models": [
+        {
+            "model": "CHINA 1.0MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "gate",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/401"
+        }
+    ]
+}

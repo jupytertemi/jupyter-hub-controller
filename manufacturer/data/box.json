@@ -1,0 +1,11 @@
+{
+    "name": "Box",
+    "models": [
+        {
+            "model": "BlackBox",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live1"
+        }
+    ]
+}

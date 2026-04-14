@@ -1,0 +1,17 @@
+{
+    "name": "Flying",
+    "models": [
+        {
+            "model": "1.3Mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/888888:888888/main"
+        },
+        {
+            "model": "3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/888888:888888/main"
+        }
+    ]
+}

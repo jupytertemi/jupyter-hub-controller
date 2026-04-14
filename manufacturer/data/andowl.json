@@ -1,0 +1,59 @@
+{
+    "name": "Andowl",
+    "models": [
+        {
+            "model": "Q-A236",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Q-A275",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Q-S2i",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "QS66",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Q-S30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "q-s4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "Q-SX002",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "S-Q4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/streamtype=1"
+        },
+        {
+            "model": "Q-S807",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile0"
+        }
+    ]
+}

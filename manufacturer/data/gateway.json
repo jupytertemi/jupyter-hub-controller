@@ -1,0 +1,11 @@
+{
+    "name": "Gateway",
+    "models": [
+        {
+            "model": "K-6040",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

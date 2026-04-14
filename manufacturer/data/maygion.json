@@ -1,0 +1,35 @@
+{
+    "name": "Maygion",
+    "models": [
+        {
+            "model": "black IP Camera V3",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "IP Camera V3",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "CAMARA Other",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_h264_1.sdp"
+        },
+        {
+            "model": "P2P H.264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "rossm",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

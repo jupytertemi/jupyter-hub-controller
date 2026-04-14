@@ -1,0 +1,11 @@
+{
+    "name": "Ipg",
+    "models": [
+        {
+            "model": "8150PSS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/MAIN"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Veroyi",
+    "models": [
+        {
+            "model": "CloudCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

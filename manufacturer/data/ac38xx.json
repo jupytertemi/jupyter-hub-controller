@@ -1,0 +1,17 @@
+{
+    "name": "Ac38xx",
+    "models": [
+        {
+            "model": "dm12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/live/2"
+        },
+        {
+            "model": "MD12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/live/2"
+        }
+    ]
+}

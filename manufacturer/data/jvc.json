@@ -1,0 +1,89 @@
+{
+    "name": "Jvc",
+    "models": [
+        {
+            "model": "JVC VN-T216/U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "VNH57",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "VN-T16U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "VN SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "VN-H37",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "VNH-37U",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        },
+        {
+            "model": "VN H264",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/[CHANNEL]"
+        },
+        {
+            "model": "VN-H137",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/[CHANNEL]"
+        },
+        {
+            "model": "VN-H237",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/[CHANNEL]"
+        },
+        {
+            "model": "VN-T216U",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/[CHANNEL]"
+        },
+        {
+            "model": "vn-t216vpru",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "VN-H557",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/Streaming/channels/0_a/unicast"
+        },
+        {
+            "model": "VN-U78",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "XA1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

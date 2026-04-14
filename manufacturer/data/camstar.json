@@ -1,0 +1,11 @@
+{
+    "name": "Camstar",
+    "models": [
+        {
+            "model": "H0202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

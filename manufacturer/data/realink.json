@@ -1,0 +1,11 @@
+{
+    "name": "Realink",
+    "models": [
+        {
+            "model": "Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        }
+    ]
+}

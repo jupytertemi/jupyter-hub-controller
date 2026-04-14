@@ -1,0 +1,17 @@
+{
+    "name": "Vguard",
+    "models": [
+        {
+            "model": "VG-200-DF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=1"
+        },
+        {
+            "model": "VG7108N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=1"
+        }
+    ]
+}

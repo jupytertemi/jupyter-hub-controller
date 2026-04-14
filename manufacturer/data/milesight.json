@@ -1,0 +1,347 @@
+{
+    "name": "Milesight",
+    "models": [
+        {
+            "model": "200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "MS-c5372",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "PTZ BULLET",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "3MP mini Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "Box",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "Bullet Outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "C2672-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "C3366-FP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "C3366-FPH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "C3581-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "C3672",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "c3687",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "C8477",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "c-ms3672",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "Etuovi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MiniDoom",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-2672C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "ms-2681",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-2972-FPB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-3366-FPH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-3567-FPN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "ms-3672",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS3672",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-3689-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2163",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2173",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2191",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2363",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "ms-c2681",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2682",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2961-EB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2961-EPB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2961-REB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2962-FIPB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2963-EB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C2973-PB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C3567-PN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C3587-PA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C3662",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "ms-c3672",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C4461-E(P)B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C4462-FIPB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C4473-PB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C4482-PB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C5361",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C5375-PD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C8164-PD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C8175-PD/BJ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "MS-C8176-PA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "NC2971",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "Takaovi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "Bullet Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/sub"
+        },
+        {
+            "model": "C2982",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/sub"
+        },
+        {
+            "model": "MS-C3263",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "MS-C3263-PN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "MS-C3687",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

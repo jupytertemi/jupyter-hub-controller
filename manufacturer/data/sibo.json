@@ -1,0 +1,11 @@
+{
+    "name": "Sibo",
+    "models": [
+        {
+            "model": "hd1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

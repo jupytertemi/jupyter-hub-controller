@@ -1,0 +1,11 @@
+{
+    "name": "Tseeu",
+    "models": [
+        {
+            "model": "TS-SD0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

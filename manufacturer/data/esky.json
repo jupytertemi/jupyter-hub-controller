@@ -1,0 +1,23 @@
+{
+    "name": "Esky",
+    "models": [
+        {
+            "model": "c5900",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "h6800",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "ip003",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

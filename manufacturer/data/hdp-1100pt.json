@@ -1,0 +1,11 @@
+{
+    "name": "Hdp-1100pt",
+    "models": [
+        {
+            "model": "dp104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/h264"
+        }
+    ]
+}

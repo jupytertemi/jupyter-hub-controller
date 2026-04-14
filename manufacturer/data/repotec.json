@@ -1,0 +1,17 @@
+{
+    "name": "Repotec",
+    "models": [
+        {
+            "model": "RP-VP0921",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4?user=[USERNAME]&pwd=[PASSWORD]"
+        },
+        {
+            "model": "RP-VP0961",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4?user=[USERNAME]&pwd=[PASSWORD]"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Seif",
+    "models": [
+        {
+            "model": "POE-280HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

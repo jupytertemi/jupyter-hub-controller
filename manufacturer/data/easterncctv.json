@@ -1,0 +1,17 @@
+{
+    "name": "Easterncctv",
+    "models": [
+        {
+            "model": "IP-IR3S24-2.8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "IP-IRD2S02-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Ctvman",
+    "models": [
+        {
+            "model": "CM405IP-V10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

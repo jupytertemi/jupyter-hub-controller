@@ -1,0 +1,11 @@
+{
+    "name": "Ccd Ip Camera",
+    "models": [
+        {
+            "model": "IMX178",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam4/mpeg4"
+        }
+    ]
+}

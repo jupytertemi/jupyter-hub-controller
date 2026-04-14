@@ -1,0 +1,17 @@
+{
+    "name": "Intelkam",
+    "models": [
+        {
+            "model": "203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "wr-109",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

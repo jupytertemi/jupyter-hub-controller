@@ -1,0 +1,11 @@
+{
+    "name": "Loveday Smart Home",
+    "models": [
+        {
+            "model": "LD-P2P-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

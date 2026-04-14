@@ -1,0 +1,17 @@
+{
+    "name": "Shinsoft Co",
+    "models": [
+        {
+            "model": "I-315",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "SIS-T2001RE",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        }
+    ]
+}

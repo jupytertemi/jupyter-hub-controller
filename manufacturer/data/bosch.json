@@ -1,0 +1,695 @@
+{
+    "name": "Bosch",
+    "models": [
+        {
+            "model": "4000 IP HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "455",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "7000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "7000 IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "7000HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "71022",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Autodome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Autodome 7000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "autodome jr800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "autodome starlight 7000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Autodome VG5 PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Autodome2-700",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Autodome7xx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "cap cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "ddd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Dinion",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Dinion 138",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Dinion 5000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Dinion 8000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "DINION HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Dinion7000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "dmo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "etet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "flexidome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "FlexiDome HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Flexidome HP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Flexidome IP outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Flexidome IP OUTDOOR 5000 IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Flexidome NDN-498P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "ghg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "IP bullet 5000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "junior800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "MHM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NBN-498-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "nbn-50022-v3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "nbn921",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC 265-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC-225-PI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC-255-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "ndc265",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC-265-P APA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC-274-PT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC-284-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC-284-PT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDC-455V03-21P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDN 265 PIO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "ndn832-B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NDN-832v-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NIN733V0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NIN832-V0P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NTC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NTI-50022",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "NWD-495V03-20P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "ojo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "on 75",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "sdds",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "second",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Tinyon 2000 WiFi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "Unkown",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "VG4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "vg5-7230-epc4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "videojet X40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "VIP X1 XF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "VIP X1600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "VIP-X1600M4A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "VIP-X1600M4S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "vjr831",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_tunnel"
+        },
+        {
+            "model": "AutoDome 700 IP 24",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "Autodome II IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "AUTODOME IP 5000 HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "Flexidome IP HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "Flexidome IP indoor 5000 HD (CPP4)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "Flexidome IP 5000 HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Gamma Shredder Fluff Discharge7000 IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NDI-50022_A3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NTS-265-PI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NWC-0455-10P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NWC-0495-10p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NDC-274",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Flexidome NDN-921-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1/Profile1"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1/Profile1"
+        },
+        {
+            "model": "Starlight 6000 vr23",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1/Profile1"
+        },
+        {
+            "model": "Autodome IP 5000 IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "Dinion starlight 8000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "Dinion_h264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "Flexidome IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "Flexidome ndn-498-p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "nbc-225-p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NDC-265P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NDN-265-PIO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NDN-498-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NTC-265-PI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NTI-50022-V3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NWC-0455-20P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "VG4 Autodome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "VG4i",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "VIP X1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video"
+        },
+        {
+            "model": "DVR RTSP 440/480/600",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video"
+        },
+        {
+            "model": "NBC-265P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video"
+        },
+        {
+            "model": "NTC-255-PI",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video"
+        },
+        {
+            "model": "DINION IP 5000 HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStream/[CHANNEL]"
+        },
+        {
+            "model": "DS-HD6462M-WD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1-s1"
+        },
+        {
+            "model": "Flexidome panaramic 5100i",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "gyhkjgh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "Flexidome IP starlight 8000i",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "NBE-7604-AL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "NBE-7604-AL-OC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "npc-20012-f2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "werwer",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

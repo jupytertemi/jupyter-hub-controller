@@ -1,0 +1,95 @@
+{
+    "name": "Pixord",
+    "models": [
+        {
+            "model": "100 SERIES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "P-400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "4000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "P-1401 Video Server",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "P-400-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "P405",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "P-415M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "P423",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "636",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "p606",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "pl621",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "pl621e",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "p400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "p463",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "p412",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        }
+    ]
+}

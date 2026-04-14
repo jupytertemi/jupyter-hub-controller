@@ -1,0 +1,11 @@
+{
+    "name": "Ordro",
+    "models": [
+        {
+            "model": "HDV-Z20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

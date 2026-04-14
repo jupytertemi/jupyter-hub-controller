@@ -1,0 +1,11 @@
+{
+    "name": "Gedthry",
+    "models": [
+        {
+            "model": "rehgj",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

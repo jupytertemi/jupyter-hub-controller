@@ -1,0 +1,11 @@
+{
+    "name": "Nas",
+    "models": [
+        {
+            "model": "metis 3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

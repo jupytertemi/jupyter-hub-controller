@@ -1,0 +1,11 @@
+{
+    "name": "Teckin",
+    "models": [
+        {
+            "model": "TC100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video0_unicast"
+        }
+    ]
+}

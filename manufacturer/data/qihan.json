@@ -1,0 +1,41 @@
+{
+    "name": "Qihan",
+    "models": [
+        {
+            "model": "356",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp_live/ch0_1"
+        },
+        {
+            "model": "QH-NV534DS-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp_live/ch0_1"
+        },
+        {
+            "model": "ccd 104",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        },
+        {
+            "model": "QH-IP130LL-WDR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        },
+        {
+            "model": "rp104",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "QCY-62401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

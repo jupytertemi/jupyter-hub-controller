@@ -1,0 +1,11 @@
+{
+    "name": "Cc Plus",
+    "models": [
+        {
+            "model": "E-35A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/channel1"
+        }
+    ]
+}

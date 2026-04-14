@@ -1,0 +1,41 @@
+{
+    "name": "March Networks",
+    "models": [
+        {
+            "model": "720P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "C3401A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "ME4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "megapx1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/1/h264/1"
+        },
+        {
+            "model": "SE2_Outdoor_IR_Dome_2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "7-12mm",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        }
+    ]
+}

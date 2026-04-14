@@ -1,0 +1,11 @@
+{
+    "name": "Whfi",
+    "models": [
+        {
+            "model": "cloudcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        }
+    ]
+}

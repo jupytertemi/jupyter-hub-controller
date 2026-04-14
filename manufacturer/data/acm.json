@@ -1,0 +1,11 @@
+{
+    "name": "Acm",
+    "models": [
+        {
+            "model": "4100b",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

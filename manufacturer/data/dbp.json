@@ -1,0 +1,11 @@
+{
+    "name": "Dbp",
+    "models": [
+        {
+            "model": "7200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Yale",
+    "models": [
+        {
+            "model": "720 DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        },
+        {
+            "model": "HD1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=4_stream=0.sdp"
+        }
+    ]
+}

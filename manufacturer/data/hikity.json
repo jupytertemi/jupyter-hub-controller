@@ -1,0 +1,11 @@
+{
+    "name": "Hikity",
+    "models": [
+        {
+            "model": "EC76-X15",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

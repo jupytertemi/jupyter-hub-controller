@@ -1,0 +1,11 @@
+{
+    "name": "Igson",
+    "models": [
+        {
+            "model": "V-IPK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Epcam2",
+    "models": [
+        {
+            "model": "EP2036BP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "EP2063BP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

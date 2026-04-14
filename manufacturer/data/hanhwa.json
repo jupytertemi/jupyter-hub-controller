@@ -1,0 +1,11 @@
+{
+    "name": "Hanhwa",
+    "models": [
+        {
+            "model": "VDR-10002",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1/media.smp"
+        }
+    ]
+}

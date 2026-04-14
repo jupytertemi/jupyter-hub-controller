@@ -1,0 +1,11 @@
+{
+    "name": "Tedun",
+    "models": [
+        {
+            "model": "F20W-WSBE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        }
+    ]
+}

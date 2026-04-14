@@ -1,0 +1,17 @@
+{
+    "name": "Annahme",
+    "models": [
+        {
+            "model": "6012",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IN6012",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

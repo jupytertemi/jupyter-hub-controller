@@ -1,0 +1,11 @@
+{
+    "name": "Ncx",
+    "models": [
+        {
+            "model": "aper",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

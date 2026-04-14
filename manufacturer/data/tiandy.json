@@ -1,0 +1,41 @@
+{
+    "name": "Tiandy",
+    "models": [
+        {
+            "model": "TC-C32KN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "TC-C32QN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "TC-NC44M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "tc-c34sp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "TC-C35US",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "TC-H332N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

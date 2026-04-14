@@ -1,0 +1,11 @@
+{
+    "name": "Sefica",
+    "models": [
+        {
+            "model": "PC95BOF/IR-IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

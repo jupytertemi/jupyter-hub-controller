@@ -1,0 +1,23 @@
+{
+    "name": "Northern",
+    "models": [
+        {
+            "model": "IP4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/1"
+        },
+        {
+            "model": "NTH-IP3W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "nth-ip4w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

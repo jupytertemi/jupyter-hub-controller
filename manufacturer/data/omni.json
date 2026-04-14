@@ -1,0 +1,11 @@
+{
+    "name": "Omni",
+    "models": [
+        {
+            "model": "KNC-p3LR4IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

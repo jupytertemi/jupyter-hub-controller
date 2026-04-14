@@ -1,0 +1,29 @@
+{
+    "name": "Icam",
+    "models": [
+        {
+            "model": "1000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "365",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "ICAM-703",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "USC-CAMS",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

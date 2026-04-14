@@ -1,0 +1,11 @@
+{
+    "name": "Gps-standard",
+    "models": [
+        {
+            "model": "VGON-5042HR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

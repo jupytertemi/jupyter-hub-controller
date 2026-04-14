@@ -1,0 +1,29 @@
+{
+    "name": "Camsee",
+    "models": [
+        {
+            "model": "1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "1080P Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "GgCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "SOME_ONVIF",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        }
+    ]
+}

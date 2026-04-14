@@ -1,0 +1,11 @@
+{
+    "name": "Gaines Dvr",
+    "models": [
+        {
+            "model": "LV-T9408XHS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/101"
+        }
+    ]
+}

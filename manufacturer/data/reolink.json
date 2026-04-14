@@ -1,0 +1,1541 @@
+{
+    "name": "Reolink",
+    "models": [
+        {
+            "model": "E1 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "410S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "410W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "420",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "510AW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "510WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "511w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "522",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "810A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "811A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "820a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "822a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "A822",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "ALL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Argus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Argus PT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "B400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "B500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "B800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "B820A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "C1 PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "c1pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "C1-Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "C2 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "C2-Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "D800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Duo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Duo (CAM 1)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Duo 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Duo 2 POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Duo 2 Security Light",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Duo 2 Wifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Duo Floodlight PoE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "E1 outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "e1 pro PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "E1 pro sub",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "E1 Zomm",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "E1 Zoom",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "FE-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "FE-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Inside",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "nord",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RCL-410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RCL-410-5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rcl-420",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RCL-510WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rcl-511",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RCL-520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rcl-522",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RCL-810A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "REOLINK C2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Reolink RCL-410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "REOLINK RLC-423",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "reolink: rlc-410-5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Reolink-820a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc 410w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC 482a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc 510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC 520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC 830A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC 842",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-1220A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc-410-5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-410W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-410WS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-411",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-411WS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-420",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc-420-5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-420-5MP-V2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-422",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-423",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-423WS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-510A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-510AW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-510WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-511",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-511W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-520-5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc-520a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-522",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-542WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-810",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc-810a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc-810c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-811A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-812A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-81MA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc-820a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rlc822a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-822A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-832A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLC-833A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RLN8-410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "rls-410s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RTC-410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "RWC-511",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Trackmix POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "TrackMix WiFi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Video Doorbell PoE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Video Doorbell Wifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "w511",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "Wifi Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "1010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "3816M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "4k Dual-Lense",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "510A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "510w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "511WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "523WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "8224",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "823",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "823A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "842-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "A1 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Argus 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "B1200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "C310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "CX410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "D400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "D4K23",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "DB_566128M5MP_P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Doorbell PoE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "dual",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Dual Lens",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Duo (CAM 2)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Duo 3 PoE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Duo Poe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Duo WiFi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Duo2 Wifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "E1 Outdoor POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "E1 Pro Outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "E1Zoom",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "E330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "FP-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "F-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "inrit",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Inside 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "IPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Lumus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "NVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Outdoor E1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "R1 Outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "R510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RCL410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "rcl-410w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RCL-411W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RCL-510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RCL-511WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RCL-81MA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RCL-823A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Reolink 520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Reolink Argus Eco",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Reolink:833A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "reolinkrlc-410w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RL-810A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC 420",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC 422W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC 510A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC 810A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-%10WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-1212a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-1224A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "rlc-210w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-243",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-410 (rtsp)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-422W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "rlc-432ws",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-510A with substream",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-511WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-810WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-81PA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-823A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-830A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-840WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLC-842A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLK8-410B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLN16-410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "rln36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RLN36-410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Roaming Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "rst-520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "rtl-1224a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "RTL-510WA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "T1 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "TrackMix",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Trackmix-PoE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Video Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "VLC-410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Wifi Doorbell 5mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "DUO POE 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "RCL-511W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "Reolink 411",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        },
+        {
+            "model": "C1",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "C2",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "HIl",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "LivingRoom",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "RC410",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "Rcl 410",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "rlc 411s",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "RLC-410S",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "RLC-411S",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "rlc423",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "RLC-WS423WS",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "rls-410",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "W410S",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0"
+        },
+        {
+            "model": "Argus Eco",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?token=[TOKEN]&channel=0&stream=1"
+        },
+        {
+            "model": "411",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_04_main"
+        },
+        {
+            "model": "b510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_04_main"
+        },
+        {
+            "model": "dvr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_04_main"
+        },
+        {
+            "model": "4K 8MP PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "833A",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "CX410W",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "D340P",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "RCL-81PA",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "RLC520",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "RLC-523WA",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "TrackMix Wired LTE",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h264Preview_01_sub"
+        },
+        {
+            "model": "RCL-812A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h264Preview_01_sub"
+        },
+        {
+            "model": "RTL-830A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h264Preview_01_sub"
+        },
+        {
+            "model": "5MP PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h264Preview_01_main"
+        },
+        {
+            "model": "RLC 520a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h264Preview_01_main"
+        },
+        {
+            "model": "z1 zoom",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=1&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "822",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h265Preview_01_main"
+        },
+        {
+            "model": "Carport",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h265Preview_01_main"
+        },
+        {
+            "model": "E1 Outdoor Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h265Preview_01_main"
+        },
+        {
+            "model": "E3 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h265Preview_01_main"
+        },
+        {
+            "model": "Tra",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h265Preview_01_main"
+        },
+        {
+            "model": "wlc-823a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//h265Preview_01_main"
+        },
+        {
+            "model": "Doorbell WiFi",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "DUO PTZ WiFi",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "IPC_529SD78MP",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "RLC 423",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "RLC 510-WA",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "Smart Video Doorbell",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "RLC-420 4MP",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_sub.bcs?channel=0&stream=1&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "843a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h265Preview_01_main"
+        },
+        {
+            "model": "Argus Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Reolink Duo (CAM 1)",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel0_main.bcs?token=[TOKEN]&channel=0&stream=0&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "Lumis",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/flv?port=1935&app=bcs&stream=channel0_main.bcs&user=[USERNAME]&password=[PASSWORD]"
+        },
+        {
+            "model": "Lumus(neolink Hack)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/livingroom/mainStream"
+        },
+        {
+            "model": "Lumus(neolink)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CarPort/mainStream"
+        },
+        {
+            "model": "rc510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        },
+        {
+            "model": "Reolink Duo (CAM 2)",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/bcs/channel1_main.bcs?token=[TOKEN]&channel=0&stream=1"
+        }
+    ]
+}

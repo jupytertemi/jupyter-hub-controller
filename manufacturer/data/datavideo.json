@@ -1,0 +1,11 @@
+{
+    "name": "Datavideo",
+    "models": [
+        {
+            "model": "NVS-25",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        }
+    ]
+}

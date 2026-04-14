@@ -1,0 +1,11 @@
+{
+    "name": "Fortec",
+    "models": [
+        {
+            "model": "IDG-2020",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

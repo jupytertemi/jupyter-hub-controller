@@ -1,0 +1,11 @@
+{
+    "name": "Serage",
+    "models": [
+        {
+            "model": "HD IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

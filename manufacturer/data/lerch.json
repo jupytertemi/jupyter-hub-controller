@@ -1,0 +1,11 @@
+{
+    "name": "Lerch",
+    "models": [
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

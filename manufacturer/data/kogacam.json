@@ -1,0 +1,11 @@
+{
+    "name": "Kogacam",
+    "models": [
+        {
+            "model": "NCM630W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

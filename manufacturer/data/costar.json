@@ -1,0 +1,17 @@
+{
+    "name": "Costar",
+    "models": [
+        {
+            "model": "CDIH226V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "CR32CI00",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        }
+    ]
+}

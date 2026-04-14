@@ -1,0 +1,11 @@
+{
+    "name": "Hondgda",
+    "models": [
+        {
+            "model": "IP-CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

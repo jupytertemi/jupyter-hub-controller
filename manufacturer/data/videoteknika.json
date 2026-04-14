@@ -1,0 +1,11 @@
+{
+    "name": "Videoteknika",
+    "models": [
+        {
+            "model": "VN2008/8P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/401"
+        }
+    ]
+}

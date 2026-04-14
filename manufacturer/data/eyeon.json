@@ -1,0 +1,11 @@
+{
+    "name": "Eyeon",
+    "models": [
+        {
+            "model": "Plus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

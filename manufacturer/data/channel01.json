@@ -1,0 +1,35 @@
+{
+    "name": "Channel01",
+    "models": [
+        {
+            "model": "AIPC-420BM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "anni",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "qrt-601",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "SZS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "IP WIFI Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ROH/channel/11"
+        }
+    ]
+}

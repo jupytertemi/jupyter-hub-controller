@@ -1,0 +1,11 @@
+{
+    "name": "Avn",
+    "models": [
+        {
+            "model": "avn244va",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        }
+    ]
+}

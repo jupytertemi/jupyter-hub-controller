@@ -1,0 +1,11 @@
+{
+    "name": "Maizic",
+    "models": [
+        {
+            "model": "V380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

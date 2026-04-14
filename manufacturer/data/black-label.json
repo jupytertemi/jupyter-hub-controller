@@ -1,0 +1,17 @@
+{
+    "name": "Black Label",
+    "models": [
+        {
+            "model": "BL2305",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/udp/av0_0"
+        },
+        {
+            "model": "BL2605",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/udp/av0_0"
+        }
+    ]
+}

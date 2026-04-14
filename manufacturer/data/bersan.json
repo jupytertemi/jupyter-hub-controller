@@ -1,0 +1,11 @@
+{
+    "name": "Bersan",
+    "models": [
+        {
+            "model": "BSI-D114",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

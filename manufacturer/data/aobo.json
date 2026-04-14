@@ -1,0 +1,11 @@
+{
+    "name": "Aobo",
+    "models": [
+        {
+            "model": "Q18 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/8062D93D576F746EFAD6668A629BF82D*0"
+        }
+    ]
+}

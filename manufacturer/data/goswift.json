@@ -1,0 +1,17 @@
+{
+    "name": "Goswift",
+    "models": [
+        {
+            "model": "GS-2MPTURRET-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "GS-4KBULLET-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        }
+    ]
+}

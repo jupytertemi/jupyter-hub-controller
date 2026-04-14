@@ -1,0 +1,11 @@
+{
+    "name": "Hunter",
+    "models": [
+        {
+            "model": "HN-BP20lRe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

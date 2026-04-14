@@ -1,0 +1,17 @@
+{
+    "name": "Norelco",
+    "models": [
+        {
+            "model": "SC-303-XD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "SC-304-XB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

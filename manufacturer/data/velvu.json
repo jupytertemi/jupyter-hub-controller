@@ -1,0 +1,11 @@
+{
+    "name": "Velvu",
+    "models": [
+        {
+            "model": "4mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

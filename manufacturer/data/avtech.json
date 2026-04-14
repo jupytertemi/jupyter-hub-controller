@@ -1,0 +1,989 @@
+{
+    "name": "Avtech",
+    "models": [
+        {
+            "model": "202z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "avm359an",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVM5547",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVN211",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "212Z",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "358-HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "80X",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "ANM357A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "Arbres fruitiers et route",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVC792",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM2220TP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM2421",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM2421AP/F28",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM317ZBP/F38",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM328",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM328A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM357a",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "avm357zap",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM358",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM3650L-000E532CC486",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM365A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM428ZDN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM459",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "avm521cp/f38",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM532F",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM542AP/F28F12",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM542B",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "avm542fp",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM543",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM552",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM561",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "avm571",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVM583",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN 362",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "avn244",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN252",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN257",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN284",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN314",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN314-HS64",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "avn314z",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN320",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN362",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN363V",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN363Z",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN801",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "avn801z",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN807ZA",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN80X",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVP542B",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVX931",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "DC2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "dgd2404",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "dgm1304",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "DM1306",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "DVR (2)",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "eagle",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "Entatech",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "h.264",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "H264 DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "IP cameras",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "NVM428",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "3300auxsd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "452B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVI201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVM 512AP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "avm301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "avm357",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVM357ZAP/F38",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVM358CHF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVM417A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVM428",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVM428D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVM457",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "avm565a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVMU428D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVN216Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVN328ZBN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVN420P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "avn701",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "AVN813",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "dgm1104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/VGA"
+        },
+        {
+            "model": "457A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "458C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AV321",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AV5115-8B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AV565",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVC793ZC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVM 503P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVM417",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVM457ZAP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVM511P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVM521",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "avm542",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVN212",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVN244zvp/22",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "AVT216SE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "dg-104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "DG104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "DGM 5406P/F28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "dgm1134",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "H264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "h264 ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "kpd677",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "KPD965working",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "MDR759H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "NVM328",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080P"
+        },
+        {
+            "model": "540",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "AVH-408P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "AVM2432P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "AVM2451T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "avm2592L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "AVM420UP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "AVM5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "AVM592",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "AVN 521A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "C04",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "dgm1105",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "YGN2003A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/profile1"
+        },
+        {
+            "model": "701",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVC791 DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVI201zp",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVM328Z",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVN204",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVN420",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVN801zeu",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVN807A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "avn80XZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "AVx 252",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "ANN363V",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN304",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN362V",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "AVN812",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "CAM04",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "7xx DVR Series",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "av801",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "AVC2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "avc791dvr",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "AVC792 DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "AVM217Z",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "AvTech-Mjpeg",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "Itsu",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "KPD675",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "MDR688B",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "MDR757ZB-E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264/ch[CHANNEL]"
+        },
+        {
+            "model": "AV5115-9A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AV5455DN-50",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264.sdp"
+        },
+        {
+            "model": "AVD744",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/HD720P"
+        },
+        {
+            "model": "AVM328B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/HD720P"
+        },
+        {
+            "model": "AVM328ZDP/F38",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/HD720P"
+        },
+        {
+            "model": "AVM428A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/HD720P"
+        },
+        {
+            "model": "AVM553JP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264_ulaw/HD720P"
+        },
+        {
+            "model": "AVH408P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video/profile1"
+        },
+        {
+            "model": "AVM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video/profile1"
+        },
+        {
+            "model": "AVM 521A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video/profile1"
+        },
+        {
+            "model": "DGM1105q",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video/profile1"
+        },
+        {
+            "model": "DGM2203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video/profile1"
+        },
+        {
+            "model": "AVH800EA6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/video_audio/ch01/record"
+        },
+        {
+            "model": "AVN815EZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/SXGA"
+        },
+        {
+            "model": "AVM365",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/HD1080"
+        },
+        {
+            "model": "AVM5447P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "mjkj",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

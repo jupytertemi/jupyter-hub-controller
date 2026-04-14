@@ -1,0 +1,17 @@
+{
+    "name": "Vip Vision",
+    "models": [
+        {
+            "model": "cam409",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "VSIP4MPVDIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Avaya",
+    "models": [
+        {
+            "model": "Other 13",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Aszhonga",
+    "models": [
+        {
+            "model": "Q10C-JZ-WIFI-2.0MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

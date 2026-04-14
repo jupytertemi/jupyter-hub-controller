@@ -1,0 +1,11 @@
+{
+    "name": "Styco",
+    "models": [
+        {
+            "model": "ST-IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

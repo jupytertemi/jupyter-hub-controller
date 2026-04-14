@@ -1,0 +1,11 @@
+{
+    "name": "Bipcam",
+    "models": [
+        {
+            "model": "ipc3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Hokam",
+    "models": [
+        {
+            "model": "a9 mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

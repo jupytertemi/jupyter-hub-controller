@@ -1,0 +1,23 @@
+{
+    "name": "Desertwolfblackwidow606",
+    "models": [
+        {
+            "model": "dltv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch2"
+        },
+        {
+            "model": "pt606",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch2"
+        },
+        {
+            "model": "thermal",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0"
+        }
+    ]
+}

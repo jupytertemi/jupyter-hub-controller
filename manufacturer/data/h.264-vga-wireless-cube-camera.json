@@ -1,0 +1,23 @@
+{
+    "name": "H.264 Vga Wireless Cube Camera",
+    "models": [
+        {
+            "model": "HI3516EV100_50H20L_S38",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=[CHANNEL].sdp?"
+        },
+        {
+            "model": "IPNC-CHINA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "RH50X20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp?real_stream"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Oswoo",
+    "models": [
+        {
+            "model": "TV-AL0801-LM-XM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/301"
+        }
+    ]
+}

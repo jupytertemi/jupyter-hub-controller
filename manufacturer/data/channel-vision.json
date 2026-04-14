@@ -1,0 +1,41 @@
+{
+    "name": "Channel Vision",
+    "models": [
+        {
+            "model": "6521",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        },
+        {
+            "model": "SC565w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        },
+        {
+            "model": "6522",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "6522-new",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "6564",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "6554",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Haustuer",
+    "models": [
+        {
+            "model": "Grandstream",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

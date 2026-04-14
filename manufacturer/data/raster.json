@@ -1,0 +1,41 @@
+{
+    "name": "Raster",
+    "models": [
+        {
+            "model": "4200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        },
+        {
+            "model": "RS-SDI20420LP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        },
+        {
+            "model": "ip-4200 df",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/media.amp"
+        },
+        {
+            "model": "ip-4200hi",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/media.amp"
+        },
+        {
+            "model": "RS-ip4200hi",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/media/media.amp"
+        },
+        {
+            "model": "ip-4200df",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

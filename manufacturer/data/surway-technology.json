@@ -1,0 +1,11 @@
+{
+    "name": "Surway Technology",
+    "models": [
+        {
+            "model": "IPC-C01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

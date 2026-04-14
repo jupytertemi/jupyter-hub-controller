@@ -1,0 +1,11 @@
+{
+    "name": "Discover",
+    "models": [
+        {
+            "model": "DIS-9502IR-SE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        }
+    ]
+}

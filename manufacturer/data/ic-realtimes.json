@@ -1,0 +1,11 @@
+{
+    "name": "Ic Realtimes",
+    "models": [
+        {
+            "model": "ICIP D2000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

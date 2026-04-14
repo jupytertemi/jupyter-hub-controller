@@ -1,0 +1,11 @@
+{
+    "name": "Schneider",
+    "models": [
+        {
+            "model": "PoE Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

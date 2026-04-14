@@ -1,0 +1,11 @@
+{
+    "name": "Xtremepro",
+    "models": [
+        {
+            "model": "ipw1-1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

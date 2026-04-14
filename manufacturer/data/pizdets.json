@@ -1,0 +1,11 @@
+{
+    "name": "Pizdets",
+    "models": [
+        {
+            "model": "196",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

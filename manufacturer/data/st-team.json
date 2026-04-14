@@ -1,0 +1,11 @@
+{
+    "name": "St-team",
+    "models": [
+        {
+            "model": "ST-S2541Lite",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

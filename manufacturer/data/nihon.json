@@ -1,0 +1,11 @@
+{
+    "name": "Nihon",
+    "models": [
+        {
+            "model": "wnipt40n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_1"
+        }
+    ]
+}

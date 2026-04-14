@@ -1,0 +1,23 @@
+{
+    "name": "Eyespy247",
+    "models": [
+        {
+            "model": "HDSD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "PTZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC8061",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        }
+    ]
+}

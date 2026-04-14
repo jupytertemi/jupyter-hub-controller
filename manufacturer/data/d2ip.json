@@ -1,0 +1,11 @@
+{
+    "name": "D2ip",
+    "models": [
+        {
+            "model": "215D2iP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0_0"
+        }
+    ]
+}

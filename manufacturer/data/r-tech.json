@@ -1,0 +1,11 @@
+{
+    "name": "R-tech",
+    "models": [
+        {
+            "model": "1220-MHP5JLI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

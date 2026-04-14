@@ -1,0 +1,17 @@
+{
+    "name": "X-price",
+    "models": [
+        {
+            "model": "XL-ICA-270M1-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "xl-ica-270m1-36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Heden",
+    "models": [
+        {
+            "model": "C5F0S7Z0N0P0L0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videostream.asf"
+        },
+        {
+            "model": "CAMHD03FX0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CAMHD05MD0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

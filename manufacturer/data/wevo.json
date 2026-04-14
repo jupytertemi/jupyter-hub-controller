@@ -1,0 +1,23 @@
+{
+    "name": "Wevo",
+    "models": [
+        {
+            "model": "200B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream[CHANNEL]"
+        },
+        {
+            "model": "200FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream[CHANNEL]"
+        },
+        {
+            "model": "200-FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        }
+    ]
+}

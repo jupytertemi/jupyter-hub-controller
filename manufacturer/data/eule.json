@@ -1,0 +1,17 @@
+{
+    "name": "Eule",
+    "models": [
+        {
+            "model": "DOM-21IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "DOM-21IP_low",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

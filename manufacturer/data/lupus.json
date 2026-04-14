@@ -1,0 +1,89 @@
+{
+    "name": "Lupus",
+    "models": [
+        {
+            "model": "228",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "LE180",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v1"
+        },
+        {
+            "model": "LE970",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v1"
+        },
+        {
+            "model": "LE202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LE204",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "LE203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=TWFpazpDYW0zTWFpazYq"
+        },
+        {
+            "model": "LE228",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=TWFpazpDYW0zTWFpazYq"
+        },
+        {
+            "model": "LE221",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "LE224",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif"
+        },
+        {
+            "model": "LE931",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LE934",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LE969",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LE971",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LE966",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

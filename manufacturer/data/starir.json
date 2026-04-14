@@ -1,0 +1,11 @@
+{
+    "name": "Starir",
+    "models": [
+        {
+            "model": "ima80l15",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

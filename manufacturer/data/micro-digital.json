@@ -1,0 +1,17 @@
+{
+    "name": "Micro Digital",
+    "models": [
+        {
+            "model": "MDC-I4260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0_0"
+        },
+        {
+            "model": "MDi8240F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0_0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Pripaso",
+    "models": [
+        {
+            "model": "MPT01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

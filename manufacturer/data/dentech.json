@@ -1,0 +1,11 @@
+{
+    "name": "Dentech",
+    "models": [
+        {
+            "model": "PTZ-LR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

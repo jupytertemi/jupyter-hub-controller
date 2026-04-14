@@ -1,0 +1,11 @@
+{
+    "name": "Wi-tec",
+    "models": [
+        {
+            "model": "WI-2806BW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

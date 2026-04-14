@@ -1,0 +1,11 @@
+{
+    "name": "Anykeeper",
+    "models": [
+        {
+            "model": "AK-4030C",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=01"
+        }
+    ]
+}

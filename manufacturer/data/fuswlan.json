@@ -1,0 +1,29 @@
+{
+    "name": "Fuswlan",
+    "models": [
+        {
+            "model": "B09POE-5MP",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B09W-1080P",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "B09-W1080P",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "PTZ IP Camera (HX WiFi Series)",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Chavega",
+    "models": [
+        {
+            "model": "CSJ-320R-40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "CSJ-320RP-40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "CSJ-NH4RU-130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "CSJ-NH6RX-200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

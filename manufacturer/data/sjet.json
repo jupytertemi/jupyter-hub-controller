@@ -1,0 +1,11 @@
+{
+    "name": "Sjet",
+    "models": [
+        {
+            "model": "544545d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        }
+    ]
+}

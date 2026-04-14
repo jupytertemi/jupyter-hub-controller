@@ -1,0 +1,191 @@
+{
+    "name": "Night Owl",
+    "models": [
+        {
+            "model": "2.W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1_1.264"
+        },
+        {
+            "model": "CAM-WNVR2P-OU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1_1.264"
+        },
+        {
+            "model": "DVR-THD30B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1_1.264"
+        },
+        {
+            "model": "NIGHTOWL2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1_1.264"
+        },
+        {
+            "model": "WNIP2 CAM2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1_1.264"
+        },
+        {
+            "model": "WNIP-2LTA-BS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1_1.264"
+        },
+        {
+            "model": "CAM-WNVR2P-IN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch2_1.264"
+        },
+        {
+            "model": "WMVR-WNIP2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch2_1.264"
+        },
+        {
+            "model": "WNIP2 CAM3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch2_1.264"
+        },
+        {
+            "model": "BTD2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/301"
+        },
+        {
+            "model": "DVR-FTD4-8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/301"
+        },
+        {
+            "model": "FTD4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/301"
+        },
+        {
+            "model": "WM-CAM-WAWNP2L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/301"
+        },
+        {
+            "model": "WNIP2-CM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/301"
+        },
+        {
+            "model": "CAM-IPPT-HDW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "CAM-WNIP2LWA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "DOORBELL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "DVR-VDP2-8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "WCM-SD2POU-BU-V2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "WM-CAM-WNP2LBU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "WNIP2 (CAM1)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "WNIP-2LTA-BS-U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "WNIP8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "CAM-WNVR2P-OU_20170811",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "IP-8LTA-B-V2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "IP-BLTA-B-V2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "QM-CAM-WNP2LBU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "WNIP-2LTAW-BS-U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "wnp8lbu",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "FTD-4",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=5&stream=1"
+        },
+        {
+            "model": "WNIP-TLTA-BS-U",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

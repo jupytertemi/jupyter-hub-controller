@@ -1,0 +1,11 @@
+{
+    "name": "Irlab",
+    "models": [
+        {
+            "model": "INS-IP311DIR-3.0MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

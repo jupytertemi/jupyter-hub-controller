@@ -1,0 +1,11 @@
+{
+    "name": "Eyecloud",
+    "models": [
+        {
+            "model": "C-P05C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

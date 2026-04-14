@@ -1,0 +1,11 @@
+{
+    "name": "Openwrt",
+    "models": [
+        {
+            "model": "mjpeg_streamer",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?action=stream"
+        }
+    ]
+}

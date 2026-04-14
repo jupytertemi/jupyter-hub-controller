@@ -1,0 +1,11 @@
+{
+    "name": "Fujitron",
+    "models": [
+        {
+            "model": "FND-52CD1321",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

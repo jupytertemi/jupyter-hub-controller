@@ -1,0 +1,17 @@
+{
+    "name": "Nexsmart",
+    "models": [
+        {
+            "model": "Nr01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "View",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

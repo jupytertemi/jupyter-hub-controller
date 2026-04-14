@@ -1,0 +1,11 @@
+{
+    "name": "Poe",
+    "models": [
+        {
+            "model": "ptz",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

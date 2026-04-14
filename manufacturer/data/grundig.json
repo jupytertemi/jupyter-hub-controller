@@ -1,0 +1,131 @@
+{
+    "name": "Grundig",
+    "models": [
+        {
+            "model": "GCI:K1523D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GCI-F4616T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "gci-f4616w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GCI-K0503B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GCI-K0589T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GCI-K2505B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GCI-K2812",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GCI-K2812W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "gec-d2201ar",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "IP - MJPEG",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "IP-Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "QLS IP-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "QLsIP-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GCI-F4626T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "GCI-H0522V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GD-CI-AT8637T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GD-CI-BC2626V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/jpeg"
+        },
+        {
+            "model": "GCI-K1523V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "GCI-K1527V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "GCI-K1627D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "GD-CI-BP4637T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

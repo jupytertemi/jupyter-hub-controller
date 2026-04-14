@@ -1,0 +1,11 @@
+{
+    "name": "Hd Ip Dome-2",
+    "models": [
+        {
+            "model": "NVSIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

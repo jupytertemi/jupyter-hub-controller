@@ -1,0 +1,11 @@
+{
+    "name": "D-tech",
+    "models": [
+        {
+            "model": "dtech",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        }
+    ]
+}

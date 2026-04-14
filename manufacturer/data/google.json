@@ -1,0 +1,23 @@
+{
+    "name": "Google",
+    "models": [
+        {
+            "model": "Nest",
+            "type": "MJPEG",
+            "protocol": "https://",
+            "url": "/get_image?uuid=8ce29a75e847488797e1a32122fb6fc8&public=0FFS3vFQ9I"
+        },
+        {
+            "model": "Pixel",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "Pixel 2XL",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Minking",
+    "models": [
+        {
+            "model": "SIR75A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.liv"
+        },
+        {
+            "model": "TC26",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0.liv"
+        }
+    ]
+}

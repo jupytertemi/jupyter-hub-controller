@@ -1,0 +1,11 @@
+{
+    "name": "Alphago",
+    "models": [
+        {
+            "model": "ALP-600",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_1&user=[USERNAME]&password=[PASSWORD]"
+        }
+    ]
+}

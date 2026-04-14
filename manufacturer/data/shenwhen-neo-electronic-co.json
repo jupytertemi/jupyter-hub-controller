@@ -1,0 +1,23 @@
+{
+    "name": "Shenwhen Neo Electronic Co",
+    "models": [
+        {
+            "model": "AY-IP9042S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/av0_[CHANNEL]"
+        },
+        {
+            "model": "LEP-FM69-H1080W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "NC-541",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/1:1/main"
+        }
+    ]
+}

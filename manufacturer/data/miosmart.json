@@ -1,0 +1,17 @@
+{
+    "name": "Miosmart",
+    "models": [
+        {
+            "model": "N526",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "VixCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

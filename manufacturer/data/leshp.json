@@ -1,0 +1,11 @@
+{
+    "name": "Leshp",
+    "models": [
+        {
+            "model": "SN-IPC-HW01201712",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Overcap",
+    "models": [
+        {
+            "model": "VSI-C809",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

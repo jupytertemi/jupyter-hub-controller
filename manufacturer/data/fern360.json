@@ -1,0 +1,11 @@
+{
+    "name": "Fern360",
+    "models": [
+        {
+            "model": "FGSIP-B4TFA-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

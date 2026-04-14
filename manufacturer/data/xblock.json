@@ -1,0 +1,11 @@
+{
+    "name": "Xblock",
+    "models": [
+        {
+            "model": "GPCZ-636A1NT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0_0"
+        }
+    ]
+}

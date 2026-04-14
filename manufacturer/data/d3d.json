@@ -1,0 +1,11 @@
+{
+    "name": "D3d",
+    "models": [
+        {
+            "model": "JPT3815W-HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

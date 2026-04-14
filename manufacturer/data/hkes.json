@@ -1,0 +1,11 @@
+{
+    "name": "Hkes",
+    "models": [
+        {
+            "model": "ONVIF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

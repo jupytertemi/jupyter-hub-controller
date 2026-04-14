@@ -1,0 +1,11 @@
+{
+    "name": "Verkada",
+    "models": [
+        {
+            "model": "CD62",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/standard"
+        }
+    ]
+}

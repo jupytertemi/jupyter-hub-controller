@@ -1,0 +1,11 @@
+{
+    "name": "Bins",
+    "models": [
+        {
+            "model": "5033sw-uk",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Hi-focus",
+    "models": [
+        {
+            "model": "1.3Mp",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

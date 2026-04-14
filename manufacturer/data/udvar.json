@@ -1,0 +1,11 @@
+{
+    "name": "Udvar",
+    "models": [
+        {
+            "model": "Wanscam 00038",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

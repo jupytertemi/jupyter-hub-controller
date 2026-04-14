@@ -1,0 +1,17 @@
+{
+    "name": "Sparklan",
+    "models": [
+        {
+            "model": "CAS-633",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "CAS-673",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

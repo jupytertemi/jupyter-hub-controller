@@ -1,0 +1,17 @@
+{
+    "name": "Mazi",
+    "models": [
+        {
+            "model": "HTVR-0410LT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/101"
+        },
+        {
+            "model": "IWH-31IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/2"
+        }
+    ]
+}

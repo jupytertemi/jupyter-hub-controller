@@ -1,0 +1,11 @@
+{
+    "name": "Imieye",
+    "models": [
+        {
+            "model": "RealHD 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

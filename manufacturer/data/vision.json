@@ -1,0 +1,11 @@
+{
+    "name": "Vision",
+    "models": [
+        {
+            "model": "VDA101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264&basic_auth=[AUTH]"
+        }
+    ]
+}

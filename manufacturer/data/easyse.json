@@ -1,0 +1,17 @@
+{
+    "name": "Easyse",
+    "models": [
+        {
+            "model": "H3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "H3e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_h264.sdp"
+        }
+    ]
+}

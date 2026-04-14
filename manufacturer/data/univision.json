@@ -1,0 +1,11 @@
+{
+    "name": "Univision",
+    "models": [
+        {
+            "model": "IPC3234SR3-DVZ28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/2"
+        }
+    ]
+}

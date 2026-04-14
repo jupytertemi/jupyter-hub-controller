@@ -1,0 +1,11 @@
+{
+    "name": "Docker Wyze Bridge",
+    "models": [
+        {
+            "model": "Wyze",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/aurora"
+        }
+    ]
+}

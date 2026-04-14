@@ -1,0 +1,11 @@
+{
+    "name": "Zekona",
+    "models": [
+        {
+            "model": "20c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

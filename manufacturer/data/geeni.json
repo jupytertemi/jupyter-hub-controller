@@ -1,0 +1,23 @@
+{
+    "name": "Geeni",
+    "models": [
+        {
+            "model": "HAWK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "mi-cw017-101w",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "Mini 7C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream_0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Au3",
+    "models": [
+        {
+            "model": "AU3-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream2"
+        }
+    ]
+}

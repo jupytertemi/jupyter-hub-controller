@@ -1,0 +1,17 @@
+{
+    "name": "Pembroke",
+    "models": [
+        {
+            "model": "PLANETICA-2200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        },
+        {
+            "model": "PLANETICA-4500V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media.amp"
+        }
+    ]
+}

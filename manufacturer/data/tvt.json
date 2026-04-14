@@ -1,0 +1,65 @@
+{
+    "name": "Tvt",
+    "models": [
+        {
+            "model": "2Other",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "TD-2104TS-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "TD-2116TS-HC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "TD-2708TE-HP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "TD-2708TS-CL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "TD-3216H2-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "TD-9441E3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "TD-9525S1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "tvt1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/?chID=2&streamType=main&linkType=tcp"
+        },
+        {
+            "model": "rer",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/chID=1&streamType=main&linkType=tcpst"
+        }
+    ]
+}

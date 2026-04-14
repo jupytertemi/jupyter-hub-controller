@@ -1,0 +1,11 @@
+{
+    "name": "Europ-camera",
+    "models": [
+        {
+            "model": "EC-C5MP30S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

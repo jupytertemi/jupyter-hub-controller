@@ -1,0 +1,35 @@
+{
+    "name": "Orion",
+    "models": [
+        {
+            "model": "224",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "C310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "ip-33",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        },
+        {
+            "model": "OR-490",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/stream[CHANNEL]"
+        },
+        {
+            "model": "SC-200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam4/mpeg4"
+        }
+    ]
+}

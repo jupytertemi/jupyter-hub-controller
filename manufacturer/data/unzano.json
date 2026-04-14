@@ -1,0 +1,11 @@
+{
+    "name": "Unzano",
+    "models": [
+        {
+            "model": "HD600",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/p3.mjpg"
+        }
+    ]
+}

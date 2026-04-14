@@ -1,0 +1,17 @@
+{
+    "name": "Civs-ipc-6400",
+    "models": [
+        {
+            "model": "6400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/StreamingSetting"
+        },
+        {
+            "model": "onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/StreamingSetting"
+        }
+    ]
+}

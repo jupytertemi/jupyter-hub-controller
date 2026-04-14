@@ -1,0 +1,11 @@
+{
+    "name": "Ct2",
+    "models": [
+        {
+            "model": "Focuseye",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Supercircuits",
+    "models": [
+        {
+            "model": "BLK-IPS101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_unicast_firststream"
+        },
+        {
+            "model": "NC-11",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "WL-IC2D",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        },
+        {
+            "model": "WL-IC2DV",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/mpeg4"
+        }
+    ]
+}

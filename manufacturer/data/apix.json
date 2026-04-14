@@ -1,0 +1,11 @@
+{
+    "name": "Apix",
+    "models": [
+        {
+            "model": "Dome",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

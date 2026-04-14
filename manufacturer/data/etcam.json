@@ -1,0 +1,11 @@
+{
+    "name": "Etcam",
+    "models": [
+        {
+            "model": "ET2CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Ysa",
+    "models": [
+        {
+            "model": "cipc-gc13h",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

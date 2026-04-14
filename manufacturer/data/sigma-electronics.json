@@ -1,0 +1,11 @@
+{
+    "name": "Sigma Electronics",
+    "models": [
+        {
+            "model": "SG-IP 9305 Zoom",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

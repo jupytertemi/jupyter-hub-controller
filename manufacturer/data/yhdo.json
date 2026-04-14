@@ -1,0 +1,11 @@
+{
+    "name": "Yhdo",
+    "models": [
+        {
+            "model": "IW-9601",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

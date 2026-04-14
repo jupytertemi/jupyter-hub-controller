@@ -1,0 +1,17 @@
+{
+    "name": "Hsmartlink",
+    "models": [
+        {
+            "model": "HSL-289799-JUWZB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_1"
+        },
+        {
+            "model": "i9831b-#6698",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_1"
+        }
+    ]
+}

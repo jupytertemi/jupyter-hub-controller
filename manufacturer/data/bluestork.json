@@ -1,0 +1,41 @@
+{
+    "name": "Bluestork",
+    "models": [
+        {
+            "model": "BLUEPIX IPCAM-IP02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "BS-CAM/DOME/HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "BS-CAM-OF/HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "BS-IPCAM/W2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "Cam-R HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "CloudCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        }
+    ]
+}

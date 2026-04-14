@@ -1,0 +1,11 @@
+{
+    "name": "Traficon",
+    "models": [
+        {
+            "model": "8MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

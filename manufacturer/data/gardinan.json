@@ -1,0 +1,11 @@
+{
+    "name": "Gardinan",
+    "models": [
+        {
+            "model": "H360-SN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

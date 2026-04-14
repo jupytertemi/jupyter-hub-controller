@@ -1,0 +1,11 @@
+{
+    "name": "Kafeoinos Tv",
+    "models": [
+        {
+            "model": "NC220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg_vga.sdp"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Balkong",
+    "models": [
+        {
+            "model": "Billig",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/12"
+        }
+    ]
+}

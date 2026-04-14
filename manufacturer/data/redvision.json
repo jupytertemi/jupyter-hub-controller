@@ -1,0 +1,11 @@
+{
+    "name": "Redvision",
+    "models": [
+        {
+            "model": "RVX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

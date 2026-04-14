@@ -1,0 +1,11 @@
+{
+    "name": "Bavision",
+    "models": [
+        {
+            "model": "Profile S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

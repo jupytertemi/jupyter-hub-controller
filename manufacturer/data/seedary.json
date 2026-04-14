@@ -1,0 +1,17 @@
+{
+    "name": "Seedary",
+    "models": [
+        {
+            "model": "D2-X-20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=0_stream=1.sdp"
+        },
+        {
+            "model": "PTZ 4MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=0_stream=1.sdp"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "F7210",
+    "models": [
+        {
+            "model": "zavio",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        }
+    ]
+}

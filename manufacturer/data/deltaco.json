@@ -1,0 +1,11 @@
+{
+    "name": "Deltaco",
+    "models": [
+        {
+            "model": "SH-IPC06",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

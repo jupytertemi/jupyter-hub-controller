@@ -1,0 +1,11 @@
+{
+    "name": "Vimtech",
+    "models": [
+        {
+            "model": "N1010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

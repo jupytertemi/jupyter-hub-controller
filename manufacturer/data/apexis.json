@@ -1,0 +1,41 @@
+{
+    "name": "Apexis",
+    "models": [
+        {
+            "model": "213 PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "215 ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "AH9063CW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_1"
+        },
+        {
+            "model": "APM-H803",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "Other Ip camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/av0"
+        },
+        {
+            "model": "APM-H803-MPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

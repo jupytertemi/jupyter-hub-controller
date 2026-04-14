@@ -1,0 +1,11 @@
+{
+    "name": "Sightlogix",
+    "models": [
+        {
+            "model": "IF56N53-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

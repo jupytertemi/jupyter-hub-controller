@@ -1,0 +1,11 @@
+{
+    "name": "Ajt",
+    "models": [
+        {
+            "model": "BCS",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

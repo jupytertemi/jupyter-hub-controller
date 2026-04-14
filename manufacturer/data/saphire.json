@@ -1,0 +1,11 @@
+{
+    "name": "Saphire",
+    "models": [
+        {
+            "model": "SF-IPCV025-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

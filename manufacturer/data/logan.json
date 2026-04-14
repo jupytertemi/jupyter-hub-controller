@@ -1,0 +1,17 @@
+{
+    "name": "Logan",
+    "models": [
+        {
+            "model": "LX4CB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=0&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "N8704HH",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/VideoInput/[CHANNEL]/h264/1"
+        }
+    ]
+}

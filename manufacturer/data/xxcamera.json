@@ -1,0 +1,17 @@
+{
+    "name": "Xxcamera",
+    "models": [
+        {
+            "model": "XXK41E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "XXK41E-V1.0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

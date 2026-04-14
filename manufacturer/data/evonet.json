@@ -1,0 +1,11 @@
+{
+    "name": "Evonet",
+    "models": [
+        {
+            "model": "C-VD310IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/media"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Orbit",
+    "models": [
+        {
+            "model": "310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "B-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

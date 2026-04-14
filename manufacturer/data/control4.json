@@ -1,0 +1,11 @@
+{
+    "name": "Control4",
+    "models": [
+        {
+            "model": "Chime",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

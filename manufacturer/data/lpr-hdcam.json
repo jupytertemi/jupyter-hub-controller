@@ -1,0 +1,11 @@
+{
+    "name": "Lpr-hdcam",
+    "models": [
+        {
+            "model": "BN-CW20CW/HIP200M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Aicam",
+    "models": [
+        {
+            "model": "IP-XM400POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

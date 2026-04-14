@@ -1,0 +1,95 @@
+###############################################
+# General settings
+###############################################
+logLevel: info
+logDestinations: [stdout]
+logFile: mediamtx.log
+
+###############################################
+# API settings
+###############################################
+api: yes
+apiAddress: :9997
+authInternalUsers:
+- user: any
+  pass:
+  ips: []
+  permissions:
+  - action: publish
+    path:
+  - action: read
+    path:
+  - action: playback
+    path:
+  - action: api
+    path:
+
+###############################################
+# RTSP settings
+###############################################
+rtsp: yes
+rtspAddress: :8556
+rtspTransports: [tcp, udp]
+
+###############################################
+# RTMP settings
+###############################################
+rtmp: no
+
+###############################################
+# HLS settings
+###############################################
+hls: yes
+hlsAddress: :8888
+hlsAllowOrigins: ['*']
+hlsAlwaysRemux: yes
+hlsVariant: lowLatency
+hlsSegmentDuration: 500ms
+hlsPartDuration: 100ms
+
+###############################################
+# SRT settings
+###############################################
+srt: no
+
+###############################################
+# WebRTC settings
+###############################################
+webrtc: yes
+webrtcAddress: :8889
+webrtcAllowOrigin: '*'
+webrtcTrustedProxies: []
+# webrtcAdditionalHosts: ['*']
+webrtcLocalTCPAddress: :8189
+webrtcIPsFromInterfaces: yes
+webrtcHandshakeTimeout: 5s
+webrtcTrackGatherTimeout: 200ms
+webrtcSTUNGatherTimeout: 200ms
+
+# webrtcICEServers2:
+#   - url: {{turn_server}}
+#     username: {{turn_user}}
+#     password: {{turn_password}}
+#   - url: stun:stun.l.google.com:19302
+#   - url: stun:stun1.l.google.com:19302
+#   - url: stun:stun2.l.google.com:19302
+
+webrtcICEServers2:
+  - url: stun:stun.l.google.com:19302
+  - url: stun:stun1.l.google.com:19302
+  - url: stun:stun2.l.google.com:19302
+  - url: turn:turn.cloudflare.com:3478?transport=udp
+    username: g0490b90b1affd955837ec2f1d4668d3ecb51ef2cfa2c969d8daa5c2a378ac08
+    password: 7075d0ece4ef44f323aa9208f93c5a9abea4df3c8e8dbd8f58de9b6883e094c6
+
+###############################################
+# Path configurations
+###############################################
+
+paths:
+  {% for camera in cameras%}
+  {{camera.name}}:
+    source: {{camera.rtsp_url}}
+    rtspTransport: udp
+    sourceOnDemand: no
+  {% endfor %}

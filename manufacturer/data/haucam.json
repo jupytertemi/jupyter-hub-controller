@@ -1,0 +1,11 @@
+{
+    "name": "Haucam",
+    "models": [
+        {
+            "model": "7010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

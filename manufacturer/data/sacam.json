@@ -1,0 +1,41 @@
+{
+    "name": "Sacam",
+    "models": [
+        {
+            "model": "cn-72m1wl",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "CN-72M2WL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "CN-72M2WH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "p2p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "p2p hd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        },
+        {
+            "model": "SW27897964",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1.3gp"
+        }
+    ]
+}

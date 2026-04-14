@@ -1,0 +1,17 @@
+{
+    "name": "Cellinx",
+    "models": [
+        {
+            "model": "NVR IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/AVStream1_1"
+        },
+        {
+            "model": "STH780",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/AVStream1_1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Prikim",
+    "models": [
+        {
+            "model": "BDs Dome",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

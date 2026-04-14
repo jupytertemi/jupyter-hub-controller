@@ -1,0 +1,11 @@
+{
+    "name": "Ronin",
+    "models": [
+        {
+            "model": "NR-W1CIP2SC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

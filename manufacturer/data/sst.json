@@ -1,0 +1,11 @@
+{
+    "name": "Sst",
+    "models": [
+        {
+            "model": "SST-CNS-BUI18",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg"
+        }
+    ]
+}

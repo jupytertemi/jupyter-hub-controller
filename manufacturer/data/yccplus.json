@@ -1,0 +1,11 @@
+{
+    "name": "Yccplus",
+    "models": [
+        {
+            "model": "288ZD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

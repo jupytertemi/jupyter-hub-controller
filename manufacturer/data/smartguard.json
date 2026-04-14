@@ -1,0 +1,17 @@
+{
+    "name": "Smartguard",
+    "models": [
+        {
+            "model": "DR-IPC-01",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "WIFI HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Wodsee",
+    "models": [
+        {
+            "model": "H-100/H-200 serie",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "WIP100-BB30-150",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "WIP200-DA30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        },
+        {
+            "model": "WIP200-DTA40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "WIP130-Y12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        },
+        {
+            "model": "WT40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

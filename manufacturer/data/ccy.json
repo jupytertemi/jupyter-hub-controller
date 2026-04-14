@@ -1,0 +1,17 @@
+{
+    "name": "Ccy",
+    "models": [
+        {
+            "model": "FC0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "L100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

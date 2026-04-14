@@ -1,0 +1,11 @@
+{
+    "name": "Ace",
+    "models": [
+        {
+            "model": "noname",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile0"
+        }
+    ]
+}

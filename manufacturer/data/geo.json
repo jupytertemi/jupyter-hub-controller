@@ -1,0 +1,23 @@
+{
+    "name": "Geo",
+    "models": [
+        {
+            "model": "1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "CB120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        },
+        {
+            "model": "EBL2101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH001.sdp"
+        }
+    ]
+}

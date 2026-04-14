@@ -1,0 +1,11 @@
+{
+    "name": "Homecare",
+    "models": [
+        {
+            "model": "720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

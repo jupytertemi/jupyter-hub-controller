@@ -1,0 +1,11 @@
+{
+    "name": "Ensidio",
+    "models": [
+        {
+            "model": "IP302P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_[CHANNEL].H264"
+        }
+    ]
+}

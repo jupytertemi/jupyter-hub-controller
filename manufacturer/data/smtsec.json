@@ -1,0 +1,17 @@
+{
+    "name": "Smtsec",
+    "models": [
+        {
+            "model": "H15HP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SIP-E0312-178D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

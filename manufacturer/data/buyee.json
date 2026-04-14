@@ -1,0 +1,11 @@
+{
+    "name": "Buyee",
+    "models": [
+        {
+            "model": "csmnct",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

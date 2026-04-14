@@ -1,0 +1,11 @@
+{
+    "name": "Ipx",
+    "models": [
+        {
+            "model": "DDK",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/camera.stm"
+        }
+    ]
+}

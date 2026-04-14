@@ -1,0 +1,17 @@
+{
+    "name": "Cctvhotdeals",
+    "models": [
+        {
+            "model": "H9008 w/ Web Port",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "pokus",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

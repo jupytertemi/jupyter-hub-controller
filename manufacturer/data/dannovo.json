@@ -1,0 +1,17 @@
+{
+    "name": "Dannovo",
+    "models": [
+        {
+            "model": "Dannovo PTZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "DannovoPTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

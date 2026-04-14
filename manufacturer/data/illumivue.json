@@ -1,0 +1,11 @@
+{
+    "name": "Illumivue",
+    "models": [
+        {
+            "model": "ILV-IP8T-NC.2-BK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

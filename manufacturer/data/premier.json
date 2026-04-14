@@ -1,0 +1,17 @@
+{
+    "name": "Premier",
+    "models": [
+        {
+            "model": "Outdoor Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Outdoor Surveilance",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

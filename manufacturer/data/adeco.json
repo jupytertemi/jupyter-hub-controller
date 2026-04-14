@@ -1,0 +1,11 @@
+{
+    "name": "Adeco",
+    "models": [
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

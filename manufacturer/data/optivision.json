@@ -1,0 +1,11 @@
+{
+    "name": "Optivision",
+    "models": [
+        {
+            "model": "OV Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/3"
+        }
+    ]
+}

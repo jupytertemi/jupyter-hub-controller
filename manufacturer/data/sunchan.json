@@ -1,0 +1,11 @@
+{
+    "name": "Sunchan",
+    "models": [
+        {
+            "model": "EPC-HR820AR5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

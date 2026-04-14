@@ -1,0 +1,407 @@
+{
+    "name": "Zavio",
+    "models": [
+        {
+            "model": "510",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "b5110",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "B-7110",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "B-7210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F210A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-210A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F3101",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-312A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-3201",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-3206",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "f5105",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-520IE",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-521E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-531E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-721A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F-731E",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "5210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "7111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "B-5111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "B-5210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "b6220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "B-7510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "b8210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "CR19F3206",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "D-3100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "D-3200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "D6210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "D6530",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "D-7111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "D-7210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "F3005",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "F-3102",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "F-3110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "F-3110-15",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "f3210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "F-3215",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "p4320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "P5210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "P-6210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro2"
+        },
+        {
+            "model": "B-5110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "D-5111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "F-3101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.h264"
+        },
+        {
+            "model": "B6210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "B6330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "B6520",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "B7210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "CD6330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "D3200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "D4211",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "D8210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "F 3206",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "F-3107",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "F3110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "F-3115",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "F-3210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "F-4215",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "P-5111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "d510e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "D-510E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "EZ10W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "f312a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "F5110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "f611e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "M-510 E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "M-510W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "M511W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "V111t",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        }
+    ]
+}

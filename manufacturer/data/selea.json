@@ -1,0 +1,11 @@
+{
+    "name": "Selea",
+    "models": [
+        {
+            "model": "X-T850",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/p3.264"
+        }
+    ]
+}

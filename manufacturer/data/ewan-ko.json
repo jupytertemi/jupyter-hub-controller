@@ -1,0 +1,11 @@
+{
+    "name": "Ewan Ko",
+    "models": [
+        {
+            "model": "Dun lang",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/CH002.sdp"
+        }
+    ]
+}

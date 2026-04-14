@@ -1,0 +1,11 @@
+{
+    "name": "Gigamedia",
+    "models": [
+        {
+            "model": "ccahddvr16",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

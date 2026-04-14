@@ -1,0 +1,11 @@
+{
+    "name": "Janex",
+    "models": [
+        {
+            "model": "Introx",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        }
+    ]
+}

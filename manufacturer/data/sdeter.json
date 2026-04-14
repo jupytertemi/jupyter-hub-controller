@@ -1,0 +1,65 @@
+{
+    "name": "Sdeter",
+    "models": [
+        {
+            "model": "4332027043",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        },
+        {
+            "model": "AB-A2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        },
+        {
+            "model": "DB-02-HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        },
+        {
+            "model": "GGGG-203267-FBCFB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        },
+        {
+            "model": "smart wifi camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        },
+        {
+            "model": "720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "mycam1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Smart WIFI Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Teet ABA2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "mycam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/cif"
+        }
+    ]
+}

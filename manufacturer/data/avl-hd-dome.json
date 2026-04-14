@@ -1,0 +1,11 @@
+{
+    "name": "Avl Hd Dome",
+    "models": [
+        {
+            "model": "AVLHDD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

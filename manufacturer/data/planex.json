@@ -1,0 +1,41 @@
+{
+    "name": "Planex",
+    "models": [
+        {
+            "model": "CS-QP50F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-W72FHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/strm1"
+        },
+        {
+            "model": "CS-W80HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "CS-WMV02",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "CS-WMV02G",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "CS-WMV04",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

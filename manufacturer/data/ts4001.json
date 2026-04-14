@@ -1,0 +1,41 @@
+{
+    "name": "Ts4001",
+    "models": [
+        {
+            "model": "8081",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/video0"
+        },
+        {
+            "model": "dvr1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/video0"
+        },
+        {
+            "model": "GM8126",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "h109",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "IP Robot3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "p720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av1"
+        }
+    ]
+}

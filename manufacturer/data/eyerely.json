@@ -1,0 +1,11 @@
+{
+    "name": "Eyerely",
+    "models": [
+        {
+            "model": "X500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

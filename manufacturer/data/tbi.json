@@ -1,0 +1,11 @@
+{
+    "name": "Tbi",
+    "models": [
+        {
+            "model": "pro panoptic",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

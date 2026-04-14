@@ -1,0 +1,443 @@
+{
+    "name": "Honeywell",
+    "models": [
+        {
+            "model": "1024",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "H4W2GR2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "HED3PR3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "HICC-0100P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "H 264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ipcam2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "IPCAM-PT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "IPCAM-PT2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ipcam-w12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "IPCAM-WI2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "ipcam-wl",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "IPCAM-WO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "w12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "WI2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "H2S2P6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "H3D3S2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "H4D1FRX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "H4D2F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "H4S1P1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HCD5HIH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HCD5WIHX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HCW1F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HCW1FX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HD31F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HD3MDIH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "hd45ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HD4HDIH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "hd4mdih",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "hd54ip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HD55IPX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HDZ20HDEX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HDZ20HDX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HDZ30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "honeywell h4d1fr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "IP-WO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "H2D2PR1",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "HBL2R1",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "WIC1",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "H2W2GR1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46QWRtaW4xMjMu"
+        },
+        {
+            "model": "HPW2P1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46QWRtaW4xMjMu"
+        },
+        {
+            "model": "H3D1F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "H3D2F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "H3S1p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "H4D1F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "H4s1P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "H4W1F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "HBD2FR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "HCD1F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "Paco",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media"
+        },
+        {
+            "model": "h3w4gr1v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "H4D3PRV2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "H4W4PER2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "H4W4PER3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HBD3PR2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "hbw4per2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HD7016",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HDZ252",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HDZ302DE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HDZ52DPR1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HM4L8GR1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "HBW2GR3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46Qm91bG91ODEh"
+        },
+        {
+            "model": "HC30WF5R1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "hd 4mdip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "HD3MDIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "HD4MDIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "hdm3dip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "Rydell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "HD44IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "hie2piv",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/"
+        },
+        {
+            "model": "HIDC-2600TVI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "HNB-210V2I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/1/1/Profile1"
+        },
+        {
+            "model": "IPCAM PT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "IPCAM-IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        }
+    ]
+}

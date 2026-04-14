@@ -1,0 +1,17 @@
+{
+    "name": "Stanley",
+    "models": [
+        {
+            "model": "8000 irv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "IPC-5100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        }
+    ]
+}

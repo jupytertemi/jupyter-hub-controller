@@ -1,0 +1,47 @@
+{
+    "name": "Ucam 247",
+    "models": [
+        {
+            "model": "247i",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC308SW-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC308W-IR-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC328SW-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC328W-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "NC328W-IR-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        },
+        {
+            "model": "UCAM247i-1080HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        }
+    ]
+}

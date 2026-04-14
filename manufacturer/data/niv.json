@@ -1,0 +1,11 @@
+{
+    "name": "Niv",
+    "models": [
+        {
+            "model": "White",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

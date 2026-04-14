@@ -1,0 +1,11 @@
+{
+    "name": "Xts Corp",
+    "models": [
+        {
+            "model": "MDVP1.3DNVF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtpvideo1.sdp"
+        }
+    ]
+}

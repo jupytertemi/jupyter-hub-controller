@@ -1,0 +1,41 @@
+{
+    "name": "Fayele",
+    "models": [
+        {
+            "model": "FY-HD54F-5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "ip-5mp-poe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "NDR-305-BGIT8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        },
+        {
+            "model": "NDR-305D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        },
+        {
+            "model": "NDR-305D-4X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        },
+        {
+            "model": "ndr-6402-530x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        }
+    ]
+}

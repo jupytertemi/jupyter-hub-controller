@@ -1,0 +1,11 @@
+{
+    "name": "Patronum",
+    "models": [
+        {
+            "model": "pr-d30ipwt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

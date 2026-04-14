@@ -1,0 +1,11 @@
+{
+    "name": "Seven Systems",
+    "models": [
+        {
+            "model": "SEVEN IP-7215PA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

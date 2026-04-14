@@ -1,0 +1,11 @@
+{
+    "name": "Ipixo",
+    "models": [
+        {
+            "model": "Internal wifi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

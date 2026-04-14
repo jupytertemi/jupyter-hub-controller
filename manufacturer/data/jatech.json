@@ -1,0 +1,11 @@
+{
+    "name": "Jatech",
+    "models": [
+        {
+            "model": "IPD-E2B5Y18",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam4/mpeg4"
+        }
+    ]
+}

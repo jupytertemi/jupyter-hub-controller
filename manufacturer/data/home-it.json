@@ -1,0 +1,11 @@
+{
+    "name": "Home-it",
+    "models": [
+        {
+            "model": "61015",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

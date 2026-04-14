@@ -1,0 +1,11 @@
+{
+    "name": "Pristenek",
+    "models": [
+        {
+            "model": "EX-S06WM-3W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

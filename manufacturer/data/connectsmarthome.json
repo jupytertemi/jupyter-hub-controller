@@ -1,0 +1,17 @@
+{
+    "name": "Connectsmarthome",
+    "models": [
+        {
+            "model": "CSH-ODCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Outdoor Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

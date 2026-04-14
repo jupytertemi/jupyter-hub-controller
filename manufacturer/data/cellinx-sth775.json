@@ -1,0 +1,11 @@
+{
+    "name": "Cellinx-sth775",
+    "models": [
+        {
+            "model": "DY-IR2020HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/AVStream1_1"
+        }
+    ]
+}

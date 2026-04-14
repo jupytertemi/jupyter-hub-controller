@@ -1,0 +1,11 @@
+{
+    "name": "Fam",
+    "models": [
+        {
+            "model": "FAM-IPC3013",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        }
+    ]
+}

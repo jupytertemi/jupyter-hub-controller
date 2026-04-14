@@ -1,0 +1,11 @@
+{
+    "name": "Kodu",
+    "models": [
+        {
+            "model": "Hoov",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

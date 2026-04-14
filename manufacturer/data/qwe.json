@@ -1,0 +1,11 @@
+{
+    "name": "Qwe",
+    "models": [
+        {
+            "model": "qweqe",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

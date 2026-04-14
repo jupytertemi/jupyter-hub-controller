@@ -1,0 +1,29 @@
+{
+    "name": "Dome",
+    "models": [
+        {
+            "model": "ENP112-IR/25X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "Q1055RV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PTZ 101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        },
+        {
+            "model": "Uteplass",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Hiina",
+    "models": [
+        {
+            "model": "Must",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

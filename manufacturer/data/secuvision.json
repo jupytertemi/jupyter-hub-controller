@@ -1,0 +1,11 @@
+{
+    "name": "Secuvision",
+    "models": [
+        {
+            "model": "NVR-D0432A-16P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/chID=1&streamType=main"
+        }
+    ]
+}

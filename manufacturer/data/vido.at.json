@@ -1,0 +1,17 @@
+{
+    "name": "Vido.at",
+    "models": [
+        {
+            "model": "HDVIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "LVDT45SL200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "name": "Sectec",
+    "models": [
+        {
+            "model": "buiten",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "BULLET",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "DOME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "ST-758M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "ST-AHD5008P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "STIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "ST-IP121M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "ST-IP7016E-1M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "ST-IP805M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "st-ip935w-1.4m",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp"
+        },
+        {
+            "model": "sfip",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=[CHANNEL]&stream=0.sdp?"
+        },
+        {
+            "model": "ST-291-2M-AI",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "ST-IP573F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=[CHANNEL]_stream=0.sdp?real_stream"
+        }
+    ]
+}

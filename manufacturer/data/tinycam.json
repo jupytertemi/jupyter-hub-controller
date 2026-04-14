@@ -1,0 +1,11 @@
+{
+    "name": "Tinycam",
+    "models": [
+        {
+            "model": "Android",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/axis-cgi/mjpg/video.cgi?camera=1"
+        }
+    ]
+}

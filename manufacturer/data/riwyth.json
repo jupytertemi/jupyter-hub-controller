@@ -1,0 +1,17 @@
+{
+    "name": "Riwyth",
+    "models": [
+        {
+            "model": "Riwyth_810S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "RW-790S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_1"
+        }
+    ]
+}

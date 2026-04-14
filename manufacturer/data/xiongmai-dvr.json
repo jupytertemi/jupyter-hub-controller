@@ -1,0 +1,35 @@
+{
+    "name": "Xiongmai Dvr",
+    "models": [
+        {
+            "model": "AHB8008R-LME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=4&stream=1.sdp?"
+        },
+        {
+            "model": "light bulb",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "nbd6808t-pl",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "R80X20-PQL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?real_stream"
+        },
+        {
+            "model": "Wish",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=1.sdp?"
+        }
+    ]
+}

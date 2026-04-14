@@ -1,0 +1,17 @@
+{
+    "name": "Atz",
+    "models": [
+        {
+            "model": "ATZ-CHV07P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "chv24",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

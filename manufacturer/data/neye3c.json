@@ -1,0 +1,11 @@
+{
+    "name": "Neye3c",
+    "models": [
+        {
+            "model": "Xmate",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

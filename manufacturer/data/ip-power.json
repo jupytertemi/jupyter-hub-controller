@@ -1,0 +1,17 @@
+{
+    "name": "Ip Power",
+    "models": [
+        {
+            "model": "NIT C422D-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        },
+        {
+            "model": "NLP C2712M-W72",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        }
+    ]
+}

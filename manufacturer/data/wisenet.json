@@ -1,0 +1,95 @@
+{
+    "name": "Wisenet",
+    "models": [
+        {
+            "model": "8080rv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile3/media.smp"
+        },
+        {
+            "model": "XND-6080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile3/media.smp"
+        },
+        {
+            "model": "ANE-L7012R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2/media.smp"
+        },
+        {
+            "model": "SNO-L6013R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2/media.smp"
+        },
+        {
+            "model": "LND-6020R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "QND-6070R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "QND-8011",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile2/media.smp"
+        },
+        {
+            "model": "LNO-6010R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "Wisenet LNO-6010R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "XNF-8010R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "XNO-6120R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "XNV-C6083R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/profile1/media.smp"
+        },
+        {
+            "model": "QNP-6250H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "XNB-8000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "XND-6080RV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/onvif/profile2/media.smp"
+        }
+    ]
+}

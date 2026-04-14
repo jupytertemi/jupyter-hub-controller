@@ -1,0 +1,71 @@
+{
+    "name": "Hicam",
+    "models": [
+        {
+            "model": "2axqi ar d1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "577hg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "C9F0SeZ0N0P4L0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "CCCC-041029-CPRNE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "CT0276BKUK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "EEEE-165313-DUJHE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "luna",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "s62",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "ap02",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "cooau",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "floodlight",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

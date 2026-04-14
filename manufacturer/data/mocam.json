@@ -1,0 +1,11 @@
+{
+    "name": "Mocam",
+    "models": [
+        {
+            "model": "hikvision",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

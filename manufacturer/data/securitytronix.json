@@ -1,0 +1,11 @@
+{
+    "name": "Securitytronix",
+    "models": [
+        {
+            "model": "ST-HD-BT2812-720-G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

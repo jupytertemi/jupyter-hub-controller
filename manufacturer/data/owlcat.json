@@ -1,0 +1,17 @@
+{
+    "name": "Owlcat",
+    "models": [
+        {
+            "model": "B87W-POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "D77W-WH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

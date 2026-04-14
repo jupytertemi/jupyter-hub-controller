@@ -1,0 +1,11 @@
+{
+    "name": "Xvr",
+    "models": [
+        {
+            "model": "XVR_3521A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

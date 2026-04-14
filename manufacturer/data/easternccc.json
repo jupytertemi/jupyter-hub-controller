@@ -1,0 +1,11 @@
+{
+    "name": "Easternccc",
+    "models": [
+        {
+            "model": "IP-IRD2S02-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        }
+    ]
+}

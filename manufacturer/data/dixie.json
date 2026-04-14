@@ -1,0 +1,11 @@
+{
+    "name": "Dixie",
+    "models": [
+        {
+            "model": "DX-IPD806A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

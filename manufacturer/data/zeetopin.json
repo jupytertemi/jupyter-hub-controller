@@ -1,0 +1,11 @@
+{
+    "name": "Zeetopin",
+    "models": [
+        {
+            "model": "ZS-GX6S-T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

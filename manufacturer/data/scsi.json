@@ -1,0 +1,23 @@
+{
+    "name": "Scsi",
+    "models": [
+        {
+            "model": "SDN-2000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "V-2001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "V-2000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        }
+    ]
+}

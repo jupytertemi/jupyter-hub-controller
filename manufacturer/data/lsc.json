@@ -1,0 +1,35 @@
+{
+    "name": "Lsc",
+    "models": [
+        {
+            "model": "Doorbell",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "Indoor smart camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Indoor smart IP Camera 1080p",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/main"
+        },
+        {
+            "model": "Indoor WEB Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

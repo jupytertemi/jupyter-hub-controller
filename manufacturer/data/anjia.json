@@ -1,0 +1,11 @@
+{
+    "name": "Anjia",
+    "models": [
+        {
+            "model": "AJ-L33PQ08A1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile0"
+        }
+    ]
+}

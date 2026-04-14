@@ -1,0 +1,11 @@
+{
+    "name": "Jyuha",
+    "models": [
+        {
+            "model": "BOC69BKNK3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

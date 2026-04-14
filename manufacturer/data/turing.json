@@ -1,0 +1,17 @@
+{
+    "name": "Turing",
+    "models": [
+        {
+            "model": "TP-MED4M28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "TP-MED8M28C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        }
+    ]
+}

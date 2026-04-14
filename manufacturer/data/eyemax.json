@@ -1,0 +1,11 @@
+{
+    "name": "Eyemax",
+    "models": [
+        {
+            "model": "TVST PHD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/101"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Seisatek",
+    "models": [
+        {
+            "model": "JK-H624WS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

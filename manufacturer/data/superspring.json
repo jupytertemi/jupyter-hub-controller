@@ -1,0 +1,17 @@
+{
+    "name": "Superspring",
+    "models": [
+        {
+            "model": "505",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "IP550",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

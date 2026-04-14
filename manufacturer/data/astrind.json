@@ -1,0 +1,11 @@
+{
+    "name": "Astrind",
+    "models": [
+        {
+            "model": "Unique Eyes",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        }
+    ]
+}

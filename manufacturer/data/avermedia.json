@@ -1,0 +1,23 @@
+{
+    "name": "Avermedia",
+    "models": [
+        {
+            "model": "NAV",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        },
+        {
+            "model": "sf2012h",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        },
+        {
+            "model": "SF1301",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        }
+    ]
+}

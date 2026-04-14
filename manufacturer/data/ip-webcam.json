@@ -1,0 +1,11 @@
+{
+    "name": "Ip Webcam",
+    "models": [
+        {
+            "model": "CAMHI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

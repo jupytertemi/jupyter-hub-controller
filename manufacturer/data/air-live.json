@@ -1,0 +1,83 @@
+{
+    "name": "Air Live",
+    "models": [
+        {
+            "model": "2015",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "Gabinet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "OD-2025HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "SC-300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "325HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/Video?Codec=MPEG4&Width=720&Height=576&Fps=30"
+        },
+        {
+            "model": "BU720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        },
+        {
+            "model": "FE-201DM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "FE-501HD",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "MD-720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        },
+        {
+            "model": "POE-200HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        },
+        {
+            "model": "OD2015HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "WN-2600HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "WN-200HD",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

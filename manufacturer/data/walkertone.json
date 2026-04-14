@@ -1,0 +1,17 @@
+{
+    "name": "Walkertone",
+    "models": [
+        {
+            "model": "3260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/888888:888888/main"
+        },
+        {
+            "model": "HI-3512",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/888888:888888/sub"
+        }
+    ]
+}

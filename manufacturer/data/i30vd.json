@@ -1,0 +1,11 @@
+{
+    "name": "I30vd",
+    "models": [
+        {
+            "model": "MicroView",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

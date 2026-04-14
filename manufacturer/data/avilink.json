@@ -1,0 +1,11 @@
+{
+    "name": "Avilink",
+    "models": [
+        {
+            "model": "NVC208",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

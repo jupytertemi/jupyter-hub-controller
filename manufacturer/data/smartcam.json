@@ -1,0 +1,11 @@
+{
+    "name": "Smartcam",
+    "models": [
+        {
+            "model": "SmartCam Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile4/media.smp"
+        }
+    ]
+}

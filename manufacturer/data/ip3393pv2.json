@@ -1,0 +1,11 @@
+{
+    "name": "Ip3393pv2",
+    "models": [
+        {
+            "model": "zot",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "name": "Sunell Security",
+    "models": [
+        {
+            "model": "BD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        },
+        {
+            "model": "BD-Z",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        },
+        {
+            "model": "CAM01IPR54/12ND",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        },
+        {
+            "model": "IPR54/12ND",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        },
+        {
+            "model": "IPR-5440APDN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        },
+        {
+            "model": "IPS-56",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        },
+        {
+            "model": "sn-ipv57/02efdr/b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        }
+    ]
+}

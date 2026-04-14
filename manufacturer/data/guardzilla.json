@@ -1,0 +1,11 @@
+{
+    "name": "Guardzilla",
+    "models": [
+        {
+            "model": "gz100w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        }
+    ]
+}

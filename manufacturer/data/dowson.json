@@ -1,0 +1,11 @@
+{
+    "name": "Dowson",
+    "models": [
+        {
+            "model": "NC001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

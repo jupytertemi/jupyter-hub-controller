@@ -1,0 +1,11 @@
+{
+    "name": "Moja Ip",
+    "models": [
+        {
+            "model": "ddd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

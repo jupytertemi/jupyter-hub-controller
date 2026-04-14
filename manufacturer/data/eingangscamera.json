@@ -1,0 +1,11 @@
+{
+    "name": "Eingangscamera",
+    "models": [
+        {
+            "model": "360 DOM China",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        }
+    ]
+}

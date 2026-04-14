@@ -1,0 +1,11 @@
+{
+    "name": "Prada",
+    "models": [
+        {
+            "model": "PC-NVD-325R",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        }
+    ]
+}

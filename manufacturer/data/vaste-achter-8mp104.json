@@ -1,0 +1,11 @@
+{
+    "name": "Vaste Achter 8mp104",
+    "models": [
+        {
+            "model": "ACHTERRAAM104",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_1"
+        }
+    ]
+}

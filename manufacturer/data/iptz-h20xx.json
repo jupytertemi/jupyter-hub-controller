@@ -1,0 +1,17 @@
+{
+    "name": "Iptz-h20xx",
+    "models": [
+        {
+            "model": "Drop Deiling",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile/profile01"
+        },
+        {
+            "model": "P14",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

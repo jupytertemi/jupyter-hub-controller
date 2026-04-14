@@ -1,0 +1,191 @@
+{
+    "name": "Digital Watchdog",
+    "models": [
+        {
+            "model": "421",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "421TIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWC-MD421d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWC-MF21M28T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWC-MF21M4TIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWC-MF21MTIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWC-MPA20M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWC-mpa2M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWC-MV421D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWM20P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MD421D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MF21",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MF214TIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MF21M28T DREAVEWAY",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MF21M4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MF21M4TIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MPA20M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MPTZ5X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MV421TIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "DWC-BVI2R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-01"
+        },
+        {
+            "model": "DWC-MD7214V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel1"
+        },
+        {
+            "model": "DWC-MV72i28V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel1"
+        },
+        {
+            "model": "DWC-MF21M28T 128M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg"
+        },
+        {
+            "model": "DWC-MPTZ5X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mjpeg"
+        },
+        {
+            "model": "DWC-MTT4Wi36",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "DWC-MV82WiA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        },
+        {
+            "model": "dwc-mvh2i4wv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "MD421TIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/stream1"
+        },
+        {
+            "model": "MP20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MV421D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "MV82WiA",
+            "type": "VLC",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

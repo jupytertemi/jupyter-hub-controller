@@ -1,0 +1,23 @@
+{
+    "name": "Pixmy",
+    "models": [
+        {
+            "model": "Shenzhen spy camera 1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1452d3fe69e9ddfb3023db6d76f2a75f_1"
+        },
+        {
+            "model": "spy camera 1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1452d3fe69e9ddfb3023db6d76f2a75f_1"
+        },
+        {
+            "model": "spy cam 1080 shenzhen camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1452d3fe69e9ddfb3023db6d76f2a75f_0"
+        }
+    ]
+}

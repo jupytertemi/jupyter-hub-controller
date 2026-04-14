@@ -1,0 +1,11 @@
+{
+    "name": "Woodie View",
+    "models": [
+        {
+            "model": "6024PB-HX201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

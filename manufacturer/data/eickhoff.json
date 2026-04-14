@@ -1,0 +1,11 @@
+{
+    "name": "Eickhoff",
+    "models": [
+        {
+            "model": "0815",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        }
+    ]
+}

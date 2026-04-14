@@ -1,0 +1,17 @@
+{
+    "name": "Ccdcam",
+    "models": [
+        {
+            "model": "EC-IP5815",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        },
+        {
+            "model": "IPC-C34000 series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/mpeg4"
+        }
+    ]
+}

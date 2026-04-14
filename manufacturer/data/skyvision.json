@@ -1,0 +1,11 @@
+{
+    "name": "Skyvision",
+    "models": [
+        {
+            "model": "SV:CB13",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

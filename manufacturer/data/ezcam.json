@@ -1,0 +1,17 @@
+{
+    "name": "Ezcam",
+    "models": [
+        {
+            "model": "C3S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "C3-S-H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

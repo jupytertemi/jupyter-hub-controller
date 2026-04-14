@@ -1,0 +1,11 @@
+{
+    "name": "Qavi",
+    "models": [
+        {
+            "model": "4MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_1"
+        }
+    ]
+}

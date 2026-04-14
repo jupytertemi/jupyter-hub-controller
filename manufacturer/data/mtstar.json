@@ -1,0 +1,17 @@
+{
+    "name": "Mtstar",
+    "models": [
+        {
+            "model": "AM8000N2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        },
+        {
+            "model": "ASRIH492-005-20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

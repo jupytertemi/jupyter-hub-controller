@@ -1,0 +1,11 @@
+{
+    "name": "Legrand",
+    "models": [
+        {
+            "model": "cm7000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

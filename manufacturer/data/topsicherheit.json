@@ -1,0 +1,11 @@
+{
+    "name": "Topsicherheit",
+    "models": [
+        {
+            "model": "YUC-K7B89M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Ysxlite",
+    "models": [
+        {
+            "model": "BATC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

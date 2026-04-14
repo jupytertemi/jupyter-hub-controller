@@ -1,0 +1,11 @@
+{
+    "name": "Rohs",
+    "models": [
+        {
+            "model": "AO99546LKTT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

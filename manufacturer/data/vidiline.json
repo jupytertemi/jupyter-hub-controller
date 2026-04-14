@@ -1,0 +1,11 @@
+{
+    "name": "Vidiline",
+    "models": [
+        {
+            "model": "vidi-ipc-24d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

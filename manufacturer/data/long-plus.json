@@ -1,0 +1,17 @@
+{
+    "name": "Long Plus",
+    "models": [
+        {
+            "model": "BR40W3200T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IPC-DSW3200T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

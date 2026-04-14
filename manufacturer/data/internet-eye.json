@@ -1,0 +1,11 @@
+{
+    "name": "Internet Eye",
+    "models": [
+        {
+            "model": "M6840",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Amsecu",
+    "models": [
+        {
+            "model": "CA-IP-D28R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        }
+    ]
+}

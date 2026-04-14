@@ -1,0 +1,11 @@
+{
+    "name": "P6lite",
+    "models": [
+        {
+            "model": "1080P HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

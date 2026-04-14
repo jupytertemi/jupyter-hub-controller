@@ -1,0 +1,17 @@
+{
+    "name": "Lumens",
+    "models": [
+        {
+            "model": "VC-A50P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "VC-BC701P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/hevc"
+        }
+    ]
+}

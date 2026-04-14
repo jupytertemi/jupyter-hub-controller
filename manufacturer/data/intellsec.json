@@ -1,0 +1,11 @@
+{
+    "name": "Intellsec",
+    "models": [
+        {
+            "model": "7Inch 20X",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

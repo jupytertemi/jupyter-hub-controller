@@ -1,0 +1,11 @@
+{
+    "name": "Bosma",
+    "models": [
+        {
+            "model": "S1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

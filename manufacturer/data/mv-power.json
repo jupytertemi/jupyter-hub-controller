@@ -1,0 +1,17 @@
+{
+    "name": "Mv Power",
+    "models": [
+        {
+            "model": "C7837WIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "IPWebcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

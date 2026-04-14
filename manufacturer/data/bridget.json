@@ -1,0 +1,11 @@
+{
+    "name": "Bridget",
+    "models": [
+        {
+            "model": "DR816",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

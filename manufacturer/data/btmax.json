@@ -1,0 +1,11 @@
+{
+    "name": "Btmax",
+    "models": [
+        {
+            "model": "IR Speed",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Linia",
+    "models": [
+        {
+            "model": "avtech459",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264/VGA"
+        }
+    ]
+}

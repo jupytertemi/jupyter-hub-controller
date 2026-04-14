@@ -1,0 +1,41 @@
+{
+    "name": "Engenius",
+    "models": [
+        {
+            "model": "EDS1130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch01_0"
+        },
+        {
+            "model": "EDS5110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch01_0"
+        },
+        {
+            "model": "eds5250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch01_0"
+        },
+        {
+            "model": "EDS6115",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch01_0"
+        },
+        {
+            "model": "eds5255",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "EWS1025",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

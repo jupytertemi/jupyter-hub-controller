@@ -1,0 +1,11 @@
+{
+    "name": "Xvim",
+    "models": [
+        {
+            "model": "d8-1t",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Wapa",
+    "models": [
+        {
+            "model": "BL-3/5/7/8/9",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "BL-3/5/7/8/9Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

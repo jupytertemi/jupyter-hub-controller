@@ -1,0 +1,11 @@
+{
+    "name": "Eken",
+    "models": [
+        {
+            "model": "h9r",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MJPG"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Solosecurity",
+    "models": [
+        {
+            "model": "h265",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        }
+    ]
+}

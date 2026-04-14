@@ -1,0 +1,11 @@
+{
+    "name": "Xipcam",
+    "models": [
+        {
+            "model": "onbekend",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

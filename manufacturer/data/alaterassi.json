@@ -1,0 +1,11 @@
+{
+    "name": "Alaterassi",
+    "models": [
+        {
+            "model": "fd8134v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

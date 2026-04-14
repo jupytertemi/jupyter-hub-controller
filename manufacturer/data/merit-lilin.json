@@ -1,0 +1,599 @@
+{
+    "name": "Merit Lilin",
+    "models": [
+        {
+            "model": "2MP Camera 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "2MP Camera 1080p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "2MP Camera 2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "2MP Camera 2MP (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "3MP Camera 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "3MP Camera 1080p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "5MP Camera 1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "5MP Camera 1080p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "7022",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "H.264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "IPG1022ES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "IPG1052",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "L series 2MP Camera 2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "L series 2MP Camera 2MP (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "LR7022",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "LR7022E4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "LR7722EX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "LR7722X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "mr832",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "ZR2322",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "2MP Camera 480p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "2MP Camera 480p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "3MP Camera 480p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "3MP Camera 480p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "5MP Camera 480p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "5MP Camera 480p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "960H 480p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "960H 480p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "IPS622 480p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "IPS622 480p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "IPS722 480p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "IPS722 480p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "L series 2MP Camera 480p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "L series 2MP Camera 480p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "VS212 480p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "VS212 480p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "2MP Camera 480p jpeg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "2MP Camera 480p jpeg (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "3MP Camera 480p jpeg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "3MP Camera 480p jpeg (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "5MP Camera 480p jpeg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "5MP Camera 480p jpeg (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "960H jpeg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "960H jpeg (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "IPS622 jpeg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "IPS622 jpeg (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "IPS722 jpeg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "IPS722 jpeg (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "L series 2MP Camera 480p jpeg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "L series 2MP Camera 480p jpeg (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "VS212 jpeg",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "VS212 jpeg (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg480p"
+        },
+        {
+            "model": "2MP Camera 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264720p"
+        },
+        {
+            "model": "2MP Camera 720p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264720p"
+        },
+        {
+            "model": "3MP Camera 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264720p"
+        },
+        {
+            "model": "3MP Camera 720p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264720p"
+        },
+        {
+            "model": "5MP Camera 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264720p"
+        },
+        {
+            "model": "5MP Camera 720p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264720p"
+        },
+        {
+            "model": "IPFASTDOME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264720p"
+        },
+        {
+            "model": "2MP Camera jpeg 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg720p"
+        },
+        {
+            "model": "2MP Camera jpeg 720p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg720p"
+        },
+        {
+            "model": "3MP Camera jpeg 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg720p"
+        },
+        {
+            "model": "3MP Camera jpeg 720p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg720p"
+        },
+        {
+            "model": "5MP Camera jpeg 720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg720p"
+        },
+        {
+            "model": "5MP Camera jpeg 720p (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpeg720p"
+        },
+        {
+            "model": "2MP Camera jpeg cif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpegcif"
+        },
+        {
+            "model": "2MP Camera jpeg cif (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpegcif"
+        },
+        {
+            "model": "3MP Camera jpeg cif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpegcif"
+        },
+        {
+            "model": "3MP Camera jpeg cif (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpegcif"
+        },
+        {
+            "model": "5MP Camera jpeg cif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpegcif"
+        },
+        {
+            "model": "5MP Camera jpeg cif (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtspjpegcif"
+        },
+        {
+            "model": "3MP Camera 3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2643m"
+        },
+        {
+            "model": "3MP Camera 3MP (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2643m"
+        },
+        {
+            "model": "5MP Camera 5MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2645m"
+        },
+        {
+            "model": "5MP Camera 5MP (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2645m"
+        },
+        {
+            "model": "D/N2mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "ipd552ex4.2n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "IPR6122",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "ipr7334",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "LD2222",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "LR2122E4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "LR2322EX.3.6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "LR2522",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "LR6022",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "MR6342",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264480p"
+        },
+        {
+            "model": "960H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264960h"
+        },
+        {
+            "model": "960H (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264960h"
+        },
+        {
+            "model": "VS212",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264960h"
+        },
+        {
+            "model": "VS212 (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264960h"
+        },
+        {
+            "model": "AHD DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/sub_[CHANNEL]"
+        },
+        {
+            "model": "Ipd2220es",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "IPR434",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "ZMR8122X-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "IPR712M4.3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641024p"
+        },
+        {
+            "model": "IPR712S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264720p"
+        },
+        {
+            "model": "IPS622 SXGA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264sxga"
+        },
+        {
+            "model": "IPS622 SXGA (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264sxga"
+        },
+        {
+            "model": "IPS722 SXGA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264sxga"
+        },
+        {
+            "model": "IPS722 SXGA (port 80)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph264sxga"
+        }
+    ]
+}

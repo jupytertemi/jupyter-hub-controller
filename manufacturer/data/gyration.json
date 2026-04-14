@@ -1,0 +1,11 @@
+{
+    "name": "Gyration",
+    "models": [
+        {
+            "model": "Cyberview 400b",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        }
+    ]
+}

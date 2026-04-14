@@ -1,0 +1,23 @@
+{
+    "name": "Hitron",
+    "models": [
+        {
+            "model": "eneo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "HNCV-811PZ0S4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "nut-8213r",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        }
+    ]
+}

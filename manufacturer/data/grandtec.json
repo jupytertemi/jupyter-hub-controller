@@ -1,0 +1,17 @@
+{
+    "name": "Grandtec",
+    "models": [
+        {
+            "model": "Mega Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        },
+        {
+            "model": "MEGA PIXEL II WIFI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        }
+    ]
+}

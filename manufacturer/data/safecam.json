@@ -1,0 +1,11 @@
+{
+    "name": "Safecam",
+    "models": [
+        {
+            "model": "ip6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        }
+    ]
+}

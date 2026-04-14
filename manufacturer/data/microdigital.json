@@ -1,0 +1,11 @@
+{
+    "name": "Microdigital",
+    "models": [
+        {
+            "model": "MDC-N7290TDN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Primary"
+        }
+    ]
+}

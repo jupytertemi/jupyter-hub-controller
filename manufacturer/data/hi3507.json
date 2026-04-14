@@ -1,0 +1,17 @@
+{
+    "name": "Hi3507",
+    "models": [
+        {
+            "model": "N-514",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "RS7507H",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Keekoon",
+    "models": [
+        {
+            "model": "k001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "Keekoon 3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "KK001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "KK002",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "KK004",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        },
+        {
+            "model": "kk005",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        }
+    ]
+}

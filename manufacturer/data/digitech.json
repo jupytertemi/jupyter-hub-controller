@@ -1,0 +1,11 @@
+{
+    "name": "Digitech",
+    "models": [
+        {
+            "model": "outdoor wireless",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        }
+    ]
+}

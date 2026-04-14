@@ -1,0 +1,11 @@
+{
+    "name": "Avl",
+    "models": [
+        {
+            "model": "HDD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

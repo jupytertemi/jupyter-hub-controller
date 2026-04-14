@@ -1,0 +1,11 @@
+{
+    "name": "Heiwell",
+    "models": [
+        {
+            "model": "IPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

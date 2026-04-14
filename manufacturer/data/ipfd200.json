@@ -1,0 +1,11 @@
+{
+    "name": "Ipfd200",
+    "models": [
+        {
+            "model": "IPID-2MPIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream.sdp1"
+        }
+    ]
+}

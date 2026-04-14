@@ -1,0 +1,11 @@
+{
+    "name": "Genie",
+    "models": [
+        {
+            "model": "Bullet",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

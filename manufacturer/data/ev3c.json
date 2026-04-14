@@ -1,0 +1,11 @@
+{
+    "name": "Ev3c",
+    "models": [
+        {
+            "model": "SV-B07W-1080P-HX",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

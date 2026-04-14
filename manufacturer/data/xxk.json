@@ -1,0 +1,11 @@
+{
+    "name": "Xxk",
+    "models": [
+        {
+            "model": "xxk-100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

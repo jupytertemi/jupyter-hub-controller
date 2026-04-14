@@ -1,0 +1,11 @@
+{
+    "name": "Dali-tech",
+    "models": [
+        {
+            "model": "D8X3NT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIFMedia"
+        }
+    ]
+}

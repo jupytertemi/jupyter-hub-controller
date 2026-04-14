@@ -1,0 +1,17 @@
+{
+    "name": "Ai Wifi",
+    "models": [
+        {
+            "model": "IL-HIP291",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        },
+        {
+            "model": "onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

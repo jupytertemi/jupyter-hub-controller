@@ -1,0 +1,17 @@
+{
+    "name": "Haiz",
+    "models": [
+        {
+            "model": "3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "Hz-bltpoe-m2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

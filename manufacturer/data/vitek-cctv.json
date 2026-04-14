@@ -1,0 +1,47 @@
+{
+    "name": "Vitek Cctv",
+    "models": [
+        {
+            "model": "ELPRISH1VTC-TNT30R3F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "ELPRISH2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "VTC-TNT30R3F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile1"
+        },
+        {
+            "model": "Vitek VT-TPTZ18HR-5N",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "VTC-C770DNIP2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch[CHANNEL].sdp"
+        },
+        {
+            "model": "VTC-IR402",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0_0"
+        },
+        {
+            "model": "VTD-TND3RFE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

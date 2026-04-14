@@ -1,0 +1,11 @@
+{
+    "name": "Esprit Enhanced",
+    "models": [
+        {
+            "model": "ES6230-K090647",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1_v"
+        }
+    ]
+}

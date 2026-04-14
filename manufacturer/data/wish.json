@@ -1,0 +1,11 @@
+{
+    "name": "Wish",
+    "models": [
+        {
+            "model": "HA-3050",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

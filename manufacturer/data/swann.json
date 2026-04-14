@@ -1,0 +1,935 @@
+{
+    "name": "Swann",
+    "models": [
+        {
+            "model": "1080msb",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/1"
+        },
+        {
+            "model": "5580",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/1"
+        },
+        {
+            "model": "swanncamHD 830",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/1"
+        },
+        {
+            "model": "swifi-spotcam",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/1"
+        },
+        {
+            "model": "SWNHD-830CAM",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/1"
+        },
+        {
+            "model": "1080p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "880",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "Alertcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "ALERT-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "DVR 4680",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "floodLigth",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "NHD-850CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SpotCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWADS-446-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWADS-450-IPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWANHD-830",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWIFI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWIFI-FLOCAM2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWIFI-PTCAM2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWNHD-800CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWNHD-806CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWNHD-820CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWWHD-FLOCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWWHD-INTCAM-US",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWWHD-OUTCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "1590",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "8580",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "875",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "885F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "886",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "887 MSB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "888",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "DV84780",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "DVR8-5580RN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "DVR8-5680RN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "NHD-865",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "NHD-865MSB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "NHD-887FN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "swifi-4kflocam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "SWIFI-FLOCAMB-AU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/1"
+        },
+        {
+            "model": "DVR8-4900",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch07/0"
+        },
+        {
+            "model": "NVR8-8580",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch07/0"
+        },
+        {
+            "model": "2KOCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch06/0"
+        },
+        {
+            "model": "DVR8 5580 RTSP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch06/0"
+        },
+        {
+            "model": "DVR8-4780",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch06/0"
+        },
+        {
+            "model": "SWIFI-2KOCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch06/0"
+        },
+        {
+            "model": "SWWHD-INTCAM-AU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch06/0"
+        },
+        {
+            "model": "440",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "440-IPC-2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "446-IPC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "456",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "ADS446",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "ADS-446CAM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "FloodCam",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "flood-Light",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "light",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "nhd-851",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "Outcam",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "RTSP(TCP) DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SVC01K",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SWADS-466CAM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "SWIFI-ALERTCAM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "446",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "460",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "470",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "470CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "815",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "ADS-466CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "N-470CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "NHD-806",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "NVW-470CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "PAT160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "SRNHD-815",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "SWNHD-825CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "SWO-SVC02K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "SWWHD-PTCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "SWWHD-PTCAM160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "SW-WIFIPT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        },
+        {
+            "model": "4575",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "4860",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "DVR4-4580RN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "DVR8-1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "DVR8-4575",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "DVR8-4680",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "DVR8-5580",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "NHD 880",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "NHD-886MSD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "NHD-887",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "SWNHD-888MSD-US",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "SW-WIFISPOTCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        },
+        {
+            "model": "8ch 3MP NVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch02/0"
+        },
+        {
+            "model": "DVR4-4500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch02/0"
+        },
+        {
+            "model": "NVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch03/0"
+        },
+        {
+            "model": "818",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "entranc3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "HD 815 3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "HD-815",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "ipc-bo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "NHD-880",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "nvr16-7090",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "NVR-7200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "ramce",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Shed",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "swnhd-816cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "SWPTCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "Xtreem",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_main"
+        },
+        {
+            "model": "NHD-888N",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch03/1"
+        },
+        {
+            "model": "7-12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "dv8-3425",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DVR w/ Web Port",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DVR4 4350",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DVR8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DVR8-8050",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DVR8-8075",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "HDR8050",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "lv-9808",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "NHH-880CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "SWIFI-XTRCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "T855",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "DVR8-1525",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        },
+        {
+            "model": "DVR8-4500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        },
+        {
+            "model": "WIFI-PT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        },
+        {
+            "model": "ADS-440-PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "ADS-446",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "SWADS-456-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "swnhd 800cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "SWO-SVC01K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "AV8185DN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "C3MPCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "Wifi Spot Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "DM-299",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "dvr8-4850v",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "Exir Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "NHD-836CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SR-SVC01K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWIFI-FLOCAM2W-EU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWIFI-PTCAM232GB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWIFI-TRACKCM32GB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "SWWHD-FLOCAM-US",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        },
+        {
+            "model": "DV8-4780",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/0"
+        },
+        {
+            "model": "DVR8-4580V",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/0"
+        },
+        {
+            "model": "HDDVR",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/ch04/0"
+        },
+        {
+            "model": "SPCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/401"
+        },
+        {
+            "model": "DVR-1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/701"
+        },
+        {
+            "model": "DVR4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/101"
+        },
+        {
+            "model": "DVR8-4680xc8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "VDD16KATLD9BDJDG111A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/12"
+        },
+        {
+            "model": "Swann Buddy Video Doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "swifi spotcam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SWIFI-ALERTCAM-EU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "WIFISPOTCAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "GS3500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "pro-t852CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "SWADS456",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "SWADS-466-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

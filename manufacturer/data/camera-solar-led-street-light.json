@@ -1,0 +1,11 @@
+{
+    "name": "Camera Solar Led Street Light",
+    "models": [
+        {
+            "model": "LX-LD15W-S3C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

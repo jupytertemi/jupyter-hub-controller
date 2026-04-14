@@ -1,0 +1,11 @@
+{
+    "name": "Atis",
+    "models": [
+        {
+            "model": "Atis1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Avr Raiden",
+    "models": [
+        {
+            "model": "ksiegowosc",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/[CHANNEL]"
+        }
+    ]
+}

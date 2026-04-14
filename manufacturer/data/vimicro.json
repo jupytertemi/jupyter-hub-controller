@@ -1,0 +1,17 @@
+{
+    "name": "Vimicro",
+    "models": [
+        {
+            "model": "VIN-IP-L14-96IB36",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        },
+        {
+            "model": "VS-IPC1002",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

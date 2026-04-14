@@ -1,0 +1,11 @@
+{
+    "name": "Bettini",
+    "models": [
+        {
+            "model": "TB232B121",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

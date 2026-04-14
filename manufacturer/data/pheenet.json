@@ -1,0 +1,17 @@
+{
+    "name": "Pheenet",
+    "models": [
+        {
+            "model": "MCAS-400PT",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "MCAS-400PTG",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live"
+        }
+    ]
+}

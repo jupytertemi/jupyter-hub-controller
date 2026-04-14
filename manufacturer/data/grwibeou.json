@@ -1,0 +1,23 @@
+{
+    "name": "Grwibeou",
+    "models": [
+        {
+            "model": "Speed dome 000A125",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "Y4C-ZA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "YCC365PLUS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam3/mpeg4"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "name": "Vicon Security",
+    "models": [
+        {
+            "model": "V920D-N39M-IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1/Profile1"
+        },
+        {
+            "model": "SN680D-B-WNIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1/Profile1"
+        },
+        {
+            "model": "957",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/second"
+        },
+        {
+            "model": "V960",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/second"
+        },
+        {
+            "model": "BULLET",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "V960B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "v961",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "V962B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "V992D-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "VND-970IP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "V922D-N39",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        }
+    ]
+}

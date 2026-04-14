@@ -1,0 +1,17 @@
+{
+    "name": "Veezon",
+    "models": [
+        {
+            "model": "VZ1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "Wireless 720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

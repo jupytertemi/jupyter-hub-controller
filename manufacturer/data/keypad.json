@@ -1,0 +1,11 @@
+{
+    "name": "Keypad",
+    "models": [
+        {
+            "model": "DoorPhone",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

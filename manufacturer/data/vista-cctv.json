@@ -1,0 +1,17 @@
+{
+    "name": "Vista Cctv",
+    "models": [
+        {
+            "model": "VK2-1080BIR37E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        },
+        {
+            "model": "VK2-1080BIR3V9F",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/stream1"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Webo",
+    "models": [
+        {
+            "model": "fhd200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream[CHANNEL]"
+        },
+        {
+            "model": "webo200p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

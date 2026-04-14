@@ -1,0 +1,11 @@
+{
+    "name": "Tbs",
+    "models": [
+        {
+            "model": "2603",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/hdmi"
+        }
+    ]
+}

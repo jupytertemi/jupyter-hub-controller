@@ -1,0 +1,11 @@
+{
+    "name": "Dinon",
+    "models": [
+        {
+            "model": "p2p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

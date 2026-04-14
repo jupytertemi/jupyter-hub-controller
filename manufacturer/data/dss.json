@@ -1,0 +1,17 @@
+{
+    "name": "Dss",
+    "models": [
+        {
+            "model": "DF960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "DFD960P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Vangold",
+    "models": [
+        {
+            "model": "720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "VG-130282HIPC/POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "VGIPY-5002W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stander/livestream/0/0"
+        }
+    ]
+}

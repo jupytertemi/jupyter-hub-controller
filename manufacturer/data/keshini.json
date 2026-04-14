@@ -1,0 +1,11 @@
+{
+    "name": "Keshini",
+    "models": [
+        {
+            "model": "Ksn-Ip237w",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

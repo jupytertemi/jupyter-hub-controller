@@ -1,0 +1,17 @@
+{
+    "name": "Techmaxx",
+    "models": [
+        {
+            "model": "T-67",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        },
+        {
+            "model": "XLT-062311-CSXMN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

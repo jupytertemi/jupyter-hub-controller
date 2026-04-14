@@ -1,0 +1,11 @@
+{
+    "name": "Acvil",
+    "models": [
+        {
+            "model": "WIFI-5MP-30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/702"
+        }
+    ]
+}

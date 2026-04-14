@@ -1,0 +1,17 @@
+{
+    "name": "Ansjer",
+    "models": [
+        {
+            "model": "1nb-2622mw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        },
+        {
+            "model": "ZG2622MW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

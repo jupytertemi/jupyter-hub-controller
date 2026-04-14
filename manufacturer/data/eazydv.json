@@ -1,0 +1,17 @@
+{
+    "name": "Eazydv",
+    "models": [
+        {
+            "model": "BC-881M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "BC-883",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

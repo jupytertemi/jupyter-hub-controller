@@ -1,0 +1,11 @@
+{
+    "name": "Dinesh",
+    "models": [
+        {
+            "model": "IP-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

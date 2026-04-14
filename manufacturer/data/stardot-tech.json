@@ -1,0 +1,23 @@
+{
+    "name": "Stardot Tech",
+    "models": [
+        {
+            "model": "NETCAM SC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/nph-h264.cgi"
+        },
+        {
+            "model": "NETCAM XL",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/nph-h264.cgi"
+        },
+        {
+            "model": "NetcamSC",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/nph-h264.cgi"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Xanboo",
+    "models": [
+        {
+            "model": "RC-8021",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "RC-8030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        }
+    ]
+}

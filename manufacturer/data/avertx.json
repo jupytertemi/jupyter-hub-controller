@@ -1,0 +1,71 @@
+{
+    "name": "Avertx",
+    "models": [
+        {
+            "model": "510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "AVX-HD510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "HD510",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "AVX-HD820IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HD300IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HD90",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "HD-80IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "HD820",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "HD820IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video1"
+        },
+        {
+            "model": "HD420IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "PTC500S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_st1"
+        }
+    ]
+}

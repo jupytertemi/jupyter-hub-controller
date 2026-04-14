@@ -1,0 +1,17 @@
+{
+    "name": "Sunywo",
+    "models": [
+        {
+            "model": "H6EV100-N4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        },
+        {
+            "model": "JVSW0711",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        }
+    ]
+}

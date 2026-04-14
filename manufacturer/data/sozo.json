@@ -1,0 +1,11 @@
+{
+    "name": "Sozo",
+    "models": [
+        {
+            "model": "SOC-SNIP36-30E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

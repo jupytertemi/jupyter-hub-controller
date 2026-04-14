@@ -1,0 +1,35 @@
+{
+    "name": "Lucky Star",
+    "models": [
+        {
+            "model": "CLOUD IP CAMERA 720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch2"
+        },
+        {
+            "model": "X Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch2"
+        },
+        {
+            "model": "CloudIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "LuckyStar720p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "small smart",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Eguard",
+    "models": [
+        {
+            "model": "G-N5FL-H40CD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

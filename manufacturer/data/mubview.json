@@ -1,0 +1,11 @@
+{
+    "name": "Mubview",
+    "models": [
+        {
+            "model": "PK320 2k",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

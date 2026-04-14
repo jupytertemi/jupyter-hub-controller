@@ -1,0 +1,11 @@
+{
+    "name": "Anhkiet",
+    "models": [
+        {
+            "model": "3h07811pag00942",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

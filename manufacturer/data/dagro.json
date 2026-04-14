@@ -1,0 +1,11 @@
+{
+    "name": "Dagro",
+    "models": [
+        {
+            "model": "EC75D-P12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Gncc",
+    "models": [
+        {
+            "model": "gn1t",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

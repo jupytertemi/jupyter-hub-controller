@@ -1,0 +1,11 @@
+{
+    "name": "Sarotech",
+    "models": [
+        {
+            "model": "IPCAM-1000G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp_live0"
+        }
+    ]
+}

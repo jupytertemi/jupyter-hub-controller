@@ -1,0 +1,17 @@
+{
+    "name": "Panoob",
+    "models": [
+        {
+            "model": "PB65-4MDL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "PD94BA2-4M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        }
+    ]
+}

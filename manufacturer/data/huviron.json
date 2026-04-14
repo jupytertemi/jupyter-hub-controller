@@ -1,0 +1,11 @@
+{
+    "name": "Huviron",
+    "models": [
+        {
+            "model": "mip-823o2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2?videoCodecType=H.264"
+        }
+    ]
+}

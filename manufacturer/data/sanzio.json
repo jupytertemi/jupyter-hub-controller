@@ -1,0 +1,11 @@
+{
+    "name": "Sanzio",
+    "models": [
+        {
+            "model": "Ebay",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "St (spacetechnology)",
+    "models": [
+        {
+            "model": "181 ip home",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "ST - 177 IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264Preview_01_sub"
+        }
+    ]
+}

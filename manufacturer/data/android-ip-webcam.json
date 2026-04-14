@@ -1,0 +1,11 @@
+{
+    "name": "Android Ip Webcam",
+    "models": [
+        {
+            "model": "TinyCam",
+            "type": "MJPEG",
+            "protocol": "https://",
+            "url": "/axis-cgi/mjpg/video.cgi?camera=1"
+        }
+    ]
+}

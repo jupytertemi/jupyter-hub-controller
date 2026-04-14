@@ -1,0 +1,17 @@
+{
+    "name": "Extreme",
+    "models": [
+        {
+            "model": "3916",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "AP3916C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

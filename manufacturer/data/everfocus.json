@@ -1,0 +1,185 @@
+{
+    "name": "Everfocus",
+    "models": [
+        {
+            "model": "1360",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "3260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EBN268",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EDN 3260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EHN3260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EHN3261",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EMN2220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EPN4220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "ezn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EZN1260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EZN268",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "EZN3160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/1"
+        },
+        {
+            "model": "2260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "ECOR264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "EDN 2160",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "EDN 2260",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "dvr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/0"
+        },
+        {
+            "model": "EAN3220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/0"
+        },
+        {
+            "model": "ECOR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/0"
+        },
+        {
+            "model": "EDN1120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/0"
+        },
+        {
+            "model": "EHN1320",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/0"
+        },
+        {
+            "model": "EPN4220d",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStreamOvf/0"
+        },
+        {
+            "model": "EAN900",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/streaming/channels/0"
+        },
+        {
+            "model": "EDN3240",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/streaming/channels/0"
+        },
+        {
+            "model": "EPN 4220",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/streaming/channels/0"
+        },
+        {
+            "model": "EQN2200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/streaming/channels/0"
+        },
+        {
+            "model": "EZN3240",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/streaming/channels/0"
+        },
+        {
+            "model": "EZN3260",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/streaming/channels/0"
+        },
+        {
+            "model": "EHN3200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cgi-bin/rtspStream/0"
+        },
+        {
+            "model": "EZN1540-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01/0"
+        }
+    ]
+}

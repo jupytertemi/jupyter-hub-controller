@@ -1,0 +1,11 @@
+{
+    "name": "Bridge",
+    "models": [
+        {
+            "model": "md1300 ir-od",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        }
+    ]
+}

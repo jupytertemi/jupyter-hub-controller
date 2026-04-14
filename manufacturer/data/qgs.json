@@ -1,0 +1,11 @@
+{
+    "name": "Qgs",
+    "models": [
+        {
+            "model": "KN-IPC8401A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

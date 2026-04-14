@@ -1,0 +1,11 @@
+{
+    "name": "Kanda",
+    "models": [
+        {
+            "model": "QooCam8K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

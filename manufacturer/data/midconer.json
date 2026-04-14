@@ -1,0 +1,11 @@
+{
+    "name": "Midconer",
+    "models": [
+        {
+            "model": "Mid",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_1.264"
+        }
+    ]
+}

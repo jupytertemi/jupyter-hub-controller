@@ -1,0 +1,11 @@
+{
+    "name": "Us Auto",
+    "models": [
+        {
+            "model": "1123",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Master",
+    "models": [
+        {
+            "model": "MR15D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "MR-15D-106",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

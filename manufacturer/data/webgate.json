@@ -1,0 +1,11 @@
+{
+    "name": "Webgate",
+    "models": [
+        {
+            "model": "HTC1610H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch5/stream2"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Amc",
+    "models": [
+        {
+            "model": "AMC0349M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Falke",
+    "models": [
+        {
+            "model": "Vandalproof",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

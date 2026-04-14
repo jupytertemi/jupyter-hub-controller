@@ -1,0 +1,11 @@
+{
+    "name": "Owluck",
+    "models": [
+        {
+            "model": "CloudCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Fortis",
+    "models": [
+        {
+            "model": "S-CAM 5.0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/ch1/main/av_stream"
+        }
+    ]
+}

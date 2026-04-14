@@ -1,0 +1,11 @@
+{
+    "name": "Hip",
+    "models": [
+        {
+            "model": "cmt9013f",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        }
+    ]
+}

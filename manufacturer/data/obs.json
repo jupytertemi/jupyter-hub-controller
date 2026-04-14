@@ -1,0 +1,11 @@
+{
+    "name": "Obs",
+    "models": [
+        {
+            "model": "OBS Stream",
+            "type": "FFMPEG",
+            "protocol": "rtmp://",
+            "url": "/"
+        }
+    ]
+}

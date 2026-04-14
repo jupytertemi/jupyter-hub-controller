@@ -1,0 +1,11 @@
+{
+    "name": "Digital Security",
+    "models": [
+        {
+            "model": "PT-7000HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Sunkwang",
+    "models": [
+        {
+            "model": "b607w",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "N190X",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "N591RP",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

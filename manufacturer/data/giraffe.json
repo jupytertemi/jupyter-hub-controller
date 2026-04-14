@@ -1,0 +1,11 @@
+{
+    "name": "Giraffe",
+    "models": [
+        {
+            "model": "GF-IPDIR4323MP2.0",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=1&stream=0.sdp?"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Simicam",
+    "models": [
+        {
+            "model": "4K POE 48V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=1.sdp?real_stream"
+        },
+        {
+            "model": "3.6mm",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=1.sdp?real_stream"
+        },
+        {
+            "model": "4K POE Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=1.sdp?real_stream"
+        },
+        {
+            "model": "H43",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=1.sdp?real_stream"
+        },
+        {
+            "model": "HD Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=2_stream=1.sdp?real_stream"
+        },
+        {
+            "model": "QJ-8M-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

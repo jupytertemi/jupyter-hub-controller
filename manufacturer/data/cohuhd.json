@@ -1,0 +1,11 @@
+{
+    "name": "Cohuhd",
+    "models": [
+        {
+            "model": "4261-1000-0014",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

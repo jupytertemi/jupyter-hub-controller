@@ -1,0 +1,11 @@
+{
+    "name": "Security Cam",
+    "models": [
+        {
+            "model": "IPVA58",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/888888:888888/main"
+        }
+    ]
+}

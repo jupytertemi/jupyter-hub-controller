@@ -1,0 +1,11 @@
+{
+    "name": "Airwave",
+    "models": [
+        {
+            "model": "wer",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1/h264major"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Smart Net Camera",
+    "models": [
+        {
+            "model": "IPC-V380-Q3S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

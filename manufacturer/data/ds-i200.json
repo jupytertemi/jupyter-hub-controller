@@ -1,0 +1,11 @@
+{
+    "name": "Ds-i200",
+    "models": [
+        {
+            "model": "C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        }
+    ]
+}

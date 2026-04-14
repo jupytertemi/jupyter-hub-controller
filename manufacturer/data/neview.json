@@ -1,0 +1,11 @@
+{
+    "name": "Neview",
+    "models": [
+        {
+            "model": "CHD-B1pv2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

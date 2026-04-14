@@ -1,0 +1,11 @@
+{
+    "name": "Sn Ipc",
+    "models": [
+        {
+            "model": "4015sw",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ROH/channel/11"
+        }
+    ]
+}

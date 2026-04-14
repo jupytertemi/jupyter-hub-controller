@@ -1,0 +1,11 @@
+{
+    "name": "Look",
+    "models": [
+        {
+            "model": "IPC-D120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

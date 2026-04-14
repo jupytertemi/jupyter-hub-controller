@@ -1,0 +1,65 @@
+{
+    "name": "Iq Eye",
+    "models": [
+        {
+            "model": "3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/onvif"
+        },
+        {
+            "model": "IQ8712",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/onvif"
+        },
+        {
+            "model": "IQR53",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/onvif"
+        },
+        {
+            "model": "862",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/stream1"
+        },
+        {
+            "model": "IQ732N",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/now.mp4"
+        },
+        {
+            "model": "IQD31SV-F1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/now.mp4"
+        },
+        {
+            "model": "IQ862n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "IQD32S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/now.mp4&res=high"
+        },
+        {
+            "model": "IQM31N",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mp4"
+        },
+        {
+            "model": "IQM32N",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mp4"
+        }
+    ]
+}

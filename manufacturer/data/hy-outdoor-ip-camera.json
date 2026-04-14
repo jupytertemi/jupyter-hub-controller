@@ -1,0 +1,11 @@
+{
+    "name": "Hy Outdoor Ip Camera",
+    "models": [
+        {
+            "model": "Smart1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

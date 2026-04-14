@@ -1,0 +1,23 @@
+{
+    "name": "Cadyce",
+    "models": [
+        {
+            "model": "CA-IP100M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "CA-IP200MP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        },
+        {
+            "model": "CA-IP400MP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/LowResolutionVideo"
+        }
+    ]
+}

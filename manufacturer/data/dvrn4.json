@@ -1,0 +1,11 @@
+{
+    "name": "Dvrn4",
+    "models": [
+        {
+            "model": "DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/h264"
+        }
+    ]
+}

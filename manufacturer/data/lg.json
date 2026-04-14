@@ -1,0 +1,83 @@
+{
+    "name": "Lg",
+    "models": [
+        {
+            "model": "7210R",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video1+audio1"
+        },
+        {
+            "model": "LW130W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video1+audio1"
+        },
+        {
+            "model": "LDW2010-F1E858",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "lnb3100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "LNDS5100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "LNP3700T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "LNV5100R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "LW342",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Master-0"
+        },
+        {
+            "model": "LND7210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Slave-0"
+        },
+        {
+            "model": "LVW700",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "LVW701",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "lw332",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/camera.stm"
+        },
+        {
+            "model": "SmartIP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2?videoCodecType=H.264"
+        }
+    ]
+}

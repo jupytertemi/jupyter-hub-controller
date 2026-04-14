@@ -1,0 +1,17 @@
+{
+    "name": "Atomtech",
+    "models": [
+        {
+            "model": "ATOM Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "ATOM Cam 2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        }
+    ]
+}

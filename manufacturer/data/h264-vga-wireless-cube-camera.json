@@ -1,0 +1,17 @@
+{
+    "name": "H264 Vga Wireless Cube Camera",
+    "models": [
+        {
+            "model": "HI3518E_50H10L_S39",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp?real_stream"
+        },
+        {
+            "model": "XM530_RH50X20_8M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

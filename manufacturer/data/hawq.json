@@ -1,0 +1,11 @@
+{
+    "name": "Hawq",
+    "models": [
+        {
+            "model": "wingdome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/snl/live/1/2"
+        }
+    ]
+}

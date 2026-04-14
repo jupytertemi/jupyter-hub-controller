@@ -1,0 +1,11 @@
+{
+    "name": "Cycam",
+    "models": [
+        {
+            "model": "cube white",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/0/onvif.sdp"
+        }
+    ]
+}

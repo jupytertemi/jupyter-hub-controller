@@ -1,0 +1,11 @@
+{
+    "name": "Ijack Liu",
+    "models": [
+        {
+            "model": "JK-A8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

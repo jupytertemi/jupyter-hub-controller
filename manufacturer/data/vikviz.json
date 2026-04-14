@@ -1,0 +1,11 @@
+{
+    "name": "Vikviz",
+    "models": [
+        {
+            "model": "PTZ-3601-IZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

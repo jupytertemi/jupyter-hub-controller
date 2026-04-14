@@ -1,0 +1,41 @@
+{
+    "name": "Enxun",
+    "models": [
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "MIP-813W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "MIP-823H1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "MP180",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "MIP-812A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2?videoCodecType=H.264"
+        },
+        {
+            "model": "VS-MIP723Y1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2?videoCodecType=H.264"
+        }
+    ]
+}

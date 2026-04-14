@@ -1,0 +1,11 @@
+{
+    "name": "Urban Security Group",
+    "models": [
+        {
+            "model": "DK-7043S-GP-AF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

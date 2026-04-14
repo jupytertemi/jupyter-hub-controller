@@ -1,0 +1,11 @@
+{
+    "name": "Maxron",
+    "models": [
+        {
+            "model": "Tokhmi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "All-in-one",
+    "models": [
+        {
+            "model": "H.264 DVR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

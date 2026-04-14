@@ -1,0 +1,89 @@
+{
+    "name": "Linksys",
+    "models": [
+        {
+            "model": "LCAB03VLNOD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "LCAD03FLN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "LCAD03VLNOD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel2"
+        },
+        {
+            "model": "LCAM0336OD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        },
+        {
+            "model": "WCV80N",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "WVC Series",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "WVC210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "WVC54GA",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "wvc54gca",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "WVC80N",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "WVCS4GCA",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "pvc2300",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "WSC 80N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "WVC2300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        }
+    ]
+}

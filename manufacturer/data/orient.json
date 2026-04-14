@@ -1,0 +1,59 @@
+{
+    "name": "Orient",
+    "models": [
+        {
+            "model": "IP-200-MH3BP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        },
+        {
+            "model": "IP-34",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        },
+        {
+            "model": "IP-76-MH3VP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        },
+        {
+            "model": "IP-940",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        },
+        {
+            "model": "ip-950",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264-1"
+        },
+        {
+            "model": "ip-31",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video"
+        },
+        {
+            "model": "IP-31-IH2A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "IP-504",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "IP-365",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

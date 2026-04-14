@@ -1,0 +1,11 @@
+{
+    "name": "Fhd-2mp",
+    "models": [
+        {
+            "model": "Senecta",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

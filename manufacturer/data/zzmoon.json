@@ -1,0 +1,11 @@
+{
+    "name": "Zzmoon",
+    "models": [
+        {
+            "model": "SD27W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

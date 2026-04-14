@@ -1,0 +1,35 @@
+{
+    "name": "Scada Technology",
+    "models": [
+        {
+            "model": "ST-MB-3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "ST-MD-3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "ST-MP-PTZ-18XIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "ST-TD-3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "ST-VD-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/2"
+        }
+    ]
+}

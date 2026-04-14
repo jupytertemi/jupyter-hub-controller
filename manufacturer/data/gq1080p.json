@@ -1,0 +1,11 @@
+{
+    "name": "Gq1080p",
+    "models": [
+        {
+            "model": "BE-IPWB200ZW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        }
+    ]
+}

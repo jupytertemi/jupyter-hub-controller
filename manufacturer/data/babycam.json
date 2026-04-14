@@ -1,0 +1,35 @@
+{
+    "name": "Babycam",
+    "models": [
+        {
+            "model": "baby",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "Ideanext",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "IPT303",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "white",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4_1.sdp"
+        },
+        {
+            "model": "yoosee",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

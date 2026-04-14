@@ -1,0 +1,11 @@
+{
+    "name": "Belder",
+    "models": [
+        {
+            "model": "P3SB-8MP-EU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Lucem",
+    "models": [
+        {
+            "model": "LIP-579VR(G)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "n732",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        }
+    ]
+}

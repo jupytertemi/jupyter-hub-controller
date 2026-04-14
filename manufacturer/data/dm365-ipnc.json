@@ -1,0 +1,875 @@
+{
+    "name": "Dm365 Ipnc",
+    "models": [
+        {
+            "model": "000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "1.3mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "125",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "221",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "6900XT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "AceSee",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "AirLive POE-5011HD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ait-11030",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Anyvision",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "avh30p100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "AVTN40P130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "axp cb1280h3/6l24a-n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "b-1080",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "BN20W3100S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "cantonk",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "cantonk1.3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "cctc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "CO36N13",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "comandor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "csd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "D24A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "DM365",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "DOM-20IP2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ds24a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "DTAVZM40P200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "EC-1061",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "eyecam 1076",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Fisotech",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "fisotech 2M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Fisotech 2MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Fisotech B1.3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "gifram1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Grazs",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "gw2440i",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Hcina",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IP-100R20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IP112",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IP-200R20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IP255",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ipc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "ipc-30",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "IPC-N2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "KIP_130SL20H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "KIP-130A40H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "kip200 2.4MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "kjhkh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LID40T130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LIRDNTSFP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "LIZM40T200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Longse_New",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "longse102",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Main CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "MiniDome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "mod",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "MosCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "NAP-100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "NAP-100SR40H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "nap25",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "NCIS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "Neki",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "neznam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "non",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "oem",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "OVI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "packing",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "PIP-2MP-BT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "pippo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "salotto",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "sega",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "T130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "tip-200w25n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "VACRON 621",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "0100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "01001",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "10XMBR-1080IP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "13245",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "18xzoom",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "222",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "368",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "36x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "6958",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "805",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "alade",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "aladetech",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Bik-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "boa",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "bs232",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "chinamala-brazo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "chink",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Cotier",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Cotier G92",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "cupol",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "DM/G33",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "DM368_IPNC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "DM36X 720P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "felixtech",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "felly",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "GM/G91-A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "goanga",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Hisilicon",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "IMP3MP91AH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Imporx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Imporx2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Imporx3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "ingresso2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "interno 1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "interno lab",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "interno mensa",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "ip633",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "IPCX-HD20M410",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "IPNC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "IPNC_CAM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "IR120",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "JT-1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "MY1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "mytech",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "netcat",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "NH4RU-200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "Observatory",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "ObservatoryCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "portable",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "PT-PTZ1384-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "ptz outdoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "RemotePC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "SpeedDome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "SUNBA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "teste",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "WinVision1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "xyzx",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "zking",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "ZK-MIPZ8022X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/Streaming/2"
+        },
+        {
+            "model": "113",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "China Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "China IP Cams",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "gw24401",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "KIP-130H80M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "tseti",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "Fuho",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0"
+        },
+        {
+            "model": "NBX305",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream"
+        },
+        {
+            "model": "tis",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Evolution",
+    "models": [
+        {
+            "model": "Concealed",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.sdp"
+        },
+        {
+            "model": "Indoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.sdp"
+        },
+        {
+            "model": "Evo5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "Evo5 mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        },
+        {
+            "model": "Mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2"
+        }
+    ]
+}

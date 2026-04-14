@@ -1,0 +1,11 @@
+{
+    "name": "Ltp",
+    "models": [
+        {
+            "model": "IP02",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

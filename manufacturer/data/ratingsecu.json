@@ -1,0 +1,11 @@
+{
+    "name": "Ratingsecu",
+    "models": [
+        {
+            "model": "R-N400A5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

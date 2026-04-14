@@ -1,0 +1,11 @@
+{
+    "name": "Bvcam",
+    "models": [
+        {
+            "model": "ca-ipbf-4mp-wfii",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

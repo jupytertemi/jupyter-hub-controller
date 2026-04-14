@@ -1,0 +1,71 @@
+{
+    "name": "Jortan",
+    "models": [
+        {
+            "model": "8165HP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/realmonitor?channel=0&stream=0.sdp"
+        },
+        {
+            "model": "8167QP-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=0&subtype=01"
+        },
+        {
+            "model": "JT-8167QP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=0&subtype=01"
+        },
+        {
+            "model": "8170QJ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "8806zl3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "JT-100BW-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "JT-160BW-3A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "JT-8171QJ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "JT-8172HJ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "JT-8176",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "RE-6146AHD-4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]&password=[PASSWORD]&channel=01&stream=1.sdp"
+        }
+    ]
+}

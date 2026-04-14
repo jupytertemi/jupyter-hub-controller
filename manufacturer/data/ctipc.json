@@ -1,0 +1,11 @@
+{
+    "name": "Ctipc",
+    "models": [
+        {
+            "model": "631c720POE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        }
+    ]
+}

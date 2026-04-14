@@ -1,0 +1,23 @@
+{
+    "name": "Onix Usa",
+    "models": [
+        {
+            "model": "IP-827/2811",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_0"
+        },
+        {
+            "model": "IP-827DN/2811",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam0_0"
+        },
+        {
+            "model": "IPD-3MIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

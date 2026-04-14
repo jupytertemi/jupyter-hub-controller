@@ -1,0 +1,17 @@
+{
+    "name": "Hicc-2300t",
+    "models": [
+        {
+            "model": "AVL Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        },
+        {
+            "model": "hd dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

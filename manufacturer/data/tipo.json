@@ -1,0 +1,11 @@
+{
+    "name": "Tipo",
+    "models": [
+        {
+            "model": "C500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

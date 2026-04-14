@@ -1,0 +1,11 @@
+{
+    "name": "Wwgc",
+    "models": [
+        {
+            "model": "UNIPC-3204WD-I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

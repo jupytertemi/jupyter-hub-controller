@@ -1,0 +1,11 @@
+{
+    "name": "Ic Realtime",
+    "models": [
+        {
+            "model": "ICIPD5000AVIR1505W1B000012",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

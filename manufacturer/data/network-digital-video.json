@@ -1,0 +1,11 @@
+{
+    "name": "Network Digital Video",
+    "models": [
+        {
+            "model": "HDIPC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

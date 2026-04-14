@@ -1,0 +1,131 @@
+{
+    "name": "Ubiquiti",
+    "models": [
+        {
+            "model": "aircam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "Air-Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "Air-vision",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "UVC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "Flex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC G3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "G3 Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "G3 Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "G3 Flex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "G4 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "unifi g3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC G3 Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC G3 Flex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC G3 Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC G4 pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "uvc gv3 flex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "UVC-Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s0"
+        },
+        {
+            "model": "uvc g4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/s1"
+        },
+        {
+            "model": "G3 Instant",
+            "type": "FFMPEG",
+            "protocol": "rtsps://",
+            "url": "/2BWx4LD70YdOYaEV?enableSrtp"
+        },
+        {
+            "model": "G3 Micro",
+            "type": "FFMPEG",
+            "protocol": "rtsps://",
+            "url": "/8Wtty2D3vG2XDa2N?enableSrtp"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Takaovi",
+    "models": [
+        {
+            "model": "1080P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp?resolution=640x480"
+        }
+    ]
+}

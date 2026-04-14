@@ -1,0 +1,11 @@
+{
+    "name": "Freesbell",
+    "models": [
+        {
+            "model": "E302",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

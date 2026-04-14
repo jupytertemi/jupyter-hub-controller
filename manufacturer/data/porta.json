@@ -1,0 +1,11 @@
+{
+    "name": "Porta",
+    "models": [
+        {
+            "model": "hyd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

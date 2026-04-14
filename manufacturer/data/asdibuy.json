@@ -1,0 +1,17 @@
+{
+    "name": "Asdibuy",
+    "models": [
+        {
+            "model": "asd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream=1"
+        },
+        {
+            "model": "ES-IP851",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

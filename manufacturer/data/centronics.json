@@ -1,0 +1,11 @@
+{
+    "name": "Centronics",
+    "models": [
+        {
+            "model": "380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

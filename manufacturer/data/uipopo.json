@@ -1,0 +1,11 @@
+{
+    "name": "Uipopo",
+    "models": [
+        {
+            "model": "POPO 566",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

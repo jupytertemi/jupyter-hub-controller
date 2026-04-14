@@ -1,0 +1,17 @@
+{
+    "name": "4xptz",
+    "models": [
+        {
+            "model": "30x",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4.sdp"
+        },
+        {
+            "model": "M400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Q-nest",
+    "models": [
+        {
+            "model": "QN-130M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

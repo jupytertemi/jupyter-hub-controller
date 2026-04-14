@@ -1,0 +1,11 @@
+{
+    "name": "Blackat",
+    "models": [
+        {
+            "model": "ELC-FP215",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/888888:888888/main"
+        }
+    ]
+}

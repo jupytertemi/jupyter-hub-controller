@@ -1,0 +1,11 @@
+{
+    "name": "Truen",
+    "models": [
+        {
+            "model": "TN-B230CSLX",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        }
+    ]
+}

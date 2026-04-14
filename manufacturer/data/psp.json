@@ -1,0 +1,11 @@
+{
+    "name": "Psp",
+    "models": [
+        {
+            "model": "SN-IPC-4036SW-US",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

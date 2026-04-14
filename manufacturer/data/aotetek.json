@@ -1,0 +1,11 @@
+{
+    "name": "Aotetek",
+    "models": [
+        {
+            "model": "720pBullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Aida",
+    "models": [
+        {
+            "model": "HD-NDI-CUBE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream/main"
+        }
+    ]
+}

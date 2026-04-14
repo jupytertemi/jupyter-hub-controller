@@ -1,0 +1,11 @@
+{
+    "name": "A-link",
+    "models": [
+        {
+            "model": "IPC3",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/Video?Codec=MPEG4&Width=720&Height=576&Fps=30"
+        }
+    ]
+}

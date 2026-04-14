@@ -1,0 +1,17 @@
+{
+    "name": "Marquis",
+    "models": [
+        {
+            "model": "ipc-xd400",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "IPC-YT60",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

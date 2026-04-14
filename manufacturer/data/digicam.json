@@ -1,0 +1,17 @@
+{
+    "name": "Digicam",
+    "models": [
+        {
+            "model": "P05-7-C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        },
+        {
+            "model": "P05-7-DF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/onvif-h264"
+        }
+    ]
+}

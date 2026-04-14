@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+/media
+/static
+
+# Environment
+.env
+.env.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backups
+*.backup
+*.bak
+*.orig
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Specific to project
+migrations/__pycache__/
+staticfiles/

@@ -1,0 +1,17 @@
+{
+    "name": "Edge",
+    "models": [
+        {
+            "model": "EG 307",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "EGP-S45208",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

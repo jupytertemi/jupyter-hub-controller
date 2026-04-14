@@ -1,0 +1,11 @@
+{
+    "name": "Systoda",
+    "models": [
+        {
+            "model": "SY-1500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

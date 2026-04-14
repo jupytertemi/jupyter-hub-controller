@@ -1,0 +1,11 @@
+{
+    "name": "Sercam",
+    "models": [
+        {
+            "model": "1245",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

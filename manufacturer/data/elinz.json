@@ -1,0 +1,17 @@
+{
+    "name": "Elinz",
+    "models": [
+        {
+            "model": "cctv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ip66",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

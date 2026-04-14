@@ -1,0 +1,17 @@
+{
+    "name": "Falcon",
+    "models": [
+        {
+            "model": "FE-IPC-HSPD210PZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        },
+        {
+            "model": "WD200P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

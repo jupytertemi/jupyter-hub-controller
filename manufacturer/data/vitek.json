@@ -1,0 +1,11 @@
+{
+    "name": "Vitek",
+    "models": [
+        {
+            "model": "VTC-IR402",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0_1"
+        }
+    ]
+}

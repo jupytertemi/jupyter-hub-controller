@@ -1,0 +1,17 @@
+{
+    "name": "Provideo",
+    "models": [
+        {
+            "model": "prva",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/g711v1"
+        },
+        {
+            "model": "SD-65/75XMP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

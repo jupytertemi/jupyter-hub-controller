@@ -1,0 +1,11 @@
+{
+    "name": "Vantage",
+    "models": [
+        {
+            "model": "VIPC-1431EP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

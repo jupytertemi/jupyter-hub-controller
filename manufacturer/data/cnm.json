@@ -1,0 +1,17 @@
+{
+    "name": "Cnm",
+    "models": [
+        {
+            "model": "DM365_IPNC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "sec-ip-cam",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

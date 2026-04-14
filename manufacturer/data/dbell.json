@@ -1,0 +1,17 @@
+{
+    "name": "Dbell",
+    "models": [
+        {
+            "model": "dbell HD Live",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "HD live",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Cybernova",
+    "models": [
+        {
+            "model": "CN IPE03W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "cn-wip031w",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

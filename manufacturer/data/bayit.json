@@ -1,0 +1,17 @@
+{
+    "name": "Bayit",
+    "models": [
+        {
+            "model": "1818",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "BH1960WH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

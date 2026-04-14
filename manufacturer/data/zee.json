@@ -1,0 +1,11 @@
+{
+    "name": "Zee",
+    "models": [
+        {
+            "model": "RS 25",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video.pro1"
+        }
+    ]
+}

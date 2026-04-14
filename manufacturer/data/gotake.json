@@ -1,0 +1,11 @@
+{
+    "name": "Gotake",
+    "models": [
+        {
+            "model": "GTK-TH01B",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

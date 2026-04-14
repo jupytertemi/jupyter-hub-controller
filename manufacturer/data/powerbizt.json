@@ -1,0 +1,29 @@
+{
+    "name": "Powerbizt",
+    "models": [
+        {
+            "model": "IP-Pro 52030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "SPRO-5103IM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "TCIP T-Typ2020x",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "TCIPE-Pro53030 IRMDN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

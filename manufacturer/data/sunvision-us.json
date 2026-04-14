@@ -1,0 +1,11 @@
+{
+    "name": "Sunvision Us",
+    "models": [
+        {
+            "model": "B603W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

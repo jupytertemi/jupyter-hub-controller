@@ -1,0 +1,11 @@
+{
+    "name": "Ipm-1z-20x-dn",
+    "models": [
+        {
+            "model": "avantura",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Jinan",
+    "models": [
+        {
+            "model": "5318",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

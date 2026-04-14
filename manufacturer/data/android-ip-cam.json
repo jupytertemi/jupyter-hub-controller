@@ -1,0 +1,17 @@
+{
+    "name": "Android Ip Cam",
+    "models": [
+        {
+            "model": "TinyCam",
+            "type": "MJPEG",
+            "protocol": "https://",
+            "url": "/axis-cgi/mjpg/video.cgi?camera=1"
+        },
+        {
+            "model": "V380-Q10",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=1.sdp"
+        }
+    ]
+}

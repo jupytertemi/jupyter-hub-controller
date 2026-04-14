@@ -1,0 +1,413 @@
+{
+    "name": "Lts",
+    "models": [
+        {
+            "model": "1048",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "3432",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CIMP3042-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP 3122",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP3022-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP3032-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP3132-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP3432",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP3C42W-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP7233-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP7342W-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP7422-m",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP7422N-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP7422W-M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP7553W4-SZ8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP7923WLPR-32R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIp8032",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP8212",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "cmip8342W-M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP9142W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP9532",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CMIP9723-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "LTCMIP8932-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "LTD8424T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "PTZIP204NW-X4IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "PTZIP512X20IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "Thermal",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "WH-CI5020-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "b01jrqwjdi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "clouldIp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "CMIP7223w-s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "FFMPEG",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "ltsCMIP7562F-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "x-cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "CMIP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "cmip 3342w-28m",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP3953",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP3C42W-28CMIP3C42W-28MM",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "cmip7042-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP7442-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP7442WB-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP8232",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP7422-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4?user=[USERNAME]&pwd=[PASSWORD]"
+        },
+        {
+            "model": "CMIP7432-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4?user=[USERNAME]&pwd=[PASSWORD]"
+        },
+        {
+            "model": "CMIP1142-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "DS-2CD2112-I",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        },
+        {
+            "model": "CMIP3042W-28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        },
+        {
+            "model": "PTZIP762X20IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        },
+        {
+            "model": "CMIP3152-28S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "CMIP7253-SZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "CMIP8932-W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "CMIP9743W-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "LTD8316T-FT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "Telescope",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        },
+        {
+            "model": "CMIP3243",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.h264"
+        },
+        {
+            "model": "CMIP3412-28",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.h264"
+        },
+        {
+            "model": "CMIP3362W-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP8032P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP8342W-28M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "PTZIP204WX4IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CMIP3382NVW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.h264"
+        },
+        {
+            "model": "CMIP7043W-MZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//Streaming/Channels/1"
+        },
+        {
+            "model": "cmip7122",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CMIP7432",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "CMIP7923LPR-20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CMIP8222",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        }
+    ]
+}

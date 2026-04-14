@@ -1,0 +1,11 @@
+{
+    "name": "Spy Cameras",
+    "models": [
+        {
+            "model": "v380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

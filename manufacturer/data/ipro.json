@@ -1,0 +1,11 @@
+{
+    "name": "Ipro",
+    "models": [
+        {
+            "model": "WV-S4156",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/MediaInput/stream_2"
+        }
+    ]
+}

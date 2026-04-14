@@ -1,0 +1,11 @@
+{
+    "name": "Wise Group",
+    "models": [
+        {
+            "model": "MY-303IP/M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1_s1"
+        }
+    ]
+}

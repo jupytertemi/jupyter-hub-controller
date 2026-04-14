@@ -1,0 +1,23 @@
+{
+    "name": "Genius",
+    "models": [
+        {
+            "model": "310R",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/avn=2"
+        },
+        {
+            "model": "350TR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/avn=2"
+        },
+        {
+            "model": "IPCAM SECURE 300",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/avn=2"
+        }
+    ]
+}

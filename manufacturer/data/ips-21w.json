@@ -1,0 +1,11 @@
+{
+    "name": "Ips-21w",
+    "models": [
+        {
+            "model": "ir-ipc-2013a",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

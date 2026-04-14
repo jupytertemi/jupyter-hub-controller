@@ -1,0 +1,11 @@
+{
+    "name": "Diviotec",
+    "models": [
+        {
+            "model": "NBR325P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

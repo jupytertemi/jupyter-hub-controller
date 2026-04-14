@@ -1,0 +1,11 @@
+{
+    "name": "Fyuui",
+    "models": [
+        {
+            "model": "y7-1080p-fy",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        }
+    ]
+}

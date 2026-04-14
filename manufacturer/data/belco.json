@@ -1,0 +1,11 @@
+{
+    "name": "Belco",
+    "models": [
+        {
+            "model": "HX-Series WiFi",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

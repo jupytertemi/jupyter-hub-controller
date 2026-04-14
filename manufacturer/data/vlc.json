@@ -1,0 +1,17 @@
+{
+    "name": "Vlc",
+    "models": [
+        {
+            "model": "Screen RTSP 554",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "Stream",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream0"
+        }
+    ]
+}

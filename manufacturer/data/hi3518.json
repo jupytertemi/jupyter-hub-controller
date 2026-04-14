@@ -1,0 +1,11 @@
+{
+    "name": "Hi3518",
+    "models": [
+        {
+            "model": "Boavision",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

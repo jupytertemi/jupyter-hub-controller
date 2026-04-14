@@ -1,0 +1,17 @@
+{
+    "name": "Videosec Security",
+    "models": [
+        {
+            "model": "IPD-3615IQ-28SWAL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1enc1"
+        },
+        {
+            "model": "MegaPX 1080P-D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1enc1"
+        }
+    ]
+}

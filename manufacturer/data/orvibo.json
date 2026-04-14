@@ -1,0 +1,11 @@
+{
+    "name": "Orvibo",
+    "models": [
+        {
+            "model": "SC10W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

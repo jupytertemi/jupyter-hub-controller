@@ -1,0 +1,53 @@
+{
+    "name": "Cricket",
+    "models": [
+        {
+            "model": "Camera_EXT1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-02"
+        },
+        {
+            "model": "CR-POE-13S2C_14181850",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-01"
+        },
+        {
+            "model": "CR-POE-13S2C_14181858",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-01"
+        },
+        {
+            "model": "CR-POE-13S2C_14181859",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-01"
+        },
+        {
+            "model": "CR-POE-20S2C_14050067",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-01"
+        },
+        {
+            "model": "CR-POE-20S3C_14241655",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-01"
+        },
+        {
+            "model": "Point Grey",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-01"
+        },
+        {
+            "model": "PointGrey Cricket 1.3MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/unicast/DefaultProfile-01"
+        }
+    ]
+}

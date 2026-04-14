@@ -1,0 +1,23 @@
+{
+    "name": "Abs",
+    "models": [
+        {
+            "model": "3 SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/[CHANNEL]/media.amp"
+        },
+        {
+            "model": "4 SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/[CHANNEL]/media.amp"
+        },
+        {
+            "model": "megacam 4210",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/[CHANNEL]/media.amp"
+        }
+    ]
+}

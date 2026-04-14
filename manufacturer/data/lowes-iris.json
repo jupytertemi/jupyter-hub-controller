@@ -1,0 +1,29 @@
+{
+    "name": "Lowes Iris",
+    "models": [
+        {
+            "model": "OC821",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "OC821D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "OC8221",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        },
+        {
+            "model": "RC-8221",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/img/media.sav"
+        }
+    ]
+}

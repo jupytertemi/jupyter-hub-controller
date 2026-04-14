@@ -1,0 +1,47 @@
+{
+    "name": "Doorbird",
+    "models": [
+        {
+            "model": "d101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg/media.amp"
+        },
+        {
+            "model": "D101S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg/media.amp"
+        },
+        {
+            "model": "D1101V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg/media.amp"
+        },
+        {
+            "model": "D2101BV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg/media.amp"
+        },
+        {
+            "model": "D2101V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg/media.amp"
+        },
+        {
+            "model": "D2103V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg/media.amp"
+        },
+        {
+            "model": "DoorBird_D101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg/media.amp"
+        }
+    ]
+}

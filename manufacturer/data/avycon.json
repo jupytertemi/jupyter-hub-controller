@@ -1,0 +1,17 @@
+{
+    "name": "Avycon",
+    "models": [
+        {
+            "model": "AVC-EHN41FT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        },
+        {
+            "model": "AVC-VN91FLT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/profile2"
+        }
+    ]
+}

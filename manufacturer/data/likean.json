@@ -1,0 +1,11 @@
+{
+    "name": "Likean",
+    "models": [
+        {
+            "model": "AK-H234N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

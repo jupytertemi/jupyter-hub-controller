@@ -1,0 +1,11 @@
+{
+    "name": "Ipvd300",
+    "models": [
+        {
+            "model": "IPVD-3MPVFIR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream.sdp1"
+        }
+    ]
+}

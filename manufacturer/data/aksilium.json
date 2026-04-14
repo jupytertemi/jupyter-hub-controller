@@ -1,0 +1,11 @@
+{
+    "name": "Aksilium",
+    "models": [
+        {
+            "model": "ip-203 VP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

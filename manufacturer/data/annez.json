@@ -1,0 +1,11 @@
+{
+    "name": "Annez",
+    "models": [
+        {
+            "model": "C31",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]&channel=1&stream=0.sdp:"
+        }
+    ]
+}

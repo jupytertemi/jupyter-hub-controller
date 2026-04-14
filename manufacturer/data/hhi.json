@@ -1,0 +1,17 @@
+{
+    "name": "Hhi",
+    "models": [
+        {
+            "model": "P34H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        },
+        {
+            "model": "ST-VBIP4002DL6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

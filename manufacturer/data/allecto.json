@@ -1,0 +1,11 @@
+{
+    "name": "Allecto",
+    "models": [
+        {
+            "model": "dvi-155",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11d=[PASSWORD]"
+        }
+    ]
+}

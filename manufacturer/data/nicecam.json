@@ -1,0 +1,11 @@
+{
+    "name": "Nicecam",
+    "models": [
+        {
+            "model": "1080LVD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

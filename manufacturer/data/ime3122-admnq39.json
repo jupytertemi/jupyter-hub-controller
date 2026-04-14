@@ -1,0 +1,11 @@
+{
+    "name": "Ime3122-admnq39",
+    "models": [
+        {
+            "model": "Pelco",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

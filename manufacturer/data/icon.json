@@ -1,0 +1,11 @@
+{
+    "name": "Icon",
+    "models": [
+        {
+            "model": "IPD-42-MPTZ-EXT",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

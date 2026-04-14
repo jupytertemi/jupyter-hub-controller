@@ -1,0 +1,11 @@
+{
+    "name": "Live-reporter",
+    "models": [
+        {
+            "model": "iphone",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

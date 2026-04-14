@@ -1,0 +1,11 @@
+{
+    "name": "Bv-security",
+    "models": [
+        {
+            "model": "IPDF-3082M-28A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        }
+    ]
+}

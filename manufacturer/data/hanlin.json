@@ -1,0 +1,11 @@
+{
+    "name": "Hanlin",
+    "models": [
+        {
+            "model": "CAM175",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

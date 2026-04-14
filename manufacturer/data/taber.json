@@ -1,0 +1,17 @@
+{
+    "name": "Taber",
+    "models": [
+        {
+            "model": "1080p Dual Light Camera",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "8115",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

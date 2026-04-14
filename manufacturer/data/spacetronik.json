@@ -1,0 +1,11 @@
+{
+    "name": "Spacetronik",
+    "models": [
+        {
+            "model": "SP-20IP20PTZ",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

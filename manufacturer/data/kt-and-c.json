@@ -1,0 +1,17 @@
+{
+    "name": "Kt And C",
+    "models": [
+        {
+            "model": "KNC-HDi47",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "KNC-p3BR4IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/2"
+        }
+    ]
+}

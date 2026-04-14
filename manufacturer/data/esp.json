@@ -1,0 +1,11 @@
+{
+    "name": "Esp",
+    "models": [
+        {
+            "model": "CA55",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

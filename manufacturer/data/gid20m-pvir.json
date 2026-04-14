@@ -1,0 +1,11 @@
+{
+    "name": "Gid20m-pvir",
+    "models": [
+        {
+            "model": "G4S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/media"
+        }
+    ]
+}

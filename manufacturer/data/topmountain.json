@@ -1,0 +1,11 @@
+{
+    "name": "Topmountain",
+    "models": [
+        {
+            "model": "JND-Y1-100W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

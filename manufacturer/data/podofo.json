@@ -1,0 +1,11 @@
+{
+    "name": "Podofo",
+    "models": [
+        {
+            "model": "SH4AMPOD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        }
+    ]
+}

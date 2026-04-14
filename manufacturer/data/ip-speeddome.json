@@ -1,0 +1,17 @@
+{
+    "name": "Ip-speeddome",
+    "models": [
+        {
+            "model": "EP_PELCO_D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v2"
+        },
+        {
+            "model": "Secuplug",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

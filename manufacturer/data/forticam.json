@@ -1,0 +1,11 @@
+{
+    "name": "Forticam",
+    "models": [
+        {
+            "model": "20A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel3"
+        }
+    ]
+}

@@ -1,0 +1,1031 @@
+{
+    "name": "Ezviz",
+    "models": [
+        {
+            "model": "3cn",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C1C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C1P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C2W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C3HW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C3S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C3TN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C3W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C3X",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C6C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C6CN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C6N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C6T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "c8c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS_CV210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS_H6C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-C1C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-C2mini-31WFR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-C3HC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "cs-c3n",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-C6CN-A0-3H2WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-C8C-A0-1F2WFL1(G05708394)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-CTQ3N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-CV200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-CV206",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-CV210 (Husky)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-CV216",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-CV248",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-CV310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "cs-cw310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-H1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-H3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-H6c-R101-1G2WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-H8C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CS-LC3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "cs-ty1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CTQ3N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CTQ3W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CTQ6C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "cv210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "cv310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CV4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "CZQ3W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DB1C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "exCube Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ezCube pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "eztube",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "H1c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "H3C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "H6C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "H8C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "H9C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Husky",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "LC3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Mini-O",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "TY1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "YT1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C1mini",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "C3N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "C3N(E32056121)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "C3W mike",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "C3WN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "C4W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "C6HN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "C6W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "C8W Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CP1 4MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-C1C-E0-1E2WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-C1HC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-C6CN-A0-8C4WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-C6HN-1C2WFR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-C6N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-C8W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-CP1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "cs-cv246",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CSCV310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-CV311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-CY310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-DB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-H3c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-H3-R100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-H8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-H8c-R100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS-LC1C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CTQ2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CV228",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "cw3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "DC1P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "e3s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "LC1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "Mini O Plus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "TY2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        },
+        {
+            "model": "CS_CV310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel1"
+        },
+        {
+            "model": "CS-CV206-C0-3B2WFR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel1"
+        },
+        {
+            "model": "CS-CV246-A0-1C2WFR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel1"
+        },
+        {
+            "model": "CS-TY2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel1"
+        },
+        {
+            "model": "3CW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "C3Q",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "C3W Pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "C6 2K",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "C6 2K+",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "c6s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "C8W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CQ6N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CS-C3HW-1C2WFR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CS-C4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CS-C6H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "cs-cv-246",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CS-DB1C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CS-DP2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CS-H6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CS-H6C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CSH8C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CT3N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "cw-c310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "Door bell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "DoorBell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "EZ360",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "Ezviz CTQ3N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "Indoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "CS-C3TN",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h265_stream"
+        },
+        {
+            "model": "C1HC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "C2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "C3A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "c3c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "c6cnpro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "C6TC",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CS-C8C-A0-1F2WF0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CS-CTQ2C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CS-H6c-R100-8B4WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "C-SH8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CTQ20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "ctq6tc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "cw310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CW3N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "cw8",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "dp1s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "MINI O",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "mini pano",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "MINI PLUS",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "OutPro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "CS-C6H-31WFR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h.264"
+        },
+        {
+            "model": "H6c PRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h.264"
+        },
+        {
+            "model": "DP1C",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "CS-C8PF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CS-H3_R100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "H7c",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "CS-C6N-D0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "CS-C8T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "H8c 2K+",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        },
+        {
+            "model": "c2cube",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "C2Q",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        },
+        {
+            "model": "CS-C6H-31WRF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H_264"
+        },
+        {
+            "model": "C4S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.265"
+        },
+        {
+            "model": "CS-C1T",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.265"
+        },
+        {
+            "model": "Ezviz-C6",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.265"
+        },
+        {
+            "model": "hC1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.265"
+        },
+        {
+            "model": "C8c 2K+",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream"
+        },
+        {
+            "model": "C8PF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/201"
+        },
+        {
+            "model": "CS-C6N-R101-1G2WF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h.264_stream"
+        },
+        {
+            "model": "CS-C3U-22ER",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "CS-C6W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch1/main"
+        },
+        {
+            "model": "CS-CV206v2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "CS-CV248-B1-32WVFMR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/HighResolutionVideo"
+        },
+        {
+            "model": "CS-H3-R100-1J3WKFL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h265"
+        },
+        {
+            "model": "CS-H8c-R100-1J4WKFL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        },
+        {
+            "model": "GK-200MP2B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av_stream/ch0"
+        },
+        {
+            "model": "USB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/h264"
+        }
+    ]
+}

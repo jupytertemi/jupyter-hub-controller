@@ -1,0 +1,23 @@
+{
+    "name": "Secur360",
+    "models": [
+        {
+            "model": "SL 9600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SL-9601-00",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Video Doorbell SL-9601-00",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

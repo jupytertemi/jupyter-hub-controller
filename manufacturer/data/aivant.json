@@ -1,0 +1,11 @@
+{
+    "name": "Aivant",
+    "models": [
+        {
+            "model": "C25",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Openeye",
+    "models": [
+        {
+            "model": "CM-610",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "CM-710",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "CM-715A",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

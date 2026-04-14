@@ -1,0 +1,11 @@
+{
+    "name": "Jvr",
+    "models": [
+        {
+            "model": "JVR01",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

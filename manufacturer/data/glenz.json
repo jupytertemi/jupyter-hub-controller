@@ -1,0 +1,11 @@
+{
+    "name": "Glenz",
+    "models": [
+        {
+            "model": "39020",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=1.sdp"
+        }
+    ]
+}

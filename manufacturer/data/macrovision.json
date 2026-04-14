@@ -1,0 +1,17 @@
+{
+    "name": "Macrovision",
+    "models": [
+        {
+            "model": "v380",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "v380pro",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Argos",
+    "models": [
+        {
+            "model": "AV SERIES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/0?videoCodecType=H.264"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Indigo",
+    "models": [
+        {
+            "model": "9250",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/profile1"
+        },
+        {
+            "model": "BX600",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "Security HDxxP DVR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/camera[CHANNEL]"
+        }
+    ]
+}

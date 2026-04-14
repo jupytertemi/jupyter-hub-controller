@@ -1,0 +1,11 @@
+{
+    "name": "Septekon",
+    "models": [
+        {
+            "model": "764",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch1"
+        }
+    ]
+}

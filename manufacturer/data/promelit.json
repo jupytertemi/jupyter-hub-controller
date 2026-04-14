@@ -1,0 +1,11 @@
+{
+    "name": "Promelit",
+    "models": [
+        {
+            "model": "Sentry H-230",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]/[USERNAME]:[PASSWORD]/main"
+        }
+    ]
+}

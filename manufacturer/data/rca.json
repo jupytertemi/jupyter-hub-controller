@@ -1,0 +1,11 @@
+{
+    "name": "Rca",
+    "models": [
+        {
+            "model": "HSDB2A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

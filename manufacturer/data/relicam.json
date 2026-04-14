@@ -1,0 +1,17 @@
+{
+    "name": "Relicam",
+    "models": [
+        {
+            "model": "IW20WV12-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "RC-IW20WV12-1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

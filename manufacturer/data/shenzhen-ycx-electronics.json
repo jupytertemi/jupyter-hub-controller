@@ -1,0 +1,17 @@
+{
+    "name": "Shenzhen Ycx Electronics",
+    "models": [
+        {
+            "model": "4K/8MP HD IP CAMERA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "YC-W608FCZ49EA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "E-think",
+    "models": [
+        {
+            "model": "NH4RT-20717A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

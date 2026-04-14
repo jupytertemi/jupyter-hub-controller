@@ -1,0 +1,17 @@
+{
+    "name": "Basler",
+    "models": [
+        {
+            "model": "bip-2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "IP CAMERA (2)",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

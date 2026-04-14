@@ -1,0 +1,23 @@
+{
+    "name": "Digisol",
+    "models": [
+        {
+            "model": "3630",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "dg-sc2600",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam_h264.sdp"
+        },
+        {
+            "model": "RTSP",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ipcam.sdp"
+        }
+    ]
+}

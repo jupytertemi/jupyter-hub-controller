@@ -1,0 +1,35 @@
+{
+    "name": "Eyecam",
+    "models": [
+        {
+            "model": "1104",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        },
+        {
+            "model": "ec-1347",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        },
+        {
+            "model": "IPD-L21Y02",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=00"
+        },
+        {
+            "model": "ec-1360",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        },
+        {
+            "model": "wifi5",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/streaming/channels/0"
+        }
+    ]
+}

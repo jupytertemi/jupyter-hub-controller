@@ -1,0 +1,11 @@
+{
+    "name": "Atlona",
+    "models": [
+        {
+            "model": "AT-HDVS-CAM",
+            "type": "FFMPEG",
+            "protocol": "rtp://",
+            "url": "/"
+        }
+    ]
+}

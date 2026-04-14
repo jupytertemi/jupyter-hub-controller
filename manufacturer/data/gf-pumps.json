@@ -1,0 +1,11 @@
+{
+    "name": "Gf-pumps",
+    "models": [
+        {
+            "model": "xenon",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live0.264"
+        }
+    ]
+}

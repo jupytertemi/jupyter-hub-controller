@@ -1,0 +1,11 @@
+{
+    "name": "Abr Security",
+    "models": [
+        {
+            "model": "IPC6200W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

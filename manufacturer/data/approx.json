@@ -1,0 +1,17 @@
+{
+    "name": "Approx",
+    "models": [
+        {
+            "model": "APPIP02P2P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "APPIP400HDPRO",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0/av0"
+        }
+    ]
+}

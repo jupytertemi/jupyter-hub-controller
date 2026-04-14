@@ -1,0 +1,17 @@
+{
+    "name": "Viewmax",
+    "models": [
+        {
+            "model": "IP-8332",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "VM-1IPPT",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        }
+    ]
+}

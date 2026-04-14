@@ -1,0 +1,11 @@
+{
+    "name": "Jyacam",
+    "models": [
+        {
+            "model": "200A",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

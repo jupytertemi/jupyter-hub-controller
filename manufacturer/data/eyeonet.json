@@ -1,0 +1,23 @@
+{
+    "name": "Eyeonet",
+    "models": [
+        {
+            "model": "cam-ip9131",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "CAM-IP9741",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "IP6394",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

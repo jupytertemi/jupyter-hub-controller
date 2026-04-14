@@ -1,0 +1,17 @@
+{
+    "name": "Anba",
+    "models": [
+        {
+            "model": "HZD-600DM",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        },
+        {
+            "model": "K and D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        }
+    ]
+}

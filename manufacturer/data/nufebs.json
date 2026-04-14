@@ -1,0 +1,17 @@
+{
+    "name": "Nufebs",
+    "models": [
+        {
+            "model": "c-20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C20",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

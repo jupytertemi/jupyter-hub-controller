@@ -1,0 +1,89 @@
+{
+    "name": "American Dynamics",
+    "models": [
+        {
+            "model": "410",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "610",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "5105DN",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "ADCI400-D033",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "i600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "I610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "i610-D321-150500000344",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "illustra 600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "illustra 610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "625",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Video?Codec=MPEG4&Width=720&Height=576&Fps=30"
+        },
+        {
+            "model": "ADVEIPSD22N",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Video?Codec=MPEG4&Width=720&Height=576&Fps=30"
+        },
+        {
+            "model": "ADCi400-D023",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "Illustra ADCi-M-111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ufirststream"
+        },
+        {
+            "model": "ipdome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Video"
+        }
+    ]
+}

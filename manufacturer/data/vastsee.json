@@ -1,0 +1,11 @@
+{
+    "name": "Vastsee",
+    "models": [
+        {
+            "model": "Va1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

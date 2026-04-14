@@ -1,0 +1,11 @@
+{
+    "name": "Durawell",
+    "models": [
+        {
+            "model": "8177QJ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Hopeway",
+    "models": [
+        {
+            "model": "HIDVAM",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

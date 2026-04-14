@@ -1,0 +1,11 @@
+{
+    "name": "Pilot",
+    "models": [
+        {
+            "model": "IGUARD",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

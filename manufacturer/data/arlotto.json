@@ -1,0 +1,23 @@
+{
+    "name": "Arlotto",
+    "models": [
+        {
+            "model": "AR1200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2?videoCodecType=H.264"
+        },
+        {
+            "model": "AR1500",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2?videoCodecType=H.264"
+        },
+        {
+            "model": "BX200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/PSIA/Streaming/channels/2?videoCodecType=H.264"
+        }
+    ]
+}

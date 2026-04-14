@@ -1,0 +1,41 @@
+{
+    "name": "Praxis",
+    "models": [
+        {
+            "model": "213 PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4/media.amp"
+        },
+        {
+            "model": "5914",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "AXIS M7010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp"
+        },
+        {
+            "model": "P1344-E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3214-V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/axis-media/media.amp?videocodec=h264&resolution=640x480"
+        },
+        {
+            "model": "P3224-VE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-media/media.amp"
+        }
+    ]
+}

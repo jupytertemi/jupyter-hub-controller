@@ -1,0 +1,11 @@
+{
+    "name": "Sucjar",
+    "models": [
+        {
+            "model": "PTZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

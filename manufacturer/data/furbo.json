@@ -1,0 +1,11 @@
+{
+    "name": "Furbo",
+    "models": [
+        {
+            "model": "Furbo2",
+            "type": "FFMPEG",
+            "protocol": "mms://",
+            "url": "/img/video.asf"
+        }
+    ]
+}

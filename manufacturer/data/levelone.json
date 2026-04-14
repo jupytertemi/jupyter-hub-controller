@@ -1,0 +1,341 @@
+{
+    "name": "Levelone",
+    "models": [
+        {
+            "model": "0031/1121/3061/5041",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "3061",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "FCS-0030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "FCS-0031",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "FCS-1121",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "FCS-5041",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "FCS-5067",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "WCS-0050",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/channel[CHANNEL]"
+        },
+        {
+            "model": "0051",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/channel1"
+        },
+        {
+            "model": "1091",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "FCS-1030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "FCS-1060",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "FCS-5011",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "FCS-5030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "WCS-0040",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "WCS-2030",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "WCS-2060",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "1131/1141/3071/3081/5051",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "5051",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "FCS-0071",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "FCS-1131",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "fcs-3073",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "FCS-3080",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "FCS-3081",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "FCS-5051",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "FCS-5061",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "WCS 0040",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "wcs-0010",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "4101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FCS 3101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FCS-4101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FCS-4301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FCS-4302",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FCS5068",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FCS-5093",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FSC-4101",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FSC-6020",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "wcs-6050",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "FCS 3065",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "FCS-3054",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "FCS-4044",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "FCS-5056",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "FCS-0040",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/img/video.sav"
+        },
+        {
+            "model": "FCS-0051",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif&event&video1"
+        },
+        {
+            "model": "FCS-1081",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "FCS-1101",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video.mp4"
+        },
+        {
+            "model": "FCS-1153",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream2"
+        },
+        {
+            "model": "FCS-3053",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream2"
+        },
+        {
+            "model": "FCS-5053",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream2"
+        },
+        {
+            "model": "FCS-3084",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/102"
+        },
+        {
+            "model": "FCS-3085",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "FCS-4051",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NVC-810",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "FSC-5060",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel0"
+        },
+        {
+            "model": "fcs-4100",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "FCS-5058",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "//Hauptstream"
+        }
+    ]
+}

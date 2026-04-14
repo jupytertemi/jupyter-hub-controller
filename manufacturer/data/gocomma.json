@@ -1,0 +1,11 @@
+{
+    "name": "Gocomma",
+    "models": [
+        {
+            "model": "CA-R21A-R",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

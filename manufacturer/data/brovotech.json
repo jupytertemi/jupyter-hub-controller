@@ -1,0 +1,23 @@
+{
+    "name": "Brovotech",
+    "models": [
+        {
+            "model": "2.0.0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "600102003-BV-H0203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        },
+        {
+            "model": "600109004-IPC-H0904",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

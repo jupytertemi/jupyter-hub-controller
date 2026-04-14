@@ -1,0 +1,11 @@
+{
+    "name": "Imago",
+    "models": [
+        {
+            "model": "ITN-22P3 NB 4",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

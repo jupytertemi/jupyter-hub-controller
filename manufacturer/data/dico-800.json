@@ -1,0 +1,11 @@
+{
+    "name": "Dico-800",
+    "models": [
+        {
+            "model": "RXT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

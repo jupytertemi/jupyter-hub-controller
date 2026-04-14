@@ -1,0 +1,11 @@
+{
+    "name": "Iv9000",
+    "models": [
+        {
+            "model": "9150",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/profile1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Melchioni",
+    "models": [
+        {
+            "model": "pinhole",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

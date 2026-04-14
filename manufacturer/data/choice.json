@@ -1,0 +1,17 @@
+{
+    "name": "Choice",
+    "models": [
+        {
+            "model": "MV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4_1.sdp"
+        },
+        {
+            "model": "N5304MV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4_1.sdp"
+        }
+    ]
+}

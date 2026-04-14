@@ -1,0 +1,35 @@
+{
+    "name": "Marshall",
+    "models": [
+        {
+            "model": "Encoder",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "VS-102",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "VS-102-HDI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/video1"
+        },
+        {
+            "model": "VS-14",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/3gpp"
+        },
+        {
+            "model": "VS-572",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/3gpp"
+        }
+    ]
+}

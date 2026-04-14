@@ -1,0 +1,23 @@
+{
+    "name": "Maxxone",
+    "models": [
+        {
+            "model": "Bullet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "m1p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "M1P-C3A40F-E-G",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/media/video3"
+        }
+    ]
+}

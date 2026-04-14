@@ -1,0 +1,17 @@
+{
+    "name": "Zulex",
+    "models": [
+        {
+            "model": "IPC-1VB-E1.40",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        },
+        {
+            "model": "IPC-2MD-E1.28",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif-stream1"
+        }
+    ]
+}

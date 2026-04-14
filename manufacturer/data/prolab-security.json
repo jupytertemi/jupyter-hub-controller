@@ -1,0 +1,11 @@
+{
+    "name": "Prolab Security",
+    "models": [
+        {
+            "model": "1234",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

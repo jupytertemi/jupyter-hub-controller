@@ -1,0 +1,65 @@
+{
+    "name": "Illustra",
+    "models": [
+        {
+            "model": "600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "ADCi610-D113",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "Flex 600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "i210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/primarystream"
+        },
+        {
+            "model": "AD610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ufirststream"
+        },
+        {
+            "model": "ies02mfbnwiy",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ufirststream"
+        },
+        {
+            "model": "adci800f-D111",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "flex",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "Illustra Pro 12MP Fisheye",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoStreamId=1"
+        },
+        {
+            "model": "Pro 3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoStreamId=1"
+        }
+    ]
+}

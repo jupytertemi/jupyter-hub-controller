@@ -1,0 +1,11 @@
+{
+    "name": "Japon Dynamic",
+    "models": [
+        {
+            "model": "1.3",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/SubStream"
+        }
+    ]
+}

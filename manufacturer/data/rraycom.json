@@ -1,0 +1,11 @@
+{
+    "name": "Rraycom",
+    "models": [
+        {
+            "model": "Wired HD Flood",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264?ch=0&subtype=0"
+        }
+    ]
+}

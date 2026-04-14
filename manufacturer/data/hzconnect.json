@@ -1,0 +1,17 @@
+{
+    "name": "Hzconnect",
+    "models": [
+        {
+            "model": "9600 doorbell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Smart Door Bell",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

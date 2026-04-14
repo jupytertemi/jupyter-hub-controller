@@ -1,0 +1,11 @@
+{
+    "name": "Declink",
+    "models": [
+        {
+            "model": "000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/user=[USERNAME]_password=[PASSWORD]_channel=1_stream=0.sdp"
+        }
+    ]
+}

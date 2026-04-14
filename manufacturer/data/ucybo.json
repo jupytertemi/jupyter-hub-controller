@@ -1,0 +1,11 @@
+{
+    "name": "Ucybo",
+    "models": [
+        {
+            "model": "NM4RT200H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.264"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Ip Camera (android)",
+    "models": [
+        {
+            "model": "C6F0SGZ3N0P3L2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C9F0SfZ3N0P6L0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "C9F0SgZ3N0PbL0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ssd",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "TinyCam",
+            "type": "FFMPEG",
+            "protocol": "https://",
+            "url": "/axis-cgi/mjpg/video.cgi?camera=1"
+        }
+    ]
+}

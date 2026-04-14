@@ -1,0 +1,23 @@
+{
+    "name": "Nexxt Solution",
+    "models": [
+        {
+            "model": "nexxt",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/channels/401"
+        },
+        {
+            "model": "Xpy 520",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        },
+        {
+            "model": "xpy 530",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

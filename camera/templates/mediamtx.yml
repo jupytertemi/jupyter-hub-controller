@@ -1,0 +1,88 @@
+###############################################
+# General settings
+###############################################
+logLevel: info
+logDestinations: [stdout]
+
+###############################################
+# API settings
+###############################################
+api: yes
+apiAddress: :9997
+
+###############################################
+# RTSP settings (disabled — go2rtc handles RTSP)
+###############################################
+rtsp: no
+
+###############################################
+# RTMP settings
+###############################################
+rtmp: no
+
+###############################################
+# HLS settings
+# hlsAlwaysRemux: yes — keeps segments ready so HLS starts instantly.
+# 500ms segments + 100ms parts for low latency.
+###############################################
+hls: yes
+hlsAddress: :8888
+hlsAllowOrigins: ['*']
+hlsAlwaysRemux: yes
+hlsVariant: lowLatency
+hlsSegmentDuration: 500ms
+hlsPartDuration: 100ms
+
+###############################################
+# SRT settings
+###############################################
+srt: no
+
+###############################################
+# WebRTC settings
+# MediaMTX serves as the WHEP endpoint for Flutter.
+# STUN (Google) listed FIRST for fast P2P srflx (~34ms).
+# TURN (Cloudflare) as relay fallback when P2P fails.
+# Aggressive timeouts from proven hubtemi deployment.
+###############################################
+webrtc: yes
+webrtcAddress: :8889
+webrtcAllowOrigins: ['*']
+webrtcTrustedProxies: []
+webrtcLocalTCPAddress: :8189
+webrtcIPsFromInterfaces: yes
+webrtcIPsFromInterfacesList: ['wl*', 'en*', 'eth*']
+webrtcHandshakeTimeout: 5s
+webrtcTrackGatherTimeout: 200ms
+webrtcSTUNGatherTimeout: 200ms
+
+webrtcICEServers2:
+  - url: stun:stun.l.google.com:19302
+  - url: stun:stun1.l.google.com:19302
+  - url: stun:stun.cloudflare.com:3478
+{% for url in turn_server %}
+  - url: {{ url }}
+    username: {{ turn_user }}
+    password: {{ turn_password }}
+{% endfor %}
+
+###############################################
+# Path configurations
+# RTSP cameras: source from go2rtc -live (passthrough H264 or NPU transcode)
+# Ring cameras: source from ring-mqtt RTSP (host-mapped port 8554)
+###############################################
+
+paths:
+  {% for camera in cameras %}
+{% if camera.type == "RING" %}
+  {{ camera.name }}:
+    source: rtsp://localhost:8554/{{ camera.ring_device_id }}_live
+    rtspTransport: tcp
+    sourceOnDemand: yes
+{% else %}
+  {{ camera.name }}:
+    source: rtsp://localhost:28554/{{ camera.name }}-live
+    rtspTransport: tcp
+    sourceOnDemand: no
+{% endif %}
+  {% endfor %}

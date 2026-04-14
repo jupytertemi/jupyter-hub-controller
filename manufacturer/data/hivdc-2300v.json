@@ -1,0 +1,11 @@
+{
+    "name": "Hivdc-2300v",
+    "models": [
+        {
+            "model": "hivdc-2300",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

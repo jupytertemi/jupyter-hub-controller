@@ -1,0 +1,11 @@
+{
+    "name": "Wifi Baby",
+    "models": [
+        {
+            "model": "WFB2015",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_h264.sdp"
+        }
+    ]
+}

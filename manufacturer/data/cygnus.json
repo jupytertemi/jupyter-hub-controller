@@ -1,0 +1,11 @@
+{
+    "name": "Cygnus",
+    "models": [
+        {
+            "model": "IPC-4M-FW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

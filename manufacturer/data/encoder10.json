@@ -1,0 +1,11 @@
+{
+    "name": "Encoder10",
+    "models": [
+        {
+            "model": "IndigoOnvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsp/profile1"
+        }
+    ]
+}

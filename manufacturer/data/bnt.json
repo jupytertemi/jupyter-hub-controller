@@ -1,0 +1,11 @@
+{
+    "name": "Bnt",
+    "models": [
+        {
+            "model": "BNT-5MP-840-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

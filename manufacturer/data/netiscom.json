@@ -1,0 +1,11 @@
+{
+    "name": "Netiscom",
+    "models": [
+        {
+            "model": "nc100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

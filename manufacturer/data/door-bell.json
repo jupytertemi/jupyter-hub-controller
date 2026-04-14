@@ -1,0 +1,11 @@
+{
+    "name": "Door Bell",
+    "models": [
+        {
+            "model": "huanso",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

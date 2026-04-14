@@ -1,0 +1,11 @@
+{
+    "name": "Aliendvr",
+    "models": [
+        {
+            "model": "mega216",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

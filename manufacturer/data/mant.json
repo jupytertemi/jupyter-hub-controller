@@ -1,0 +1,11 @@
+{
+    "name": "Mant",
+    "models": [
+        {
+            "model": "H264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

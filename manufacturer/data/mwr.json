@@ -1,0 +1,17 @@
+{
+    "name": "Mwr",
+    "models": [
+        {
+            "model": "C1223",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_1"
+        },
+        {
+            "model": "C1223HW",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/av0_0"
+        }
+    ]
+}

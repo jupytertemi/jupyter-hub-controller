@@ -1,0 +1,11 @@
+{
+    "name": "Fnkvision",
+    "models": [
+        {
+            "model": "X4822032",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

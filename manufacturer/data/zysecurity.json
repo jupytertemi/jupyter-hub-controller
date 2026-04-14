@@ -1,0 +1,17 @@
+{
+    "name": "Zysecurity",
+    "models": [
+        {
+            "model": "PTZ IP 58",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "ZY-PEZ40-SNY",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/"
+        }
+    ]
+}

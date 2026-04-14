@@ -1,0 +1,11 @@
+{
+    "name": "Napco Security",
+    "models": [
+        {
+            "model": "iSee Dome",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=1&subtype=00&authbasic=[AUTH]"
+        }
+    ]
+}

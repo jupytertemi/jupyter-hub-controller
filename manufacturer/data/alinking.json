@@ -1,0 +1,17 @@
+{
+    "name": "Alinking",
+    "models": [
+        {
+            "model": "ALC SERIES",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/mpeg4"
+        },
+        {
+            "model": "ALS-7742",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/cam[CHANNEL]/h264"
+        }
+    ]
+}

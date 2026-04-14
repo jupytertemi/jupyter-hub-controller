@@ -1,0 +1,11 @@
+{
+    "name": "Uniue Vision",
+    "models": [
+        {
+            "model": "uv-ipbm21",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        }
+    ]
+}

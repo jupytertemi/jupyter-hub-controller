@@ -1,0 +1,11 @@
+{
+    "name": "Aguadilla",
+    "models": [
+        {
+            "model": "onvif",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/main"
+        }
+    ]
+}

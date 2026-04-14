@@ -1,0 +1,11 @@
+{
+    "name": "Ctvison",
+    "models": [
+        {
+            "model": "CT-36DSWIFIBT",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Hiki",
+    "models": [
+        {
+            "model": "hike200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

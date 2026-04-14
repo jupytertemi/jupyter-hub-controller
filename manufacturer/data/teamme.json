@@ -1,0 +1,11 @@
+{
+    "name": "Teamme",
+    "models": [
+        {
+            "model": "HM206",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/sub"
+        }
+    ]
+}

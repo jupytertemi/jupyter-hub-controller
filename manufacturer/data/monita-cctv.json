@@ -1,0 +1,11 @@
+{
+    "name": "Monita Cctv",
+    "models": [
+        {
+            "model": "LPR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/channel=0;stream=0;user=[USERNAME];pass=[PASSWORD];"
+        }
+    ]
+}

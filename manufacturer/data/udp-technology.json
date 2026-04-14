@@ -1,0 +1,23 @@
+{
+    "name": "Udp Technology",
+    "models": [
+        {
+            "model": "IPE-1100M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_unicast_firststream"
+        },
+        {
+            "model": "IPE-3500M",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_unicast_firststream"
+        },
+        {
+            "model": "NVC-1000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_unicast_firststream"
+        }
+    ]
+}

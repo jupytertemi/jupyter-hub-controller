@@ -1,0 +1,113 @@
+{
+    "name": "Messoa",
+    "models": [
+        {
+            "model": "855PRO",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "875PRO",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NCC800",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NDF820",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NDF821",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NIC990",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        },
+        {
+            "model": "NCB855",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "NCR875",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "NDR890",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/mpeg4"
+        },
+        {
+            "model": "NCC700",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "NIC910HPRO",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "NIC930HPRO",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "NIC950HPRO",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        },
+        {
+            "model": "NDZ760",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.h264"
+        },
+        {
+            "model": "NDZ860",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "NIC830",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "NIC835",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        },
+        {
+            "model": "NIC836",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/livestream"
+        }
+    ]
+}

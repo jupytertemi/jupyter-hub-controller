@@ -1,0 +1,11 @@
+{
+    "name": "3eyes3",
+    "models": [
+        {
+            "model": "E-2100M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

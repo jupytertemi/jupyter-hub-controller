@@ -1,0 +1,11 @@
+{
+    "name": "Cantek",
+    "models": [
+        {
+            "model": "CTW-IPSD3282D",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor"
+        }
+    ]
+}

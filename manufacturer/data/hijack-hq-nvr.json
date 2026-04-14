@@ -1,0 +1,23 @@
+{
+    "name": "Hijack Hq Nvr",
+    "models": [
+        {
+            "model": "7608ni-i2/8p",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Unicast/channels/102"
+        },
+        {
+            "model": "NBD8016RA-UL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        },
+        {
+            "model": "nvr",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch01.264"
+        }
+    ]
+}

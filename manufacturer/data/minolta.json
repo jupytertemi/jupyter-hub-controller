@@ -1,0 +1,11 @@
+{
+    "name": "Minolta",
+    "models": [
+        {
+            "model": "MD08",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264"
+        }
+    ]
+}

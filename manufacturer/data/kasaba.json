@@ -1,0 +1,11 @@
+{
+    "name": "Kasaba",
+    "models": [
+        {
+            "model": "TRX-20WiFi-PL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif1"
+        }
+    ]
+}

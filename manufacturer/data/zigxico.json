@@ -1,0 +1,11 @@
+{
+    "name": "Zigxico",
+    "models": [
+        {
+            "model": "W11",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/onvif/stream1"
+        }
+    ]
+}

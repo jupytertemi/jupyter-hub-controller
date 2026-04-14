@@ -1,0 +1,155 @@
+{
+    "name": "Compro",
+    "models": [
+        {
+            "model": "CS40",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "CS400P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "IP50/70",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "IP540",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "IP540p",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "IP55",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "IP55/60",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "IP550P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "IP70",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "IP90P",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "NC3230",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "TN1500",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias[CHANNEL]"
+        },
+        {
+            "model": "CS60",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "nc1200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "IP530W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "IP570",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "IP70W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "Main Entrance Int",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "TN2200",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "TN30W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "TN50",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "TN60",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "TN900",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "tn920",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/medias2"
+        },
+        {
+            "model": "NC150/420/500",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/[CHANNEL]"
+        }
+    ]
+}

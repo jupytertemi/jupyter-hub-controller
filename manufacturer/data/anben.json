@@ -1,0 +1,11 @@
+{
+    "name": "Anben",
+    "models": [
+        {
+            "model": "BPI205-2H",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ch0_0.264"
+        }
+    ]
+}

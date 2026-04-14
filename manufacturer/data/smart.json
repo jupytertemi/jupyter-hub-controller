@@ -1,0 +1,17 @@
+{
+    "name": "Smart",
+    "models": [
+        {
+            "model": "dbpower",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "SmartCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

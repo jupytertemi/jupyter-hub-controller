@@ -1,0 +1,11 @@
+{
+    "name": "Commend",
+    "models": [
+        {
+            "model": "ID5",
+            "type": "MJPEG",
+            "protocol": "https://",
+            "url": "/mjpeg/video.mjpg?resolution=1280x960&fps=15"
+        }
+    ]
+}

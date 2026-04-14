@@ -1,0 +1,11 @@
+{
+    "name": "Roidmi",
+    "models": [
+        {
+            "model": "EVE Plus",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/rtsph2641080p"
+        }
+    ]
+}

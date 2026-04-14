@@ -1,0 +1,11 @@
+{
+    "name": "Gds",
+    "models": [
+        {
+            "model": "3710",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/2"
+        }
+    ]
+}

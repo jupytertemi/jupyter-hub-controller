@@ -1,0 +1,41 @@
+{
+    "name": "Tuya",
+    "models": [
+        {
+            "model": "AK8743",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream_0"
+        },
+        {
+            "model": "China Spy",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream_0"
+        },
+        {
+            "model": "Kerui",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream_0"
+        },
+        {
+            "model": "lsc",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream_0"
+        },
+        {
+            "model": "smart",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        },
+        {
+            "model": "SRG-007",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

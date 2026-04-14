@@ -1,0 +1,17 @@
+{
+    "name": "Apeman",
+    "models": [
+        {
+            "model": "ID71",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "IP360",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Onvif/live/1/1"
+        }
+    ]
+}

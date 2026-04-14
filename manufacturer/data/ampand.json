@@ -1,0 +1,11 @@
+{
+    "name": "Ampand",
+    "models": [
+        {
+            "model": "IP-P12",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Clearone",
+    "models": [
+        {
+            "model": "Unite200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        }
+    ]
+}

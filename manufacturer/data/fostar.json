@@ -1,0 +1,11 @@
+{
+    "name": "Fostar",
+    "models": [
+        {
+            "model": "FC2501P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        }
+    ]
+}

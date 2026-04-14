@@ -1,0 +1,17 @@
+{
+    "name": "Yanivision",
+    "models": [
+        {
+            "model": "4MP",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4_1.sdp"
+        },
+        {
+            "model": "mini ptz",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live_mpeg4_1.sdp"
+        }
+    ]
+}

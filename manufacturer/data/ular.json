@@ -1,0 +1,11 @@
+{
+    "name": "Ular",
+    "models": [
+        {
+            "model": "S3 Spy Cam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

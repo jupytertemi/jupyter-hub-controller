@@ -1,0 +1,11 @@
+{
+    "name": "Eonboom",
+    "models": [
+        {
+            "model": "DVI20B-2.0M",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        }
+    ]
+}

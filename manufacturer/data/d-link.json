@@ -1,0 +1,1883 @@
+{
+    "name": "D-link",
+    "models": [
+        {
+            "model": "0015",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS 4701E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-2121",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-2132L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-2132L-2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-2132LB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-2230",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-2310L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS2330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-2330L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-2332l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-4614EK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-5029L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-5030L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-5222L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "dcs5222lb",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-5222LB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-5222LB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-6010L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-6112",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-6513",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-6620",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-6818B1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-7010L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-7110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DVS-301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "132L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "2121",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "2630L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "5220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "932-L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "935L (MJPEG)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "936L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "936L (H.264)",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "942",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "942L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DC8942L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS 930L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS- 933L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS 935L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "dcs 942l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS=933L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-1100L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-2100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-2630L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-5009L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-5605",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-8200LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-855L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-930",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS930l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-932L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "dcs-935l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "dcs936l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-936L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "dcs942",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS942L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-942L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-942LB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-9552",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "dcs-960l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-963L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-993L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DSC-936L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DSC940",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DSL-930",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DSL-936L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "2103",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "2130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "2132",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "2132LB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "2230L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "2330",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "2330L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "2530L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "4201",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "4602EV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "4701e",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "5220L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "5222lb1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "6010L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "6210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "7110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "dcs",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS 2132LB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS 2230",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS 4703E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "dcs 5029l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS 5222",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS DCS-4605EV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS_5020L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-1130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2103",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2130",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2132",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2132LB",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2132L-ES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2136",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2136L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS2230",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2232",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-22x0",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2310",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2311L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2311L-ES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS2330l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2330L/RE",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "dcs-2332",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-2670l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-3010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-3511",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-3710",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-3716",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4212",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4601EV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4602EV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "dcs-4612EK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4618EK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4622",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS4701E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4712E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4714E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4718E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-4802E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-5020L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-5220B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-5222LB-sesipod",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6002L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6004",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6004L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6010LLH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6113V",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6314",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6511",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6616",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-6818",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-7000L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-7010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS7010L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "dcs-7313",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-7413",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-7513",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "dcs-7710",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-8010LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-934L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-D5552",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DSC 8000-LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DSC-2103",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DSC-2132L-ES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DSC2210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DSC-2230L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DSC2530L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "dsc6100lh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DSC-7513",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "TV310PI",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "WVC54GCA",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "920",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "930 L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "930l",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "933",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "935L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "935L (H.264)",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "936L (MJPEG)",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "960L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "ager",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCC 942L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS 932L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS 936L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-1000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-1100",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-2000",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-2102",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-2120",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-3110",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-3220",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-3410",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-3420",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-5211L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-5220",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-5230",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-5230L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-5300",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-6111",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-6113",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-6815",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-820L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-825L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-900",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-910",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-920",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-930L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-932",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-932L NEW",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-936L2",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-942",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-942LA1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-942LB1",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS950G",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "D-LINK DCS-936L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DSC-935L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DSC-942L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "Reno",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "2132L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS 5220",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS-2120 SERIES",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS-3415",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS-3420 Series",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS-5610",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS-6110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS-6915",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS-7110B1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "5020L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "5222l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "6110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "DCS 2330L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "DCS 4602EV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "DCS 6314",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "DCS-2530L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "DCS-4603",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "DCS-4633EV",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "DCS-5221",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "dcs7110",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "dsc 2210",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "DSC2530",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live2.sdp"
+        },
+        {
+            "model": "2332L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS_2330L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS2132BL",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-4701E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS700L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "ds2330l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "4860",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "8010LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "DCP-8010LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "DCS 5020l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "DCS 8515LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "DCS 932LB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "DCS-8000-LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "DCS-8300LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "DCS-8525LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "dcs-8600lh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "DHC 8000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "dsc6100",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "tapo",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream1"
+        },
+        {
+            "model": "500",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-3110 Series",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-3112",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-5222",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "DCS-933L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        },
+        {
+            "model": "5010L",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "910",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "930 L IP",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "930-lb",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "932l",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "932LB2",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DC932L",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS 2130",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS 4622",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS_5010L",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "dcs-132",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS-2000 SERIES",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS-2530-L",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS-32LB",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS-4705E",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "dcs-5010l",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "dcs-8100lh",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "dcs-832l",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "dcs910",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS-930 L",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS-930-Lb",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS-930lb1",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DCS-932L (B1)",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "dcs-932lb",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "dcs-933",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "d-link",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "Dlink 932l",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "dsc-5030L",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "DSC-7010",
+            "type": "JPEG",
+            "protocol": "https://",
+            "url": "/image/jpeg.cgi"
+        },
+        {
+            "model": "d-932",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS l935",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-930B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-935",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-960",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DCS-960L2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DL935",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DSC 942L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DSC-2630L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "DSC-820L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "8000L-HV2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "8526LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "DCS 8000-LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "DCS 8526LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "DCS-8000LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "DCS-8000LHV2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "DCS-8302LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "DCS-8627LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "DCS-8630LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "DCS-8635LH",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/profile.0"
+        },
+        {
+            "model": "dcs 930",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-5222L1B",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS933l",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-935L MJPEG OK",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/play2.sdp"
+        },
+        {
+            "model": "DCS-5552l",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play3.sdp"
+        },
+        {
+            "model": "dcs 942",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/OVProfile00"
+        },
+        {
+            "model": "DCS-5222B1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/OVProfile00"
+        },
+        {
+            "model": "DCS5222L",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/OVProfile00"
+        },
+        {
+            "model": "DCS-6010",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "DCS-6113VB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live.sdp"
+        },
+        {
+            "model": "dcs-6100lh",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1"
+        },
+        {
+            "model": "DCS-8000",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "DSC-2230-91",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "NC450",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_hd.sdp"
+        }
+    ]
+}

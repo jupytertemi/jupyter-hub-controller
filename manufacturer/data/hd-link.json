@@ -1,0 +1,41 @@
+{
+    "name": "Hd Link",
+    "models": [
+        {
+            "model": "5222L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "936L (H.264)",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "Play",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play1.sdp"
+        },
+        {
+            "model": "5222LB1",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live3.sdp"
+        },
+        {
+            "model": "DCS-936L",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/play3.sdp"
+        },
+        {
+            "model": "DVS-301",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_hd.sdp"
+        }
+    ]
+}

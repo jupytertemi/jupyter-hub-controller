@@ -1,0 +1,11 @@
+{
+    "name": "Hi5",
+    "models": [
+        {
+            "model": "HD 720",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch1"
+        }
+    ]
+}

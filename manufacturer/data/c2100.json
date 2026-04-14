@@ -1,0 +1,11 @@
+{
+    "name": "C2100",
+    "models": [
+        {
+            "model": "Acam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ONVIF/channel1"
+        }
+    ]
+}

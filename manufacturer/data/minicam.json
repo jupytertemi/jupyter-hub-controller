@@ -1,0 +1,17 @@
+{
+    "name": "Minicam",
+    "models": [
+        {
+            "model": "IP-600",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "MiniSpy",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/ucast/11"
+        }
+    ]
+}

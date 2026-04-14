@@ -1,0 +1,17 @@
+{
+    "name": "Meco",
+    "models": [
+        {
+            "model": "Bell 5t",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        },
+        {
+            "model": "Eleverde",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/101"
+        }
+    ]
+}

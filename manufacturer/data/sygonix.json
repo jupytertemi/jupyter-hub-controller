@@ -1,0 +1,23 @@
+{
+    "name": "Sygonix",
+    "models": [
+        {
+            "model": "43176S",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "43176Y",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        },
+        {
+            "model": "FI8904W",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/v01"
+        }
+    ]
+}

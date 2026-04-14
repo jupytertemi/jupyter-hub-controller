@@ -1,0 +1,59 @@
+{
+    "name": "Huawei",
+    "models": [
+        {
+            "model": "DS-2CD2383G0-IU",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC6225-VRZ",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC-6232-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC6321-VF",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC6331-IR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/Streaming/Channels/1"
+        },
+        {
+            "model": "IPC6325-WD-VR",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/LiveMedia/ch1/Media2"
+        },
+        {
+            "model": "issv",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/LiveMedia/ch1/Media2"
+        },
+        {
+            "model": "tablet",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live"
+        },
+        {
+            "model": "TE60",
+            "type": "MJPEG",
+            "protocol": "rtsp://",
+            "url": "/LiveMedia/ch1/Media1/trackID=1"
+        }
+    ]
+}

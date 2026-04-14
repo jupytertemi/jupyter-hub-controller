@@ -1,0 +1,29 @@
+{
+    "name": "Heimlink",
+    "models": [
+        {
+            "model": "CloudCam",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "hm202",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "HM203",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        },
+        {
+            "model": "hm311",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H.264"
+        }
+    ]
+}

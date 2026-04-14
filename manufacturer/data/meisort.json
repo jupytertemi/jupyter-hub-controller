@@ -1,0 +1,23 @@
+{
+    "name": "Meisort",
+    "models": [
+        {
+            "model": "v11",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/1EDBA8F05638533F788D8B5E71187399&0"
+        },
+        {
+            "model": "WQJ802B-FH-2-S",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        },
+        {
+            "model": "Y203s",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

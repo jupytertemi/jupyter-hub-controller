@@ -1,0 +1,11 @@
+{
+    "name": "Becam",
+    "models": [
+        {
+            "model": "SSkantoor",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live/ch0"
+        }
+    ]
+}

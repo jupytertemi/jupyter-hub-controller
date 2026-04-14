@@ -1,0 +1,35 @@
+{
+    "name": "Ipc-model",
+    "models": [
+        {
+            "model": "c2m",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "DOME",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "FOSCAM G2",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "ip2m-841",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoMain"
+        },
+        {
+            "model": "FI9828",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/videoSub"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Hdl",
+    "models": [
+        {
+            "model": "HMEG-70/70W",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/H264/ch[CHANNEL]"
+        },
+        {
+            "model": "HMEG-70/70W (rtsp)",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/H264"
+        },
+        {
+            "model": "HMEG-70P/70DVIR",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/live/ch00_0"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Nv-mbw",
+    "models": [
+        {
+            "model": "NV-MBW-PI802-P",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

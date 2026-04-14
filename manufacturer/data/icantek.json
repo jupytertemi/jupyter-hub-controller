@@ -1,0 +1,11 @@
+{
+    "name": "Icantek",
+    "models": [
+        {
+            "model": "iCanView Camera",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/video[CHANNEL]"
+        }
+    ]
+}

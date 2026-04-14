@@ -1,0 +1,11 @@
+{
+    "name": "Dunlop",
+    "models": [
+        {
+            "model": "dp-22xm122fwd-i",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam1/mpeg4"
+        }
+    ]
+}

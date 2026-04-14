@@ -1,0 +1,11 @@
+{
+    "name": "Hiklook",
+    "models": [
+        {
+            "model": "2mp",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/live1.sdp"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Eos Vision",
+    "models": [
+        {
+            "model": "BW-200",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

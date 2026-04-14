@@ -1,0 +1,11 @@
+{
+    "name": "Uray Encoder",
+    "models": [
+        {
+            "model": "H.264",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/0"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Vitorcam",
+    "models": [
+        {
+            "model": "C800",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/cam0/h264"
+        },
+        {
+            "model": "ca23",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

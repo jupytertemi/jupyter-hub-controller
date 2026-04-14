@@ -1,0 +1,11 @@
+{
+    "name": "Cctvsecuritypros",
+    "models": [
+        {
+            "model": "Model",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

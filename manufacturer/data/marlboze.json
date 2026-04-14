@@ -1,0 +1,23 @@
+{
+    "name": "Marlboze",
+    "models": [
+        {
+            "model": "720P P2P IR-Cut",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/tcp/av0_0"
+        },
+        {
+            "model": "c-p11-50",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream_0"
+        },
+        {
+            "model": "M-P09",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/stream_0"
+        }
+    ]
+}

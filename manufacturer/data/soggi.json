@@ -1,0 +1,11 @@
+{
+    "name": "Soggi",
+    "models": [
+        {
+            "model": "orno",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/11"
+        }
+    ]
+}

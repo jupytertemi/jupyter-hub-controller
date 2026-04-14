@@ -1,0 +1,11 @@
+{
+    "name": "Digital Intellect",
+    "models": [
+        {
+            "model": "238",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/h264_stream"
+        }
+    ]
+}

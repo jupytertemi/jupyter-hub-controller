@@ -1,0 +1,11 @@
+{
+    "name": "Cenova",
+    "models": [
+        {
+            "model": "180pl",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": ""
+        }
+    ]
+}

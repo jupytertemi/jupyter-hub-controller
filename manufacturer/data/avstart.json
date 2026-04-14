@@ -1,0 +1,11 @@
+{
+    "name": "Avstart",
+    "models": [
+        {
+            "model": "CB205",
+            "type": "VLC",
+            "protocol": "rtsp://",
+            "url": "/cam/realmonitor?channel=[CHANNEL]&subtype=1"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Reticam",
+    "models": [
+        {
+            "model": "720E",
+            "type": "FFMPEG",
+            "protocol": "rtsp://",
+            "url": "/H264/sub"
+        }
+    ]
+}
