@@ -674,3 +674,4 @@ class InterfaceHASSView(GenericAPIView):
         except Exception as exc:
             print(f"Failed to enable service calls for {entry_id}: {exc}")
             return False
+

@@ -199,9 +199,9 @@ class AlarmDeviceConfigManager(models.Manager):
                     {"error": "Failed to set volume  device to Home Assistant"}
                 )
 
-        except Exception:
-            raise Exception({"error": "Failed to set volume device to Home Assistant"})
-
+        except Exception as exc:
+            print(f"Warning: Failed to set volume for {identity}: {exc}")
+            pass  # Silently continue if media_player unavailable
     # def _get_entity_ids(self, hass_entry_id):
     #     client = self.getHassClient()
     #     speaker_entity = client.get_media_player_entity(hass_entry_id)
