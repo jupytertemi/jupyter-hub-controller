@@ -156,15 +156,21 @@ class AlarmSettingsManager(models.Manager):
             kwargs.setdefault("entry_door_all_sensors", True)
 
         old_mode = instance.mode
+        old_sound = instance.sound  # Track old sound/occupancy
+        
         for key, value in kwargs.items():
             setattr(instance, key, value)
+            
         SOUND_TO_OCCUPANCY_MAP = {
             AlarmSound.PEOPLE_HOME.value: OccupancyIllusion.PEOPLE.value,
             AlarmSound.RUNNING_APPLIANCES.value: OccupancyIllusion.RUNNING_APPLIANCES.value,
             AlarmSound.BARKING_DOGS.value: OccupancyIllusion.DOGS.value,
         }
+        
         instance.save()
         new_mode = instance.mode
+        new_sound = instance.sound
+        
         if instance.mode == AlarmSettingsMode.NONE.value:
             payload = {
                 "alarm_mode": AlarmMode.OFF.value,
@@ -190,8 +196,24 @@ class AlarmSettingsManager(models.Manager):
         AlarmDeviceConfig.objects.filter(device=instance.device).update(**payload)
         self._sync_entry_sensors(instance, entry_sensor_ids)
         self.setup_alarm_automations(instance)
-        if old_mode != new_mode:
-            self.publish_alarm_mode(instance.device.identity_name, new_mode)
+        
+        # Publish MQTT if mode OR sound changed
+        mode_changed = old_mode != new_mode
+        sound_changed = old_sound != new_sound
+        
+        if mode_changed or sound_changed:
+            # Determine what MQTT mode to send
+            if new_mode == AlarmSettingsMode.TRAVEL.value and new_sound:
+                # For occupancy illusion, send the sound value as mode
+                mqtt_mode = SOUND_TO_OCCUPANCY_MAP.get(new_sound, OccupancyIllusion.OFF.value)
+            elif new_mode == AlarmSettingsMode.NONE.value:
+                mqtt_mode = "disarm"
+            else:
+                # For regular alarm modes (night, away)
+                mqtt_mode = new_mode
+                
+            self.publish_alarm_mode(instance.device.identity_name, mqtt_mode)
+            
         return instance
 
     def _sync_entry_sensors(self, settings_data, entry_sensor_ids=None):
@@ -691,7 +713,7 @@ class AlarmSettingsManager(models.Manager):
                 "data": {
                     "topic": f"/{device_name}/mode",
                     "payload": json.dumps(
-                        {"device_name": device_name, "mode": sound}
+                        {"device_name": device_name, "mode": "disarm"}
                     ),
                 },
             },
@@ -911,7 +933,7 @@ class AlarmSettingsManager(models.Manager):
 
             mqtt_client.publish(
                 topic,
-                json.dumps({"device_name": identity, "mode": mode}),
+                json.dumps({"device_name": identity, "mode": "disarm"}),
             )
             print('123')
             time.sleep(0.5)
