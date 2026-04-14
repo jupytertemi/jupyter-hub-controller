@@ -13,6 +13,15 @@ from utils.hass_client import HassClient
 
 class AlarmDeviceManager(models.Manager):
     def create(self, **kwargs):
+        identity_name = kwargs.get("identity_name")
+        
+        # Check if device already exists in Django
+        if self.filter(identity_name=identity_name).exists():
+            raise ValidationError({
+                "error": f"Device {identity_name} is already onboarded. "
+                         "Please delete it from the app first to re-onboard."
+            })
+        
         client = HassClient(
             hass_url=settings.HASS_URL,
             username=settings.HASS_USERNAME,
@@ -20,7 +29,6 @@ class AlarmDeviceManager(models.Manager):
         )
         client.login()
         
-        identity_name = kwargs.get("identity_name")
         entry_id = None
 
         # FIRST: Check if device already auto-discovered by HA (e.g., via MQTT)
