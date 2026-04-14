@@ -60,8 +60,8 @@ class RetrieveDeleteAlarmDeviceView(RetrieveUpdateDestroyAPIView):
                     "action": "factory_reset",
                     "device_name": identity_name,
                 },
-                wait_response=True,
-                timeout=30,
+                wait_response=False,  # Don't wait - transfer_server doesn't relay ESP responses
+                timeout=5,
             )
 
             if response and response.get("status") == "ok" and response.get("device") == identity_name:
@@ -80,8 +80,8 @@ class RetrieveDeleteAlarmDeviceView(RetrieveUpdateDestroyAPIView):
             {
                 "status": "success",
                 "message": "Alarm device deleted from hub",
-                "factory_reset": "success" if factory_reset_success else "failed",
-                "note": "Manual device reset may be required" if not factory_reset_success else None
+                "factory_reset_sent": factory_reset_success,
+                "note": "Factory reset sent. Device will reboot to setup mode." if factory_reset_success else "Failed to send reset command."
             },
             status=status.HTTP_200_OK
         )
@@ -198,45 +198,26 @@ class RebootAlarmDeviceView(APIView):
         device = get_object_or_404(AlarmDevice, id=id)
         device_name = device.identity_name
 
-        response = publish_socket_message(
-            {
-                "action": "restart",
-                "device_name": device_name,
-            },
-            wait_response=True,
-        )
-
-        if not response:
-            return Response(
+        try:
+            publish_socket_message(
                 {
-                    "status": "error",
                     "action": "restart",
-                    "message": "Timeout waiting websocket response",
-                    "device": device_name,
+                    "device_name": device_name,
                 },
-                status=status.HTTP_504_GATEWAY_TIMEOUT,
+                wait_response=False,  # Don't wait - transfer_server doesn't relay responses
+                timeout=5,
             )
-
-        expected_action = response.get("action") == "restart"
-        expected_device = response.get("device") == device_name
-        expected_status = response.get("status") == "ok"
-        expected_result = response.get("result") == "success"
-
-        if not all(
-            [expected_action, expected_device, expected_status, expected_result]
-        ):
-
-            return Response(
-                {
-                    "status": "error",
-                    "action": "restart",
-                    "message": "Alarm device failed to restart",
-                    "device": device_name,
-                },
-                 status=status.HTTP_400_BAD_REQUEST
-            )
-
-        return Response(status=status.HTTP_200_OK)
+            return Response({
+                "status": "success",
+                "message": "Restart command sent to device",
+                "device": device_name,
+            }, status=status.HTTP_200_OK)
+        except Exception as exc:
+            return Response({
+                "status": "error",
+                "message": f"Failed to send restart command: {exc}",
+                "device": device_name,
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
    
 class TurnOnOffAlarmView(GenericAPIView):
