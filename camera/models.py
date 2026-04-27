@@ -12,7 +12,9 @@ class Camera(BaseModel):
     username = models.CharField(max_length=256, null=True)
     password = models.CharField(max_length=256, null=True)
     ip = models.CharField(max_length=256, null=True)
+    mac_address = models.CharField(max_length=17, null=True, blank=True)
     rtsp_url = models.TextField(null=True)
+    sub_rtsp_url = models.TextField(null=True, blank=True)
     ring_account = models.ForeignKey(RingAccount, on_delete=models.SET_NULL, null=True)
     ring_id = models.CharField(max_length=256, null=True)
     ring_device_id = models.CharField(max_length=256, null=True)
@@ -26,6 +28,10 @@ class Camera(BaseModel):
     )
     slug_name = models.CharField(max_length=255, null=False, blank=False, unique=True)
     detect_zone = models.BooleanField(default=False)
+
+    is_enabled = models.BooleanField(default=True)
+    consecutive_failures = models.PositiveIntegerField(default=0)
+    last_seen_at = models.DateTimeField(blank=True, null=True)
 
 
 class RTSPCamera(Camera):
@@ -60,7 +66,7 @@ class CameraSetting(BaseModel):
         blank=True,
     )
 
-    enable_face_recognition = models.BooleanField(default=False)
+    enable_face_recognition = models.BooleanField(default=True)
     loitering_recognition = models.BooleanField(default=False)
     loitering_camera = models.ForeignKey(
         Camera,
@@ -69,7 +75,12 @@ class CameraSetting(BaseModel):
         null=True,
         blank=True,
     )
-    license_vehicle_recognition = models.BooleanField(default=False)
+    loitering_cameras = models.ManyToManyField(
+        Camera,
+        related_name="loitering_cameras_setting",
+        blank=True,
+    )
+    license_vehicle_recognition = models.BooleanField(default=True)
     vehicle_recognition_camera = models.ForeignKey(
         Camera,
         on_delete=models.SET_NULL,

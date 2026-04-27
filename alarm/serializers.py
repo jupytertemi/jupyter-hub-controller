@@ -43,26 +43,32 @@ class AlarmDeviceSerializer(serializers.ModelSerializer):
                 setattr(config, attr, value)
 
             alarm_settings = AlarmSettings.objects.get(device=config.device)
+            settings_payload = {}
+            if "volume" in config_data:
+                settings_payload["volume"] = config_data["volume"]
+
             if config.alarm_mode != AlarmMode.OFF.value:
-                AlarmSettings.objects.update_instance(
-                    alarm_settings,
-                    **{"mode": config.alarm_mode, "sound": AlarmSound.ALARM.value}
+                settings_payload.update(
+                    {"mode": config.alarm_mode, "sound": AlarmSound.ALARM.value}
                 )
             if config.occupancy_illusion != OccupancyIllusion.OFF.value:
                 sound = OCCUPANCY_TO_SOUND_MAP.get(config.occupancy_illusion)
 
                 if sound:
-                    AlarmSettings.objects.update_instance(
-                        alarm_settings,
-                        **{"mode": AlarmSettingsMode.TRAVEL.value, "sound": sound}
+                    settings_payload.update(
+                        {"mode": AlarmSettingsMode.TRAVEL.value, "sound": sound}
                     )
 
             if (
                 config.occupancy_illusion == AlarmMode.OFF.value
                 and config.alarm_mode == AlarmMode.OFF.value
             ):
+                settings_payload["mode"] = AlarmSettingsMode.NONE.value
+
+            if settings_payload:
                 AlarmSettings.objects.update_instance(
-                    alarm_settings, **{"mode": AlarmSettingsMode.NONE.value}
+                    alarm_settings,
+                    **settings_payload,
                 )
             config.save()
             AlarmDeviceConfig.objects.update_config(config)

@@ -23,18 +23,22 @@ class EventDetailSerializer(EventSerializer):
         fields = "__all__"
 
     def get_hls_url(self, obj):
+        # Only return HLS URL when no local clip is available — HLS serves HEVC
+        # recordings which browsers reject (hev1). Local clips are transcoded to
+        # H.264 by clip_transcoder sidecar and are the preferred playback source.
+        if obj.video_path:
+            return ""
         host = ""
         try:
             host = read_env_file("REMOTE_HOST")
         except Exception as e:
             logging.error(f"read cloudflared fail: {e}")
-        logging.info(f"cloudflared host: {host}")
         if host and host != "":
             host = "https://" + host
             value = f"{host}/frigate/vod/event/{obj.event_id}/index-v1.m3u8"
             if obj.label == "PARCEL":
                 value = f"{host}/frigate/vod/event/{obj.parcel_id}/index-v1.m3u8"
-            logging.info(f"get_hls_url: {value}")
+            logging.info(f"get_hls_url (fallback): {value}")
             return value
         return ""
 

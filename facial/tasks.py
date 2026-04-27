@@ -75,10 +75,23 @@ def create_facial_config(model: dict):
     person_data = {
         "TRAINING_PERSON_NAME": model.get("name"),
         "TRAINING_PERSON_ID": str(model.get("uuid")),
+        "HAS_VALIDATED_FRAMES": model.get("has_validated_frames", False),
+        "VALIDATED_FRAME_COUNT": model.get("validated_frame_count", 0),
     }
 
     with open(settings.PERSON_DATA_PATH, "w") as json_file:
         json.dump(person_data, json_file, indent=4)
+
+    # move staged validated frames into training folder (after cleanup)
+    staging_dir = os.path.join(
+        os.path.dirname(settings.TRAINING_FOLDER_PATH), "validated_frames_staging"
+    )
+    if model.get("has_validated_frames") and os.path.isdir(staging_dir):
+        dest_dir = os.path.join(settings.TRAINING_FOLDER_PATH, "validated_frames")
+        if os.path.exists(dest_dir):
+            shutil.rmtree(dest_dir)
+        shutil.move(staging_dir, dest_dir)
+        logging.info(f"Moved validated frames to {dest_dir}")
 
     # start training process
     restart_service(settings.FACE_TRAINING_CONTAINER_NAME)

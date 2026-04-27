@@ -58,18 +58,26 @@ class RTSPCameraManager(models.Manager):
             return None
 
     def get_onvif_device_info(self, ip, username="", password=""):
-        """Return {'manufacturer': ..., 'model': ...} or None from ONVIF."""
-        try:
-            camera = ONVIFCamera(ip, 80, username, password)
-            device_management = camera.create_devicemgmt_service()
-            device_info = device_management.GetDeviceInformation()
-            return {
-                "manufacturer": (device_info.Manufacturer or "").strip(),
-                "model": (device_info.Model or "").strip(),
-            }
-        except Exception as err:
-            logging.info(f"get_onvif_device_info failed for {ip}: {err}")
-            return None
+        """Return {'manufacturer': ..., 'model': ...} or None from ONVIF.
+
+        Retries up to 3 times with 2s delay -- camera ONVIF services often
+        boot slower than RTSP, causing intermittent failures on first attempt.
+        """
+        import time as _time
+        for attempt in range(3):
+            try:
+                camera = ONVIFCamera(ip, 80, username, password)
+                device_management = camera.create_devicemgmt_service()
+                device_info = device_management.GetDeviceInformation()
+                return {
+                    "manufacturer": (device_info.Manufacturer or "").strip(),
+                    "model": (device_info.Model or "").strip(),
+                }
+            except Exception as err:
+                logging.info(f"get_onvif_device_info attempt {attempt+1}/3 failed for {ip}: {err}")
+                if attempt < 2:
+                    _time.sleep(2)
+        return None
 
     def get_discover_name(self, items):
         list_mac_address = [
@@ -305,7 +313,24 @@ class RTSPCameraManager(models.Manager):
             # Store in kwargs (passed by reference) so create() receives it
             kwargs['sub_rtsp_url'] = sub_url
 
-            return url
+            # Gather ONVIF device info (manufacturer/model) for auto-populate
+            onvif_manufacturer = ''
+            onvif_model = ''
+            try:
+                device_service = camera_fc.create_devicemgmt_service()
+                device_info = device_service.GetDeviceInformation()
+                onvif_manufacturer = getattr(device_info, 'Manufacturer', '') or ''
+                onvif_model = getattr(device_info, 'Model', '') or ''
+            except Exception as e:
+                logging.warning(f"ONVIF GetDeviceInformation failed for {ip}: {e}")
+
+            return {
+                'rtsp_url': url,
+                'sub_rtsp_url': sub_url,
+                'onvif_manufacturer': onvif_manufacturer,
+                'onvif_model': onvif_model,
+                'message': 'Get camera rtsp url successfully.',
+            }
         except ONVIFError as err:
             logging.error(f"error:{err}")
             return None
@@ -414,12 +439,20 @@ class CameraSettingManager(models.Manager):
 
     def update(self, instance, validated_data):
         updated_fields = []
+        loitering_cameras_data = validated_data.pop("loitering_cameras", None)
+
         for field, value in validated_data.items():
             if hasattr(instance, field):
                 current_value = getattr(instance, field)
                 if current_value != value:
                     setattr(instance, field, value)
                     updated_fields.append(field)
+
+        if loitering_cameras_data is not None:
+            instance.save()
+            instance.loitering_cameras.set(loitering_cameras_data)
+            updated_fields.append("loitering_cameras")
+
         if (
             "enable_parcel_detect" in updated_fields
             or "parcel_detect_camera" in updated_fields
@@ -443,12 +476,11 @@ class CameraSettingManager(models.Manager):
         if (
             "loitering_recognition" in updated_fields
             or "loitering_camera" in updated_fields
+            or "loitering_cameras" in updated_fields
         ):
-            camera_name = None
-            if instance.loitering_recognition:
-                camera_name = instance.loitering_camera.slug_name
+            camera_names = self._get_loiter_camera_names(instance)
             self.handle_loitering_recognition(
-                instance.loitering_recognition, camera_name
+                instance.loitering_recognition, camera_names
             )
         if "activate_sounds_detection" in updated_fields:
             self.handle_sounds_detection()
@@ -458,6 +490,16 @@ class CameraSettingManager(models.Manager):
         instance.save()
 
         return instance
+
+    def _get_loiter_camera_names(self, instance):
+        camera_names = None
+        if instance.loitering_recognition:
+            m2m_cameras = list(instance.loitering_cameras.all())
+            if m2m_cameras:
+                camera_names = ",".join(c.slug_name for c in m2m_cameras)
+            elif instance.loitering_camera:
+                camera_names = instance.loitering_camera.slug_name
+        return camera_names
 
     def handle_parcel_detect(self, is_enabnled: bool, camera_name=None):
         container_name = settings.PARCEL_CONTAINER_NAME

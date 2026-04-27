@@ -110,7 +110,8 @@ def monitor_alarm_ips():
             # Update Halo's NVS with new hub IP via /audiosave endpoint
             try:
                 mqtt_port = getattr(settings, 'MQTT_PORT', 5555)
-                url = f"http://{new_ip}/audiosave?local_ip={hub_ip}&port={mqtt_port}"
+                hub_slug = getattr(settings, "DEVICE_NAME", "")
+                url = f"http://{new_ip}/audiosave?local_ip={hub_ip}&port={mqtt_port}&hub_slug={hub_slug}"
                 response = requests.get(url, timeout=5)
                 if response.status_code == 200:
                     logging.info(f"Updated {identity} audio config at {new_ip}")

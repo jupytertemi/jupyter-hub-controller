@@ -205,7 +205,7 @@ class AlarmSettingsManager(models.Manager):
             # Determine what MQTT mode to send
             if new_mode == AlarmSettingsMode.TRAVEL.value and new_sound:
                 # For occupancy illusion, send the sound value as mode
-                mqtt_mode = SOUND_TO_OCCUPANCY_MAP.get(new_sound, OccupancyIllusion.OFF.value)
+                mqtt_mode = new_sound  # Send sound name directly: firmware expects people_home etc
             elif new_mode == AlarmSettingsMode.NONE.value:
                 mqtt_mode = "disarm"
             else:
@@ -935,13 +935,11 @@ class AlarmSettingsManager(models.Manager):
                 topic,
                 json.dumps({"device_name": identity, "mode": "disarm"}),
             )
-            print('123')
-            time.sleep(0.5)
+            time.sleep(0.2)  # Optimized from 0.5s for faster response
             mqtt_client.publish(
                 topic,
                 json.dumps({"device_name": identity, "mode": mode}),
             ) 
-            print('456')
             mqtt_client.close()
         except Exception as e:
             logging.exception("MQTT connect/publish failed")

@@ -1,4 +1,5 @@
 import logging
+import os
 import subprocess
 from datetime import timedelta
 
@@ -30,9 +31,25 @@ def render_and_write_config(template_name, context, output_path):
     return True
 
 
+
+def _zone_coords_to_pixels(coords, camera_type):
+    """Convert normalized 0-1 zone coordinates to Frigate detect pixel coordinates."""
+    if camera_type == "RING":
+        w, h = 720, 720
+    else:
+        w, h = 1920, 1080
+    pixels = []
+    for i, val in enumerate(coords):
+        if i % 2 == 0:
+            pixels.append(str(round(val * w)))
+        else:
+            pixels.append(str(round(val * h)))
+    return ",".join(pixels)
+
+
 def get_cameras():
     model = apps.get_model("camera.camera")
-    cameras = model.objects.all()
+    cameras = model.objects.filter(is_enabled=True)
     camera_data = []
     for camera in cameras:
         camera_data.append(
@@ -46,8 +63,9 @@ def get_cameras():
                 "zones": [
                     {
                         "name": zone.zone_name,
-                        "coordinates": ",".join(
-                            str(round(x * 1000)) for x in zone.coordinates
+                        "coordinates": _zone_coords_to_pixels(
+                            zone.coordinates,
+                            camera.type,
                         ),
                         "objects": zone.objects_detect,
                     }
@@ -105,8 +123,15 @@ def _get_turn_credentials():
         all_turn_urls = ice_credential[1]["urls"]
         # Filter port 53 — browsers block TURN on DNS port
         safe_urls = [u for u in all_turn_urls if ":53?" not in u]
-        # Use all safe TURN URLs for maximum connectivity
-        turn_urls = safe_urls
+        # Use 2 TURN entries: UDP (fastest) + TURNS:443 (most reliable).
+        # P2P via STUN is always priority. TURN is fallback for symmetric NAT.
+        preferred_pair = [
+            "turn:turn.cloudflare.com:3478?transport=udp",
+            "turns:turn.cloudflare.com:443?transport=tcp",
+        ]
+        turn_urls = [u for u in preferred_pair if u in safe_urls]
+        if not turn_urls:
+            turn_urls = safe_urls[:2]
 
         return {
             "stun_server": ice_credential[0]["urls"],
@@ -246,19 +271,48 @@ def get_ice_server():
         return {}
 
 
+CAMERA_FAILURE_THRESHOLD = 3  # 3 × 5 min = 15 min before auto-disable
+
+
+def _publish_camera_health_event(camera_slug, event_type):
+    """Fire-and-forget MQTT notification for camera health changes."""
+    import json as _json
+    try:
+        from utils.mqtt_client import MQTTClient
+        from django.conf import settings as _settings
+        mqtt_client = MQTTClient(
+            host=_settings.MQTT_HOST,
+            port=_settings.MQTT_PORT,
+            username=_settings.MQTT_USERNAME,
+            password=_settings.MQTT_PASSWORD,
+            client_id="camera-health",
+        )
+        mqtt_client.connect()
+        mqtt_client.publish(
+            f"jupyter/camera/{camera_slug}/health",
+            _json.dumps({"event": event_type, "camera": camera_slug}),
+            qos=0,
+        )
+        mqtt_client.close()
+    except Exception as e:
+        logging.warning(f"MQTT camera health publish failed: {e}")
+
+
 @shared_task
 def monitor_camera_ips():
-    """Check each RTSP camera IP. If unreachable, ARP sweep to find new IP."""
+    """Check each RTSP camera IP. Auto-disable after sustained failure, re-enable on recovery."""
     from camera.enums import CameraType
     from camera.models import Camera
     from alarm.network import find_ip_by_mac, get_mac_address, ping_host
 
+    # Iterate ALL RTSP cameras (including disabled) so we detect recovery
     cameras = Camera.objects.filter(type=CameraType.RTSP)
     if not cameras.exists():
         return "No RTSP cameras"
 
     config_changed = False
     results = []
+    now = timezone.now()
 
     for camera in cameras:
         # Step 1: Backfill MAC if missing
@@ -269,41 +323,68 @@ def monitor_camera_ips():
                 camera.save(update_fields=["mac_address"])
                 logging.info(f"Backfilled MAC for {camera.slug_name}: {mac}")
 
-        # Step 2: Ping stored IP
-        if camera.ip and ping_host(camera.ip):
-            results.append(f"{camera.slug_name}: OK at {camera.ip}")
-            continue
+        # Step 2: Ping stored IP (5s timeout — some cameras respond slowly)
+        reachable = camera.ip and ping_host(camera.ip, timeout=5)
 
-        # Step 3: IP unreachable — ARP sweep if we have MAC
+        # Step 3: If unreachable, ARP sweep to find new IP
         new_ip = None
-        if camera.mac_address:
+        if not reachable and camera.mac_address:
             new_ip = find_ip_by_mac(camera.mac_address, populate_arp=True)
+            if new_ip and new_ip != camera.ip:
+                old_ip = camera.ip
+                if camera.rtsp_url and old_ip:
+                    camera.rtsp_url = camera.rtsp_url.replace(old_ip, new_ip)
+                if camera.sub_rtsp_url and old_ip:
+                    camera.sub_rtsp_url = camera.sub_rtsp_url.replace(old_ip, new_ip)
+                camera.ip = new_ip
+                update_fields = ["ip", "rtsp_url", "sub_rtsp_url"]
+                if not camera.mac_address:
+                    mac = get_mac_address(new_ip)
+                    if mac:
+                        camera.mac_address = mac
+                        update_fields.append("mac_address")
+                camera.save(update_fields=update_fields)
+                config_changed = True
+                reachable = True
+                logging.info(f"Camera {camera.slug_name} IP updated: {old_ip} -> {new_ip}")
+                results.append(f"{camera.slug_name}: moved {old_ip} -> {new_ip}")
+            elif new_ip:
+                reachable = True
 
-        # Step 4: Found at new IP — update DB and RTSP URL
-        if new_ip and new_ip != camera.ip:
-            old_ip = camera.ip
-            if camera.rtsp_url and old_ip:
-                camera.rtsp_url = camera.rtsp_url.replace(old_ip, new_ip)
-            if camera.sub_rtsp_url and old_ip:
-                camera.sub_rtsp_url = camera.sub_rtsp_url.replace(old_ip, new_ip)
-            camera.ip = new_ip
-            update_fields = ["ip", "rtsp_url", "sub_rtsp_url"]
-            if not camera.mac_address:
-                mac = get_mac_address(new_ip)
-                if mac:
-                    camera.mac_address = mac
-                    update_fields.append("mac_address")
+        # Step 4: Health watchdog — track failures, auto-disable/enable
+        if reachable:
+            was_disabled = not camera.is_enabled
+            camera.consecutive_failures = 0
+            camera.last_seen_at = now
+            update_fields = ["consecutive_failures", "last_seen_at"]
+            if was_disabled:
+                camera.is_enabled = True
+                update_fields.append("is_enabled")
+                config_changed = True
+                logging.info(f"Camera {camera.slug_name} back online — re-enabled")
+                _publish_camera_health_event(camera.slug_name, "camera_online")
             camera.save(update_fields=update_fields)
-            config_changed = True
-            logging.info(f"Camera {camera.slug_name} IP updated: {old_ip} -> {new_ip}")
-            results.append(f"{camera.slug_name}: moved {old_ip} -> {new_ip}")
-        elif new_ip:
-            results.append(f"{camera.slug_name}: recovered at {new_ip}")
+            if not any(camera.slug_name in r for r in results):
+                results.append(f"{camera.slug_name}: OK at {camera.ip}")
         else:
-            logging.warning(f"Camera {camera.slug_name} unreachable")
-            results.append(f"{camera.slug_name}: OFFLINE")
+            camera.consecutive_failures += 1
+            update_fields = ["consecutive_failures"]
+            if camera.consecutive_failures >= CAMERA_FAILURE_THRESHOLD and camera.is_enabled:
+                camera.is_enabled = False
+                update_fields.append("is_enabled")
+                config_changed = True
+                logging.warning(
+                    f"Camera {camera.slug_name} disabled after "
+                    f"{camera.consecutive_failures} consecutive failures"
+                )
+                _publish_camera_health_event(camera.slug_name, "camera_offline")
+            camera.save(update_fields=update_fields)
+            results.append(
+                f"{camera.slug_name}: OFFLINE "
+                f"({camera.consecutive_failures}/{CAMERA_FAILURE_THRESHOLD})"
+            )
 
-    # Batch config regeneration — one call covers all IP changes
+    # Batch config regeneration — one call covers all changes
     if config_changed:
         update_camera_config.delay()
 
@@ -410,3 +491,62 @@ def cleanup_ring_device(ring_device_id):
 
     logging.info("Ring device cleanup complete (no container restart)")
     return f"Ring device {ring_device_id} cleanup complete"
+
+
+SNAPSHOT_DIR = os.path.join(
+    getattr(settings, 'BASE_DIR', '/root/jupyter-hub-controller'),
+    'media', 'thumbnails',
+)
+
+
+@shared_task
+def capture_camera_snapshots():
+    """Grab one JPEG frame from each RTSP camera, bypassing Frigate entirely."""
+    import os as _os
+    from camera.enums import CameraType
+    from camera.models import Camera
+
+    _os.makedirs(SNAPSHOT_DIR, exist_ok=True)
+
+    cameras = Camera.objects.filter(is_enabled=True, type=CameraType.RTSP)
+    if not cameras.exists():
+        return "No enabled RTSP cameras"
+
+    results = []
+    for camera in cameras:
+        rtsp_url = camera.sub_rtsp_url or camera.rtsp_url
+        if not rtsp_url:
+            results.append(f"{camera.slug_name}: no RTSP URL")
+            continue
+
+        output_path = _os.path.join(SNAPSHOT_DIR, f"{camera.slug_name}.jpg")
+        tmp_path = f"{output_path}.tmp"
+
+        try:
+            proc = subprocess.run(
+                [
+                    "ffmpeg", "-y",
+                    "-rtsp_transport", "tcp",
+                    "-i", rtsp_url,
+                    "-frames:v", "1",
+                    "-q:v", "5",
+                    tmp_path,
+                ],
+                capture_output=True,
+                timeout=15,
+            )
+            if proc.returncode == 0 and _os.path.exists(tmp_path):
+                _os.replace(tmp_path, output_path)
+                results.append(f"{camera.slug_name}: OK")
+            else:
+                logging.warning(f"Snapshot failed for {camera.slug_name}: {proc.stderr[-200:]}")
+                results.append(f"{camera.slug_name}: ffmpeg error")
+        except subprocess.TimeoutExpired:
+            results.append(f"{camera.slug_name}: timeout")
+        except Exception as e:
+            results.append(f"{camera.slug_name}: {e}")
+        finally:
+            if _os.path.exists(tmp_path):
+                _os.remove(tmp_path)
+
+    return "; ".join(results)

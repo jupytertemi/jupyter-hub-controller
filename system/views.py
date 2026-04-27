@@ -24,3 +24,24 @@ class SystemTemperatureView(APIView):
                 'success': False,
                 'error': str(e)
             }, status=500)
+
+
+class SystemUptimeView(APIView):
+    permission_classes = [AllowAny]
+    
+    def get(self, request):
+        try:
+            # Read system uptime from /proc/uptime
+            with open('/proc/uptime', 'r') as f:
+                uptime_seconds = float(f.read().split()[0])
+            
+            return Response({
+                'success': True,
+                'uptime': int(uptime_seconds),
+                'unit': 'seconds'
+            })
+        except Exception as e:
+            return Response({
+                'success': False,
+                'error': str(e)
+            }, status=500)

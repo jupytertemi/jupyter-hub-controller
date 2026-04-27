@@ -177,6 +177,7 @@ class GetWifiCredentialsView(APIView):
                 "mdns": hub_ip,
             }
         )
+
         return Response(serializer.data)
 
 ################## CHANH ##################

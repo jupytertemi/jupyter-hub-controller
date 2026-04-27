@@ -1,3 +1,4 @@
+import logging
 import random
 import socket
 
@@ -63,7 +64,7 @@ class AlarmDeviceManager(models.Manager):
 
         # THIRD: Enable allow_service_calls for the device
         try:
-            client.enable_service_calls(entry_id)
+            client.add_allow_service_esphome(entry_id)
             print(f"Enabled service calls for {identity_name}")
         except Exception as exc:
             print(f"Warning: Could not enable service calls: {exc}")
@@ -200,8 +201,7 @@ class AlarmDeviceConfigManager(models.Manager):
                 )
 
         except Exception as exc:
-            print(f"Warning: Failed to set volume for {identity}: {exc}")
-            pass  # Silently continue if media_player unavailable
+            logging.warning("set_volume failed for %s: %s", identity, exc)
     # def _get_entity_ids(self, hass_entry_id):
     #     client = self.getHassClient()
     #     speaker_entity = client.get_media_player_entity(hass_entry_id)

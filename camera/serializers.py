@@ -15,6 +15,8 @@ from camera.models import (
     RTSPCamera,
 )
 from utils.exceptions import CustomException
+from utils.update_env import read_env_file
+import logging
 
 
 class RTSPDiscoveringSerializer(serializers.Serializer):
@@ -40,7 +42,14 @@ class BaseCameraSerializer(serializers.ModelSerializer):
             return None
 
     def get_stream_url(self, obj):
-        return f"http://{settings.REMOTE_HOST}/webrtc/{obj.slug_name}/whep"
+        host = ""
+        try:
+            host = read_env_file("REMOTE_HOST")
+        except Exception as e:
+            logging.error(f"read REMOTE_HOST fail: {e}")
+        if not host:
+            host = settings.REMOTE_HOST
+        return f"https://{host}/webrtc/{obj.slug_name}/whep"
 
 
 class RTSPCameraSerializer(BaseCameraSerializer):
@@ -50,6 +59,7 @@ class RTSPCameraSerializer(BaseCameraSerializer):
         extra_kwargs = {
             "id": {"read_only": True},
             "slug_name": {"read_only": True},
+            "sub_rtsp_url": {"read_only": True},
             "skip_validation": {"write_only": True},
             "rtsp_url": {"required": True},
             "stream_url": {"read_only": True},
@@ -141,11 +151,10 @@ class CameraSettingSerializer(serializers.ModelSerializer):
             ):
                 raise ValidationError("This 'parcel_detect_camera' field is required.")
         if attrs.get("loitering_recognition", None):
-            if (
-                not attrs.get("loitering_camera", None)
-                or attrs.get("loitering_camera", None) is None
-            ):
-                raise ValidationError("This 'loitering_recognition' field is required.")
+            has_single = attrs.get("loitering_camera", None) is not None
+            has_multi = bool(attrs.get("loitering_cameras", []))
+            if not has_single and not has_multi:
+                raise ValidationError("At least one loitering camera is required.")
 
         if attrs.get("license_vehicle_recognition", None):
             if (

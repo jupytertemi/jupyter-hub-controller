@@ -34,7 +34,7 @@ go2rtc:
     {{ camera.name }}-sub:
       - {{ camera.sub_rtsp_url|default:camera.rtsp_url }}
     {{ camera.name }}-live:
-      - {{ camera.sub_rtsp_url|default:camera.rtsp_url }}
+      - {{ camera.sub_rtsp_url|default:camera.rtsp_url }}#video
       - "ffmpeg:{{ camera.name }}-sub#video=h264#hardware=rkmpp#width=1280#height=720#raw=-r 10 -g 20"
 {% endif %}{% endfor %}
   webrtc:
@@ -96,8 +96,8 @@ cameras:{% if not cameras %} {}{% endif %}
       enabled: true
 {% if camera.type == "RING" %}      width: 720
       height: 720
-{% else %}      width: 640
-      height: 480
+{% else %}      width: 1920
+      height: 1080
 {% endif %}      fps: 5
       max_disappeared: 50
       stationary:
@@ -135,7 +135,7 @@ cameras:{% if not cameras %} {}{% endif %}
     mqtt:
       bounding_box: true
       crop: true
-      height: 500
+      height: 720
       quality: 100
       timestamp: true
 

@@ -67,22 +67,13 @@ class ListRTSPCameraURLView(APIView):
         query_serializer=RTSPCameraUrlSerializer(),
     )
     def get(self, request, *args, **kwargs):
-        query = self.request.GET.copy()
-        rtsp_url = RTSPCamera.objects.get_rtsp_url(query)
-        data = {
-            "rtsp_url": rtsp_url,
-            "message": "Get camera rtsp url successfully.",
-        }
-        # Include ONVIF device info so Flutter can pre-fill manufacturer/model search
-        device_info = RTSPCamera.objects.get_onvif_device_info(
-            query.get("ip", ""),
-            query.get("username", ""),
-            query.get("password", ""),
+        query = self.request.GET.dict()
+        result = RTSPCamera.objects.get_rtsp_url(query)
+        if isinstance(result, dict):
+            return Response(result)
+        return Response(
+            {"rtsp_url": result, "message": "Get camera rtsp url successfully."}
         )
-        if device_info:
-            data["onvif_manufacturer"] = device_info["manufacturer"]
-            data["onvif_model"] = device_info["model"]
-        return Response(data)
 
 
 class ListCreateRingCameraView(ListCreateAPIView):
@@ -330,3 +321,62 @@ class CameraSnapshotProxyView(APIView):
                 )
 
         return HttpResponse(status=404)
+
+
+class CameraRebootView(APIView):
+    @staticmethod
+    def _extract_rtsp_credentials(rtsp_url):
+        """Extract username/password from rtsp://user:pass@host/... URL."""
+        if not rtsp_url:
+            return "", ""
+        try:
+            from urllib.parse import urlparse
+            parsed = urlparse(rtsp_url)
+            return parsed.username or "", parsed.password or ""
+        except Exception:
+            return "", ""
+
+    def post(self, request, pk):
+        try:
+            camera = Camera.objects.get(pk=pk)
+        except Camera.DoesNotExist:
+            return Response(
+                {"error": "Camera not found"}, status=status.HTTP_404_NOT_FOUND
+            )
+
+        if not camera.ip:
+            return Response(
+                {"error": "Camera IP not available"},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        try:
+            from onvif import ONVIFCamera, ONVIFError
+
+            username = camera.username or ""
+            password = camera.password or ""
+            if not username and camera.rtsp_url:
+                username, password = self._extract_rtsp_credentials(camera.rtsp_url)
+
+            onvif_cam = ONVIFCamera(
+                camera.ip,
+                80,
+                username,
+                password,
+            )
+            device_mgmt = onvif_cam.create_devicemgmt_service()
+            device_mgmt.SystemReboot()
+            return Response(
+                {"message": f"Reboot command sent to {camera.name}"},
+                status=status.HTTP_202_ACCEPTED,
+            )
+        except ONVIFError as e:
+            return Response(
+                {"error": f"ONVIF reboot failed: {str(e)}"},
+                status=status.HTTP_502_BAD_GATEWAY,
+            )
+        except Exception as e:
+            return Response(
+                {"error": f"Reboot failed: {str(e)}"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )

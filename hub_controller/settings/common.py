@@ -246,10 +246,6 @@ CELERY_BEAT_SCHEDULE = {
         "task": "camera.tasks.monitor_camera_ips",
         "schedule": 5 * 60,  # every 5 minutes (seconds)
     },
-    "monitor-alarm-ips-every-5m": {
-        "task": "alarm.tasks.monitor_alarm_ips",
-        "schedule": 5 * 60,  # every 5 minutes (seconds)
-    },
     "gdrive-scheduled-backups-every-5m": {
         "task": "gdrive_backup.tasks.run_scheduled_backups",
         "schedule": 5 * 60,
@@ -257,5 +253,9 @@ CELERY_BEAT_SCHEDULE = {
     "gdrive-space-check-every-6h": {
         "task": "gdrive_backup.tasks.check_gdrive_space",
         "schedule": 6 * 60 * 60,
+    },
+    "capture-camera-snapshots-every-30m": {
+        "task": "camera.tasks.capture_camera_snapshots",
+        "schedule": 30 * 60,
     },
 }
