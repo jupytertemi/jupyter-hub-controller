@@ -218,34 +218,42 @@ def camera_setting_config(
     is_enabnled: bool, container_name: str, servicer_path, camera_name=None
 ):
     camera_file_path = servicer_path
-    with open(camera_file_path, "r", encoding="UTF-8") as file:
-        lines = file.readlines()
 
-    has_enabled = False
-    has_camera_name = False
+    # Unlock immutable flag (set by ota-lockdown.sh to prevent OTA overwrites)
+    subprocess.run(["chattr", "-i", camera_file_path], capture_output=True)
 
-    updated_lines = []
+    try:
+        with open(camera_file_path, "r", encoding="UTF-8") as file:
+            lines = file.readlines()
 
-    for line in lines:
-        if line.strip().startswith("IS_ENABNLED"):
-            updated_lines.append(f"IS_ENABNLED = {is_enabnled}\n")
-            has_enabled = True
-        elif line.strip().startswith("CAMERA_NAME"):
-            updated_lines.append(f"CAMERA_NAME = '{camera_name}'\n")
-            has_camera_name = True
-        else:
-            updated_lines.append(line)
+        has_enabled = False
+        has_camera_name = False
 
-    # If missing, add new one
-    if not has_enabled:
-        updated_lines.append(f"\nIS_ENABNLED = {is_enabnled}\n")
+        updated_lines = []
 
-    if not has_camera_name:
-        updated_lines.append(f"CAMERA_NAME = {camera_name}\n")
+        for line in lines:
+            if line.strip().startswith("IS_ENABNLED"):
+                updated_lines.append(f"IS_ENABNLED = {is_enabnled}\n")
+                has_enabled = True
+            elif line.strip().startswith("CAMERA_NAME") and not line.strip().startswith("CAMERA_NAME_LIST"):
+                updated_lines.append(f"CAMERA_NAME = '{camera_name or ''}'\n")
+                has_camera_name = True
+            else:
+                updated_lines.append(line)
 
-    # Write and update the file
-    with open(camera_file_path, "w", encoding="UTF-8") as file:
-        file.writelines(updated_lines)
+        if not has_enabled:
+            updated_lines.append(f"\nIS_ENABNLED = {is_enabnled}\n")
+
+        if not has_camera_name:
+            updated_lines.append(f"CAMERA_NAME = '{camera_name or ''}'\n")
+
+        with open(camera_file_path, "w", encoding="UTF-8") as file:
+            file.writelines(updated_lines)
+
+        logging.info(f"[camera_setting_config] {container_name}: IS_ENABNLED={is_enabnled}, CAMERA_NAME={camera_name}")
+    finally:
+        # Re-lock immutable flag
+        subprocess.run(["chattr", "+i", camera_file_path], capture_output=True)
 
     restart_service(container_name)
     return f"{container_name} config updated successfully."
