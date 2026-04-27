@@ -483,7 +483,7 @@ class CameraSettingManager(models.Manager):
                 instance.loitering_recognition, camera_names
             )
         if "activate_sounds_detection" in updated_fields:
-            self.handle_sounds_detection()
+            self.handle_sounds_detection(instance.activate_sounds_detection)
 
         if "footage_retention_period" in updated_fields:
             self.handle_retention_period()
@@ -532,9 +532,13 @@ class CameraSettingManager(models.Manager):
             queue="camera_queue",
         )
 
-    def handle_sounds_detection(self):
-        # Custom logic for sounds detection
-        logging.info("Sounds detection updated!")
+    def handle_sounds_detection(self, is_enabnled: bool):
+        container_name = settings.SOUND_DETECTION_CONTAINER
+        servicer_path = settings.SOUND_DETECTION_PATH
+        camera_setting_config.apply_async(
+            args=(is_enabnled, container_name, str(servicer_path)),
+            queue="camera_queue",
+        )
 
     def handle_retention_period(self):
         # Custom logic for footage retention period
