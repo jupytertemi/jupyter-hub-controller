@@ -150,13 +150,16 @@ SWAGGER_SETTINGS = {
 }
 
 # Celery Configuration Options
-# Use the hub's local timezone for scheduling. CELERY_ENABLE_UTC=False means
-# Celery stores and compares times in local TZ, matching django_celery_beat's
-# DatabaseScheduler which uses Django's TIME_ZONE for last_run_at comparisons.
-CELERY_ENABLE_UTC = False
+# django_celery_beat 2.8.x has a timezone double-conversion bug when
+# CELERY_ENABLE_UTC=False. Workaround: keep UTC for celery internals but
+# set DJANGO_CELERY_BEAT_TZ_AWARE=False so the DatabaseScheduler uses naive
+# UTC datetimes for last_run_at comparisons (avoids all TZ boundary issues).
+# Django TIME_ZONE is local for display; storage is UTC (the app converts).
+CELERY_ENABLE_UTC = True
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 CELERY_TIMEZONE = TIME_ZONE
+DJANGO_CELERY_BEAT_TZ_AWARE = False
 
 CELERY_TASK_QUEUES = (
     Queue("camera_queue", routing_key="camera.#"),
