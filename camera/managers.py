@@ -42,20 +42,18 @@ class RTSPCameraManager(models.Manager):
             mac_address_prefix__in=mac_address_prefixes
         ).values_list("mac_address_prefix", "organization_name")
 
+    ONVIF_PORTS = [80, 2020, 8080, 8899]
+
     def get_onvif_name(self, ip):
-        try:
-            camera = ONVIFCamera(ip, 80, "", "")
-
-            # Create the device management service
-            device_management = camera.create_devicemgmt_service()
-
-            # Get device information
-            device_info = device_management.GetDeviceInformation()
-
-            return f"{device_info.Manufacturer} {device_info.Model}"
-        except ONVIFError as err:
-            logging.info(f"error:{err.__dict__}")
-            return None
+        for port in self.ONVIF_PORTS:
+            try:
+                camera = ONVIFCamera(ip, port, "", "")
+                device_management = camera.create_devicemgmt_service()
+                device_info = device_management.GetDeviceInformation()
+                return f"{device_info.Manufacturer} {device_info.Model}"
+            except Exception:
+                continue
+        return None
 
     def get_onvif_device_info(self, ip, username="", password=""):
         """Return {'manufacturer': ..., 'model': ...} or None from ONVIF.
@@ -64,19 +62,20 @@ class RTSPCameraManager(models.Manager):
         boot slower than RTSP, causing intermittent failures on first attempt.
         """
         import time as _time
-        for attempt in range(3):
-            try:
-                camera = ONVIFCamera(ip, 80, username, password)
-                device_management = camera.create_devicemgmt_service()
-                device_info = device_management.GetDeviceInformation()
-                return {
-                    "manufacturer": (device_info.Manufacturer or "").strip(),
-                    "model": (device_info.Model or "").strip(),
-                }
-            except Exception as err:
-                logging.info(f"get_onvif_device_info attempt {attempt+1}/3 failed for {ip}: {err}")
-                if attempt < 2:
-                    _time.sleep(2)
+        for port in self.ONVIF_PORTS:
+            for attempt in range(2):
+                try:
+                    camera = ONVIFCamera(ip, port, username, password)
+                    device_management = camera.create_devicemgmt_service()
+                    device_info = device_management.GetDeviceInformation()
+                    return {
+                        "manufacturer": (device_info.Manufacturer or "").strip(),
+                        "model": (device_info.Model or "").strip(),
+                    }
+                except Exception as err:
+                    logging.info(f"get_onvif_device_info port {port} attempt {attempt+1}/2 failed for {ip}: {err}")
+                    if attempt < 1:
+                        _time.sleep(2)
         return None
 
     def get_discover_name(self, items):
@@ -265,12 +264,16 @@ class RTSPCameraManager(models.Manager):
             # Verify username, passwork, ip of camera rtsp
             self.rtsp_validate(ip, username, password)
             # Create the camera object
-            camera_fc = ONVIFCamera(
-                ip,
-                80,
-                username,
-                password,
-            )
+            camera_fc = None
+            for _port in self.ONVIF_PORTS:
+                try:
+                    camera_fc = ONVIFCamera(ip, _port, username, password)
+                    camera_fc.create_devicemgmt_service()
+                    break
+                except Exception:
+                    camera_fc = None
+            if camera_fc is None:
+                raise ONVIFError("Could not connect to ONVIF on any port")
             # Create the media service
             media_service = camera_fc.create_media_service()
             # Get the profiles
@@ -336,52 +339,16 @@ class RTSPCameraManager(models.Manager):
             return None
 
     def rtsp_validate(self, ip, username, password):
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
                 sock.settimeout(5)
-                port_checking_result = sock.connect_ex((ip, 554))
-                if port_checking_result != 0:
+                if sock.connect_ex((ip, 554)) != 0:
                     raise ValidationError({"detail": f"Camera IP {ip} is incorrect"})
+        except ValidationError:
+            raise
         except Exception:
-            logging.error(f"Camera IP {ip} is incorrect")
+            logging.error(f"Camera IP {ip} is unreachable on port 554")
             raise ValidationError({"detail": f"Camera IP {ip} is incorrect"})
-
-        if port_checking_result != 0:
-            raise ValidationError({"detail": f"Camera IP {ip} is incorrect"})
-
-        sock.close()
-
-        snapshot = "/tmp/check_rtsp.png"
-        rtsp = f"rtsp://{username}:{password}@{ip}:554"
-        command = [
-            "ffmpeg",
-            "-y",
-            "-frames",
-            "1",
-            snapshot,
-            "-rtsp_transport",
-            "tcp",
-            "-i",
-            rtsp,
-        ]
-        for _ in range(0, self.checking_retries):
-            try:
-                cmd = subprocess.run(
-                    command,
-                    stderr=subprocess.DEVNULL,
-                    timeout=self.checking_timeout,
-                    check=False,
-                )
-                break
-            except subprocess.TimeoutExpired:
-                pass
-
-        if "cmd" in locals() and cmd.returncode != 0:
-            print("local", locals())
-            print("cmd.returncode", cmd.returncode)
-            raise ValidationError({"detail": "Camera credentials is incorrect"})
-
 
 class RingCameraManager(models.Manager):
     def get_queryset(self, *args, **kwargs):
