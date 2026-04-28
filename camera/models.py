@@ -32,6 +32,8 @@ class Camera(BaseModel):
     is_enabled = models.BooleanField(default=True)
     consecutive_failures = models.PositiveIntegerField(default=0)
     last_seen_at = models.DateTimeField(blank=True, null=True)
+    onvif_manufacturer = models.CharField(max_length=256, null=True, blank=True)
+    onvif_model = models.CharField(max_length=256, null=True, blank=True)
 
 
 class RTSPCamera(Camera):

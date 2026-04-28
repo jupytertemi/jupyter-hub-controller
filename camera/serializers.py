@@ -88,6 +88,9 @@ class CameraSerializer(BaseCameraSerializer):
     }
 
     def get_vendor(self, obj):
+        onvif_mfr = getattr(obj, "onvif_manufacturer", None)
+        if onvif_mfr and onvif_mfr.strip():
+            return onvif_mfr.strip()
         mac = getattr(obj, "mac_address", None)
         if not mac or len(mac) < 8:
             return None
@@ -112,6 +115,7 @@ class CameraSerializer(BaseCameraSerializer):
             "detect_zone", "is_enabled", "consecutive_failures",
             "last_seen_at", "created_at", "updated_at",
             "stream_url", "ring_refresh_token", "vendor",
+            "onvif_manufacturer", "onvif_model",
         ]
         extra_kwargs = {
             "id": {"read_only": True},

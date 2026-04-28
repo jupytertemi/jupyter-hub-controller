@@ -73,6 +73,8 @@ class EventDetailSerializer(EventSerializer):
 
     def get_local_url(self, obj):
         logging.info(f"video_path raw: {obj.video_path}")
+        if not obj.video_path:
+            return ""
         host = ""
         prefix = "/media/frigate/"
         try:
@@ -92,6 +94,11 @@ class EventDetailSerializer(EventSerializer):
                     f"https://{host}/frigate/api/",
                     1
                 )
+
+            # ===== CASE 3: vehicle AI debug paths =====
+            elif obj.video_path.startswith("debug/") or obj.video_path.startswith("/usr/src/app/debug/"):
+                clean = obj.video_path.replace("/usr/src/app/", "", 1)
+                value = f"https://{host}/local/vehicle_detection/{clean}"
 
             # ===== DEFAULT =====
             else:
