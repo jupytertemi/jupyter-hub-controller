@@ -9,6 +9,7 @@ from rest_framework.exceptions import ValidationError
 from camera.enums import CameraType
 from camera.models import (
     Camera,
+    CameraOrganization,
     CameraSetting,
     CameraSettingZone,
     RingCamera,
@@ -78,9 +79,40 @@ class RingCameraSerializer(BaseCameraSerializer):
 
 
 class CameraSerializer(BaseCameraSerializer):
+    vendor = serializers.SerializerMethodField()
+
+    CHIPSET_VENDORS = {
+        "espressif", "realtek", "hisilicon", "ingenic", "mediatek",
+        "qualcomm", "broadcom", "marvell", "ralink", "silicon laboratories",
+        "texas instruments", "microchip technology", "nordic semiconductor",
+    }
+
+    def get_vendor(self, obj):
+        mac = getattr(obj, "mac_address", None)
+        if not mac or len(mac) < 8:
+            return None
+        prefix = mac[:8].upper()
+        try:
+            org = CameraOrganization.objects.filter(mac_address_prefix=prefix).first()
+            if not org:
+                return None
+            name = org.organization_name
+            if any(c in name.lower() for c in self.CHIPSET_VENDORS):
+                return f"{name} (OEM)"
+            return name
+        except Exception:
+            return None
+
     class Meta:
         model = Camera
-        fields = "__all__"
+        fields = [
+            "id", "name", "username", "password", "ip", "mac_address",
+            "rtsp_url", "sub_rtsp_url", "ring_account", "ring_id",
+            "ring_device_id", "is_audio", "zone", "type", "slug_name",
+            "detect_zone", "is_enabled", "consecutive_failures",
+            "last_seen_at", "created_at", "updated_at",
+            "stream_url", "ring_refresh_token", "vendor",
+        ]
         extra_kwargs = {
             "id": {"read_only": True},
             "slug_name": {"read_only": True},

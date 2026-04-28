@@ -18,9 +18,38 @@ class EventSerializer(serializers.ModelSerializer):
 class EventDetailSerializer(EventSerializer):
     hls_url = serializers.SerializerMethodField()
     local_url = serializers.SerializerMethodField()
+    snapshot_url = serializers.SerializerMethodField()
 
     class Meta(EventSerializer.Meta):
         fields = "__all__"
+
+    def get_snapshot_url(self, obj):
+        path = obj.snapshot_path
+        if not path:
+            return ""
+        host = ""
+        try:
+            host = read_env_file("REMOTE_HOST")
+        except Exception:
+            return ""
+        if not host:
+            return ""
+        if path.startswith("http://frigate:5000/"):
+            return path.replace(
+                "http://frigate:5000/",
+                f"https://{host}/frigate/",
+                1
+            )
+        if path.startswith("/media/frigate/"):
+            return path.replace(
+                "/media/frigate/",
+                f"https://{host}/local/",
+                1
+            )
+        if path.startswith("debug/") or path.startswith("/usr/src/app/debug/"):
+            clean = path.replace("/usr/src/app/", "", 1)
+            return f"https://{host}/local/vehicle_detection/{clean}"
+        return ""
 
     def get_hls_url(self, obj):
         # Only return HLS URL when no local clip is available — HLS serves HEVC
@@ -60,7 +89,7 @@ class EventDetailSerializer(EventSerializer):
             elif obj.video_path.startswith("http://frigate:5000/api/"):
                 value = obj.video_path.replace(
                     "http://frigate:5000/api/",
-                    "http://frigate:5000/frigate/api/",
+                    f"https://{host}/frigate/api/",
                     1
                 )
 
