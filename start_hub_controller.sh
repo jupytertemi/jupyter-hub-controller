@@ -13,10 +13,11 @@ else
   echo "⏳ Source .env not found yet: $ENV_FILE"
 fi
 
-# Auto-detect timezone from host and inject into BOTH .env files.
-# The host timezone is set during onboarding from the phone's locale.
-# All services (Django, Celery, PostgreSQL, Docker containers) must use
-# the same timezone to prevent scheduling bugs (e.g. celery beat freeze).
+# Bootstrap timezone from /etc/timezone into .env files.
+# After network is up (below), S4 auto-detects the real timezone from
+# internet IP geolocation and corrects this if the gold image was wrong.
+# All services (Django, Celery, PostgreSQL, Docker containers) read TZ
+# from .env to prevent scheduling bugs (e.g. celery beat freeze).
 HOST_TZ=$(cat /etc/timezone 2>/dev/null || echo "UTC")
 export TZ="${HOST_TZ}"
 for envfile in "$DST_ENV" "$ENV_FILE"; do
@@ -107,6 +108,32 @@ until ping -c1 8.8.8.8 >/dev/null 2>&1; do sleep 2; done
 # S1: Use JUPYTER_HOST from .env (production URL), NOT hardcoded dev domain
 DNS_HOST=$(echo "${JUPYTER_HOST:-https://api.hub.jupyter.com.au}" | sed 's|https\?://||')
 until getent hosts "$DNS_HOST" >/dev/null 2>&1; do sleep 2; done
+
+# S4: Auto-detect timezone from internet (IP geolocation).
+# Gold image ships with a placeholder timezone. On first boot with internet,
+# we detect the actual local timezone and update the system. All containers
+# and services read from /etc/timezone or TZ in .env.
+DETECTED_TZ=$(curl -sf --max-time 5 "http://worldtimeapi.org/api/ip" | grep -o '"timezone":"[^"]*"' | cut -d'"' -f4)
+if [ -z "$DETECTED_TZ" ]; then
+  DETECTED_TZ=$(curl -sf --max-time 5 "https://ipapi.co/timezone")
+fi
+if [ -n "$DETECTED_TZ" ] && [ "$DETECTED_TZ" != "$HOST_TZ" ]; then
+  echo "=== Updating timezone: ${HOST_TZ} → ${DETECTED_TZ} ==="
+  echo "$DETECTED_TZ" > /etc/timezone
+  ln -sf "/usr/share/zoneinfo/${DETECTED_TZ}" /etc/localtime
+  export TZ="${DETECTED_TZ}"
+  for envfile in "$DST_ENV" "$ENV_FILE"; do
+    if [ -f "$envfile" ]; then
+      sed -i '/^TZ=/d' "$envfile"
+      echo "TZ=${DETECTED_TZ}" >> "$envfile"
+    fi
+  done
+  echo "✅ Timezone auto-detected and updated to ${DETECTED_TZ}"
+elif [ -n "$DETECTED_TZ" ]; then
+  echo "✅ Timezone confirmed: ${DETECTED_TZ} (matches system)"
+else
+  echo "⚠️ Could not auto-detect timezone, keeping: ${HOST_TZ}"
+fi
 
 # S3: Argus monitoring onboard — update hub identity in agent config and restart.
 # Agent binaries are pre-installed on gold image. Only identity needs updating.
