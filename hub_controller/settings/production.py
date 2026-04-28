@@ -30,6 +30,7 @@ DATABASES = {
         "PASSWORD": os.getenv("DB_PASSWORD", "postgres"),  # noqa
         "HOST": os.getenv("DB_HOST", "localhost"),  # noqa
         "PORT": os.getenv("DB_PORT", "5432"),  # noqa
+        "TIME_ZONE": "GMT",
     }
 }
 
