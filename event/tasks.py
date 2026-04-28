@@ -25,7 +25,7 @@ DOWNLOAD_TIMEOUT = 30
 MIN_CLIP_BYTES = 4096
 MIN_CLIP_BYTES_FINAL = 100_000  # 100KB: completed events should have real clips
 BACKOFF_SECONDS = [10, 30, 90, 300, 600]  # ~17min total window
-SCAN_WINDOW_MINUTES = 30
+SCAN_WINDOW_MINUTES = 24 * 60
 DEDUP_TTL_SECONDS = 1800
 
 
@@ -125,6 +125,7 @@ def ensure_local_clip_task(self, event_id):
         if os.path.getsize(tmp_path) < MIN_CLIP_BYTES:
             raise RuntimeError(f"clip too small: {os.path.getsize(tmp_path)} bytes")
         os.replace(tmp_path, target_host)
+        os.chmod(target_host, 0o644)
         tmp_path = None
         Event.objects.filter(event_id=event_id).update(video_path=target_container)
         logger.info(
