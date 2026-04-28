@@ -25,14 +25,14 @@ class EventDetailSerializer(EventSerializer):
 
     def get_snapshot_url(self, obj):
         path = obj.snapshot_path
-        if not path:
-            return ""
         host = ""
         try:
             host = read_env_file("REMOTE_HOST")
         except Exception:
             return ""
         if not host:
+            return ""
+        if not path:
             return ""
         if path.startswith("http://frigate:5000/"):
             return path.replace(
@@ -47,16 +47,10 @@ class EventDetailSerializer(EventSerializer):
                 1
             )
         if path.startswith("debug/") or path.startswith("/usr/src/app/debug/"):
-            clean = path.replace("/usr/src/app/", "", 1)
-            return f"https://{host}/local/vehicle_detection/{clean}"
+            return f"https://{host}/frigate/api/events/{obj.event_id}/snapshot.jpg"
         return ""
 
     def get_hls_url(self, obj):
-        # Only return HLS URL when no local clip is available — HLS serves HEVC
-        # recordings which browsers reject (hev1). Local clips are transcoded to
-        # H.264 by clip_transcoder sidecar and are the preferred playback source.
-        if obj.video_path:
-            return ""
         host = ""
         try:
             host = read_env_file("REMOTE_HOST")
@@ -67,7 +61,6 @@ class EventDetailSerializer(EventSerializer):
             value = f"{host}/frigate/vod/event/{obj.event_id}/index-v1.m3u8"
             if obj.label == "PARCEL":
                 value = f"{host}/frigate/vod/event/{obj.parcel_id}/index-v1.m3u8"
-            logging.info(f"get_hls_url (fallback): {value}")
             return value
         return ""
 
