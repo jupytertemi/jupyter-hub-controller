@@ -234,6 +234,14 @@ CELERY_TASK_ROUTES = {
         "queue": "hub_operations_queue",
         "routing_key": "hub_operations.gdrive",
     },
+    "event.tasks.scan_broken_video_paths": {
+        "queue": "hub_operations_queue",
+        "routing_key": "hub_operations.task",
+    },
+    "event.tasks.ensure_local_clip_task": {
+        "queue": "hub_operations_queue",
+        "routing_key": "hub_operations.task",
+    },
 }
 
 # Celery Beat Schedule — periodic tasks
@@ -257,5 +265,9 @@ CELERY_BEAT_SCHEDULE = {
     "capture-camera-snapshots-every-30m": {
         "task": "camera.tasks.capture_camera_snapshots",
         "schedule": 30 * 60,
+    },
+    "scan-broken-video-paths-every-30s": {
+        "task": "event.tasks.scan_broken_video_paths",
+        "schedule": 30,
     },
 }

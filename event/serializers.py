@@ -59,8 +59,6 @@ class EventDetailSerializer(EventSerializer):
         if host and host != "":
             host = "https://" + host
             value = f"{host}/frigate/vod/event/{obj.event_id}/index-v1.m3u8"
-            if obj.label == "PARCEL":
-                value = f"{host}/frigate/vod/event/{obj.parcel_id}/index-v1.m3u8"
             return value
         return ""
 

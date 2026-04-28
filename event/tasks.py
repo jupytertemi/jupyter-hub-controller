@@ -23,6 +23,7 @@ FRIGATE_URL = os.getenv("FRIGATE_URL", "http://127.0.0.1:5000")
 
 DOWNLOAD_TIMEOUT = 30
 MIN_CLIP_BYTES = 4096
+MIN_CLIP_BYTES_FINAL = 100_000  # 100KB: completed events should have real clips
 BACKOFF_SECONDS = [10, 30, 90, 300, 600]  # ~17min total window
 SCAN_WINDOW_MINUTES = 30
 DEDUP_TTL_SECONDS = 1800
@@ -36,21 +37,46 @@ def _is_broken_path(p):
 
 @shared_task(bind=True, ignore_result=True)
 def scan_broken_video_paths(self):
-    """Beat: scan recent events with empty/frigate_api video_path, enqueue fix."""
+    """Beat: scan recent events with empty/frigate_api video_path, enqueue fix.
+    Also re-downloads undersized clips (truncated during active events)."""
     cutoff = timezone.now() - timedelta(minutes=SCAN_WINDOW_MINUTES)
-    qs = (
+    enqueued = 0
+
+    # Pass 1: events with broken video_path (empty or Frigate internal URL)
+    broken_qs = (
         Event.objects.filter(created_at__gte=cutoff)
         .filter(Q(video_path="") | Q(video_path__startswith="http://frigate:5000/"))
+        .exclude(end_time__isnull=True)
         .values_list("event_id", flat=True)[:100]
     )
-    enqueued = 0
-    for event_id in qs:
+    for event_id in broken_qs:
         if not event_id:
             continue
         lock_key = f"ensure_clip:{event_id}"
         if cache.add(lock_key, "1", DEDUP_TTL_SECONDS):
             ensure_local_clip_task.apply_async(args=[event_id], queue="hub_operations_queue")
             enqueued += 1
+
+    # Pass 2: events with local path but undersized file (truncated mid-event)
+    local_qs = (
+        Event.objects.filter(created_at__gte=cutoff)
+        .filter(video_path__startswith=CLIPS_DIR_CONTAINER)
+        .exclude(end_time__isnull=True)
+        .values_list("event_id", "video_path")[:100]
+    )
+    for event_id, video_path in local_qs:
+        if not event_id:
+            continue
+        host_path = video_path.replace(CLIPS_DIR_CONTAINER, CLIPS_DIR_HOST, 1)
+        try:
+            if os.path.exists(host_path) and os.path.getsize(host_path) < MIN_CLIP_BYTES_FINAL:
+                lock_key = f"ensure_clip:{event_id}"
+                if cache.add(lock_key, "1", DEDUP_TTL_SECONDS):
+                    ensure_local_clip_task.apply_async(args=[event_id], queue="hub_operations_queue")
+                    enqueued += 1
+        except OSError:
+            pass
+
     if enqueued:
         logger.info(f"scan_broken_video_paths enqueued={enqueued}")
 
@@ -65,14 +91,20 @@ def ensure_local_clip_task(self, event_id):
     except Event.DoesNotExist:
         return
 
-    if event.video_path.startswith(CLIPS_DIR_CONTAINER):
-        return  # already local
-
     os.makedirs(CLIPS_DIR_HOST, exist_ok=True)
     target_host = os.path.join(CLIPS_DIR_HOST, f"event_{event_id}.mp4")
     target_container = f"{CLIPS_DIR_CONTAINER}/event_{event_id}.mp4"
 
-    if os.path.exists(target_host) and os.path.getsize(target_host) >= MIN_CLIP_BYTES:
+    if event.video_path.startswith(CLIPS_DIR_CONTAINER):
+        if os.path.exists(target_host) and os.path.getsize(target_host) >= MIN_CLIP_BYTES_FINAL:
+            return  # already local and large enough
+        # File exists but suspiciously small — re-download (was likely fetched mid-event)
+        logger.info(
+            f"Re-downloading undersized clip event_id={event_id} "
+            f"size={os.path.getsize(target_host) if os.path.exists(target_host) else 0}"
+        )
+
+    if os.path.exists(target_host) and os.path.getsize(target_host) >= MIN_CLIP_BYTES_FINAL:
         Event.objects.filter(event_id=event_id).update(video_path=target_container)
         return
 
