@@ -113,11 +113,11 @@ until getent hosts "$DNS_HOST" >/dev/null 2>&1; do sleep 2; done
 # Gold image ships with a placeholder timezone. On first boot with internet,
 # we detect the actual local timezone and update the system. All containers
 # and services read from /etc/timezone or TZ in .env.
-DETECTED_TZ=$(curl -sf --max-time 5 "http://worldtimeapi.org/api/ip" | grep -o '"timezone":"[^"]*"' | cut -d'"' -f4)
+DETECTED_TZ=$(curl -sf --max-time 5 "http://ip-api.com/line/?fields=timezone")
 if [ -z "$DETECTED_TZ" ]; then
-  DETECTED_TZ=$(curl -sf --max-time 5 "https://ipapi.co/timezone")
+  DETECTED_TZ=$(curl -sf --max-time 5 "http://worldtimeapi.org/api/ip" | grep -o '"timezone":"[^"]*"' | cut -d'"' -f4)
 fi
-if [ -n "$DETECTED_TZ" ] && [ "$DETECTED_TZ" != "$HOST_TZ" ]; then
+if [ -n "$DETECTED_TZ" ] && [ "$DETECTED_TZ" != "$HOST_TZ" ] && [ -f "/usr/share/zoneinfo/${DETECTED_TZ}" ]; then
   echo "=== Updating timezone: ${HOST_TZ} → ${DETECTED_TZ} ==="
   echo "$DETECTED_TZ" > /etc/timezone
   ln -sf "/usr/share/zoneinfo/${DETECTED_TZ}" /etc/localtime
