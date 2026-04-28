@@ -106,7 +106,21 @@ REST_FRAMEWORK = {
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+# Read timezone from the host system. The hub's /etc/timezone is set during
+# onboarding (from the user's phone locale) and NTP keeps the clock accurate.
+# All services (Django, Celery, PostgreSQL, Docker containers) must agree on
+# the same timezone to prevent double-conversion bugs in django_celery_beat.
+def _read_system_timezone():
+    tz = os.environ.get("TZ")
+    if tz and tz != "UTC":
+        return tz
+    try:
+        with open("/etc/timezone") as f:
+            return f.read().strip()
+    except (OSError, IOError):
+        return "UTC"
+
+TIME_ZONE = _read_system_timezone()
 
 USE_I18N = True
 
@@ -136,10 +150,13 @@ SWAGGER_SETTINGS = {
 }
 
 # Celery Configuration Options
-CELERY_ENABLE_UTC = True
+# Use the hub's local timezone for scheduling. CELERY_ENABLE_UTC=False means
+# Celery stores and compares times in local TZ, matching django_celery_beat's
+# DatabaseScheduler which uses Django's TIME_ZONE for last_run_at comparisons.
+CELERY_ENABLE_UTC = False
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
-CELERY_TIMEZONE = "UTC"
+CELERY_TIMEZONE = TIME_ZONE
 
 CELERY_TASK_QUEUES = (
     Queue("camera_queue", routing_key="camera.#"),

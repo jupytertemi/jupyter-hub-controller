@@ -13,15 +13,19 @@ else
   echo "⏳ Source .env not found yet: $ENV_FILE"
 fi
 
-# Auto-detect timezone from host and inject into .env for Docker containers.
-# Containers with TZ baked into their image would otherwise ignore /etc/timezone bind-mount.
+# Auto-detect timezone from host and inject into BOTH .env files.
 # The host timezone is set during onboarding from the phone's locale.
+# All services (Django, Celery, PostgreSQL, Docker containers) must use
+# the same timezone to prevent scheduling bugs (e.g. celery beat freeze).
 HOST_TZ=$(cat /etc/timezone 2>/dev/null || echo "UTC")
-if [ -f "$DST_ENV" ]; then
-  sed -i '/^TZ=/d' "$DST_ENV"
-  echo "TZ=${HOST_TZ}" >> "$DST_ENV"
-  echo "✅ Timezone set to ${HOST_TZ} in .env"
-fi
+export TZ="${HOST_TZ}"
+for envfile in "$DST_ENV" "$ENV_FILE"; do
+  if [ -f "$envfile" ]; then
+    sed -i '/^TZ=/d' "$envfile"
+    echo "TZ=${HOST_TZ}" >> "$envfile"
+  fi
+done
+echo "✅ Timezone set to ${HOST_TZ} (system + all .env files)"
 
 systemctl start docker
 
