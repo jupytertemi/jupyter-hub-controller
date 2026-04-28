@@ -86,6 +86,21 @@ done
 
 cd /root/jupyter-container
 
+# S5: Patch docker-compose.yml to remove timezone bind mounts from postgres.
+# Gold image bind-mounts /etc/timezone (Melbourne) into the PG container,
+# which corrupts PG's timezone name resolution ('UTC' maps to AEST +10:00).
+# This patch runs on every boot so it works on any gold image version.
+COMPOSE_FILE="/root/jupyter-container/docker-compose.yml"
+if grep -q '/etc/timezone:/etc/timezone' "$COMPOSE_FILE" 2>/dev/null; then
+  if lsattr "$COMPOSE_FILE" 2>/dev/null | grep -q 'i'; then
+    chattr -i "$COMPOSE_FILE"
+  fi
+  # Remove timezone bind mounts from postgres section only (between 'postgres:' and next service)
+  sed -i '/^  postgres:/,/^  [a-z]/{/\/etc\/localtime:\/etc\/localtime/d;/\/etc\/timezone:\/etc\/timezone/d}' "$COMPOSE_FILE"
+  chattr +i "$COMPOSE_FILE"
+  echo "✅ Removed timezone bind mounts from postgres container"
+fi
+
 STOP_TIMEOUT=30
 START_WAIT=5
 
