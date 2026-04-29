@@ -37,6 +37,23 @@ class Command(BaseCommand):
             default=5,
             help="Minutes after open before HA's belt-and-braces auto-close fires (default: 5).",
         )
+        parser.add_argument(
+            "--camera-id",
+            type=int,
+            default=None,
+            help="Explicit Camera.id to bind. Required if multiple Camera rows exist.",
+        )
+        parser.add_argument(
+            "--garage-id",
+            type=int,
+            default=None,
+            help="Explicit MerossDevice.id to bind. Required if multiple MerossDevice rows exist.",
+        )
+        parser.add_argument(
+            "--dry-run",
+            action="store_true",
+            help="Print intended bindings + would-be settings, take no action.",
+        )
 
     def handle(self, *args, **opts):
         existing = GarageDoorSettings.objects.first()
@@ -49,28 +66,58 @@ class Command(BaseCommand):
             )
             return
 
-        meross_devices = list(MerossDevice.objects.all())
-        cameras = list(Camera.objects.all())
+        # Resolve garage (Meross device)
+        if opts["garage_id"] is not None:
+            try:
+                garage = MerossDevice.objects.get(id=opts["garage_id"])
+            except MerossDevice.DoesNotExist:
+                self.stderr.write(self.style.ERROR(
+                    f"MerossDevice id={opts['garage_id']} not found."
+                ))
+                return
+        else:
+            meross_devices = list(MerossDevice.objects.all())
+            if len(meross_devices) != 1:
+                self.stdout.write(self.style.WARNING(
+                    f"Found {len(meross_devices)} MerossDevice(s); pass --garage-id "
+                    "explicitly or configure via app UI for multi-device hubs."
+                ))
+                for d in meross_devices:
+                    self.stdout.write(f"  candidate: id={d.id} name={d.name!r}")
+                return
+            garage = meross_devices[0]
 
-        if len(meross_devices) != 1:
-            self.stdout.write(
-                self.style.WARNING(
-                    f"Found {len(meross_devices)} MerossDevice(s); seed only runs "
-                    "when exactly one exists. Configure via app UI for multi-device hubs."
-                )
-            )
-            return
-        if len(cameras) != 1:
-            self.stdout.write(
-                self.style.WARNING(
-                    f"Found {len(cameras)} Camera(s); seed only runs when exactly one "
-                    "exists. Configure via app UI for multi-camera hubs."
-                )
-            )
-            return
+        # Resolve camera
+        if opts["camera_id"] is not None:
+            try:
+                camera = Camera.objects.get(id=opts["camera_id"])
+            except Camera.DoesNotExist:
+                self.stderr.write(self.style.ERROR(
+                    f"Camera id={opts['camera_id']} not found."
+                ))
+                return
+        else:
+            cameras = list(Camera.objects.all())
+            if len(cameras) != 1:
+                self.stdout.write(self.style.WARNING(
+                    f"Found {len(cameras)} Camera(s); pass --camera-id explicitly "
+                    "or configure via app UI for multi-camera hubs."
+                ))
+                for c in cameras:
+                    self.stdout.write(f"  candidate: id={c.id} name={c.name!r}")
+                return
+            camera = cameras[0]
 
-        garage = meross_devices[0]
-        camera = cameras[0]
+        if opts["dry_run"]:
+            self.stdout.write(self.style.SUCCESS("DRY RUN — no changes made."))
+            self.stdout.write(f"Would bind: garage='{garage.name}' (id={garage.id}), "
+                              f"camera='{camera.name}' (id={camera.id})")
+            self.stdout.write(f"Settings: active_open=True, auto_close=True, "
+                              f"auto_close_delay={opts['auto_close_delay']}min, "
+                              f"auto_open_on_owner=True, card_on_owner=True, "
+                              f"card_on_unknown=False")
+            self.stdout.write("To execute, drop --dry-run.")
+            return
 
         if existing:
             self.stdout.write(f"--force: deleting existing GarageDoorSettings id={existing.id}")
