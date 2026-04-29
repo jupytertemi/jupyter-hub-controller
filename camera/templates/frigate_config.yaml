@@ -119,7 +119,12 @@ cameras:{% if not cameras %} {}{% endif %}
     snapshots:
       enabled: true
       timestamp: false
-      bounding_box: true
+      # Disabled — burned-in bounding-box overlay was being detected by
+      # the plate detector as a fake "license plate" on event-snapshot
+      # fetches and producing high-confidence false positives (CCT-S OCR
+      # returned "7D2235" from the rendered "car: 70% 22659" label). The
+      # clean_copy below still saves a parallel annotated image for debug.
+      bounding_box: false
       clean_copy: true
       retain:
         default: 30
