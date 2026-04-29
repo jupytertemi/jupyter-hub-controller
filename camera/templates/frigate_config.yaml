@@ -28,7 +28,7 @@ go2rtc:
     bin: /config/ffmpeg-go2rtc
   streams:{% if not cameras %} {}{% endif %}
 {% for camera in cameras %}{% if camera.type == "RING" %}    {{ camera.name }}:
-      - rtsp://ring-mqtt:8554/{{ camera.ring_device_id }}_live
+      - rtsp://ring_mqtt:8554/{{ camera.ring_device_id }}_live
 {% else %}    {{ camera.name }}:
       - {{ camera.rtsp_url }}
     {{ camera.name }}-sub:
@@ -59,7 +59,7 @@ cameras:{% if not cameras %} {}{% endif %}
     ffmpeg:
       inputs:
 {% if camera.type == "RING" %}
-        - path: rtsp://ring-mqtt:8554/{{ camera.ring_device_id }}_live
+        - path: rtsp://ring_mqtt:8554/{{ camera.ring_device_id }}_live
           roles:
             - detect
             - record
