@@ -424,16 +424,26 @@ sudo docker compose down --timeout 30 || true
 
 # --- Frigate storage cleanup (AFTER containers are stopped) ---
 # Must happen after docker compose down so Frigate isn't holding file locks.
-echo "Cleaning Frigate storage (clips, recordings, exports)..."
+echo "Cleaning Frigate storage (clips, recordings, exports, debugs)..."
 FRIGATE_DIR="$COMPOSE_DIR/frigate"
 STORAGE_DIR="$FRIGATE_DIR/storage"
-for folder in clips exports recordings; do
+for folder in clips exports recordings debugs; do
     TARGET="$STORAGE_DIR/$folder"
     if [ -d "$TARGET" ]; then
-        sudo rm -rf "$TARGET"/* "$TARGET"/.* 2>/dev/null || true
+        find "$TARGET" -type f -delete 2>/dev/null || true
+        find "$TARGET" -mindepth 1 -type d -empty -delete 2>/dev/null || true
         echo "  Cleaned: $TARGET"
     else
         mkdir -p "$TARGET"
+    fi
+done
+
+# --- Clean user-specific media directories ---
+echo "Cleaning user media directories..."
+for media_dir in "$COMPOSE_DIR/alarm_audio" "$COMPOSE_DIR/voice_ai_data"; do
+    if [ -d "$media_dir" ]; then
+        sudo rm -rf "$media_dir"/* 2>/dev/null || true
+        echo "  Cleaned: $media_dir"
     fi
 done
 
