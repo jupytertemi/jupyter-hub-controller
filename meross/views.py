@@ -127,14 +127,24 @@ class GetStatesEntityView(InterfaceHASSView):
             serializer = self.get_serializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             resp = client.get_states_entity(entity_id)
-            if resp.get("state") != "unavailable":
-                resp["state"] = serializer.data.get("states")
-                entry = client.control_states_entity(entity_id, resp)
-                return Response(data=entry, status=200)
-            else:
+            if resp.get("state") == "unavailable":
                 return Response(
                     {"error": "Device is unavailable, cannot be controlled"}, status=503
                 )
+            desired = serializer.data.get("states")
+            domain = entity_id.split(".")[0]
+            if domain == "cover":
+                if desired in ("closing", "closed"):
+                    service = "cover/close_cover"
+                else:
+                    service = "cover/open_cover"
+                entry = client.call_service(service, {"entity_id": entity_id})
+                updated = client.get_states_entity(entity_id)
+                return Response(data=updated, status=200)
+            else:
+                resp["state"] = desired
+                entry = client.control_states_entity(entity_id, resp)
+                return Response(data=entry, status=200)
         except Exception as err:
             raise ValidationError({"error": err})
 
