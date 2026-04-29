@@ -117,3 +117,10 @@ python refresh_pubkey.py || echo "WARNING: refresh_pubkey failed (non-fatal)"
 
 echo "=== Ensuring hub user exists ==="
 python ensure_hub_user.py || echo "WARNING: ensure_hub_user failed (non-fatal)"
+
+echo "=== Seeding garage automation defaults (idempotent) ==="
+# Creates GarageDoorSettings + HA automations IFF exactly one MerossDevice and one
+# Camera exist on this hub. Multi-device hubs skip automatically and are configured
+# via the app UI. No-op when a row already exists. Non-fatal on any error so the
+# entrypoint never blocks boot on a missing Meross device.
+python manage.py populate_garage_settings 2>&1 || echo "WARNING: populate_garage_settings failed (non-fatal — configure via app)"

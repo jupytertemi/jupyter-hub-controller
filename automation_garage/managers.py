@@ -38,6 +38,7 @@ class GarageDoorSettingsManager(models.Manager):
     def _delete_all_created_automations(self, client, automation_name):
         automation_ids = [
             f"{automation_name}_auto_close",
+            f"{automation_name}_auto_close_on_departing",
             f"{automation_name}_auto_open_on_owner",
             f"{automation_name}_trigger_card_on_owner",
             f"{automation_name}_trigger_turn_on",
@@ -119,12 +120,31 @@ class GarageDoorSettingsManager(models.Manager):
 
         if camera:
             if kwargs.get("auto_open_on_owner"):
+                # Open the cover when a known vehicle is *Approaching* the camera.
+                # VehicleAI already does the fuzzy plate→owner match and sets the
+                # `owner` field in the MQTT payload — we trust it here.
                 self.create_mqtt_automation(
                     automation_id=f"{automation_name}_auto_open_on_owner",
                     name=f"{automation_name}_auto_open_on_owner",
                     topic=settings.HASS_MQTT_TOPIC_LISTEN_EVENT_AUTOMATION,
                     actions=self.create_action_cover("open", cover_trigger_item),
-                    conditions=self.create_conditions_card(camera.name),
+                    conditions=self.create_conditions_card(
+                        camera.name,
+                        statuses=("Approaching",),
+                    ),
+                )
+                # Close the cover when the same known vehicle is confirmed *Departed*
+                # (track removed from camera FoV after a Departing/Approaching/Parked
+                # trajectory). Departing alone is a soft signal; Departed is authoritative.
+                self.create_mqtt_automation(
+                    automation_id=f"{automation_name}_auto_close_on_departing",
+                    name=f"{automation_name}_auto_close_on_departing",
+                    topic=settings.HASS_MQTT_TOPIC_LISTEN_EVENT_AUTOMATION,
+                    actions=self.create_action_cover("close", cover_trigger_item),
+                    conditions=self.create_conditions_card(
+                        camera.name,
+                        statuses=("Departed",),
+                    ),
                 )
             if kwargs.get("card_on_owner"):
                 self.create_mqtt_automation(
@@ -211,13 +231,49 @@ class GarageDoorSettingsManager(models.Manager):
             }
         ]
 
+    @staticmethod
+    def _normalize_plate(plate):
+        """Canonical form for plate matching: uppercase, no spaces/dashes/dots."""
+        if not plate:
+            return ""
+        out = str(plate).upper()
+        for ch in (" ", "-", ".", "·"):
+            out = out.replace(ch, "")
+        return out
+
+    def _known_plate_variants(self):
+        """Build a deduplicated list of normalized plate strings for HA template
+        comparison. Defensive — sub-quorum reads ('ABC123 (1/3)') are dropped."""
+        seen = set()
+        variants = []
+        for p in Vehicle.objects.values_list("license_plate", flat=True):
+            if not p or "(" in p:  # skip empty + sub-quorum residue
+                continue
+            n = self._normalize_plate(p)
+            if n and n not in seen:
+                seen.add(n)
+                variants.append(n)
+        return variants
+
     def create_conditions_card(
         self,
         camera_name,
         action_type=False,
+        statuses=("Approaching", "Departing"),
     ):
+        """
+        Build HA template conditions for vehicle automations.
+
+        Args:
+            camera_name: Camera name to match against trigger.payload_json.camera_name.
+            action_type: True → unknown-vehicle path (negates plate-in-known list).
+            statuses: tuple of vehicle_status values that should fire this automation.
+                      Defaults to ('Approaching', 'Departing') for back-compat; callers
+                      should pass ('Approaching',) for open and ('Departed',) for close.
+        """
         in_operator = "not in" if action_type else "in"
-        vehicle_plates = list(Vehicle.objects.values_list("license_plate", flat=True))
+        plate_variants = self._known_plate_variants()
+        statuses_list = list(statuses)
         return [
             {
                 "condition": "template",
@@ -228,12 +284,18 @@ class GarageDoorSettingsManager(models.Manager):
                 "value_template": f'{{{{ trigger.payload_json.camera_name == "{camera_name}" }}}}',
             },
             {
+                # Normalize the incoming plate (uppercase, strip punctuation) before
+                # comparing against the known-plate set. Mirrors _normalize_plate.
                 "condition": "template",
-                "value_template": f"{{{{ trigger.payload_json.vehicle_plate {in_operator} {vehicle_plates} }}}}",
+                "value_template": (
+                    "{% set p = (trigger.payload_json.vehicle_plate | default('') | string | upper"
+                    " | replace(' ', '') | replace('-', '') | replace('.', '')) %}"
+                    f"{{{{ p {in_operator} {plate_variants} }}}}"
+                ),
             },
             {
                 "condition": "template",
-                "value_template": "{{ trigger.payload_json.vehicle_status in ['Approaching', 'Departing'] }}",
+                "value_template": f"{{{{ trigger.payload_json.vehicle_status in {statuses_list} }}}}",
             },
         ]
 
