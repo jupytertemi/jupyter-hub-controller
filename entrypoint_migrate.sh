@@ -122,6 +122,31 @@ if ! python manage.py migrate --noinput; then
 fi
 echo "=== All migrations applied successfully ==="
 
+echo "=== Post-migration verification ==="
+EXPECTED_APPS="alarm automation camera event face_training facial gdrive_backup hub_operations meross suggested_facial vehicle"
+VERIFY_FAILED=false
+for app in $EXPECTED_APPS; do
+    TABLE_COUNT=$(docker exec postgres psql -U postgres -d hub_controller -t -A \
+        -c "SELECT count(*) FROM information_schema.tables WHERE table_schema='public' AND table_name LIKE '${app}_%';" 2>/dev/null || echo "0")
+    if [ "$TABLE_COUNT" -eq 0 ]; then
+        echo "  MISSING TABLES for app: $app"
+        VERIFY_FAILED=true
+    fi
+done
+if [ "$VERIFY_FAILED" = true ]; then
+    echo "WARNING: Some Django apps have missing tables. Attempting targeted migrate..."
+    python manage.py migrate --noinput 2>&1 || echo "  Targeted retry also failed"
+else
+    echo "  All expected Django app tables present"
+fi
+
+echo "=== Seeding OUI camera vendor database ==="
+if [ -f /usr/local/bin/update_camera_orgs.py ]; then
+    python3 /usr/local/bin/update_camera_orgs.py 2>&1 || echo "WARNING: OUI seed failed (non-fatal, weekly timer will retry)"
+else
+    echo "  OUI updater not installed, skipping"
+fi
+
 echo "=== Starting ALL Docker containers ==="
 cd /root/jupyter-container
 docker compose up -d 2>&1 || echo "WARNING: docker compose up had errors (some containers may need manual start)"

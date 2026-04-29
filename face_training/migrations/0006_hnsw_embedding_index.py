@@ -2,6 +2,7 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
+    atomic = False
 
     dependencies = [
         ('face_training', '0005_facetraining_quality_score_augmentation_type'),

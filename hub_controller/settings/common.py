@@ -230,6 +230,10 @@ CELERY_TASK_ROUTES = {
         "queue": "automation_queue",
         "routing_key": "alarm.task",
     },
+    "alarm.tasks.monitor_alarm_ips": {
+        "queue": "automation_queue",
+        "routing_key": "alarm.task",
+    },
     "camera.tasks.monitor_camera_ips": {
         "queue": "camera_queue",
         "routing_key": "camera.task",
@@ -285,5 +289,9 @@ CELERY_BEAT_SCHEDULE = {
     "scan-broken-video-paths-every-30s": {
         "task": "event.tasks.scan_broken_video_paths",
         "schedule": 30,
+    },
+    "monitor-alarm-ips-every-5m": {
+        "task": "alarm.tasks.monitor_alarm_ips",
+        "schedule": 5 * 60,
     },
 }
