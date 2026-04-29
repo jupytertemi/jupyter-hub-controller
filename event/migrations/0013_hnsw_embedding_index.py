@@ -2,6 +2,7 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
+    atomic = False
 
     dependencies = [
         ('event', '0012_rename_event_label_idx_event_event_label_79334f_idx_and_more'),

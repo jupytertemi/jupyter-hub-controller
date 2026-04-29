@@ -107,8 +107,25 @@ docker exec postgres psql -U postgres -tc "SELECT 1 FROM pg_database WHERE datna
     echo "Created events database"
 }
 
-echo "Apply database migrations"
-python manage.py migrate  --noinput
+echo "=== Installing pgvector extension (required for HNSW indexes) ==="
+docker exec postgres psql -U postgres -d hub_controller -c "CREATE EXTENSION IF NOT EXISTS vector;" 2>/dev/null || true
+
+echo "=== Applying database migrations ==="
+if ! python manage.py migrate --noinput; then
+    echo "ERROR: Django migrations FAILED. Retrying once after 5s..."
+    sleep 5
+    if ! python manage.py migrate --noinput; then
+        echo "CRITICAL: Django migrations failed TWICE. Hub database is incomplete."
+        echo "  Manual intervention required: run 'python manage.py migrate' from venv"
+        exit 1
+    fi
+fi
+echo "=== All migrations applied successfully ==="
+
+echo "=== Starting ALL Docker containers ==="
+cd /root/jupyter-container
+docker compose up -d 2>&1 || echo "WARNING: docker compose up had errors (some containers may need manual start)"
+cd /root/jupyter-hub-controller
 
 echo "Collecting static files..."
 python manage.py collectstatic --noinput

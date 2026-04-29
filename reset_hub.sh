@@ -45,7 +45,7 @@ write_progress() {
 PEOF
 }
 
-write_progress 0 8 "in_progress" "Starting hub reset..."
+write_progress 0 8 "in_progress" "Unlocking system files..."
 echo "====== START RESET HUB ======"
 
 # ===============================
@@ -60,7 +60,7 @@ echo "PHASE 0: OTA lockdown removed — all files unlocked for reset"
 # ===============================
 # PHASE 1: LOAD STATE
 # ===============================
-write_progress 1 8 "in_progress" "Loading hub identity..."
+write_progress 1 8 "in_progress" "Reading hub configuration..."
 # Read env vars safely — strip \r (CRLF), trim whitespace, handle special chars
 if [ -f "$ENV_FILE" ]; then
     while IFS='=' read -r key value; do
@@ -127,7 +127,7 @@ fi
 # PHASE 2: NETWORK OPS (need WiFi + credentials)
 # Must complete BEFORE credentials are wiped or WiFi disconnected.
 # ===============================
-write_progress 2 8 "in_progress" "Removing cloud registration..."
+write_progress 2 8 "in_progress" "Deregistering from jupyter cloud..."
 
 # --- Cloud delete ---
 # Cloud API authenticates with slug_name:hub_secret (Basic Auth)
@@ -238,10 +238,37 @@ if [ -f /opt/secureprotect-agent/agent.env ]; then
     echo "  Cleared HUB_NAME from agent.env"
 fi
 
+# --- Factory reset all Halo devices ---
+# Must happen BEFORE Phase 3 stops services. Django, postgres, HA, and
+# transfer_server must all be running for the DELETE endpoint to send
+# the factory_reset command to each Halo via the socket relay.
+echo "Factory resetting Halo devices..."
+HALO_IDS=$(docker exec postgres psql -U postgres -d hub_controller -t -A \
+    -c "SELECT id FROM alarm_alarmdevice;" 2>/dev/null) || true
+
+if [ -n "$HALO_IDS" ]; then
+    for halo_id in $HALO_IDS; do
+        echo "  Sending factory reset to Halo id=$halo_id..."
+        HALO_RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -X DELETE "http://localhost/api/alarms/${halo_id}" \
+            --connect-timeout 10 --max-time 15 2>&1) || true
+        HALO_HTTP=$(echo "$HALO_RESPONSE" | tail -1)
+        HALO_BODY=$(echo "$HALO_RESPONSE" | head -n -1)
+        if [ "$HALO_HTTP" = "200" ] || [ "$HALO_HTTP" = "204" ]; then
+            echo "  Halo id=$halo_id factory reset sent + DB record deleted (HTTP $HALO_HTTP)"
+        else
+            echo "  WARNING: Halo id=$halo_id factory reset failed (HTTP $HALO_HTTP): $HALO_BODY"
+        fi
+        sleep 2
+    done
+else
+    echo "  No Halo devices registered — skipping"
+fi
+
 # ===============================
 # PHASE 3: STOP SERVICES
 # ===============================
-write_progress 3 8 "in_progress" "Stopping services..."
+write_progress 3 8 "in_progress" "Shutting down AI engines and cameras..."
 echo "Stopping services..."
 
 # Stop identity guard FIRST — prevents it from restoring .env changes
@@ -265,7 +292,7 @@ sudo systemctl stop jupyter-hub-controller.service 2>/dev/null || true
 # ===============================
 # PHASE 4: CLEAN LOCAL STATE (no network needed)
 # ===============================
-write_progress 4 8 "in_progress" "Clearing hub data..."
+write_progress 4 8 "in_progress" "Erasing all recordings and settings..."
 
 # --- Clear identity vars from ALL .env files ---
 echo "Cleaning identity vars from .env files..."
@@ -332,22 +359,13 @@ echo "Cleaning Ring-MQTT data..."
 rm -rf "$COMPOSE_DIR/ring-mqtt-data/ring-state.json" 2>/dev/null || true
 rm -rf "$COMPOSE_DIR/ring-mqtt-data/go2rtc.yaml" 2>/dev/null || true
 
-# --- Frigate: reset config + clean storage ---
+# --- Frigate: reset config (storage cleanup moved to Phase 5 after docker down) ---
 FRIGATE_DIR="$COMPOSE_DIR/frigate"
-STORAGE_DIR="$FRIGATE_DIR/storage"
 CONFIG_DIR="$FRIGATE_DIR/config"
 SRC_FILE="/root/frigate_config_default.yaml"
 DEST_FILE="$CONFIG_DIR/config.yaml"
 
 echo "Resetting Frigate configuration..."
-for folder in clips exports recordings; do
-    TARGET="$STORAGE_DIR/$folder"
-    if [ -d "$TARGET" ]; then
-        sudo rm -rf "$TARGET"/* "$TARGET"/.* 2>/dev/null || true
-    else
-        mkdir -p "$TARGET"
-    fi
-done
 sudo mkdir -p "$CONFIG_DIR"
 if [ -f "$SRC_FILE" ]; then
     sudo cp "$SRC_FILE" "$DEST_FILE"
@@ -398,52 +416,53 @@ echo "Camera table cleaned."
 # ===============================
 # PHASE 5: DOCKER REBUILD (local images, no network needed)
 # ===============================
-write_progress 5 8 "in_progress" "Rebuilding containers..."
-#################### UPDATE ####################
+write_progress 5 8 "in_progress" "Restoring to factory settings..."
+
+echo "Stopping ALL Docker containers first..."
+cd "$COMPOSE_DIR"
+sudo docker compose down --timeout 30 || true
+
+# --- Frigate storage cleanup (AFTER containers are stopped) ---
+# Must happen after docker compose down so Frigate isn't holding file locks.
+echo "Cleaning Frigate storage (clips, recordings, exports)..."
+FRIGATE_DIR="$COMPOSE_DIR/frigate"
+STORAGE_DIR="$FRIGATE_DIR/storage"
+for folder in clips exports recordings; do
+    TARGET="$STORAGE_DIR/$folder"
+    if [ -d "$TARGET" ]; then
+        sudo rm -rf "$TARGET"/* "$TARGET"/.* 2>/dev/null || true
+        echo "  Cleaned: $TARGET"
+    else
+        mkdir -p "$TARGET"
+    fi
+done
+
 # --- Generate service secrets BEFORE volume prune ---
 # Volume prune destroys postgres data. Fresh postgres needs POSTGRES_PASSWORD
 # to initialize. SECRET_KEY is also required for Django to start.
-# These are local service secrets, NOT identity — safe to regenerate.
+# These are local service secrets, NOT identity -- safe to regenerate.
+echo "Generating service secrets for fresh database init..."
+DEFAULT_DB_PASSWORD=$(python3 -c 'import secrets; print(secrets.token_urlsafe(24))' 2>/dev/null || echo "secureprotect-$(date +%s)")
+DEFAULT_SECRET_KEY=$(python3 -c 'import secrets; print(secrets.token_urlsafe(50))' 2>/dev/null || echo "django-secret-$(date +%s)")
+DEFAULT_SVC_PASSWORD=$(python3 -c 'import secrets; print(secrets.token_urlsafe(24))' 2>/dev/null || echo "svcpass-$(date +%s)")
 
-# echo "Generating service secrets for fresh database init..."
-# DEFAULT_DB_PASSWORD=$(python3 -c 'import secrets; print(secrets.token_urlsafe(24))' 2>/dev/null || echo "secureprotect-$(date +%s)")
-# DEFAULT_SECRET_KEY=$(python3 -c 'import secrets; print(secrets.token_urlsafe(50))' 2>/dev/null || echo "django-secret-$(date +%s)")
-# DEFAULT_SVC_PASSWORD=$(python3 -c 'import secrets; print(secrets.token_urlsafe(24))' 2>/dev/null || echo "svcpass-$(date +%s)")
-
-# for envfile in "$ENV_FILE" "$CONTAINER_ENV_FILE"; do
-#     [ -f "$envfile" ] || continue
-#     # DB_PASSWORD — postgres init requires this
-#     sed -i "s/^DB_PASSWORD=.*/DB_PASSWORD=${DEFAULT_DB_PASSWORD}/" "$envfile"
-#     # SECRET_KEY — Django refuses to start without it
-#     sed -i "s/^SECRET_KEY=.*/SECRET_KEY=${DEFAULT_SECRET_KEY}/" "$envfile"
-#     # MQTT and service passwords — containers need these to connect to EMQX
-#     for svc_var in MQTT_PASSWORD MQTT_CONTROLLER_PASSWORD MQTT_AI_CONTROLLER_PASSWORD \
-#                    MQTT_FRIGATE_PASSWORD MQTT_HASS_PASSWORD MQTT_RING_CAMERA_PASSWORD \
-#                    HASS_PASSWORD FRIGATE_PASSWORD SCRYPTED_PASSWORD; do
-#         sed -i "s/^${svc_var}=.*/${svc_var}=${DEFAULT_SVC_PASSWORD}/" "$envfile"
-#     done
-#     echo "  Service secrets set in: $envfile"
-# done
-#################### UPDATE ####################
-
-echo "Stopping Docker containers..."
-cd "$COMPOSE_DIR"
-sudo docker compose down || true
-
-#################### UPDATE ####################
-# echo "Removing Docker volumes..."
-# docker volume prune --all --force || true
-echo "🧼 Removing Docker volumes..."
-for vol in jupyter-container_postgres-vlm jupyter-container_redis_data; do
-    sudo docker volume rm "$vol" 2>/dev/null || echo "ℹ️ Volume $vol not found or already removed."
+for envfile in "$ENV_FILE" "$CONTAINER_ENV_FILE"; do
+    [ -f "$envfile" ] || continue
+    sed -i "s/^DB_PASSWORD=.*/DB_PASSWORD=${DEFAULT_DB_PASSWORD}/" "$envfile"
+    sed -i "s/^SECRET_KEY=.*/SECRET_KEY=${DEFAULT_SECRET_KEY}/" "$envfile"
+    for svc_var in MQTT_PASSWORD MQTT_CONTROLLER_PASSWORD MQTT_AI_CONTROLLER_PASSWORD \
+                   MQTT_FRIGATE_PASSWORD MQTT_HASS_PASSWORD MQTT_RING_CAMERA_PASSWORD \
+                   HASS_PASSWORD FRIGATE_PASSWORD SCRYPTED_PASSWORD; do
+        sed -i "s/^${svc_var}=.*/${svc_var}=${DEFAULT_SVC_PASSWORD}/" "$envfile"
+    done
+    echo "  Service secrets set in: $envfile"
 done
-#################### UPDATE ####################
 
-#################### UPDATE ####################
-# echo "Starting Docker containers..."
-# docker compose up -d $(docker compose config --services | grep -v face_recognition | grep -v parcel_detection | grep -v number_plate_detection | grep -v suggested_faces | grep -v sound_detection | grep -v face_training) || true
-# docker compose up -d face_recognition parcel_detection number_plate_detection suggested_faces sound_detection face_training || true
-#################### UPDATE ####################
+# --- Remove Docker volumes (postgres + redis) ---
+echo "Removing Docker volumes (postgres + redis)..."
+for vol in jupyter-container_postgres-vlm jupyter-container_redis_data; do
+    sudo docker volume rm "$vol" 2>/dev/null || echo "  Volume $vol not found or already removed."
+done
 
 # iptables: allow Docker containers to reach Django on port 8000
 if sudo iptables -L INPUT -n 2>/dev/null | grep -q "DROP.*tcp.*dpt:8000"; then
@@ -455,7 +474,7 @@ cd /root
 # ===============================
 # PHASE 6: RESTART SERVICES + POST-RESET VERIFICATION
 # ===============================
-write_progress 6 8 "in_progress" "Verifying and restarting services..."
+write_progress 6 8 "in_progress" "Verifying clean state..."
 
 # R6: Run post-reset verification BEFORE restarting services.
 # This ensures identity guard and hub-manager see clean state from the start.
@@ -524,7 +543,7 @@ done
 # app: offboard is complete, hub is about to reboot.
 # The app then watches for BLE advertising as the ready signal.
 # ===============================
-write_progress 7 8 "in_progress" "Finalizing..."
+write_progress 7 8 "in_progress" "Preparing hub for new owner..."
 echo "Stopping Cloudflare tunnel (reset signal to app)..."
 sudo systemctl stop cloudflared.service 2>/dev/null || true
 echo "  Tunnel stopped — app will detect disconnect"
@@ -533,7 +552,7 @@ sleep 3
 
 # PHASE 8: WIFI DISCONNECT (LAST — kills SSH if run manually)
 # ===============================
-write_progress 8 8 "complete" "Reset complete. Rebooting..."
+write_progress 8 8 "complete" "Reset complete! Hub is rebooting into setup mode."
 echo "Disconnecting WiFi..."
 # R4: WiFi interface is wlP2p33s0 on Rock5B+, NOT wlan0. Detect dynamically.
 WIFI_IFACE=$(nmcli -t -f DEVICE,TYPE dev | grep ':wifi$' | head -1 | cut -d: -f1)
