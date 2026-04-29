@@ -408,10 +408,37 @@ else
 fi
 
 
-# Clean cameras from PostgreSQL (ensures fresh camera setup on re-onboard)
-echo "Cleaning camera_camera table..."
-sudo docker exec postgres psql -U postgres -d events -c "DELETE FROM camera_camera CASCADE;" 2>/dev/null || true
-echo "Camera table cleaned."
+# Clean all user data from PostgreSQL (ensures fresh setup on re-onboard)
+# Tables cleared: cameras, zones, settings, Ring account, alarm/Halo devices,
+# Meross account/devices, events, faces, vehicles, parcels, garage settings,
+# GDrive backup config. Schema and Django internals are preserved.
+echo "Cleaning user data tables from hub_controller database..."
+USER_DATA_TABLES=(
+    "event_event"
+    "camera_camerasettingzone"
+    "camera_camerasetting"
+    "camera_camera"
+    "ring_ringaccount"
+    "alarm_alarmdeviceconfig"
+    "alarm_alarmdevice"
+    "automation_alarmsettings"
+    "automation_garage_garagedoorsettings"
+    "meross_merossdevice"
+    "meross_merosscloudaccount"
+    "face_training_facetraining"
+    "facial_facial"
+    "suggested_facial_suggestedfacial"
+    "vehicle_vehicle"
+    "gdrive_backup_backuprecord"
+    "gdrive_backup_backupschedule"
+    "gdrive_backup_googledriveaccount"
+    "external_device_externaldevice"
+    "cloudflare_turn_turn"
+)
+for tbl in "${USER_DATA_TABLES[@]}"; do
+    sudo docker exec postgres psql -U postgres -d hub_controller -c "DELETE FROM $tbl CASCADE;" 2>/dev/null || true
+done
+echo "User data tables cleaned."
 
 # ===============================
 # PHASE 5: DOCKER REBUILD (local images, no network needed)
