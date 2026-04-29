@@ -147,11 +147,11 @@ class ResettingProgressView(GenericAPIView):
             return Response(data, status=status.HTTP_200_OK)
         except FileNotFoundError:
             return Response(
-                {"step": 0, "total_steps": 7, "percent": 0, "status": "not_started", "message": "No reset in progress"},
+                {"operation": "unknown", "step": 0, "total_steps": 8, "percent": 0, "status": "not_started", "message": "No operation in progress"},
                 status=status.HTTP_200_OK,
             )
         except json.JSONDecodeError:
             return Response(
-                {"step": 0, "total_steps": 7, "percent": 0, "status": "error", "message": "Progress file corrupt"},
+                {"operation": "unknown", "step": 0, "total_steps": 8, "percent": 0, "status": "error", "message": "Progress file corrupt"},
                 status=status.HTTP_200_OK,
             )

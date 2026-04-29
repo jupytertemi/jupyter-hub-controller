@@ -12,4 +12,5 @@ urlpatterns = [
     ),
     path("resetting/progress", ResettingProgressView.as_view(), name="resetting_progress"),
     path("onboarding/status", OnboardingStatusView.as_view(), name="onboarding_status"),
+    path("onboarding/progress", ResettingProgressView.as_view(), name="onboarding_progress"),
 ]

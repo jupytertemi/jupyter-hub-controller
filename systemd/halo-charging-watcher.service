@@ -1,0 +1,18 @@
+[Unit]
+Description=Halo Charging MQTT Watcher - relays charging state to cloud for Live Activity
+After=network.target mosquitto.service jupyter-hub-controller.service
+Wants=mosquitto.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/jupyter-hub-controller
+EnvironmentFile=/root/jupyter-container/.env
+ExecStart=/root/jupyter-hub-controller/.venv/bin/python manage.py watch_halo_charging
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=halo-charging-watcher
+
+[Install]
+WantedBy=multi-user.target
