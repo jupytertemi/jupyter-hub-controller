@@ -58,6 +58,50 @@ def monitor_alarm_ips():
     if not devices.exists():
         return "No alarm devices"
 
+    # Backfill IP from MQTT for devices that have no IP/MAC (onboard gap)
+    # Uses EMQX HTTP Management API (not subprocess docker exec, which fails from gunicorn context)
+    missing_ip = [d for d in devices if not d.ip_address]
+    if missing_ip:
+        try:
+            emqx_password = os.environ.get("MQTT_PASSWORD", "")
+            token_resp = requests.post(
+                "http://localhost:18083/api/v5/login",
+                json={"username": "admin", "password": emqx_password},
+                timeout=5,
+            )
+            token_resp.raise_for_status()
+            emqx_token = token_resp.json()["token"]
+
+            clients_resp = requests.get(
+                "http://localhost:18083/api/v5/clients?limit=100",
+                headers={"Authorization": f"Bearer {emqx_token}"},
+                timeout=5,
+            )
+            clients_resp.raise_for_status()
+            mqtt_clients = {
+                c["clientid"]: c["ip_address"]
+                for c in clients_resp.json().get("data", [])
+                if c.get("connected")
+            }
+
+            for device in missing_ip:
+                identity = device.identity_name
+                for clientid, client_ip in mqtt_clients.items():
+                    if identity in clientid and client_ip and not client_ip.startswith("172."):
+                        device.ip_address = client_ip
+                        mac = get_mac_address(client_ip)
+                        if mac:
+                            device.mac_address = mac
+                        update_fields = ["ip_address"]
+                        if device.mac_address:
+                            update_fields.append("mac_address")
+                        device.save(update_fields=update_fields)
+                        logging.info(f"Backfilled {identity} IP from MQTT API: {client_ip} mac={mac}")
+                        break
+        except Exception as e:
+            logging.warning(f"MQTT API backfill failed: {e}")
+
+    devices = AlarmDevice.objects.all()
     results = []
     hub_ip = None
 
