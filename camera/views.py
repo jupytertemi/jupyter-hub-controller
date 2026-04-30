@@ -256,74 +256,137 @@ class CameraSettingZoneView(ListCreateAPIView):
 
 
 class CameraSnapshotProxyView(APIView):
-    """Proxy for camera snapshots with smart Frigate polling.
+    """Legacy snapshot endpoint, used by WebRTCPlayer poster + dashboard tiles.
 
-    Checks Frigate stats to see if the camera is actively streaming before
-    fetching a live frame.  When Frigate is live, the cached thumbnail is
-    updated so subsequent requests (even if Frigate goes down again) always
-    have the freshest image.  When Frigate is not ready, the cached
-    thumbnail captured during onboarding is served instantly.
+    Was Frigate-first only; if Frigate had no recent frame and no cached
+    thumbnail existed, it returned 404 → "Camera snapshot not available yet".
+
+    2026-05-01 — extended to 3-tier fallback so the snapshot is reliable
+    everywhere in the app, not just the calibration wizard:
+
+      1. Frigate latest.jpg          fast path, ~100ms when active
+      2. Direct RTSP via ffmpeg      3s timeout, only when Frigate is dead
+      3. Cached thumbnail            instant, captured at last successful
+                                     Frigate or RTSP fetch
+
+    Frigate is tried first to preserve the snappy dashboard / WebRTC poster
+    behaviour. RTSP only kicks in when Frigate is genuinely unavailable
+    (idle camera, Frigate restarting, no fps detected).
     """
     permission_classes = []
     authentication_classes = []
 
     THUMBNAIL_DIR = "/root/jupyter-hub-controller/media/thumbnails"
-
-    def _frigate_camera_active(self, slug):
-        """Return True if Frigate reports camera_fps > 0 for *slug*."""
-        try:
-            req = urllib.request.Request("http://127.0.0.1:5000/api/stats")
-            with urllib.request.urlopen(req, timeout=2) as resp:
-                stats = json.loads(resp.read())
-                return stats.get("cameras", {}).get(slug, {}).get(
-                    "camera_fps", 0
-                ) > 0
-        except Exception:
-            return False
+    FRIGATE_TIMEOUT_S = 2
+    RTSP_TIMEOUT_S = 3
 
     def _fetch_frigate_frame(self, slug):
-        """Fetch latest JPEG from Frigate. Returns bytes or None."""
+        """Fetch latest JPEG from Frigate (works whether camera_fps>0 or not).
+        Returns bytes or None. We attempt the fetch unconditionally — if
+        Frigate is up at all and has any frame for this slug it returns it.
+        """
         try:
-            req = urllib.request.Request(
-                f"http://127.0.0.1:5000/api/{slug}/latest.jpg"
-            )
-            with urllib.request.urlopen(req, timeout=2) as resp:
+            url = f"http://127.0.0.1:5000/api/{slug}/latest.jpg"
+            with urllib.request.urlopen(url, timeout=self.FRIGATE_TIMEOUT_S) as resp:
                 content = resp.read()
                 if len(content) > 100:
                     return content
-        except Exception:
-            pass
+                _snapshot_log.warning("[%s] frigate returned tiny payload (%d bytes)", slug, len(content))
+        except Exception as exc:
+            _snapshot_log.warning("[%s] frigate fetch failed: %s", slug, exc)
         return None
 
+    def _capture_rtsp(self, rtsp_url, slug):
+        """RTSP fallback for when Frigate is dead. Returns bytes or None."""
+        if not rtsp_url:
+            return None
+        with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as f:
+            out_path = f.name
+        try:
+            cmd = [
+                "ffmpeg", "-y",
+                "-hide_banner", "-loglevel", "error",
+                "-rtsp_transport", "tcp",
+                "-timeout", str(self.RTSP_TIMEOUT_S * 1_000_000),
+                "-i", rtsp_url,
+                "-frames:v", "1",
+                "-q:v", "2",
+                out_path,
+            ]
+            proc = subprocess.run(cmd, capture_output=True, timeout=self.RTSP_TIMEOUT_S + 1)
+            if proc.returncode != 0:
+                err_tail = (proc.stderr or b"").decode("utf-8", errors="replace").strip().splitlines()
+                _snapshot_log.warning(
+                    "[%s] ffmpeg rc=%d: %s",
+                    slug, proc.returncode,
+                    err_tail[-1] if err_tail else "no stderr",
+                )
+                return None
+            if os.path.getsize(out_path) < 100:
+                return None
+            with open(out_path, "rb") as f:
+                return f.read()
+        except subprocess.TimeoutExpired:
+            _snapshot_log.warning("[%s] ffmpeg wall-clock timeout", slug)
+            return None
+        except Exception as exc:
+            _snapshot_log.exception("[%s] ffmpeg exception: %s", slug, exc)
+            return None
+        finally:
+            try:
+                os.unlink(out_path)
+            except OSError:
+                pass
+
+    def _save_cache(self, slug, frame):
+        try:
+            os.makedirs(self.THUMBNAIL_DIR, exist_ok=True)
+            with open(os.path.join(self.THUMBNAIL_DIR, f"{slug}.jpg"), "wb") as f:
+                f.write(frame)
+        except OSError:
+            pass
+
     def get(self, request, slug):
-        # If Frigate is actively streaming, serve live frame and update cache
-        if self._frigate_camera_active(slug):
-            frame = self._fetch_frigate_frame(slug)
+        # 1. Frigate first (fast path)
+        frame = self._fetch_frigate_frame(slug)
+        if frame:
+            self._save_cache(slug, frame)
+            return HttpResponse(
+                frame,
+                content_type="image/jpeg",
+                headers={"X-Snapshot-Source": "frigate-live", "Cache-Control": "no-store"},
+            )
+
+        # 2. RTSP fallback (only if Frigate's dead — adds 3s but saves the user)
+        try:
+            camera = Camera.objects.get(slug_name=slug)
+        except Camera.DoesNotExist:
+            return HttpResponse(status=404)
+
+        if camera.type == CameraType.RTSP and camera.rtsp_url:
+            frame = self._capture_rtsp(camera.rtsp_url, slug)
             if frame:
-                # Update cached thumbnail with fresh frame
-                try:
-                    os.makedirs(self.THUMBNAIL_DIR, exist_ok=True)
-                    path = os.path.join(self.THUMBNAIL_DIR, f"{slug}.jpg")
-                    with open(path, "wb") as f:
-                        f.write(frame)
-                except Exception:
-                    pass
+                self._save_cache(slug, frame)
                 return HttpResponse(
                     frame,
                     content_type="image/jpeg",
-                    headers={"X-Snapshot-Source": "frigate-live"},
+                    headers={"X-Snapshot-Source": "rtsp-fallback", "Cache-Control": "no-store"},
                 )
 
-        # Frigate not active — serve cached thumbnail
+        # 3. Cached thumbnail
         path = os.path.join(self.THUMBNAIL_DIR, f"{slug}.jpg")
         if os.path.exists(path):
-            with open(path, "rb") as f:
-                return HttpResponse(
-                    f.read(),
-                    content_type="image/jpeg",
-                    headers={"X-Snapshot-Source": "cached-thumbnail"},
-                )
+            try:
+                with open(path, "rb") as f:
+                    return HttpResponse(
+                        f.read(),
+                        content_type="image/jpeg",
+                        headers={"X-Snapshot-Source": "cached-thumbnail", "Cache-Control": "no-store"},
+                    )
+            except OSError:
+                pass
 
+        _snapshot_log.error("[%s] all three snapshot sources dead", slug)
         return HttpResponse(status=404)
 
 
