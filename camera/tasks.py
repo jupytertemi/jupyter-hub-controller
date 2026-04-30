@@ -259,6 +259,167 @@ def camera_setting_config(
     return f"{container_name} config updated successfully."
 
 
+# ---------------------------------------------------------------------------
+# AI bind-mount constants healer
+# ---------------------------------------------------------------------------
+# Each AI Docker container (number_plate_detection, face_recognition,
+# parcel_detection, sound_detection, …) bind-mounts /usr/src/app/constants.py
+# from a host file at /root/jupyter-container/<image>/constants.py. That host
+# file mixes two kinds of values in the same file:
+#   (a) developer code-level defaults (thresholds, model paths, etc.)
+#   (b) app-managed runtime values written by camera_setting_config above:
+#       IS_ENABNLED  — feature toggle from CameraSetting model
+#       CAMERA_NAME  — bound camera slug from CameraSetting FK
+#
+# When an AI image rebuild copies a fresh source over the bind-mount, the
+# developer defaults arrive (good) but the (b) values get clobbered (bad —
+# resets feature off + camera unbound). The user has to toggle in the app
+# again to restore.
+#
+# This periodic task auto-heals (b) by reading the canonical state from the
+# Django CameraSetting singleton and re-applying the values. It is the same
+# write path the app toggle uses (camera_setting_config), so behaviour is
+# identical — just kicked by a clock instead of a user click.
+#
+# Survives offboarding: this task lives in code (camera/tasks.py) and the
+# beat schedule entry lives in version-controlled settings. Both ship in any
+# gold-image build. No state files to lose.
+#
+# Survives onboarding: on a fresh hub, CameraSetting may be empty (singleton
+# created on first save). The healer no-ops gracefully when no row exists.
+# Once the user toggles via app, CameraSetting is populated and the next
+# beat tick keeps the bind-mount in sync forever.
+
+# Mapping of AI containers → (CameraSetting field for is_enabled,
+# CameraSetting FK field for camera, settings.<NAME>_CONTAINER, settings path)
+# Driven entirely by django settings (env-overridable in local.py) — no
+# hardcoded paths in this file.
+AI_HEALER_CONTAINERS = (
+    {
+        'kind': 'vehicle',
+        'enabled_field': 'license_vehicle_recognition',
+        'camera_fk_field': 'vehicle_recognition_camera',
+        'container_setting': 'VEHICLE_CONFIG_NAME',
+        'path_setting': 'VEHICLE_CONFIG_PATH',
+    },
+    {
+        'kind': 'parcel',
+        'enabled_field': 'enable_parcel_detect',
+        'camera_fk_field': 'parcel_detect_camera',
+        'container_setting': 'PARCEL_CONTAINER_NAME',
+        'path_setting': 'PARCEL_CONFIG_PATH',
+    },
+    {
+        'kind': 'face',
+        'enabled_field': 'enable_face_recognition',
+        'camera_fk_field': None,  # face has no per-camera binding
+        'container_setting': 'FACIAL_CONTAINER_NAME',
+        'path_setting': 'FACIAL_CONFIG_PATH',
+    },
+    {
+        'kind': 'sound',
+        'enabled_field': 'activate_sounds_detection',
+        'camera_fk_field': None,
+        'container_setting': 'SOUND_DETECTION_CONTAINER',
+        'path_setting': 'SOUND_DETECTION_PATH',
+    },
+)
+
+
+def _read_app_managed_lines(path):
+    """Return (is_enabnled_str, camera_name_str) from a constants.py file.
+    Returns (None, None) if the file is missing/unreadable."""
+    if not path or not os.path.exists(path):
+        return None, None
+    is_enabnled = None
+    camera_name = None
+    try:
+        with open(path, 'r', encoding='UTF-8') as f:
+            for line in f:
+                stripped = line.strip()
+                if stripped.startswith('IS_ENABNLED') and '=' in stripped:
+                    is_enabnled = stripped.split('=', 1)[1].strip()
+                elif (stripped.startswith('CAMERA_NAME')
+                      and not stripped.startswith('CAMERA_NAME_LIST')
+                      and '=' in stripped):
+                    camera_name = stripped.split('=', 1)[1].strip().strip("'").strip('"')
+    except Exception as e:
+        logging.debug(f"[ai-healer] read {path}: {e}")
+        return None, None
+    return is_enabnled, camera_name
+
+
+@shared_task
+def heal_ai_constants():
+    """Periodic auto-healer for AI bind-mounted constants.py files.
+
+    For each configured AI container:
+      1. Read the current IS_ENABNLED and CAMERA_NAME from the bind-mount.
+      2. Read the desired state from the Django CameraSetting singleton.
+      3. If they drift, call camera_setting_config to re-apply the desired
+         values (same path as the user-toggle handler).
+
+    Idempotent. Runs at the cadence in CELERY_BEAT_SCHEDULE
+    (default 60 seconds, env-tunable via AI_HEALER_INTERVAL_S).
+    """
+    CameraSettingModel = apps.get_model('camera', 'CameraSetting')
+    cs = CameraSettingModel.objects.first()
+    if cs is None:
+        logging.debug("[ai-healer] No CameraSetting row yet (pre-onboarding) — skipping")
+        return "no-camera-setting"
+
+    healed = 0
+    skipped = 0
+    for spec in AI_HEALER_CONTAINERS:
+        path = getattr(settings, spec['path_setting'], None)
+        container = getattr(settings, spec['container_setting'], None)
+        if not path or not container:
+            logging.debug(f"[ai-healer] {spec['kind']}: settings missing, skip")
+            skipped += 1
+            continue
+        if not os.path.exists(path):
+            logging.debug(f"[ai-healer] {spec['kind']}: bind-mount {path} missing, skip")
+            skipped += 1
+            continue
+
+        # Desired state from Django
+        desired_enabled = bool(getattr(cs, spec['enabled_field'], False))
+        desired_camera = ''
+        if spec.get('camera_fk_field') and desired_enabled:
+            cam = getattr(cs, spec['camera_fk_field'], None)
+            if cam is not None:
+                desired_camera = getattr(cam, 'slug_name', '') or ''
+
+        # Current state on disk
+        cur_enabled_raw, cur_camera = _read_app_managed_lines(path)
+        # Normalize current "True"/"False" string to bool for compare
+        cur_enabled = (str(cur_enabled_raw).strip() == 'True') if cur_enabled_raw is not None else None
+
+        drift = (cur_enabled != desired_enabled) or ((cur_camera or '') != (desired_camera or ''))
+        if not drift:
+            logging.debug(f"[ai-healer] {spec['kind']}: in sync (enabled={cur_enabled}, camera={cur_camera!r})")
+            continue
+
+        logging.info(
+            f"[ai-healer] {spec['kind']} drift detected — "
+            f"on-disk=(IS_ENABNLED={cur_enabled_raw}, CAMERA_NAME={cur_camera!r}) "
+            f"desired=(IS_ENABNLED={desired_enabled}, CAMERA_NAME={desired_camera!r}) → re-applying"
+        )
+        try:
+            # Reuse the existing writer — same chattr/sed/chattr dance the
+            # user-toggle handler runs. Synchronous so we can log success.
+            camera_setting_config(
+                is_enabnled=desired_enabled,
+                container_name=container,
+                servicer_path=str(path),
+                camera_name=desired_camera or None,
+            )
+            healed += 1
+        except Exception as e:
+            logging.error(f"[ai-healer] {spec['kind']} heal failed: {e}")
+    return f"healed={healed} skipped={skipped} total={len(AI_HEALER_CONTAINERS)}"
+
+
 def get_ice_server():
     try:
 

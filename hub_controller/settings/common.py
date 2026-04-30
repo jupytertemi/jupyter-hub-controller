@@ -182,6 +182,10 @@ CELERY_TASK_ROUTES = {
         "queue": "camera_queue",
         "routing_key": "camera.task",
     },
+    "camera.tasks.heal_ai_constants": {
+        "queue": "camera_queue",
+        "routing_key": "camera.task",
+    },
     "camera.tasks.restart_ring_safe": {
         "queue": "ring_safe_queue",
         "routing_key": "camera.task",
@@ -273,6 +277,13 @@ CELERY_BEAT_SCHEDULE = {
     "monitor-camera-ips-every-5m": {
         "task": "camera.tasks.monitor_camera_ips",
         "schedule": 5 * 60,  # every 5 minutes (seconds)
+    },
+    # Auto-heal AI bind-mounted constants.py files. See
+    # camera/tasks.py:heal_ai_constants for the full design rationale and
+    # offboarding/onboarding semantics.
+    "heal-ai-constants-every-60s": {
+        "task": "camera.tasks.heal_ai_constants",
+        "schedule": int(os.getenv("AI_HEALER_INTERVAL_S", "60")),
     },
     "gdrive-scheduled-backups-every-5m": {
         "task": "gdrive_backup.tasks.run_scheduled_backups",
