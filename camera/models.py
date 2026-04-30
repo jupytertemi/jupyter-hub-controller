@@ -35,6 +35,14 @@ class Camera(BaseModel):
     onvif_manufacturer = models.CharField(max_length=256, null=True, blank=True)
     onvif_model = models.CharField(max_length=256, null=True, blank=True)
 
+    # 2026-05-01 — VehicleAI per-camera calibration (entry arrow + park rectangle).
+    # Consumed by state_detector.py to commit Approaching→Parked and Departing→Departed
+    # state transitions for known plates. All coordinates are normalized 0-1.
+    vehicle_entry_point_x = models.FloatField(null=True, blank=True)
+    vehicle_entry_point_y = models.FloatField(null=True, blank=True)
+    vehicle_approach_angle_deg = models.FloatField(null=True, blank=True)
+    vehicle_park_polygon = models.JSONField(null=True, blank=True)
+
 
 class RTSPCamera(Camera):
     objects = RTSPCameraManager()

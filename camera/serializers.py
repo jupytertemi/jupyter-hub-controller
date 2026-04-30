@@ -202,3 +202,99 @@ class CameraSettingSerializer(serializers.ModelSerializer):
                 )
         validated_data = super().validate(attrs)
         return validated_data
+
+
+class VehicleCalibrationSerializer(serializers.Serializer):
+    """Serializer for per-camera VehicleAI calibration (entry arrow + park rectangle).
+
+    Saves four pieces of geometry per camera that let state_detector.py commit
+    Approaching→Parked and Departing→Departed transitions reliably.
+    """
+
+    entry_point_x = serializers.FloatField(min_value=0.0, max_value=1.0)
+    entry_point_y = serializers.FloatField(min_value=0.0, max_value=1.0)
+    approach_angle_deg = serializers.FloatField(min_value=0.0)
+    park_polygon = serializers.ListField(
+        child=serializers.ListField(
+            child=serializers.FloatField(min_value=0.0, max_value=1.0),
+            min_length=2,
+            max_length=2,
+        ),
+        min_length=4,
+        max_length=4,
+    )
+
+    def validate_approach_angle_deg(self, value):
+        if value >= 360.0:
+            raise ValidationError("approach_angle_deg must be in [0, 360).")
+        return value
+
+    def validate_park_polygon(self, value):
+        # Already shape-validated (4 [x,y] pairs in [0,1]) by ListField config.
+        # Enforce axis-alignment with corner order TL, TR, BR, BL.
+        tl, tr, br, bl = value
+        if tl[0] != bl[0]:
+            raise ValidationError("park_polygon not axis-aligned: TL.x != BL.x")
+        if tr[0] != br[0]:
+            raise ValidationError("park_polygon not axis-aligned: TR.x != BR.x")
+        if tl[1] != tr[1]:
+            raise ValidationError("park_polygon not axis-aligned: TL.y != TR.y")
+        if bl[1] != br[1]:
+            raise ValidationError("park_polygon not axis-aligned: BL.y != BR.y")
+        if tl[0] >= tr[0]:
+            raise ValidationError("park_polygon zero or negative width.")
+        if tl[1] >= bl[1]:
+            raise ValidationError("park_polygon zero or negative height.")
+        return value
+
+    def validate(self, attrs):
+        # entry point must NOT lie inside the park rectangle (collapsed geometry).
+        ex, ey = attrs["entry_point_x"], attrs["entry_point_y"]
+        poly = attrs["park_polygon"]
+        min_x = min(p[0] for p in poly)
+        max_x = max(p[0] for p in poly)
+        min_y = min(p[1] for p in poly)
+        max_y = max(p[1] for p in poly)
+        if min_x <= ex <= max_x and min_y <= ey <= max_y:
+            raise ValidationError(
+                "entry_point cannot lie inside park_polygon (collapsed geometry)."
+            )
+        return attrs
+
+    @staticmethod
+    def from_camera(camera):
+        if camera.vehicle_entry_point_x is None:
+            return None
+        return {
+            "entry_point_x": camera.vehicle_entry_point_x,
+            "entry_point_y": camera.vehicle_entry_point_y,
+            "approach_angle_deg": camera.vehicle_approach_angle_deg,
+            "park_polygon": camera.vehicle_park_polygon,
+        }
+
+    @staticmethod
+    def apply_to_camera(camera, validated_data):
+        camera.vehicle_entry_point_x = validated_data["entry_point_x"]
+        camera.vehicle_entry_point_y = validated_data["entry_point_y"]
+        camera.vehicle_approach_angle_deg = validated_data["approach_angle_deg"]
+        camera.vehicle_park_polygon = validated_data["park_polygon"]
+        camera.save(update_fields=[
+            "vehicle_entry_point_x",
+            "vehicle_entry_point_y",
+            "vehicle_approach_angle_deg",
+            "vehicle_park_polygon",
+        ])
+
+    @staticmethod
+    def clear_on_camera(camera):
+        camera.vehicle_entry_point_x = None
+        camera.vehicle_entry_point_y = None
+        camera.vehicle_approach_angle_deg = None
+        camera.vehicle_park_polygon = None
+        camera.save(update_fields=[
+            "vehicle_entry_point_x",
+            "vehicle_entry_point_y",
+            "vehicle_approach_angle_deg",
+            "vehicle_park_polygon",
+        ])
+

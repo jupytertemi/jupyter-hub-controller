@@ -5,6 +5,7 @@ from camera.views import (
     CameraSettingUpdateView,
     CameraSettingZoneView,
     CameraSnapshotProxyView,
+    CameraVehicleCalibrationView,
     ListCameraView,
     ListCreateRingCameraView,
     ListCreateRTSPCameraView,
@@ -24,6 +25,11 @@ urlpatterns = [
     path("cameras/setting", CameraSettingUpdateView.as_view(), name="cameras/setting"),
     path("cameras/zone", CameraSettingZoneView.as_view(), name="cameras"),
     path("cameras/<str:slug>/snapshot", CameraSnapshotProxyView.as_view(), name="camera-snapshot"),
+    path(
+        "cameras/<str:slug>/vehicle-calibration",
+        CameraVehicleCalibrationView.as_view(),
+        name="camera-vehicle-calibration",
+    ),
     path("cameras/<str:pk>/reboot", CameraRebootView.as_view(), name="camera-reboot"),
     path("cameras/<str:pk>", UpdateDeleteCameraView.as_view(), name="cameras"),
 ]

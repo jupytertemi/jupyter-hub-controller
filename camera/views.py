@@ -36,6 +36,7 @@ from camera.serializers import (
     RTSPCameraUrlSerializer,
     RTSPDiscoveringSerializer,
     UpdateCameraSerializer,
+    VehicleCalibrationSerializer,
 )
 from camera.tasks import update_camera_config, update_frigate_config, cleanup_ring_device
 from ring.tasks import clear_ring_auth
@@ -380,3 +381,86 @@ class CameraRebootView(APIView):
                 {"error": f"Reboot failed: {str(e)}"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
+
+
+class CameraVehicleCalibrationView(APIView):
+    """Per-camera VehicleAI calibration: entry-arrow + park-rectangle.
+
+    GET    /cameras/<slug>/vehicle-calibration  → 200 with calibration, 404 if unset
+    POST   /cameras/<slug>/vehicle-calibration  → 200 with saved payload
+    DELETE /cameras/<slug>/vehicle-calibration  → 204 (clears, falls back to defaults)
+
+    The calibration is consumed by state_detector.py (number_plate_detection
+    container) to commit Approaching→Parked and Departing→Departed transitions.
+    Frigate is intentionally bypassed for the entry arrow because Frigate's
+    ZoneConfig has no line/tripwire primitive — only the park rectangle could
+    be pushed to Frigate as a polygon zone (deferred to Phase 2).
+    """
+
+    http_method_names = ["get", "post", "delete"]
+
+    def _get_camera(self, slug):
+        try:
+            return Camera.objects.get(slug_name=slug)
+        except Camera.DoesNotExist:
+            return None
+
+    def _ensure_vehicle_ai_enabled(self, camera):
+        """Vehicle calibration only saveable if license_vehicle_recognition is
+        on for this camera (the AI gate)."""
+        setting = CameraSetting.objects.filter(
+            license_vehicle_recognition=True,
+            vehicle_recognition_camera=camera,
+        ).first()
+        return setting is not None
+
+    def get(self, request, slug):
+        camera = self._get_camera(slug)
+        if camera is None:
+            return Response(
+                {"error": f"Camera '{slug}' not found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+        payload = VehicleCalibrationSerializer.from_camera(camera)
+        if payload is None:
+            return Response(
+                {"error": "Calibration not set for this camera."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+        return Response(payload, status=status.HTTP_200_OK)
+
+    def post(self, request, slug):
+        camera = self._get_camera(slug)
+        if camera is None:
+            return Response(
+                {"error": f"Camera '{slug}' not found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+        if not self._ensure_vehicle_ai_enabled(camera):
+            return Response(
+                {
+                    "error": (
+                        "VehicleAI is not enabled for this camera. Enable "
+                        "license_vehicle_recognition with vehicle_recognition_camera "
+                        "set to this camera before saving calibration."
+                    )
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        serializer = VehicleCalibrationSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        VehicleCalibrationSerializer.apply_to_camera(camera, serializer.validated_data)
+        return Response(
+            VehicleCalibrationSerializer.from_camera(camera),
+            status=status.HTTP_200_OK,
+        )
+
+    def delete(self, request, slug):
+        camera = self._get_camera(slug)
+        if camera is None:
+            return Response(
+                {"error": f"Camera '{slug}' not found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+        VehicleCalibrationSerializer.clear_on_camera(camera)
+        return Response(status=status.HTTP_204_NO_CONTENT)
