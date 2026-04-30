@@ -2,6 +2,7 @@ from django.urls import path
 
 from camera.views import (
     CameraRebootView,
+    CameraRTSPSnapshotView,
     CameraSettingUpdateView,
     CameraSettingZoneView,
     CameraSnapshotProxyView,
@@ -25,6 +26,11 @@ urlpatterns = [
     path("cameras/setting", CameraSettingUpdateView.as_view(), name="cameras/setting"),
     path("cameras/zone", CameraSettingZoneView.as_view(), name="cameras"),
     path("cameras/<str:slug>/snapshot", CameraSnapshotProxyView.as_view(), name="camera-snapshot"),
+    path(
+        "cameras/<str:slug>/rtsp-snapshot",
+        CameraRTSPSnapshotView.as_view(),
+        name="camera-rtsp-snapshot",
+    ),
     path(
         "cameras/<str:slug>/vehicle-calibration",
         CameraVehicleCalibrationView.as_view(),

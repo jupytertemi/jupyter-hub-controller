@@ -1,5 +1,8 @@
 import json
+import logging
 import os
+import subprocess
+import tempfile
 import urllib.request
 
 from django.http import HttpResponse
@@ -381,6 +384,164 @@ class CameraRebootView(APIView):
                 {"error": f"Reboot failed: {str(e)}"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
+
+
+_snapshot_log = logging.getLogger("camera.snapshot")
+
+
+class CameraRTSPSnapshotView(APIView):
+    """Snapshot endpoint for the VehicleAI calibration wizard (and any flow
+    that needs the freshest possible camera frame).
+
+    Capture order, fail-fast at each step:
+      1. Direct RTSP → ffmpeg single-frame grab, 3-second hard timeout.
+      2. Frigate `latest.jpg` → 2-second timeout. (For Ring cameras with no
+         rtsp_url this is effectively the only path; go2rtc bridges Ring to
+         Frigate.)
+      3. Cached thumbnail captured during onboarding.
+
+    Returns 503 only if all three sources fail. Sets `X-Snapshot-Source`
+    header so the client can distinguish live RTSP from fallback.
+
+    Logging is verbose by design — every failure logs why, so the wizard's
+    "snapshot failed to load" reports can be diagnosed from journalctl.
+    """
+
+    permission_classes = []
+    authentication_classes = []
+
+    THUMBNAIL_DIR = "/root/jupyter-hub-controller/media/thumbnails"
+    RTSP_TIMEOUT_S = 3
+    FRIGATE_TIMEOUT_S = 2
+
+    def _capture_rtsp(self, rtsp_url, slug):
+        """Grab one JPEG frame from the RTSP URL via ffmpeg. Returns bytes or None."""
+        if not rtsp_url:
+            _snapshot_log.warning("[%s] no rtsp_url on Camera row", slug)
+            return None
+        with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as f:
+            out_path = f.name
+        try:
+            cmd = [
+                "ffmpeg", "-y",
+                "-hide_banner", "-loglevel", "error",
+                "-rtsp_transport", "tcp",
+                # ffmpeg 5.x renamed -stimeout to -timeout (microseconds)
+                "-timeout", str(self.RTSP_TIMEOUT_S * 1_000_000),
+                "-i", rtsp_url,
+                "-frames:v", "1",
+                "-q:v", "2",
+                out_path,
+            ]
+            proc = subprocess.run(
+                cmd,
+                capture_output=True,
+                timeout=self.RTSP_TIMEOUT_S + 1,  # hard wall-clock cap
+            )
+            if proc.returncode != 0:
+                # ffmpeg writes useful info to stderr — log truncated last line only
+                err_tail = (proc.stderr or b"").decode("utf-8", errors="replace").strip().splitlines()
+                _snapshot_log.warning(
+                    "[%s] ffmpeg rc=%d: %s",
+                    slug, proc.returncode,
+                    err_tail[-1] if err_tail else "no stderr",
+                )
+                return None
+            if not os.path.exists(out_path) or os.path.getsize(out_path) < 100:
+                _snapshot_log.warning("[%s] ffmpeg produced empty/missing file", slug)
+                return None
+            with open(out_path, "rb") as f:
+                content = f.read()
+            _snapshot_log.info("[%s] rtsp capture OK (%d bytes)", slug, len(content))
+            return content
+        except subprocess.TimeoutExpired:
+            _snapshot_log.warning("[%s] ffmpeg wall-clock timeout (>%ds)", slug, self.RTSP_TIMEOUT_S + 1)
+            return None
+        except Exception as exc:
+            _snapshot_log.exception("[%s] ffmpeg exception: %s", slug, exc)
+            return None
+        finally:
+            try:
+                os.unlink(out_path)
+            except OSError:
+                pass
+
+    def _fetch_frigate_latest(self, slug):
+        """Frigate fallback. Returns bytes or None."""
+        try:
+            url = f"http://127.0.0.1:5000/api/{slug}/latest.jpg"
+            with urllib.request.urlopen(url, timeout=self.FRIGATE_TIMEOUT_S) as resp:
+                content = resp.read()
+                if len(content) > 100:
+                    _snapshot_log.info("[%s] frigate fallback OK (%d bytes)", slug, len(content))
+                    return content
+                _snapshot_log.warning("[%s] frigate returned tiny payload (%d bytes)", slug, len(content))
+        except Exception as exc:
+            _snapshot_log.warning("[%s] frigate fallback failed: %s", slug, exc)
+        return None
+
+    def _read_cached_thumbnail(self, slug):
+        path = os.path.join(self.THUMBNAIL_DIR, f"{slug}.jpg")
+        if os.path.exists(path):
+            try:
+                with open(path, "rb") as f:
+                    return f.read()
+            except OSError as exc:
+                _snapshot_log.warning("[%s] cached thumbnail unreadable: %s", slug, exc)
+        return None
+
+    def get(self, request, slug):
+        try:
+            camera = Camera.objects.get(slug_name=slug)
+        except Camera.DoesNotExist:
+            _snapshot_log.warning("[%s] camera not found", slug)
+            return HttpResponse(
+                json.dumps({"error": f"Camera '{slug}' not found"}),
+                status=status.HTTP_404_NOT_FOUND,
+                content_type="application/json",
+            )
+
+        # 1. RTSP direct (skip for Ring cams — they have no usable rtsp_url)
+        if camera.type == CameraType.RTSP and camera.rtsp_url:
+            frame = self._capture_rtsp(camera.rtsp_url, slug)
+            if frame:
+                return HttpResponse(
+                    frame,
+                    content_type="image/jpeg",
+                    headers={"X-Snapshot-Source": "rtsp-direct", "Cache-Control": "no-store"},
+                )
+
+        # 2. Frigate fallback
+        frame = self._fetch_frigate_latest(slug)
+        if frame:
+            # Update cached thumbnail opportunistically
+            try:
+                os.makedirs(self.THUMBNAIL_DIR, exist_ok=True)
+                with open(os.path.join(self.THUMBNAIL_DIR, f"{slug}.jpg"), "wb") as f:
+                    f.write(frame)
+            except OSError:
+                pass
+            return HttpResponse(
+                frame,
+                content_type="image/jpeg",
+                headers={"X-Snapshot-Source": "frigate-fallback", "Cache-Control": "no-store"},
+            )
+
+        # 3. Cached thumbnail
+        cached = self._read_cached_thumbnail(slug)
+        if cached:
+            return HttpResponse(
+                cached,
+                content_type="image/jpeg",
+                headers={"X-Snapshot-Source": "cached-thumbnail", "Cache-Control": "no-store"},
+            )
+
+        _snapshot_log.error("[%s] all three snapshot sources failed", slug)
+        return HttpResponse(
+            json.dumps({"error": "snapshot unavailable from all sources (rtsp/frigate/cache)"}),
+            status=status.HTTP_503_SERVICE_UNAVAILABLE,
+            content_type="application/json",
+        )
 
 
 class CameraVehicleCalibrationView(APIView):
