@@ -276,7 +276,13 @@ class CameraSnapshotProxyView(APIView):
     permission_classes = []
     authentication_classes = []
 
-    THUMBNAIL_DIR = "/root/jupyter-hub-controller/media/thumbnails"
+    # Shared with camera.tasks.SNAPSHOT_DIR via settings — see CAMERA_THUMBNAILS_DIR
+    # in hub_controller/settings/common.py. Single source of truth.
+    THUMBNAIL_DIR = getattr(
+        __import__("django.conf", fromlist=["settings"]).settings,
+        "CAMERA_THUMBNAILS_DIR",
+        "/root/jupyter-hub-controller/media/thumbnails",
+    )
     FRIGATE_TIMEOUT_S = 2
     RTSP_TIMEOUT_S = 3
 
@@ -473,7 +479,13 @@ class CameraRTSPSnapshotView(APIView):
     permission_classes = []
     authentication_classes = []
 
-    THUMBNAIL_DIR = "/root/jupyter-hub-controller/media/thumbnails"
+    # Shared with camera.tasks.SNAPSHOT_DIR via settings — see CAMERA_THUMBNAILS_DIR
+    # in hub_controller/settings/common.py. Single source of truth.
+    THUMBNAIL_DIR = getattr(
+        __import__("django.conf", fromlist=["settings"]).settings,
+        "CAMERA_THUMBNAILS_DIR",
+        "/root/jupyter-hub-controller/media/thumbnails",
+    )
     RTSP_TIMEOUT_S = 3
     FRIGATE_TIMEOUT_S = 2
 

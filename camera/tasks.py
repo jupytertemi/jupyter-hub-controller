@@ -662,60 +662,112 @@ def cleanup_ring_device(ring_device_id):
     return f"Ring device {ring_device_id} cleanup complete"
 
 
-SNAPSHOT_DIR = os.path.join(
-    getattr(settings, 'BASE_DIR', '/root/jupyter-hub-controller'),
-    'media', 'thumbnails',
+# Single source of truth — must match camera.views.CameraSnapshotProxyView.THUMBNAIL_DIR.
+# Defined in settings/common.py so the task and the view can never diverge again.
+SNAPSHOT_DIR = getattr(
+    settings,
+    "CAMERA_THUMBNAILS_DIR",
+    "/root/jupyter-hub-controller/media/thumbnails",
 )
 
 
 @shared_task
 def capture_camera_snapshots():
-    """Grab one JPEG frame from each RTSP camera, bypassing Frigate entirely."""
+    """Pre-warm /media/thumbnails/<slug>.jpg for every enabled camera.
+
+    Two-source fallback per camera so a transient RTSP failure (busy stream,
+    network blip) never leaves a stale thumbnail:
+
+      1. RTSP via ffmpeg (RTSP-type cameras only). Uses sub_rtsp_url if
+         available — it's lower-bandwidth, faster to grab a single frame.
+      2. Frigate latest.jpg (works for ALL camera types including Ring,
+         which routes through go2rtc → Frigate).
+
+    Whichever succeeds first writes the thumbnail. If both fail in the same
+    cycle, the previous thumbnail stays in place — staleness, not 404.
+
+    Called by Celery beat (see CELERY_BEAT_SCHEDULE in settings/common.py).
+    """
     import os as _os
+    import urllib.request
     from camera.enums import CameraType
     from camera.models import Camera
 
     _os.makedirs(SNAPSHOT_DIR, exist_ok=True)
 
-    cameras = Camera.objects.filter(is_enabled=True, type=CameraType.RTSP)
+    cameras = Camera.objects.filter(is_enabled=True)
     if not cameras.exists():
-        return "No enabled RTSP cameras"
+        return "No enabled cameras"
 
-    results = []
-    for camera in cameras:
-        rtsp_url = camera.sub_rtsp_url or camera.rtsp_url
-        if not rtsp_url:
-            results.append(f"{camera.slug_name}: no RTSP URL")
-            continue
-
-        output_path = _os.path.join(SNAPSHOT_DIR, f"{camera.slug_name}.jpg")
-        tmp_path = f"{output_path}.tmp"
-
+    def _try_rtsp(rtsp_url, tmp_path):
+        """Returns True on success."""
         try:
             proc = subprocess.run(
                 [
                     "ffmpeg", "-y",
+                    "-hide_banner", "-loglevel", "error",
                     "-rtsp_transport", "tcp",
+                    "-timeout", "3000000",  # 3s socket timeout (microseconds)
                     "-i", rtsp_url,
                     "-frames:v", "1",
                     "-q:v", "5",
                     tmp_path,
                 ],
                 capture_output=True,
-                timeout=15,
+                timeout=8,
             )
-            if proc.returncode == 0 and _os.path.exists(tmp_path):
-                _os.replace(tmp_path, output_path)
-                results.append(f"{camera.slug_name}: OK")
-            else:
-                logging.warning(f"Snapshot failed for {camera.slug_name}: {proc.stderr[-200:]}")
-                results.append(f"{camera.slug_name}: ffmpeg error")
-        except subprocess.TimeoutExpired:
-            results.append(f"{camera.slug_name}: timeout")
-        except Exception as e:
-            results.append(f"{camera.slug_name}: {e}")
-        finally:
-            if _os.path.exists(tmp_path):
-                _os.remove(tmp_path)
+            return proc.returncode == 0 and _os.path.exists(tmp_path) and _os.path.getsize(tmp_path) > 100
+        except (subprocess.TimeoutExpired, Exception):
+            return False
 
-    return "; ".join(results)
+    def _try_frigate(slug, output_path):
+        """Returns True on success."""
+        try:
+            url = f"http://127.0.0.1:5000/api/{slug}/latest.jpg"
+            with urllib.request.urlopen(url, timeout=2) as resp:
+                content = resp.read()
+                if len(content) > 100:
+                    with open(output_path, "wb") as f:
+                        f.write(content)
+                    return True
+        except Exception:
+            pass
+        return False
+
+    ok = 0
+    failed = []
+    for camera in cameras:
+        slug = camera.slug_name
+        output_path = _os.path.join(SNAPSHOT_DIR, f"{slug}.jpg")
+        tmp_path = f"{output_path}.tmp"
+
+        captured = False
+
+        # 1. RTSP first for RTSP-type cameras
+        if camera.type == CameraType.RTSP:
+            rtsp_url = camera.sub_rtsp_url or camera.rtsp_url
+            if rtsp_url and _try_rtsp(rtsp_url, tmp_path):
+                _os.replace(tmp_path, output_path)
+                ok += 1
+                captured = True
+
+        # 2. Frigate fallback for everything (incl. Ring)
+        if not captured and _try_frigate(slug, output_path):
+            ok += 1
+            captured = True
+
+        if not captured:
+            failed.append(slug)
+
+        # Cleanup any leftover tmp file
+        if _os.path.exists(tmp_path):
+            try:
+                _os.remove(tmp_path)
+            except OSError:
+                pass
+
+    msg = f"thumbnails refreshed: {ok}/{cameras.count()} OK"
+    if failed:
+        msg += f"; failed: {','.join(failed)}"
+    logging.info(msg)
+    return msg

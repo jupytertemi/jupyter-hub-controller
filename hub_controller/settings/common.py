@@ -268,6 +268,16 @@ CELERY_TASK_ROUTES = {
     },
 }
 
+# Camera thumbnail cache — proactively refreshed by camera.tasks.capture_camera_snapshots
+# every 5 minutes, read by camera.views.CameraSnapshotProxyView. Both must point at the
+# same dir; previously they diverged (task wrote to BASE_DIR/media/thumbnails, view read
+# from a hardcoded literal that didn't match) and the cache was effectively unused.
+CAMERA_THUMBNAILS_DIR = os.environ.get(
+    "CAMERA_THUMBNAILS_DIR",
+    "/root/jupyter-hub-controller/media/thumbnails",
+)
+
+
 # Celery Beat Schedule — periodic tasks
 CELERY_BEAT_SCHEDULE = {
     "rotate-turn-credentials-every-12h": {
@@ -293,9 +303,14 @@ CELERY_BEAT_SCHEDULE = {
         "task": "gdrive_backup.tasks.check_gdrive_space",
         "schedule": 6 * 60 * 60,
     },
-    "capture-camera-snapshots-every-30m": {
+    # Proactive snapshot cache — every 5 min refresh /media/thumbnails/<slug>.jpg
+    # for every enabled camera. Endpoints serving the cached file (legacy
+    # /snapshot, dashboard tiles, WebRTCPlayer poster) become near-instant
+    # (~10ms file read). The wizard's /rtsp-snapshot bypasses this and goes
+    # live for fresh framing when the user is actively setting up calibration.
+    "capture-camera-snapshots-every-5m": {
         "task": "camera.tasks.capture_camera_snapshots",
-        "schedule": 30 * 60,
+        "schedule": 5 * 60,
     },
     "scan-broken-video-paths-every-30s": {
         "task": "event.tasks.scan_broken_video_paths",
