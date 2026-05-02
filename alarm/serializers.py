@@ -86,9 +86,11 @@ class UpdateAlarmDeviceSerializer(AlarmDeviceSerializer):
             "identity_name": {
                 "read_only": True,
             },
-            "type": {
-                "read_only": True,
-            },
+            # `type` is now writable on PATCH (was read_only). Build 156 item 7.
+            # Allows the Flutter app's saveMetadata flow to PATCH the user's
+            # QR-derived INDOOR/OUTDOOR choice onto the auto-created row,
+            # which webhook initially defaults to INDOOR. AlarmType TextChoices
+            # provides the value-validation gate (only INDOOR/OUTDOOR accepted).
         }
 
 

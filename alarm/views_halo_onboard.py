@@ -29,6 +29,7 @@ from alarm.services.pending_onboard import (
     mark_pending,
     is_pending,
     clear_pending,
+    get_onboard_started_at,
     health_check as pending_health_check,
 )
 from alarm.services.wifi_freq import (
@@ -256,22 +257,61 @@ class AlarmWaitOnlineView(APIView):
             )
         timeout = min(timeout, 60.0)
         deadline = time.monotonic() + timeout
+        # Build 156 item 2: tighter polling (0.5s → 0.25s) halves the
+        # race window where a webhook commit can land between polls.
+        poll_interval = 0.25
+        # Build 156 item 6: capture pending-marked timestamp so we can
+        # report `time_to_register_seconds` to the iPhone client. Read
+        # once at request start; the pending key may be cleared by the
+        # webhook before we finish polling.
+        started_at = get_onboard_started_at(identity_name)
+
+        def _success_response(device):
+            time_to_register = None
+            if started_at is not None:
+                time_to_register = round(time.time() - started_at, 2)
+            return Response(
+                {"status": "online",
+                 "device": AlarmDeviceSerializer(device).data,
+                 "time_to_register_seconds": time_to_register},
+                status=status.HTTP_200_OK,
+            )
 
         while time.monotonic() < deadline:
             try:
                 device = AlarmDevice.objects.get(identity_name=identity_name)
+                return _success_response(device)
             except AlarmDevice.DoesNotExist:
-                time.sleep(0.5)
-                continue
-            return Response(
-                {"status": "online",
-                 "device": AlarmDeviceSerializer(device).data},
-                status=status.HTTP_200_OK,
+                time.sleep(poll_interval)
+
+        # Final-grace check: catches commits that landed between the last
+        # poll and the deadline. The webhook auto-create transaction can
+        # be slow when HA registration runs inline (2-5s), so a register
+        # heartbeat at T=28 might commit at T=30.5 — outside our polling
+        # window. Grace check closes that race without extending the
+        # wall-clock budget.
+        try:
+            device = AlarmDevice.objects.get(identity_name=identity_name)
+            logger.info(
+                "halo_wait_online_grace_hit identity_name=%s waited=%.1fs",
+                identity_name, timeout,
             )
+            return _success_response(device)
+        except AlarmDevice.DoesNotExist:
+            pass
 
         logger.warning(
             "halo_wait_online_timeout identity_name=%s waited=%.1fs",
             identity_name, timeout,
+        )
+        # Build 156 item 6: surface timing context on 408 so the iPhone's
+        # late-register fallback (Build 156 item 1) can decide whether to
+        # immediately fire `GET /alarms?identity_name=` (the row may have
+        # JUST landed in the milliseconds between our last poll and this
+        # response).
+        from datetime import datetime, timezone as _tz
+        last_register_check_at = datetime.now(_tz.utc).isoformat().replace(
+            "+00:00", "Z",
         )
         return Response(
             {"status": "timeout",
@@ -281,7 +321,10 @@ class AlarmWaitOnlineView(APIView):
                  "WiFi credentials wrong, Halo couldn't reach hub MQTT broker, "
                  "or Halo firmware crashed during boot. Restart the Halo and retry."
              ),
-             "identity_name": identity_name},
+             "identity_name": identity_name,
+             "time_to_register_seconds": None,
+             "last_register_check_at": last_register_check_at,
+             "onboard_started_at_known": started_at is not None},
             status=status.HTTP_408_REQUEST_TIMEOUT,
         )
 

@@ -15,6 +15,10 @@ from alarm.views_halo_onboard import (
     HaloRegisterWebhookView,
     HaloRecoverySecretView,
 )
+from alarm.views_halo_recovery import (
+    HaloRecoveryConfirmView,
+    HaloRecoveryCancelView,
+)
 
 app_name = "alarm"
 
@@ -50,6 +54,17 @@ urlpatterns = [
         "alarms/<str:slug>/recovery-secret",
         HaloRecoverySecretView.as_view(),
         name="halo-recovery-secret",
+    ),
+    # ---- 2FA factory reset (Live Activity-driven offboard) ----
+    path(
+        "halo/recovery/confirm",
+        HaloRecoveryConfirmView.as_view(),
+        name="halo-recovery-confirm",
+    ),
+    path(
+        "halo/recovery/cancel",
+        HaloRecoveryCancelView.as_view(),
+        name="halo-recovery-cancel",
     ),
     # ---- Legacy detail (must be LAST — wildcard catch-all) ----
     path("alarms/<str:id>", RetrieveDeleteAlarmDeviceView.as_view()),

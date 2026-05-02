@@ -53,6 +53,22 @@ def derive_mac_from_slug(slug: str) -> str:
     return f"{raw[0:2]}:{raw[2:4]}:{raw[4:6]}"
 
 
+def _type_from_serial(serial: str) -> Optional[str]:
+    """Halo serials are baked at manufacture: JUP-OUTDR-XXXXXX (outdoor unit)
+    or JUP-INDR-XXXXXX (indoor unit). Returns the corresponding AlarmType
+    value, or None if the serial doesn't match either pattern (don't override
+    the row's existing type in that case)."""
+    if not serial:
+        return None
+    s = serial.upper()
+    # Order matters — match the more specific token first
+    if "OUTDR" in s:
+        return "OUTDOOR"
+    if "INDR" in s:
+        return "INDOOR"
+    return None
+
+
 def merge_enrichment(slug: str, status: Optional[Dict]) -> Dict:
     """Build the dict of fields to apply to AlarmDevice from a /api/status
     response. Fields we DON'T trust the firmware to populate (mac_address)
@@ -64,4 +80,10 @@ def merge_enrichment(slug: str, status: Optional[Dict]) -> Dict:
             out["version_fw"] = status["firmware"]
         if status.get("device"):
             out["status_device_field"] = status["device"]
+        # Build 156 item 7.5: Halo's serial encodes form factor.
+        # Webhook initially defaults to INDOOR; this lets enrichment promote
+        # to OUTDOOR (or confirm INDOOR) based on firmware-baked truth.
+        type_from_serial = _type_from_serial(status.get("serial_number") or "")
+        if type_from_serial:
+            out["type_from_serial"] = type_from_serial
     return out

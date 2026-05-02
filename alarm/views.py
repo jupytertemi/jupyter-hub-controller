@@ -49,41 +49,120 @@ class RetrieveDeleteAlarmDeviceView(RetrieveUpdateDestroyAPIView):
     queryset = AlarmDevice.objects.all()
 
     def destroy(self, request, *args, **kwargs):
+        """Offboard a Halo.
+
+        Per HALO_2FA_FACTORY_RESET_BACKEND_BRIEF.md (firmware ≥ v2.19.1) the
+        unauthenticated factory-reset paths (HTTP /factoryreset, TCP socket
+        action: factory_reset, Argus command) are blocked. The only way to
+        wipe the Halo's NVS is the MQTT 2FA flow:
+
+            1. Hub publishes `factory_reset` + device_secret to /{slug}/recovery
+            2. Halo replies `pending` with a one-time nonce
+            3. Hub fires a Live Activity push to admin's phone
+            4. Admin taps Confirm → hub publishes `confirm_factory_reset` + nonce
+            5. Halo wipes NVS, reboots to AP mode
+
+        Per product decision: hub-side cleanup (DB row, HA scripts/automations)
+        runs UNCONDITIONALLY. If the admin doesn't confirm within 60s, the
+        Halo's own internal timer auto-cancels. The Halo stays bonded to
+        nothing (its hub config still points at us, but our DB row is gone),
+        which is acceptable — we'd rather a stranded Halo than a stranded
+        hub-side row.
+        """
         instance = self.get_object()
         identity_name = instance.identity_name
-        
-        # Try factory reset, but continue cleanup even if it fails
-        factory_reset_success = False
-        try:
-            response = publish_socket_message(
-                {
-                    "action": "factory_reset",
-                    "device_name": identity_name,
-                },
-                wait_response=False,  # Don't wait - transfer_server doesn't relay ESP responses
-                timeout=5,
+        device_secret = instance.device_secret  # v1.6 column
+        alarm_id = instance.id
+
+        # SEQUENCING (critical):
+        #   1. Initiate 2FA factory reset SYNCHRONOUSLY (publish + wait ≤5s
+        #      for pending nonce). MQTT broker + live_activity_publisher
+        #      are still alive at this point, so the publish reliably
+        #      lands and the LA push reliably fires.
+        #   2. ONLY THEN run perform_destroy() (HA scripts, automations,
+        #      DB row). If we did this first, gunicorn-worker-death mid
+        #      cleanup would drop the 2FA thread before publish landed.
+        #
+        # Worst case: Halo offline → 5s block, no pending response, no LA
+        # push, hub-side cleanup proceeds anyway. Halo will need physical
+        # reset. This is the documented behavior per the firmware brief.
+        # Verified-confirm offboard flow with cancel-first + retry.
+        # See alarm/services/halo_recovery.py::factory_reset_with_verify
+        # and docs/halo-2fa-factory-reset-firmware-bug-2026-05-03.md for
+        # rationale. The hub publishes cancel → factory_reset → confirm,
+        # then verifies the firmware actually replied `confirmed/resetting`
+        # before declaring success. If confirm is silently dropped (real
+        # v2.21.0 firmware bug we hit in testing), the chain retries up to
+        # 2 attempts with cancel-first to clear stale state.
+        factory_reset_confirmed = False
+        result_reason = None
+        attempts = 0
+        nonce = None
+        serial = None
+        if device_secret:
+            from alarm.services.halo_recovery import factory_reset_with_verify
+
+            result = factory_reset_with_verify(identity_name, device_secret,
+                                               max_attempts=2)
+            attempts = result.get("attempts", 0)
+            if result.get("success"):
+                factory_reset_confirmed = True
+                nonce = result.get("nonce")
+                serial = result.get("serial")
+                logging.info(
+                    "halo_offboard verified_success slug=%s nonce=%s serial=%s attempts=%d",
+                    identity_name, nonce, serial, attempts,
+                )
+            else:
+                result_reason = result.get("reason")
+                nonce = result.get("last_nonce")
+                serial = result.get("last_serial")
+                logging.warning(
+                    "halo_offboard verified_failed slug=%s reason=%s attempts=%d — proceeding with hub-side cleanup",
+                    identity_name, result_reason, attempts,
+                )
+        else:
+            logging.warning(
+                "halo_offboard no_device_secret slug=%s — pre-v1.6 Halo. "
+                "Skipping factory reset. Physical reset required.",
+                identity_name,
             )
 
-            if response and response.get("status") == "ok" and response.get("device") == identity_name:
-                factory_reset_success = True
-                logging.info(f"Factory reset successful for {identity_name}")
-            else:
-                logging.warning(f"Factory reset failed for {identity_name}: {response}")
-        except Exception as exc:
-            logging.warning(f"Factory reset exception for {identity_name}: {exc}")
-
-        # ALWAYS perform cleanup, regardless of factory reset result
-        # User can manually reset device if needed
+        # Hub-side cleanup runs unconditionally. Authoritative state.
         self.perform_destroy(instance)
-        
+
+        if factory_reset_confirmed:
+            note = ("Halo factory reset and reverting to AP mode. "
+                    "Re-scan the QR sticker to onboard fresh.")
+        elif not device_secret:
+            note = ("Hub-side cleanup complete. device_secret unknown — "
+                    "physically reset (hold button) the Halo.")
+        elif result_reason == "firmware_silent_no_pending":
+            note = ("Halo did not respond to factory_reset (firmware MQTT "
+                    "appears hung). Power-cycle the Halo and retry from the app.")
+        elif result_reason and result_reason.startswith("denied:invalid_secret"):
+            note = ("Halo rejected the stored secret — likely the device "
+                    "was wiped out-of-band. Hub-side cleanup done. Power-"
+                    "cycle the Halo to restart cleanly.")
+        elif result_reason == "firmware_silent_no_confirmed":
+            note = ("Halo accepted reset request but never confirmed the "
+                    "wipe (firmware bug). Power-cycle the Halo and retry.")
+        else:
+            note = (f"Halo factory reset did not verify (reason: {result_reason}). "
+                    "Hub-side cleanup done. Power-cycle the Halo and retry.")
+
         return Response(
             {
                 "status": "success",
                 "message": "Alarm device deleted from hub",
-                "factory_reset_sent": factory_reset_success,
-                "note": "Factory reset sent. Device will reboot to setup mode." if factory_reset_success else "Failed to send reset command."
+                "factory_reset_confirmed": factory_reset_confirmed,
+                "factory_reset_attempts": attempts,
+                "factory_reset_reason": result_reason,
+                "factory_reset_nonce": nonce,
+                "factory_reset_serial": serial,
+                "note": note,
             },
-            status=status.HTTP_200_OK
+            status=status.HTTP_200_OK,
         )
 
     def perform_destroy(self, instance):

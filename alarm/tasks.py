@@ -15,7 +15,8 @@ logger = logging.getLogger(__name__)
 # v1.6 Halo onboard tasks
 # --------------------------------------------------------------------------
 
-@shared_task(bind=True, max_retries=10, default_retry_delay=60)
+@shared_task(bind=True, max_retries=10, default_retry_delay=60,
+             queue="hub_operations_queue")
 def enrich_and_publish_ha_discovery(self, device_id: int):
     """Off-thread enrichment + HA Auto-Discovery republish.
 
@@ -53,6 +54,18 @@ def enrich_and_publish_ha_discovery(self, device_id: int):
         if enrichment.get("mac_address") and not device.mac_address:
             device.mac_address = enrichment["mac_address"]
             fields_changed.append("mac_address")
+        # Build 156 item 7.5: parse Halo's serial from /api/status to set
+        # the form-factor type. Webhook defaults to INDOOR; serial is the
+        # firmware-baked authoritative source. Only overrides on first
+        # enrichment so a user PATCH (Build 156 item 5) wins later.
+        from alarm.enums import AlarmType
+        type_from_serial = enrichment.get("type_from_serial")
+        if type_from_serial and device.type == AlarmType.INDOOR:
+            # Only "promote" from default INDOOR. If user PATCHed to OUTDOOR
+            # already, OR firmware says INDOOR matching default, leave alone.
+            if type_from_serial != device.type:
+                device.type = type_from_serial
+                fields_changed.append("type")
         if fields_changed:
             device.save(update_fields=fields_changed)
             logger.info(
@@ -76,7 +89,7 @@ def enrich_and_publish_ha_discovery(self, device_id: int):
     publish_ha_discovery_if_needed.delay(device.id)
 
 
-@shared_task
+@shared_task(queue="hub_operations_queue")
 def publish_ha_discovery_if_needed(device_id: int):
     """Compute fingerprint of HA-relevant fields; republish only on change."""
     from alarm.models import AlarmDevice, HaDiscoveryState
