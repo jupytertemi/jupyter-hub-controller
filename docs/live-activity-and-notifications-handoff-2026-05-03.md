@@ -131,18 +131,35 @@ Walking the pipeline upstream → downstream:
 
 ### The one thing that DOES correlate with "user gets nothing"
 
-Apple returning 200 + no delivery = three known causes, in rough order of likelihood:
+**RETRACTION (added after pushback from Temi):** An earlier draft of this section led with "APNs key / environment mismatch" as the prime suspect. That was wrong on the available evidence. Temi reports the **Halo charging Live Activity card works** on his iPhone. If that's the **system** variant (lock screen, Dynamic Island, with the Flutter app force-killed), it's pushed via APNs using the same .p8 key and the same endpoint as everything else — meaning the key, the endpoint, and at least one device token are all healthy. A key/env mismatch would 100%-fail every push type, not just some. Striking the .p8 hypothesis from the lead spot.
 
-1. **Bundle ID / environment mismatch.** Bundle is `com.app.jupyter.dev`. Publisher pushes to `https://api.push.apple.com` (production endpoint). TestFlight builds use production APNs (correct), but if the iPhone has *also* been installed via Xcode debug at some point, the most recent token Flutter registered with the cloud may be the **sandbox** token. Production APNs with a sandbox token = 200 OK silent drop. **High suspicion.**
-2. **Stale device token.** App reinstalled, OS upgraded, or the token rotated and the new one never reached the cloud Lambda. **Medium suspicion.**
-3. **APNs key environment mismatch.** The .p8 key at `APNS_PRIVATE_KEY_PATH` has both Development and Production checkboxes. If the key only has Development scope and we're sending to production endpoint, Apple will accept the JWT (kid match) but drop the push. **Low suspicion** but trivially verifiable in Apple Developer portal.
+(One caveat: if the Halo LA Temi sees is the **in-app** variant — `Activity.request(...)` from inside the running Flutter app — it bypasses APNs entirely and proves nothing. Quick disambiguation: kill the Flutter app from the app switcher, wait 30s, plug in the Halo. If the LA appears on the lock screen, it's system. If only foreground, it's in-app. Junior dev should confirm with Temi which one before relying on the evidence below.)
 
-For FCM (`failed=1` on every push), without per-token error reasons we're guessing. Most common causes:
+### Refined hypothesis: per-token freshness asymmetry
+
+Assuming system-level Halo LA works → key + endpoint + at least one token (HALO_CHARGING_START_TOKEN) are healthy. The publisher reads **three independent** push-related tokens from `.env`:
+
+| Token | Used for | Refresh marker in `.env`? |
+|---|---|---|
+| `LIVE_ACTIVITY_START_TOKEN` | AI event LAs (parcel/loiter/garage/audio) | Yes — `LIVE_ACTIVITY_TOKEN_REFRESHED` timestamp |
+| `HALO_CHARGING_START_TOKEN` | Halo charging LA | None observed |
+| `APNS_DEVICE_TOKENS` | Regular alert pushes (banners + sounds) | None observed |
+
+The 27-of-28 `200 OK` from Apple proves the publisher's HTTP/2 + JWT + payload format is correct. But Apple returns **200 OK** for tokens that are dead-but-once-valid — they only emit `410 BadDeviceToken` for tokens that never existed. This is the classic silent-drop.
+
+**Strongest current hypothesis:** the cloud Lambda token-refresh path updates `LIVE_ACTIVITY_START_TOKEN` reliably (we see the refresh timestamp moving) but does NOT comparably refresh `HALO_CHARGING_START_TOKEN` or `APNS_DEVICE_TOKENS`. Result: AI event LAs work briefly when the LA token is fresh, then go dead when it expires; Halo LA works only if it happens to have been fresh at the right moment; alert path stays stuck on a token from an earlier install. Apple silently drops them all and returns 200.
+
+**Counter-evidence to keep in mind:** the most recent log line shows `la=EMPTY halo=EMPTY` — meaning the Lambda returned EMPTY for the LA tokens at the last refresh, but FCM (1 token) and APNs raw (1 token) are still populated. So the asymmetry might be the opposite direction: Lambda refresh wipes LA tokens to empty when it can't find them but leaves alert/FCM tokens stale. Either pattern fits "works briefly, then nothing."
+
+**To verify, junior dev should:**
+1. Determine which Halo LA Temi has been seeing (system vs in-app, per the kill-the-app test above).
+2. Capture a clean state: force-quit and relaunch Jupyter on Temi's iPhone, immediately read the hub's `.env` LA + APNs raw tokens, compare against what Flutter just registered with the cloud Lambda. Mismatch = Lambda or hub-poll is dropping the registration.
+3. Capture the per-token Firebase failure reason — currently `live_activity_publisher.py:357-358` only logs the count. A 20-line patch to log `r.exception` for each non-success in the `messaging.send_each_for_multicast` response would surface it.
+
+For FCM specifically (`failed=1` on every push), the current logging is insufficient to diagnose. Most common root causes (in no particular order until we have the Firebase error):
 - Firebase service-account credentials at `FIREBASE_CRED_PATH` rotated/revoked
 - FCM registration token stale (app reinstalled)
-- Project misconfigured (APNs auth key missing from Firebase project, so iOS-via-FCM fails — Android would still work)
-
-A 20-line patch to `live_activity_publisher.py` to log per-token Firebase responses would unblock the FCM diagnosis. Tell me when ready and I'll send the patch — but per your instruction this is going to junior Flutter dev, so leaving untouched.
+- Firebase project missing the APNs auth key, so iOS-via-FCM fails (Android would still work — confirm by checking from an Android device)
 
 ---
 
@@ -203,14 +220,16 @@ None of that is on the LA delivery path. The two relevant cross-overs:
 
 ## Action items for junior dev (priority-ordered)
 
-Given the empirical data above, the hub-side path is producing 200 OK from APNs and the iPhone receives nothing. That narrows the search to iPhone token registration + Apple environment alignment. Order:
+Given the empirical data above and Temi's report that the Halo charging LA works, the hub-side path is producing 200 OK from APNs and at least *some* tokens are reaching the device. The search narrows to **per-token freshness** and **whether the cloud Lambda token-refresh path covers all three token types symmetrically.**
 
-1. **APNs environment audit** (highest signal). Open the Flutter project's iOS app target → Signing & Capabilities → Push Notifications. Confirm the entitlement is `production` (or `aps-environment: development` if the build is via Xcode). Then in Apple Developer portal → Keys → the key with kid `2S6GK89DYS` — verify it has both Development AND Production checkboxes selected. If only Development, sandbox APNs is the only working endpoint, and the publisher's `https://api.push.apple.com` is the wrong base for that key.
-2. **Token freshness audit**. On the iPhone, trigger a token-refresh in the Flutter app (force-quit + relaunch, or call `FirebaseMessaging.deleteToken()` then `getToken()`). Watch the Lambda broker store update. Then watch the hub's next 10-min refresh pull the new token. Then trigger an event and check `/var/log/la-publisher-metrics.jsonl`.
-3. **Pull `live_activity_publisher.py` into the repo.** It's on hubs but not in git — drift risk every time the gold image is updated.
-4. **Patch the publisher to log per-token Firebase failures**. Currently line 357-358 only logs the count. Adding `for r in resp.responses: if not r.success: log.error(...)` will surface why FCM fails.
-5. **Confirm Firebase service-account credentials** at `FIREBASE_CRED_PATH`. Try `firebase admin SDK` smoke test in a Python REPL on the hub; if it auth-fails, regenerate from the Firebase console.
-6. **Add a periodic LA-token-presence health check** that warns loudly when `LIVE_ACTIVITY_START_TOKEN` is empty for more than N consecutive refreshes — would have caught the empty-token state before testing.
+1. **Disambiguate the working Halo LA.** With Jupyter killed from the app switcher and 30s elapsed, plug in the Halo. If the LA appears on the lock screen → system push works → confirms .p8 key + endpoint healthy → search is purely token-freshness. If only foreground → it's the in-app `Activity.request(...)` variant and proves nothing about pushes.
+2. **Token freshness audit per token type.** On the iPhone, force-quit + relaunch Jupyter. Watch what gets POSTed to the cloud Lambda — is Flutter registering all three (LA push-to-start token, Halo charging push-to-start token, raw APNs token) on the same launch, or only some? Then read the hub's `.env` immediately after the next 10-min refresh — are all three populated, or only the LA one?
+3. **Patch `live_activity_publisher.py` to log per-token Firebase failures**. Currently line 357-358 only logs the count, not per-token reasons. Adding `for r in resp.responses: if not r.success: log.error(r.exception)` after `messaging.send_each_for_multicast` will surface why FCM fails on every push. Without this we're guessing.
+4. **Pull `live_activity_publisher.py` into git.** It's on hubs but not version-controlled — drift risk every gold-image refresh.
+5. **Confirm Firebase service-account credentials** at `FIREBASE_CRED_PATH`. Run a `firebase_admin.messaging.send(...)` smoke test in a Python REPL on the hub; if it auth-fails, regenerate from Firebase console.
+6. **Add a per-token-type LA presence health check** that warns loudly when any of `LIVE_ACTIVITY_START_TOKEN`, `HALO_CHARGING_START_TOKEN`, `APNS_DEVICE_TOKENS` is empty for more than N consecutive refreshes. Would have caught the silent token-go-empty case before user-visible testing.
+
+**Lower-priority** (only if 1-3 don't crack it): the .p8 key scope in Apple Developer portal. If the system Halo LA works (test #1), this is moot. If somehow the system Halo LA also turns out to be broken and Temi was seeing the in-app variant, then re-open the .p8 / environment angle.
 
 ---
 
