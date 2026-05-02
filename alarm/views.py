@@ -291,7 +291,15 @@ class AlarmModeAPIView(APIView):
 
 
 class UpdateAlarmDeviceVersionFW(APIView):
-    permission_classes = [HasFRVApiKey]
+    """Halo → hub firmware-version report.
+
+    v1.6: accept BOTH legacy fleet-shared FRV_API_KEY (existing onboarded
+    Halos in the field) AND new per-Halo HMAC token (from v1.6 onboard).
+    Token check inline rather than via permission class so we have access
+    to the request body's identity_name to derive the expected HMAC.
+    """
+
+    permission_classes = []  # auth is inline (token vs identity_name)
 
     def post(self, request):
         identity_name = request.data.get("identity_name")
@@ -303,8 +311,27 @@ class UpdateAlarmDeviceVersionFW(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        device = get_object_or_404(AlarmDevice, identity_name=identity_name)
+        # Accept the auth token in either header (preferred) or query params
+        # for backwards compat. The Halo firmware sends it via api_path-derived
+        # URL plus api_key on the URL/body — older clients sent api_key= as
+        # request data; newer (v1.6) firmware can send it as
+        # X-Halo-API-Token: <token>.
+        presented_key = (
+            request.headers.get("X-Halo-API-Token")
+            or request.headers.get("X-API-KEY")
+            or request.data.get("api_key")
+            or request.query_params.get("api_key")
+            or ""
+        )
 
+        from alarm.services.halo_token import verify_legacy_or_modern_key
+        if not verify_legacy_or_modern_key(identity_name, presented_key):
+            return Response(
+                {"detail": "Invalid or missing Halo API token"},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        device = get_object_or_404(AlarmDevice, identity_name=identity_name)
         device.version_fw = version_fw
         device.save(update_fields=["version_fw"])
 

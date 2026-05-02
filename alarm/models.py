@@ -27,8 +27,33 @@ class AlarmDevice(BaseModel):
     version_fw = models.CharField(max_length=64, default="", blank=True)
     ip_address = models.GenericIPAddressField(null=True, blank=True, help_text="Current IP address of the alarm device")
     mac_address = models.CharField(max_length=17, default="", blank=True, help_text="MAC address in format aa:bb:cc:dd:ee:ff")
+    # v1.6: persisted from TCP register payload — used for BLE recovery wizard
+    # if the user installs the app on a new phone (keychain entry lost).
+    # NEVER returned in default serializers — only via /api/alarms/{slug}/recovery-secret
+    # which requires auth.
+    device_secret = models.CharField(
+        max_length=128,
+        default="",
+        blank=True,
+        help_text="Halo's firmware-generated 64-hex secret. Sensitive — write-only.",
+    )
 
     objects = AlarmDeviceManager()
+
+
+class HaDiscoveryState(BaseModel):
+    """Tracks the last HA Auto-Discovery payload published per AlarmDevice.
+
+    Used by the publish-if-needed Celery task to avoid republishing on every
+    Halo register heartbeat. Republish only when one of the tracked fields
+    (mac_address, version_fw, ip_address, name, type) changes.
+    """
+    device = models.OneToOneField(
+        AlarmDevice,
+        on_delete=models.CASCADE,
+        related_name="ha_discovery_state",
+    )
+    fingerprint = models.CharField(max_length=512, default="", blank=True)
 
 
 class AlarmDeviceConfig(BaseModel):

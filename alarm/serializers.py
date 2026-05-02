@@ -17,7 +17,10 @@ class AlarmDeviceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AlarmDevice
-        fields = "__all__"
+        # v1.6: explicit exclude of `device_secret` so it never leaks via
+        # the default GET endpoints. Use HaloRecoverySecretView for explicit
+        # secret retrieval (auth-gated).
+        exclude = ("device_secret",)
         extra_kwargs = {
             "id": {"read_only": True},
             "hass_entry_id": {"read_only": True},

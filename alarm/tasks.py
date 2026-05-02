@@ -1,6 +1,141 @@
+import json
+import logging
+import time
+from typing import Optional
+
 from celery import shared_task
+from django.conf import settings
 
 from utils.restarting_service import restart_service, start_service, stop_service
+
+logger = logging.getLogger(__name__)
+
+
+# --------------------------------------------------------------------------
+# v1.6 Halo onboard tasks
+# --------------------------------------------------------------------------
+
+@shared_task(bind=True, max_retries=10, default_retry_delay=60)
+def enrich_and_publish_ha_discovery(self, device_id: int):
+    """Off-thread enrichment + HA Auto-Discovery republish.
+
+    The webhook handler writes the minimum AlarmDevice row immediately;
+    this task does the slower /api/status query, fills missing fields,
+    and republishes HA discovery on any field change.
+
+    Idempotent: safe to call repeatedly. Republish-if-needed semantics
+    mean we won't spam HA on register heartbeats.
+    """
+    from alarm.models import AlarmDevice, HaDiscoveryState
+    from alarm.services.halo_enrichment import fetch_status, merge_enrichment
+
+    try:
+        device = AlarmDevice.objects.get(id=device_id)
+    except AlarmDevice.DoesNotExist:
+        logger.warning("enrich_skipped_device_gone id=%s", device_id)
+        return
+
+    needs_enrichment = not device.version_fw or device.name in ("", device.identity_name)
+
+    if needs_enrichment:
+        # Try /api/status; one shot per Celery attempt — outer retry loop
+        # handles "Halo not ready yet" via Celery's max_retries.
+        status = fetch_status(device.ip_address, timeout=2.0)
+        enrichment = merge_enrichment(device.identity_name, status)
+        fields_changed = []
+        if enrichment.get("version_fw") and enrichment["version_fw"] != device.version_fw:
+            device.version_fw = enrichment["version_fw"]
+            fields_changed.append("version_fw")
+        if enrichment.get("status_device_field") and device.name == device.identity_name:
+            device.name = enrichment["status_device_field"]
+            fields_changed.append("name")
+        # mac is derived deterministically from slug; only update if empty
+        if enrichment.get("mac_address") and not device.mac_address:
+            device.mac_address = enrichment["mac_address"]
+            fields_changed.append("mac_address")
+        if fields_changed:
+            device.save(update_fields=fields_changed)
+            logger.info(
+                "halo_enriched id=%s fields=%s",
+                device.id, fields_changed,
+            )
+
+        if not device.version_fw:
+            # Halo HTTP server still unreachable — back off and retry.
+            # Cap is max_retries=10 × 60s = 10min; after that the row
+            # stays without fw_version and HA discovery uses what we have.
+            try:
+                raise self.retry()
+            except self.MaxRetriesExceededError:
+                logger.warning(
+                    "halo_enrich_max_retries id=%s — giving up, HA discovery proceeds without fw_version",
+                    device.id,
+                )
+
+    # Always publish HA discovery — republish-if-needed handles the dedup
+    publish_ha_discovery_if_needed.delay(device.id)
+
+
+@shared_task
+def publish_ha_discovery_if_needed(device_id: int):
+    """Compute fingerprint of HA-relevant fields; republish only on change."""
+    from alarm.models import AlarmDevice, HaDiscoveryState
+    from utils.mqtt_client import MQTTClient
+
+    try:
+        device = AlarmDevice.objects.get(id=device_id)
+    except AlarmDevice.DoesNotExist:
+        return
+
+    fingerprint = "|".join([
+        device.mac_address or "",
+        device.version_fw or "",
+        str(device.ip_address or ""),
+        device.name or "",
+        device.type or "",
+    ])
+
+    state, _ = HaDiscoveryState.objects.get_or_create(device=device)
+    if state.fingerprint == fingerprint:
+        logger.debug("ha_discovery_no_change device=%s", device.identity_name)
+        return
+
+    payload = {
+        "name":         device.name,
+        "unique_id":    device.identity_name,
+        "command_topic": f"/{device.identity_name}/mode",
+        "state_topic":   f"/{device.identity_name}/status",
+        "device": {
+            "identifiers":  [device.identity_name],
+            "manufacturer": "Jupyter",
+            "model":        f"Halo-{device.type}",
+            "sw_version":   device.version_fw,
+        },
+    }
+    if device.mac_address:
+        payload["device"]["connections"] = [["mac", device.mac_address]]
+
+    topic = f"homeassistant/alarm_control_panel/{device.identity_name}/config"
+    try:
+        client = MQTTClient(
+            host=settings.MQTT_HOST,
+            port=settings.MQTT_PORT,
+            username=settings.MQTT_USERNAME,
+            password=settings.MQTT_PASSWORD,
+        )
+        client.connect()
+        client.publish(topic, json.dumps(payload), retain=True)
+        client.close()
+    except Exception:
+        logger.exception("ha_discovery_publish_failed device=%s", device.identity_name)
+        return
+
+    state.fingerprint = fingerprint
+    state.save(update_fields=["fingerprint"])
+    logger.info(
+        "ha_discovery_published device=%s topic=%s",
+        device.identity_name, topic,
+    )
 
 
 @shared_task
