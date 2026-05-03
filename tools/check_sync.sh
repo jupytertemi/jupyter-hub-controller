@@ -123,6 +123,19 @@ VEHICLE_CONTAINER="number_plate_detection"
 # Local builds only; sync source of truth is github.com/jupytertemi/VehicleAI.
 VEHICLE_IMAGE_REF="jupytertemi/pilot_vehicle_ai:dev"
 
+# FaceAI (face_recognition container) — baked 2026-05-03 same playbook
+LOCAL_FACE_REPO="${LOCAL_FACE_REPO:-/Users/topsycombs/jupytertemi/FaceAI}"
+FACE_AI_FILES=(
+  "npu_yield_listener.py"
+  "constants.py"
+  "database.py"
+  "shared_enhance.py"
+  "improved_matcher.py"
+  "face_analysis/face_analysis.py"
+)
+FACE_CONTAINER="face_recognition"
+FACE_IMAGE_REF="jupytertemi/pilot_face_recognition_ai:dev"
+
 # --- run ------------------------------------------------------------------
 
 echo "================================================================"
@@ -153,18 +166,30 @@ done
 echo
 
 # Section 3: VehicleAI files
-echo "## VehicleAI (containerized — bind-mount AND image layer must match local)"
+echo "## VehicleAI (containerized — image-baked, no bind-mount)"
 echo
-printf "  %-22s %-12s %-12s %-12s %-12s %s\n" "FILE" "LOCAL" "HUB-HOST" "CONTAINER" "IMAGE-BAKED" "VERDICT"
+printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "FILE" "LOCAL" "HUB-HOST" "CONTAINER" "IMAGE-BAKED" "VERDICT"
 for f in "${VEHICLE_AI_FILES[@]}"; do
   l=$(local_sha "$LOCAL_VEHICLE_REPO/$f")
   h=$(hub_host_sha "/root/jupyter-container/pilot_vehicle_ai/$f")
   c=$(container_sha "$VEHICLE_CONTAINER" "/usr/src/app/$f")
   i=$(image_sha "$VEHICLE_IMAGE_REF" "/usr/src/app/$f")
-  # All four must match. If image differs but host=container, it's a bind-mount
-  # drift that'll regress on image-only deploy.
   v=$(verdict "$l" "$h" "$c" "$i")
-  printf "  %-22s %-12s %-12s %-12s %-12s %s\n" "$f" "$l" "$h" "$c" "$i" "$v"
+  printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "$f" "$l" "$h" "$c" "$i" "$v"
+done
+echo
+
+# Section 3b: FaceAI files
+echo "## FaceAI (face_recognition container — image-baked, no bind-mount)"
+echo
+printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "FILE" "LOCAL" "HUB-HOST" "CONTAINER" "IMAGE-BAKED" "VERDICT"
+for f in "${FACE_AI_FILES[@]}"; do
+  l=$(local_sha "$LOCAL_FACE_REPO/$f")
+  h=$(hub_host_sha "/root/jupyter-container/pilot_face_recognition_ai/$f")
+  c=$(container_sha "$FACE_CONTAINER" "/usr/src/app/$f")
+  i=$(image_sha "$FACE_IMAGE_REF" "/usr/src/app/$f")
+  v=$(verdict "$l" "$h" "$c" "$i")
+  printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "$f" "$l" "$h" "$c" "$i" "$v"
 done
 echo
 
