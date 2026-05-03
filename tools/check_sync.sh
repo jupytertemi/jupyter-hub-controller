@@ -116,7 +116,10 @@ VEHICLE_AI_FILES=(
   "zone_gate.py"
 )
 VEHICLE_CONTAINER="number_plate_detection"
-VEHICLE_IMAGE_REF="ghcr.io/jupyter-hub/pilot_vehicle_ai:dev"
+# Local-only namespace under jupytertemi/. NEVER ghcr.io/jupyter-hub/... — that
+# was a wrong-namespace + broken-registry-pull pattern from earlier deploys.
+# Local builds only; sync source of truth is github.com/jupytertemi/VehicleAI.
+VEHICLE_IMAGE_REF="jupytertemi/pilot_vehicle_ai:dev"
 
 # --- run ------------------------------------------------------------------
 
