@@ -446,12 +446,20 @@ class CameraSettingManager(models.Manager):
         if "enable_face_recognition" in updated_fields:
             self.handle_face_recognition(instance.enable_face_recognition)
 
-        if "license_vehicle_recognition" in updated_fields:
-            camera_name = None
-            if instance.license_vehicle_recognition:
-                camera_name = instance.vehicle_recognition_camera.slug_name
+        if (
+            "license_vehicle_recognition" in updated_fields
+            or "vehicle_recognition_camera" in updated_fields
+            or "vehicle_recognition_cameras" in updated_fields
+        ):
+            # 2026-05-03 — Mirror loitering's pattern: fire the
+            # camera_setting_config Celery task whenever EITHER the toggle OR
+            # the camera selection (FK or M2M) changes. Without this, a user
+            # who PATCHes only the M2M (after license is already true) wouldn't
+            # see the AI container's IS_ENABNLED flag flipped — container
+            # stays asleep even though the DB + Frigate config are correct.
+            camera_names = self._get_vehicle_camera_names(instance)
             self.handle_license_vehicle_recognition(
-                instance.license_vehicle_recognition, camera_name
+                instance.license_vehicle_recognition, camera_names
             )
         if (
             "loitering_recognition" in updated_fields
@@ -479,6 +487,21 @@ class CameraSettingManager(models.Manager):
                 camera_names = ",".join(c.slug_name for c in m2m_cameras)
             elif instance.loitering_camera:
                 camera_names = instance.loitering_camera.slug_name
+        return camera_names
+
+    def _get_vehicle_camera_names(self, instance):
+        """2026-05-03 — Mirror of _get_loiter_camera_names for VehicleAI.
+        M2M is preferred; legacy single-camera FK is the fallback. Returns
+        comma-separated slugs (matching the format that the Celery
+        camera_setting_config task writes to the AI container's constants.py).
+        """
+        camera_names = None
+        if instance.license_vehicle_recognition:
+            m2m_cameras = list(instance.vehicle_recognition_cameras.all())
+            if m2m_cameras:
+                camera_names = ",".join(c.slug_name for c in m2m_cameras)
+            elif instance.vehicle_recognition_camera:
+                camera_names = instance.vehicle_recognition_camera.slug_name
         return camera_names
 
     def handle_parcel_detect(self, is_enabnled: bool, camera_name=None):
