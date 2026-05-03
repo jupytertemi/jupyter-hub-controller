@@ -43,6 +43,12 @@ class Camera(BaseModel):
     vehicle_approach_angle_deg = models.FloatField(null=True, blank=True)
     vehicle_park_polygon = models.JSONField(null=True, blank=True)
 
+    # 2026-05-03 — Vehicle detection zone (foundation). 4-point quad, normalized 0-1.
+    # Drawn first in the wizard; everything else (arrow + park rectangle) layers on top.
+    # AI engine gate: points-in-polygon(bbox_center) before any state logic. Frigate
+    # config also publishes this as zones.vehicle_detection_zone for upstream filtering.
+    vehicle_detection_zone = models.JSONField(null=True, blank=True)
+
 
 class RTSPCamera(Camera):
     objects = RTSPCameraManager()
@@ -96,6 +102,14 @@ class CameraSetting(BaseModel):
         on_delete=models.SET_NULL,
         related_name="vehicle_recognition_camera_setting",
         null=True,
+        blank=True,
+    )
+    # 2026-05-03 — Multi-camera support (mirrors loitering_cameras pattern).
+    # The legacy ForeignKey above is kept populated to whichever camera was
+    # last single-selected, but write-path consumers should prefer the M2M.
+    vehicle_recognition_cameras = models.ManyToManyField(
+        Camera,
+        related_name="vehicle_recognition_cameras_setting",
         blank=True,
     )
     activate_sounds_detection = models.BooleanField(default=False)

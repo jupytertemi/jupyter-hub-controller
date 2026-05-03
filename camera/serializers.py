@@ -223,6 +223,21 @@ class VehicleCalibrationSerializer(serializers.Serializer):
         min_length=4,
         max_length=4,
     )
+    # 2026-05-03 — Optional foundation zone. 4-point quad, normalized 0-1.
+    # When present, AI engine and Frigate gate detection on points-in-polygon
+    # before any state-machine logic. New wizards write this; legacy clients
+    # may omit it (field is optional).
+    detection_zone = serializers.ListField(
+        child=serializers.ListField(
+            child=serializers.FloatField(min_value=0.0, max_value=1.0),
+            min_length=2,
+            max_length=2,
+        ),
+        min_length=4,
+        max_length=4,
+        required=False,
+        allow_null=True,
+    )
 
     def validate_approach_angle_deg(self, value):
         if value >= 360.0:
@@ -263,13 +278,14 @@ class VehicleCalibrationSerializer(serializers.Serializer):
 
     @staticmethod
     def from_camera(camera):
-        if camera.vehicle_entry_point_x is None:
+        if camera.vehicle_entry_point_x is None and camera.vehicle_detection_zone is None:
             return None
         return {
             "entry_point_x": camera.vehicle_entry_point_x,
             "entry_point_y": camera.vehicle_entry_point_y,
             "approach_angle_deg": camera.vehicle_approach_angle_deg,
             "park_polygon": camera.vehicle_park_polygon,
+            "detection_zone": camera.vehicle_detection_zone,
         }
 
     @staticmethod
@@ -278,12 +294,18 @@ class VehicleCalibrationSerializer(serializers.Serializer):
         camera.vehicle_entry_point_y = validated_data["entry_point_y"]
         camera.vehicle_approach_angle_deg = validated_data["approach_angle_deg"]
         camera.vehicle_park_polygon = validated_data["park_polygon"]
-        camera.save(update_fields=[
+        update_fields = [
             "vehicle_entry_point_x",
             "vehicle_entry_point_y",
             "vehicle_approach_angle_deg",
             "vehicle_park_polygon",
-        ])
+        ]
+        # detection_zone is optional — only update if explicitly present (allows
+        # legacy clients to keep working without zeroing the new field).
+        if "detection_zone" in validated_data:
+            camera.vehicle_detection_zone = validated_data["detection_zone"]
+            update_fields.append("vehicle_detection_zone")
+        camera.save(update_fields=update_fields)
 
     @staticmethod
     def clear_on_camera(camera):
@@ -291,10 +313,12 @@ class VehicleCalibrationSerializer(serializers.Serializer):
         camera.vehicle_entry_point_y = None
         camera.vehicle_approach_angle_deg = None
         camera.vehicle_park_polygon = None
+        camera.vehicle_detection_zone = None
         camera.save(update_fields=[
             "vehicle_entry_point_x",
             "vehicle_entry_point_y",
             "vehicle_approach_angle_deg",
             "vehicle_park_polygon",
+            "vehicle_detection_zone",
         ])
 

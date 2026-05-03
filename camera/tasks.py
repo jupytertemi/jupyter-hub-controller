@@ -52,6 +52,28 @@ def get_cameras():
     cameras = model.objects.filter(is_enabled=True)
     camera_data = []
     for camera in cameras:
+        zones = [
+            {
+                "name": zone.zone_name,
+                "coordinates": _zone_coords_to_pixels(
+                    zone.coordinates,
+                    camera.type,
+                ),
+                "objects": zone.objects_detect,
+            }
+            for zone in camera.camera_setting_zone.all()
+        ]
+        # 2026-05-03 — Vehicle AI detection zone. Stored as nested [[x,y]×4]
+        # on Camera; flatten for the existing pixel-conversion helper which
+        # expects [x1,y1,x2,y2,...]. Only published when set; AI engine and
+        # Frigate gate detection on points-in-polygon when present.
+        if camera.vehicle_detection_zone:
+            flat = [v for pt in camera.vehicle_detection_zone for v in pt]
+            zones.append({
+                "name": "vehicle_detection_zone",
+                "coordinates": _zone_coords_to_pixels(flat, camera.type),
+                "objects": ["car", "truck", "motorcycle", "bus"],
+            })
         camera_data.append(
             {
                 "name": camera.slug_name,
@@ -60,17 +82,7 @@ def get_cameras():
                 "ring_device_id": camera.ring_device_id,
                 "type": camera.type,
                 "is_audio": camera.is_audio,
-                "zones": [
-                    {
-                        "name": zone.zone_name,
-                        "coordinates": _zone_coords_to_pixels(
-                            zone.coordinates,
-                            camera.type,
-                        ),
-                        "objects": zone.objects_detect,
-                    }
-                    for zone in camera.camera_setting_zone.all()
-                ],
+                "zones": zones,
             }
         )
     return camera_data

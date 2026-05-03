@@ -172,6 +172,176 @@ class VehicleCalibrationViewTests(TestCase):
         resp = self.client.patch(self._url(), data={"entry_point_x": 0.5}, format="json")
         self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
+    # ---------- 2026-05-03: detection_zone field (additive) ----------
+
+    def _valid_zone(self):
+        return [[0.10, 0.10], [0.90, 0.10], [0.90, 0.90], [0.10, 0.90]]
+
+    def test_post_with_detection_zone_persists_to_db(self):
+        from unittest.mock import patch
+        with patch("camera.views.update_frigate_config") as mock_render:
+            mock_render.delay = lambda: None
+            resp = self.client.post(
+                self._url(),
+                data=_valid_payload(detection_zone=self._valid_zone()),
+                format="json",
+            )
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        self.camera.refresh_from_db()
+        self.assertEqual(self.camera.vehicle_detection_zone, self._valid_zone())
+        # Existing fields still populated alongside.
+        self.assertEqual(self.camera.vehicle_entry_point_x, 0.18)
+
+    def test_get_returns_detection_zone_when_set(self):
+        self.camera.vehicle_detection_zone = self._valid_zone()
+        self.camera.vehicle_entry_point_x = 0.18
+        self.camera.vehicle_entry_point_y = 0.42
+        self.camera.vehicle_approach_angle_deg = 295.0
+        self.camera.vehicle_park_polygon = [[0.42, 0.55], [0.78, 0.55], [0.78, 0.92], [0.42, 0.92]]
+        self.camera.save()
+        resp = self.client.get(self._url())
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        self.assertEqual(resp.data["detection_zone"], self._valid_zone())
+
+    def test_post_without_detection_zone_leaves_field_unchanged(self):
+        # Pre-populate detection_zone, then POST without it. Should NOT zero it.
+        self.camera.vehicle_detection_zone = self._valid_zone()
+        self.camera.save(update_fields=["vehicle_detection_zone"])
+        from unittest.mock import patch
+        with patch("camera.views.update_frigate_config") as mock_render:
+            mock_render.delay = lambda: None
+            resp = self.client.post(self._url(), data=_valid_payload(), format="json")
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        self.camera.refresh_from_db()
+        self.assertEqual(self.camera.vehicle_detection_zone, self._valid_zone())
+
+    def test_post_with_detection_zone_triggers_frigate_render(self):
+        from unittest.mock import patch
+        with patch("camera.tasks.update_frigate_config.delay") as mock_delay:
+            resp = self.client.post(
+                self._url(),
+                data=_valid_payload(detection_zone=self._valid_zone()),
+                format="json",
+            )
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        mock_delay.assert_called_once()
+
+    def test_post_unchanged_zone_does_not_trigger_render(self):
+        self.camera.vehicle_detection_zone = self._valid_zone()
+        self.camera.save(update_fields=["vehicle_detection_zone"])
+        from unittest.mock import patch
+        with patch("camera.tasks.update_frigate_config.delay") as mock_delay:
+            resp = self.client.post(self._url(), data=_valid_payload(), format="json")
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        mock_delay.assert_not_called()
+
+    def test_delete_with_zone_set_triggers_frigate_render(self):
+        self.camera.vehicle_detection_zone = self._valid_zone()
+        self.camera.vehicle_entry_point_x = 0.5
+        self.camera.vehicle_entry_point_y = 0.5
+        self.camera.vehicle_approach_angle_deg = 90.0
+        self.camera.vehicle_park_polygon = [[0.4, 0.5], [0.6, 0.5], [0.6, 0.7], [0.4, 0.7]]
+        self.camera.save()
+        from unittest.mock import patch
+        with patch("camera.tasks.update_frigate_config.delay") as mock_delay:
+            resp = self.client.delete(self._url())
+        self.assertEqual(resp.status_code, status.HTTP_204_NO_CONTENT)
+        mock_delay.assert_called_once()
+        self.camera.refresh_from_db()
+        self.assertIsNone(self.camera.vehicle_detection_zone)
+
+    def test_post_zone_with_3_points_rejected(self):
+        bad = _valid_payload(detection_zone=[[0.1, 0.1], [0.9, 0.1], [0.5, 0.9]])
+        resp = self.client.post(self._url(), data=bad, format="json")
+        self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_post_zone_out_of_range_rejected(self):
+        bad = _valid_payload(detection_zone=[[1.1, 0.1], [0.9, 0.1], [0.9, 0.9], [0.1, 0.9]])
+        resp = self.client.post(self._url(), data=bad, format="json")
+        self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_post_authorized_via_m2m_membership(self):
+        # Camera is NOT in vehicle_recognition_camera (legacy ForeignKey) but IS
+        # in the new M2M. Should be authorized to write calibration.
+        self.setting.vehicle_recognition_camera = None
+        self.setting.save()
+        self.setting.vehicle_recognition_cameras.add(self.camera)
+        from unittest.mock import patch
+        with patch("camera.views.update_frigate_config") as mock_render:
+            mock_render.delay = lambda: None
+            resp = self.client.post(
+                self._url(),
+                data=_valid_payload(detection_zone=self._valid_zone()),
+                format="json",
+            )
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+
+    def test_post_unauthorized_when_not_in_either_path(self):
+        self.setting.vehicle_recognition_camera = None
+        self.setting.save()
+        # M2M is empty.
+        resp = self.client.post(
+            self._url(),
+            data=_valid_payload(detection_zone=self._valid_zone()),
+            format="json",
+        )
+        self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
+
+    # ---------- Delete cascade (2026-05-03) ----------
+
+    def test_delete_removes_camera_from_legacy_fk(self):
+        # Setting has this camera as the legacy single-select; DELETE on
+        # vehicle-calibration must clear the FK.
+        self.assertEqual(self.setting.vehicle_recognition_camera_id, self.camera.id)
+        self.camera.vehicle_detection_zone = self._valid_zone()
+        self.camera.save(update_fields=["vehicle_detection_zone"])
+        from unittest.mock import patch
+        with patch("camera.views.update_frigate_config") as mock_render:
+            mock_render.delay = lambda: None
+            resp = self.client.delete(self._url())
+        self.assertEqual(resp.status_code, status.HTTP_204_NO_CONTENT)
+        self.setting.refresh_from_db()
+        self.assertIsNone(self.setting.vehicle_recognition_camera)
+        # Last-camera cascade: no other cameras → license disabled.
+        self.assertFalse(self.setting.license_vehicle_recognition)
+
+    def test_delete_removes_camera_from_m2m(self):
+        # Two cameras in M2M; delete one keeps the other and keeps license on.
+        cam2 = Camera.objects.create(name="Cam2", slug_name="cam-002", ip="192.168.1.100")
+        self.setting.vehicle_recognition_camera = None
+        self.setting.save()
+        self.setting.vehicle_recognition_cameras.add(self.camera, cam2)
+        self.camera.vehicle_detection_zone = self._valid_zone()
+        self.camera.save(update_fields=["vehicle_detection_zone"])
+        from unittest.mock import patch
+        with patch("camera.views.update_frigate_config") as mock_render:
+            mock_render.delay = lambda: None
+            resp = self.client.delete(self._url())
+        self.assertEqual(resp.status_code, status.HTTP_204_NO_CONTENT)
+        self.setting.refresh_from_db()
+        # cam2 still in M2M, this camera removed.
+        m2m_ids = list(self.setting.vehicle_recognition_cameras.values_list("id", flat=True))
+        self.assertNotIn(self.camera.id, m2m_ids)
+        self.assertIn(cam2.id, m2m_ids)
+        # License stays ON because cam2 remains.
+        self.assertTrue(self.setting.license_vehicle_recognition)
+
+    def test_delete_last_camera_disables_feature(self):
+        # Only this camera in M2M; delete it → feature should disable globally.
+        self.setting.vehicle_recognition_camera = None
+        self.setting.save()
+        self.setting.vehicle_recognition_cameras.set([self.camera])
+        self.camera.vehicle_detection_zone = self._valid_zone()
+        self.camera.save(update_fields=["vehicle_detection_zone"])
+        from unittest.mock import patch
+        with patch("camera.views.update_frigate_config") as mock_render:
+            mock_render.delay = lambda: None
+            resp = self.client.delete(self._url())
+        self.assertEqual(resp.status_code, status.HTTP_204_NO_CONTENT)
+        self.setting.refresh_from_db()
+        self.assertEqual(self.setting.vehicle_recognition_cameras.count(), 0)
+        self.assertFalse(self.setting.license_vehicle_recognition)
+
     # ---------- Coexistence smoke ----------
 
     def test_existing_zone_endpoint_still_works(self):

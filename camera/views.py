@@ -643,12 +643,22 @@ class CameraVehicleCalibrationView(APIView):
 
     def _ensure_vehicle_ai_enabled(self, camera):
         """Vehicle calibration only saveable if license_vehicle_recognition is
-        on for this camera (the AI gate)."""
-        setting = CameraSetting.objects.filter(
+        on AND the camera is in the recognition set — either the legacy
+        single-camera ForeignKey OR the new multi-camera M2M (2026-05-03).
+        """
+        # Legacy single-camera path
+        if CameraSetting.objects.filter(
             license_vehicle_recognition=True,
             vehicle_recognition_camera=camera,
-        ).first()
-        return setting is not None
+        ).exists():
+            return True
+        # Multi-camera M2M path
+        if CameraSetting.objects.filter(
+            license_vehicle_recognition=True,
+            vehicle_recognition_cameras=camera,
+        ).exists():
+            return True
+        return False
 
     def get(self, request, slug):
         camera = self._get_camera(slug)
@@ -685,18 +695,61 @@ class CameraVehicleCalibrationView(APIView):
             )
         serializer = VehicleCalibrationSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
+        had_zone_before = camera.vehicle_detection_zone is not None
         VehicleCalibrationSerializer.apply_to_camera(camera, serializer.validated_data)
+        # CW#172 — Frigate config flows through camera/templates/frigate_config.yaml
+        # via the Celery render task. Re-render only when the detection_zone
+        # actually changed (avoids unnecessary Frigate restarts on arrow/park-rect
+        # tweaks that don't affect Frigate's view of the world).
+        zone_now = camera.vehicle_detection_zone is not None
+        zone_changed_value = "detection_zone" in serializer.validated_data
+        if zone_changed_value or (had_zone_before != zone_now):
+            from camera.tasks import update_frigate_config
+            update_frigate_config.delay()
         return Response(
             VehicleCalibrationSerializer.from_camera(camera),
             status=status.HTTP_200_OK,
         )
 
     def delete(self, request, slug):
+        """Clear all vehicle calibration on this camera AND remove it from the
+        vehicle-recognition selection. If this was the last camera with vehicle
+        AI enabled, also disable license_vehicle_recognition globally.
+
+        Per Temi 2026-05-03: a camera without a detection zone shouldn't run
+        vehicle AI; deleting a zone is the explicit signal to also disable
+        recognition for that camera. Cascade prevents stranded "enabled but
+        unconfigured" state.
+        """
         camera = self._get_camera(slug)
         if camera is None:
             return Response(
                 {"error": f"Camera '{slug}' not found."},
                 status=status.HTTP_404_NOT_FOUND,
             )
+        had_zone = camera.vehicle_detection_zone is not None
         VehicleCalibrationSerializer.clear_on_camera(camera)
+
+        # Cascade: remove this camera from any CameraSetting's recognition set.
+        for setting in CameraSetting.objects.filter(
+            license_vehicle_recognition=True,
+        ):
+            changed = False
+            if setting.vehicle_recognition_camera_id == camera.id:
+                setting.vehicle_recognition_camera = None
+                changed = True
+            if setting.vehicle_recognition_cameras.filter(id=camera.id).exists():
+                setting.vehicle_recognition_cameras.remove(camera)
+                changed = True
+            # If no cameras remain in EITHER path, disable the feature globally
+            # for this setting — prevents stranded "enabled but no targets" state.
+            if changed:
+                if (setting.vehicle_recognition_camera is None
+                        and not setting.vehicle_recognition_cameras.exists()):
+                    setting.license_vehicle_recognition = False
+                setting.save()
+
+        if had_zone:
+            from camera.tasks import update_frigate_config
+            update_frigate_config.delay()
         return Response(status=status.HTTP_204_NO_CONTENT)
