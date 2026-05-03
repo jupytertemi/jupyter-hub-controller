@@ -1,5 +1,6 @@
 import json
 import logging
+import subprocess
 import time
 from typing import Optional
 
@@ -156,21 +157,29 @@ def alarm_unusual_sound_config(
     is_unusual_sound: bool, container_name: str, servicer_path
 ):
     camera_file_path = servicer_path
-    with open(camera_file_path, "r", encoding="UTF-8") as file:
-        lines = file.readlines()
 
-    updated_lines = [
-        (
-            f"STOP_ALARM = {is_unusual_sound}\n"
-            if line.strip().startswith("STOP_ALARM")
-            else line
-        )
-        for line in lines
-    ]
+    # Match the chattr -i / +i dance used by camera_setting_config — the
+    # AI bind-mount constants files are immutable between writes (set by
+    # ota-lockdown.sh) so a bare open(..., "w") raises EPERM.
+    subprocess.run(["chattr", "-i", camera_file_path], capture_output=True)
 
-    # Write and update the file
-    with open(camera_file_path, "w", encoding="UTF-8") as file:
-        file.writelines(updated_lines)
+    try:
+        with open(camera_file_path, "r", encoding="UTF-8") as file:
+            lines = file.readlines()
+
+        updated_lines = [
+            (
+                f"STOP_ALARM = {is_unusual_sound}\n"
+                if line.strip().startswith("STOP_ALARM")
+                else line
+            )
+            for line in lines
+        ]
+
+        with open(camera_file_path, "w", encoding="UTF-8") as file:
+            file.writelines(updated_lines)
+    finally:
+        subprocess.run(["chattr", "+i", camera_file_path], capture_output=True)
 
     restart_service(container_name)
     return f"{container_name} restart config successfully."

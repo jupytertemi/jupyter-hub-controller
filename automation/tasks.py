@@ -1,4 +1,5 @@
 import logging
+import subprocess
 
 from celery import shared_task
 from celery.exceptions import MaxRetriesExceededError
@@ -13,21 +14,29 @@ def automation_alarm_loitering_config(
     is_loitering: bool, container_name: str, servicer_path
 ):
     camera_file_path = servicer_path
-    with open(camera_file_path, "r", encoding="UTF-8") as file:
-        lines = file.readlines()
 
-    updated_lines = [
-        (
-            f"IS_LOITERING = {is_loitering}\n"
-            if line.strip().startswith("IS_LOITERING")
-            else line
-        )
-        for line in lines
-    ]
+    # Match the chattr -i / +i dance used by camera_setting_config — the
+    # AI bind-mount constants files are immutable between writes (set by
+    # ota-lockdown.sh) so a bare open(..., "w") raises EPERM.
+    subprocess.run(["chattr", "-i", camera_file_path], capture_output=True)
 
-    # Write and update the file
-    with open(camera_file_path, "w", encoding="UTF-8") as file:
-        file.writelines(updated_lines)
+    try:
+        with open(camera_file_path, "r", encoding="UTF-8") as file:
+            lines = file.readlines()
+
+        updated_lines = [
+            (
+                f"IS_LOITERING = {is_loitering}\n"
+                if line.strip().startswith("IS_LOITERING")
+                else line
+            )
+            for line in lines
+        ]
+
+        with open(camera_file_path, "w", encoding="UTF-8") as file:
+            file.writelines(updated_lines)
+    finally:
+        subprocess.run(["chattr", "+i", camera_file_path], capture_output=True)
 
     restart_service(container_name)
     return f"{container_name} restart config successfully."
