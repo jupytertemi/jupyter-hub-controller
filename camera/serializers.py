@@ -205,15 +205,38 @@ class CameraSettingSerializer(serializers.ModelSerializer):
 
 
 class VehicleCalibrationSerializer(serializers.Serializer):
-    """Serializer for per-camera VehicleAI calibration (entry arrow + park rectangle).
+    """Per-camera VehicleAI calibration. All five fields are independently
+    optional, but they form two semantic groups:
 
-    Saves four pieces of geometry per camera that let state_detector.py commit
-    Approaching→Parked and Departing→Departed transitions reliably.
+      * detection_zone  — foundation 4-point quad. AI + Frigate gate on this.
+      * arrow + park    — entry_point_x/y + approach_angle_deg + park_polygon.
+                           Drive the Approaching → Parked → Departing transitions.
+
+    Valid POST shapes (per Flutter v162 wizard, 2026-05-03):
+
+      * zone-only           {"detection_zone": [[x,y]×4]}
+      * full-tracking       {"detection_zone":..., "entry_point_x":..., "entry_point_y":...,
+                             "approach_angle_deg":..., "park_polygon":[[x,y]×4]}
+      * legacy-no-zone      {"entry_point_x":..., "entry_point_y":...,
+                             "approach_angle_deg":..., "park_polygon":[[x,y]×4]}
+
+    Constraints:
+      * At least one of (detection_zone, full-arrow-and-park-set) must be
+        present — empty body is rejected.
+      * Arrow + park is all-or-nothing: any one of the four legacy fields
+        present requires all four to be present (and the collapsed-geometry
+        check still applies).
+      * Field present with explicit ``null`` is a "clear this field" instruction
+        on PATCH-style writes. Field MISSING from the body leaves the row
+        untouched.
     """
 
-    entry_point_x = serializers.FloatField(min_value=0.0, max_value=1.0)
-    entry_point_y = serializers.FloatField(min_value=0.0, max_value=1.0)
-    approach_angle_deg = serializers.FloatField(min_value=0.0)
+    entry_point_x = serializers.FloatField(min_value=0.0, max_value=1.0,
+                                           required=False, allow_null=True)
+    entry_point_y = serializers.FloatField(min_value=0.0, max_value=1.0,
+                                           required=False, allow_null=True)
+    approach_angle_deg = serializers.FloatField(min_value=0.0,
+                                                required=False, allow_null=True)
     park_polygon = serializers.ListField(
         child=serializers.ListField(
             child=serializers.FloatField(min_value=0.0, max_value=1.0),
@@ -222,11 +245,13 @@ class VehicleCalibrationSerializer(serializers.Serializer):
         ),
         min_length=4,
         max_length=4,
+        required=False,
+        allow_null=True,
     )
-    # 2026-05-03 — Optional foundation zone. 4-point quad, normalized 0-1.
-    # When present, AI engine and Frigate gate detection on points-in-polygon
-    # before any state-machine logic. New wizards write this; legacy clients
-    # may omit it (field is optional).
+    # 2026-05-03 — Foundation zone. 4-point quad, normalized 0-1. When present,
+    # AI engine + Frigate gate detection on points-in-polygon before any
+    # state-machine logic. The new Flutter wizard always writes this; legacy
+    # clients omit it (field is optional).
     detection_zone = serializers.ListField(
         child=serializers.ListField(
             child=serializers.FloatField(min_value=0.0, max_value=1.0),
@@ -239,14 +264,20 @@ class VehicleCalibrationSerializer(serializers.Serializer):
         allow_null=True,
     )
 
+    _LEGACY_FIELDS = (
+        "entry_point_x", "entry_point_y", "approach_angle_deg", "park_polygon",
+    )
+
     def validate_approach_angle_deg(self, value):
-        if value >= 360.0:
+        if value is not None and value >= 360.0:
             raise ValidationError("approach_angle_deg must be in [0, 360).")
         return value
 
     def validate_park_polygon(self, value):
-        # Already shape-validated (4 [x,y] pairs in [0,1]) by ListField config.
-        # Enforce axis-alignment with corner order TL, TR, BR, BL.
+        if value is None:
+            return value
+        # ListField already enforces 4 [x,y] pairs in [0,1].
+        # Axis-alignment with corner order TL, TR, BR, BL.
         tl, tr, br, bl = value
         if tl[0] != bl[0]:
             raise ValidationError("park_polygon not axis-aligned: TL.x != BL.x")
@@ -263,17 +294,43 @@ class VehicleCalibrationSerializer(serializers.Serializer):
         return value
 
     def validate(self, attrs):
-        # entry point must NOT lie inside the park rectangle (collapsed geometry).
-        ex, ey = attrs["entry_point_x"], attrs["entry_point_y"]
-        poly = attrs["park_polygon"]
-        min_x = min(p[0] for p in poly)
-        max_x = max(p[0] for p in poly)
-        min_y = min(p[1] for p in poly)
-        max_y = max(p[1] for p in poly)
-        if min_x <= ex <= max_x and min_y <= ey <= max_y:
+        # 2026-05-03 — Two independent groups; legacy is all-or-nothing.
+        has_zone = attrs.get("detection_zone") is not None
+        legacy_present = [f for f in self._LEGACY_FIELDS if attrs.get(f) is not None]
+        has_full_legacy = len(legacy_present) == len(self._LEGACY_FIELDS)
+        legacy_partial = 0 < len(legacy_present) < len(self._LEGACY_FIELDS)
+
+        # Partial legacy is invalid whether zone is present or not — broken state.
+        if legacy_partial:
+            missing = [f for f in self._LEGACY_FIELDS if attrs.get(f) is None]
             raise ValidationError(
-                "entry_point cannot lie inside park_polygon (collapsed geometry)."
+                f"Arrow + park calibration is all-or-nothing. Missing: {missing}. "
+                "Either provide all four (entry_point_x, entry_point_y, "
+                "approach_angle_deg, park_polygon), or omit them all."
             )
+
+        # At least one valid group must be present.
+        if not has_zone and not has_full_legacy:
+            raise ValidationError(
+                "At least one of detection_zone or the full arrow+park set "
+                "(entry_point_x, entry_point_y, approach_angle_deg, park_polygon) "
+                "must be provided."
+            )
+
+        # Collapsed-geometry guard only if we have the full legacy set.
+        if has_full_legacy:
+            ex = attrs["entry_point_x"]
+            ey = attrs["entry_point_y"]
+            poly = attrs["park_polygon"]
+            min_x = min(p[0] for p in poly)
+            max_x = max(p[0] for p in poly)
+            min_y = min(p[1] for p in poly)
+            max_y = max(p[1] for p in poly)
+            if min_x <= ex <= max_x and min_y <= ey <= max_y:
+                raise ValidationError(
+                    "entry_point cannot lie inside park_polygon (collapsed geometry)."
+                )
+
         return attrs
 
     @staticmethod
@@ -290,22 +347,22 @@ class VehicleCalibrationSerializer(serializers.Serializer):
 
     @staticmethod
     def apply_to_camera(camera, validated_data):
-        camera.vehicle_entry_point_x = validated_data["entry_point_x"]
-        camera.vehicle_entry_point_y = validated_data["entry_point_y"]
-        camera.vehicle_approach_angle_deg = validated_data["approach_angle_deg"]
-        camera.vehicle_park_polygon = validated_data["park_polygon"]
-        update_fields = [
-            "vehicle_entry_point_x",
-            "vehicle_entry_point_y",
-            "vehicle_approach_angle_deg",
-            "vehicle_park_polygon",
-        ]
-        # detection_zone is optional — only update if explicitly present (allows
-        # legacy clients to keep working without zeroing the new field).
-        if "detection_zone" in validated_data:
-            camera.vehicle_detection_zone = validated_data["detection_zone"]
-            update_fields.append("vehicle_detection_zone")
-        camera.save(update_fields=update_fields)
+        """Field PRESENT → write the value (incl. None=clear).
+        Field MISSING from validated_data → leave the column untouched."""
+        update_fields = []
+        field_map = {
+            "entry_point_x": "vehicle_entry_point_x",
+            "entry_point_y": "vehicle_entry_point_y",
+            "approach_angle_deg": "vehicle_approach_angle_deg",
+            "park_polygon": "vehicle_park_polygon",
+            "detection_zone": "vehicle_detection_zone",
+        }
+        for serializer_field, model_field in field_map.items():
+            if serializer_field in validated_data:
+                setattr(camera, model_field, validated_data[serializer_field])
+                update_fields.append(model_field)
+        if update_fields:
+            camera.save(update_fields=update_fields)
 
     @staticmethod
     def clear_on_camera(camera):

@@ -172,25 +172,102 @@ class CrossFieldTests(SimpleTestCase):
 
 
 class FieldMissingTests(SimpleTestCase):
-    """All four top-level fields are required."""
+    """Legacy arrow+park fields: all four together OR none, never partial.
+    Updated 2026-05-03: fields are individually optional but the GROUP is
+    all-or-nothing. Missing one without detection_zone → cross-field error,
+    not a per-field error. See v162 zone-only flow below.
+    """
 
-    def test_missing_entry_point_x(self):
+    def test_missing_entry_point_x_without_zone_rejected(self):
         payload = _valid_payload()
         del payload["entry_point_x"]
         s = VehicleCalibrationSerializer(data=payload)
         self.assertFalse(s.is_valid())
-        self.assertIn("entry_point_x", s.errors)
+        # Cross-field error since arrow+park is partial and no zone.
+        msg = " ".join(str(e) for e in s.errors.get("non_field_errors", []))
+        self.assertIn("all-or-nothing", msg.lower())
 
-    def test_missing_park_polygon(self):
+    def test_missing_park_polygon_without_zone_rejected(self):
         payload = _valid_payload()
         del payload["park_polygon"]
         s = VehicleCalibrationSerializer(data=payload)
         self.assertFalse(s.is_valid())
-        self.assertIn("park_polygon", s.errors)
+        msg = " ".join(str(e) for e in s.errors.get("non_field_errors", []))
+        self.assertIn("all-or-nothing", msg.lower())
 
-    def test_missing_approach_angle(self):
+    def test_missing_approach_angle_without_zone_rejected(self):
         payload = _valid_payload()
         del payload["approach_angle_deg"]
         s = VehicleCalibrationSerializer(data=payload)
         self.assertFalse(s.is_valid())
-        self.assertIn("approach_angle_deg", s.errors)
+        msg = " ".join(str(e) for e in s.errors.get("non_field_errors", []))
+        self.assertIn("all-or-nothing", msg.lower())
+
+
+class V162ZoneFlowTests(SimpleTestCase):
+    """2026-05-03 — Flutter v162 wizard flow: zone is the foundation; arrow + park
+    are optional per-camera. Three valid POST shapes."""
+
+    _ZONE = [[0.10, 0.10], [0.90, 0.10], [0.90, 0.90], [0.10, 0.90]]
+
+    def test_zone_only_accepted(self):
+        # Wizard step 1 saved, steps 2 + 3 skipped.
+        s = VehicleCalibrationSerializer(data={"detection_zone": self._ZONE})
+        self.assertTrue(s.is_valid(), msg=s.errors)
+
+    def test_full_tracking_accepted(self):
+        # Wizard saved zone + arrow + park.
+        payload = _valid_payload(detection_zone=self._ZONE)
+        s = VehicleCalibrationSerializer(data=payload)
+        self.assertTrue(s.is_valid(), msg=s.errors)
+
+    def test_legacy_no_zone_still_accepted(self):
+        # Pre-v162 client saved arrow + park only. Backwards compat.
+        s = VehicleCalibrationSerializer(data=_valid_payload())
+        self.assertTrue(s.is_valid(), msg=s.errors)
+
+    def test_empty_body_rejected(self):
+        s = VehicleCalibrationSerializer(data={})
+        self.assertFalse(s.is_valid())
+        msg = " ".join(str(e) for e in s.errors.get("non_field_errors", []))
+        self.assertIn("must be provided", msg.lower())
+
+    def test_partial_legacy_with_zone_rejected(self):
+        # If user provides arrow without park (or vice versa), error — even WITH
+        # zone present. Prevents stale half-calibration.
+        s = VehicleCalibrationSerializer(data={
+            "detection_zone": self._ZONE,
+            "entry_point_x": 0.18,  # arrow x without the rest
+        })
+        self.assertFalse(s.is_valid())
+        msg = " ".join(str(e) for e in s.errors.get("non_field_errors", []))
+        self.assertIn("all-or-nothing", msg.lower())
+
+    def test_zone_with_explicit_null_legacy_accepted(self):
+        # User clearing arrow+park while keeping zone.
+        s = VehicleCalibrationSerializer(data={
+            "detection_zone": self._ZONE,
+            "entry_point_x": None,
+            "entry_point_y": None,
+            "approach_angle_deg": None,
+            "park_polygon": None,
+        })
+        self.assertTrue(s.is_valid(), msg=s.errors)
+
+    def test_full_tracking_with_explicit_null_zone_accepted(self):
+        # User clearing zone while keeping arrow+park (legacy refresh).
+        s = VehicleCalibrationSerializer(data=_valid_payload(detection_zone=None))
+        self.assertTrue(s.is_valid(), msg=s.errors)
+
+    def test_collapsed_geometry_still_caught_with_zone(self):
+        # Collapsed-geometry guard fires when full legacy set IS present,
+        # regardless of zone. Don't lose this validation.
+        bad = _valid_payload(
+            detection_zone=self._ZONE,
+            entry_point_x=0.5,
+            entry_point_y=0.7,  # inside park_polygon ([0.42,0.55]–[0.78,0.92])
+        )
+        s = VehicleCalibrationSerializer(data=bad)
+        self.assertFalse(s.is_valid())
+        msg = " ".join(str(e) for e in s.errors.get("non_field_errors", []))
+        self.assertIn("collapsed", msg.lower())
