@@ -1,4 +1,6 @@
+import ipaddress
 import json
+import re
 
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
@@ -18,6 +20,34 @@ from camera.models import (
 from utils.exceptions import CustomException
 from utils.update_env import read_env_file
 import logging
+
+
+def extract_ip_from_rtsp_url(url):
+    """Extract a literal IPv4/IPv6 host from an RTSP URL, or None.
+
+    Why: monitor_camera_ips() pings camera.ip every 5 min and disables
+    cameras whose ip is NULL. The RTSP serializer historically excluded
+    `ip` from input, so freshly-added cameras had ip=NULL → watchdog
+    flipped them offline within minutes → Frigate config rendered empty
+    → cameras disappeared from streams. Mirror of the same logic in
+    migration 0024_backfill_camera_ip_from_rtsp_url so the helper is
+    self-contained when migrations run on older Django imports.
+
+    Handles passwords containing '@' (rsplit on last '@' is the userinfo
+    separator). Returns None for hostname-based URLs — the watchdog uses
+    IP literals for ping/ARP, hostnames don't fit that contract.
+    """
+    if not url:
+        return None
+    s = url.split("://", 1)[1] if "://" in url else url
+    if "@" in s:
+        s = s.rsplit("@", 1)[1]
+    host = re.split(r"[:/]", s, 1)[0]
+    try:
+        ipaddress.ip_address(host)
+        return host
+    except ValueError:
+        return None
 
 
 class RTSPDiscoveringSerializer(serializers.Serializer):
@@ -65,6 +95,12 @@ class RTSPCameraSerializer(BaseCameraSerializer):
             "rtsp_url": {"required": True},
             "stream_url": {"read_only": True},
         }
+
+    def create(self, validated_data):
+        ip = extract_ip_from_rtsp_url(validated_data.get("rtsp_url"))
+        if ip:
+            validated_data["ip"] = ip
+        return super().create(validated_data)
 
 
 class RingCameraSerializer(BaseCameraSerializer):
