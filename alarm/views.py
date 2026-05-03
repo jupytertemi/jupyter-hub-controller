@@ -37,7 +37,11 @@ class ListCreateAlarmDeviceView(ListCreateAPIView):
     queryset = AlarmDevice.objects.all()
     pagination_class = Pagination
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    filterset_fields = ["type"]
+    # 2026-05-03 — `identity_name` added for Flutter Build 156 late-register
+    # fallback: when wait-online 408s, the rebuild GETs /alarms?identity_name=<slug>
+    # to check whether the row was created sub-second-late. Server-side filter
+    # avoids paginating the full list client-side.
+    filterset_fields = ["type", "identity_name"]
     ordering_fields = ["created_at"]
     search_fields = ["name"]
 
