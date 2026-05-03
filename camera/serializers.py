@@ -193,12 +193,16 @@ class CameraSettingSerializer(serializers.ModelSerializer):
                 raise ValidationError("At least one loitering camera is required.")
 
         if attrs.get("license_vehicle_recognition", None):
-            if (
-                not attrs.get("vehicle_recognition_camera", None)
-                or attrs.get("vehicle_recognition_camera", None) is None
-            ):
+            # 2026-05-03 — Accept either the legacy single-camera FK OR the
+            # multi-camera M2M (matches the loitering pattern above). Flutter
+            # v162 wizard PATCHes both: per-camera FK during the loop (auth)
+            # plus the final M2M set (AI engine consumption layer).
+            has_single = attrs.get("vehicle_recognition_camera", None) is not None
+            has_multi = bool(attrs.get("vehicle_recognition_cameras", []))
+            if not has_single and not has_multi:
                 raise ValidationError(
-                    "This 'vehicle_recognition_camera' field is required."
+                    "At least one vehicle recognition camera is required "
+                    "(vehicle_recognition_camera or vehicle_recognition_cameras)."
                 )
         validated_data = super().validate(attrs)
         return validated_data

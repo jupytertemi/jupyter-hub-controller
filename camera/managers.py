@@ -406,7 +406,15 @@ class CameraSettingManager(models.Manager):
 
     def update(self, instance, validated_data):
         updated_fields = []
+        # M2M fields MUST be popped before the setattr() loop — Django
+        # rejects setattr on the forward side of a many-to-many.
         loitering_cameras_data = validated_data.pop("loitering_cameras", None)
+        # 2026-05-03 — Same treatment for vehicle_recognition_cameras (v162
+        # Flutter wizard PATCHes the multi-camera selection). Without this
+        # pop, PATCH 500'd on Direct assignment to the forward side of M2M.
+        vehicle_recognition_cameras_data = validated_data.pop(
+            "vehicle_recognition_cameras", None,
+        )
 
         for field, value in validated_data.items():
             if hasattr(instance, field):
@@ -419,6 +427,11 @@ class CameraSettingManager(models.Manager):
             instance.save()
             instance.loitering_cameras.set(loitering_cameras_data)
             updated_fields.append("loitering_cameras")
+
+        if vehicle_recognition_cameras_data is not None:
+            instance.save()
+            instance.vehicle_recognition_cameras.set(vehicle_recognition_cameras_data)
+            updated_fields.append("vehicle_recognition_cameras")
 
         if (
             "enable_parcel_detect" in updated_fields
