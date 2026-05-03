@@ -6,6 +6,27 @@
 
 This brief documents the hub-side surface area only. The full system spans Flutter app → cloud Lambda broker → hub `.env` → publisher → APNs/FCM. The hub side is one slice; the failures could be in any layer.
 
+> **2026-05-03 — Lead diagnosis (added after junior dev probe):**
+>
+> A second Lambda probe taken AFTER Temi signed out and back in returned `device_count: 0, devices: []`. The earlier probe (this same brief, line ~145) showed device id=243 with FCM + APNs raw tokens populated and LA tokens empty. Sign-out wiped the device record on the broker; sign-in did NOT re-register.
+>
+> **What this rewrites:** the populated FCM + APNs raw tokens we saw earlier were NOT evidence of healthy registration — they were stale records from an older app session that happened to still be in the Lambda store. Flutter's device-registration POST to the Lambda is either silently failing, never firing on sign-in, or the sign-in path doesn't trigger it.
+>
+> **Implication for the hub side:** the hub publisher is functionally innocent. It reads what's in `.env`, fans out to APNs / FCM, and Apple returns 200 OK. Whether those tokens correspond to a live install on the iPhone is a question the hub can't answer. The "asymmetric refresh" hypothesis I floated earlier in this doc is wrong — the asymmetry observed (LA empty, alert/FCM populated) was just an artifact of the device record being **partially populated** for an older session, not an active mismatch.
+>
+> **Where the bug lives:** Flutter's auth flow → cloud Lambda broker registration POST. Either:
+> - Sign-in doesn't call the device-register endpoint at all
+> - It calls but fails silently (4xx/5xx swallowed, no retry)
+> - It calls with payload that the Lambda silently drops
+> - LA push-to-start tokens specifically are never requested via `Activity.pushTokenUpdates` so the registration POST happens with empty LA fields (matches the Lambda earlier showing populated APNs+FCM but empty LA — those were registered, LA never was)
+>
+> **Highest-value next steps** (none hub-side anymore):
+> 1. Flutter dev: instrument the device-register POST. Log the URL, body, response, and timing on every sign-in. Confirm it fires.
+> 2. Flutter dev: confirm `Activity.pushTokenUpdates` async-stream is being subscribed to and its tokens forwarded to the Lambda — separate POST or same one?
+> 3. Cloud-side: add CloudWatch logs on the Lambda's POST handler — does it ever see the request, and if so what does it reject?
+>
+> The rest of this brief is the hub-side surface area as originally written. Read past the publisher / .env / metrics sections only if you want infrastructure context — they're not the failure point.
+
 ---
 
 ## Architecture (hub-direct path)
