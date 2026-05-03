@@ -112,6 +112,8 @@ HUB_CONTROLLER_FILES=(
 
 # VehicleAI files (containerized via bind-mount today; should be image-baked)
 VEHICLE_AI_FILES=(
+  "constants.py"
+  "main_vehicle.py"
   "state_detector.py"
   "zone_gate.py"
 )
