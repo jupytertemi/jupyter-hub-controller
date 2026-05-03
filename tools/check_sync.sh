@@ -112,7 +112,8 @@ HUB_CONTROLLER_FILES=(
 
 # VehicleAI files (containerized via bind-mount today; should be image-baked)
 VEHICLE_AI_FILES=(
-  "constants.py"
+  # constants.py intentionally omitted — it's the runtime-toggle file written
+  # by camera_setting_config. Tracked separately under Runtime-toggle bind-mounts.
   "main_vehicle.py"
   "state_detector.py"
   "zone_gate.py"
@@ -126,8 +127,8 @@ VEHICLE_IMAGE_REF="jupytertemi/pilot_vehicle_ai:dev"
 # FaceAI (face_recognition container) — baked 2026-05-03 same playbook
 LOCAL_FACE_REPO="${LOCAL_FACE_REPO:-/Users/topsycombs/jupytertemi/FaceAI}"
 FACE_AI_FILES=(
+  # constants.py intentionally omitted — runtime-toggle, tracked separately.
   "npu_yield_listener.py"
-  "constants.py"
   "database.py"
   "shared_enhance.py"
   "improved_matcher.py"
@@ -135,6 +136,40 @@ FACE_AI_FILES=(
 )
 FACE_CONTAINER="face_recognition"
 FACE_IMAGE_REF="jupytertemi/pilot_face_recognition_ai:dev"
+
+# ParcelAI (parcel_detection) — baked 2026-05-03
+LOCAL_PARCEL_REPO="${LOCAL_PARCEL_REPO:-/Users/topsycombs/jupytertemi/ParcelAI}"
+PARCEL_AI_FILES=(
+  "database.py"
+  "npu_yield_listener.py"
+  "main_parcel.py"
+)
+PARCEL_CONTAINER="parcel_detection"
+PARCEL_IMAGE_REF="jupytertemi/pilot_parcel_theft_ai:dev"
+PARCEL_HUB_DIR="/root/jupyter-container/pilot_parcel_theft_AI"
+
+# LoiterAI (loiter_detection) — baked 2026-05-03
+LOCAL_LOITER_REPO="${LOCAL_LOITER_REPO:-/Users/topsycombs/jupytertemi/LoiterAI}"
+LOITER_AI_FILES=(
+  "detector.py"
+  "database.py"
+  "main.py"
+  "npu_yield_listener.py"
+)
+LOITER_CONTAINER="loiter_detection"
+LOITER_IMAGE_REF="jupytertemi/loiterai:dev"
+LOITER_HUB_DIR="/root/jupyter-container/loiterai"
+
+# Runtime-toggle bind-mount audit (constants.py / config.py per AI).
+# Per docs/ai-constants-healer.md §2.2 these MUST stay bind-mounted so the
+# camera_setting_config Celery task's writes reach the container.
+RUNTIME_TOGGLE_MOUNTS=(
+  "face_recognition:/usr/src/app/constants.py:pilot_face_recognition_ai/constants.py"
+  "number_plate_detection:/usr/src/app/constants.py:pilot_vehicle_ai/constants.py"
+  "parcel_detection:/usr/src/app/constants.py:pilot_parcel_theft_AI/constants.py"
+  "sound_detection:/usr/src/app/constants.py:pilot_unusual_sounds_ai/constants.py"
+  "loiter_detection:/usr/src/app/config.py:loiterai/config.py"
+)
 
 # --- run ------------------------------------------------------------------
 
@@ -190,6 +225,50 @@ for f in "${FACE_AI_FILES[@]}"; do
   i=$(image_sha "$FACE_IMAGE_REF" "/usr/src/app/$f")
   v=$(verdict "$l" "$h" "$c" "$i")
   printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "$f" "$l" "$h" "$c" "$i" "$v"
+done
+echo
+
+# Section 3c: ParcelAI files
+echo "## ParcelAI (parcel_detection container — image-baked, no source bind-mount)"
+echo
+printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "FILE" "LOCAL" "HUB-HOST" "CONTAINER" "IMAGE-BAKED" "VERDICT"
+for f in "${PARCEL_AI_FILES[@]}"; do
+  l=$(local_sha "$LOCAL_PARCEL_REPO/$f")
+  h=$(hub_host_sha "$PARCEL_HUB_DIR/$f")
+  c=$(container_sha "$PARCEL_CONTAINER" "/usr/src/app/$f")
+  i=$(image_sha "$PARCEL_IMAGE_REF" "/usr/src/app/$f")
+  v=$(verdict "$l" "$h" "$c" "$i")
+  printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "$f" "$l" "$h" "$c" "$i" "$v"
+done
+echo
+
+# Section 3d: LoiterAI files
+echo "## LoiterAI (loiter_detection container — image-baked, no source bind-mount)"
+echo
+printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "FILE" "LOCAL" "HUB-HOST" "CONTAINER" "IMAGE-BAKED" "VERDICT"
+for f in "${LOITER_AI_FILES[@]}"; do
+  l=$(local_sha "$LOCAL_LOITER_REPO/$f")
+  h=$(hub_host_sha "$LOITER_HUB_DIR/$f")
+  c=$(container_sha "$LOITER_CONTAINER" "/usr/src/app/$f")
+  i=$(image_sha "$LOITER_IMAGE_REF" "/usr/src/app/$f")
+  v=$(verdict "$l" "$h" "$c" "$i")
+  printf "  %-32s %-12s %-12s %-12s %-12s %s\n" "$f" "$l" "$h" "$c" "$i" "$v"
+done
+echo
+
+# Section 3e: Runtime-toggle bind-mount presence
+echo "## Runtime-toggle bind-mounts (constants.py / config.py per AI)"
+echo
+printf "  %-22s %-30s %s\n" "CONTAINER" "BIND-MOUNT TARGET" "VERDICT"
+for entry in "${RUNTIME_TOGGLE_MOUNTS[@]}"; do
+  c="${entry%%:*}"; rest="${entry#*:}"
+  dest="${rest%%:*}"; src="${rest#*:}"
+  found=$(ssh_run "docker inspect '$c' --format '{{range .Mounts}}{{.Source}}|{{.Destination}}{{println}}{{end}}' 2>/dev/null | grep -F '$src|$dest'" 2>/dev/null)
+  if [ -n "$found" ]; then
+    printf "  %-22s %-30s %s\n" "$c" "$dest" "${GREEN}PASS${RESET}"
+  else
+    printf "  %-22s %-30s %s\n" "$c" "$dest" "${RED}FAIL (missing)${RESET}"
+  fi
 done
 echo
 
