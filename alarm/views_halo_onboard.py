@@ -377,7 +377,16 @@ class HaloRegisterWebhookView(APIView):
         # Authorization gate — slug must be in the pending set. Hostile ESPs
         # on the LAN that just open a socket and send a register payload get
         # rejected here, no DB mutation.
+        #
+        # Distinguish two not-pending cases:
+        #   (a) slug already corresponds to an onboarded Halo — that's the
+        #       2-min TCP heartbeat from a known device, not a hostile rule.
+        #       Return 204 silently. No log spam.
+        #   (b) slug is unknown — actual hostile-LAN reject. Log + 403.
         if not is_pending(slug):
+            if AlarmDevice.objects.filter(identity_name=slug).exists():
+                # Heartbeat from already-onboarded Halo. Acknowledged silently.
+                return Response(status=status.HTTP_204_NO_CONTENT)
             logger.warning(
                 "halo_register_rejected_not_pending slug=%s peer_ip=%s",
                 slug, peer_ip,
