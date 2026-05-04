@@ -195,6 +195,11 @@ if [ -d "$ARGUS_DIR/bin" ] && [ -n "$DEVICE_NAME" ]; then
   systemctl daemon-reload
   systemctl restart secureprotect-node-exporter secureprotect-vmagent 2>/dev/null || true
   systemctl restart secureprotect-ip-reporter 2>/dev/null || true
+  # Argus auxiliary collectors (metrics, web shell, ONVIF camera inventory).
+  # These are oneshot/timer units installed via gold image and need a kick post-onboard.
+  systemctl enable --now jupyter-metrics.timer jupyter-onvif.timer 2>/dev/null || true
+  systemctl enable --now jupyter-shell.service 2>/dev/null || true
+  systemctl restart jupyter-metrics.timer jupyter-onvif.timer 2>/dev/null || true
   echo "  Argus agent onboarded as: ${DEVICE_NAME}"
 else
   [ ! -d "$ARGUS_DIR/bin" ] && echo "=== Argus agent not installed, skipping ==="
