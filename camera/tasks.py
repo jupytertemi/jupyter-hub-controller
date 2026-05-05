@@ -110,6 +110,50 @@ def get_cameras():
                 "detect_height": detect_h,
             }
         )
+
+    # 2026-05-05 — Tiered detect-resolution cap by enabled camera count.
+    # Frigate's CPU + memory + NPU load scale linearly with detect.width *
+    # detect.height * fps * camera_count. A hub with 6 cameras at native
+    # 1080p detect eats ~4x the resources of 4 cameras at 720p. We cap
+    # automatically so a customer adding their 7th camera doesn't crash
+    # Frigate. Vehicle cams stay protected longest because plate reading
+    # genuinely needs the detail.
+    n = len(camera_data)
+    if n <= 4:
+        cap_vehicle = (1920, 1080)
+        cap_other = None  # use camera native sub
+    elif n <= 6:
+        cap_vehicle = (1920, 1080)
+        cap_other = (1280, 720)
+    elif n <= 8:
+        cap_vehicle = (1280, 720)
+        cap_other = (854, 480)
+    else:
+        cap_vehicle = (1024, 576)
+        cap_other = (640, 360)
+
+    def _apply_cap(w, h, cap):
+        if not cap or not w or not h:
+            return w, h
+        cap_w, cap_h = cap
+        if w <= cap_w:
+            return w, h
+        scale = cap_w / float(w)
+        return cap_w, int(h * scale)
+
+    for c in camera_data:
+        cap = cap_vehicle if c["has_vehicle_detection"] else cap_other
+        c["detect_width"], c["detect_height"] = _apply_cap(
+            c["detect_width"], c["detect_height"], cap
+        )
+        # Apply same cap to sub_stream dims so non-vehicle cams' detect block
+        # in the template (which currently reads sub_stream_width/height) sees
+        # the capped values. Original native res still preserved on Camera row.
+        if not c["has_vehicle_detection"]:
+            c["sub_stream_width"], c["sub_stream_height"] = _apply_cap(
+                c["sub_stream_width"], c["sub_stream_height"], cap
+            )
+
     return camera_data
 
 
