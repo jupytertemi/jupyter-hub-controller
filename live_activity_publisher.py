@@ -577,7 +577,14 @@ def _handle_ai_event(data):
     if not ok:
         log.info("skip: %s", why)
         return
-    push_la_ai_event(notification_type, title, data)
+    # Live Activity cards persist on the lock screen with action buttons
+    # (garage open/close, etc.) and should fire ONLY for actionable events.
+    # Per product owner 2026-05-06: a passing "Vehicle spotted" with no
+    # known owner is informational, not actionable — banner only, no LA.
+    # Known owner Approaching/Parked/Departing keeps the LA card because it
+    # carries the garage open/close button (notification_type=garage_detected).
+    if notification_type != "vehicle_spotted":
+        push_la_ai_event(notification_type, title, data)
     extra = {"notificationType": notification_type, "label": label, "event_id": event_id,
              "camera_name": data.get("camera_name", ""), "video_path": data.get("video_path", "") or ""}
     push_apns_alert(title, body, extra, log_tag=notification_type)
