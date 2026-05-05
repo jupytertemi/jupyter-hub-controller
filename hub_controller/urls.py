@@ -67,4 +67,5 @@ urlpatterns = [
     path("api/", include("external_device.urls")),
     path("api/", include("system.urls")),
     path("api/gdrive/", include("gdrive_backup.urls")),
+    path("api/", include("notifications.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root="/root/jupyter-container/upload")

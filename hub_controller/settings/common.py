@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "cloudflare_turn",
     "external_device",
     "gdrive_backup",
+    "notifications",
 ]
 
 MIDDLEWARE = [

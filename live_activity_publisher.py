@@ -215,30 +215,74 @@ def _emit_metric(push_type, log_tag, status, http_status=None, error=None):
         pass  # Telemetry must never break the push path
 
 
-def _apns_post(token, payload, push_type, topic, log_tag):
-    """Generic APNs send. push_type in {liveactivity, alert}; topic accordingly."""
+def _apns_post(token, payload, push_type, topic, log_tag, max_retries=2):
+    """Generic APNs send. Returns one of:
+        "ok"      — Apple accepted (HTTP 200)
+        "stale"   — token is dead (HTTP 410 Unregistered, or 400 BadDeviceToken).
+                    Caller should remove this token from the store.
+        "fail"    — non-recoverable HTTP/transport error
+        "skipped" — no token supplied
+
+    push_type in {liveactivity, alert}; topic accordingly. Retries 5xx
+    responses up to max_retries times with exponential backoff (0.5s, 2s).
+    """
     if not token:
         _emit_metric(push_type, log_tag, "skipped", error="no token")
-        return False
+        return "skipped"
     headers = {
         "authorization": f"bearer {_jwt_token()}",
         "apns-push-type": push_type,
         "apns-topic": topic,
         "apns-priority": "10",
     }
-    try:
-        with httpx.Client(http2=True, timeout=10) as c:
-            r = c.post(f"{APNS_BASE}/3/device/{token}", headers=headers, json=payload)
-        if r.status_code == 200:
-            log.info("APNs OK %s", log_tag)
-            _emit_metric(push_type, log_tag, "ok", http_status=200)
-            return True
-        log.error("APNs %s status=%s body=%s", log_tag, r.status_code, r.text[:200])
-        _emit_metric(push_type, log_tag, "http_fail", http_status=r.status_code, error=r.text[:200])
-    except Exception as ex:
-        log.exception("APNs %s exception: %s", log_tag, ex)
-        _emit_metric(push_type, log_tag, "exception", error=ex)
-    return False
+    backoffs = [0.5, 2.0, 5.0]
+    last_status = None
+    last_body = ""
+    for attempt in range(max_retries + 1):
+        try:
+            with httpx.Client(http2=True, timeout=10) as c:
+                r = c.post(f"{APNS_BASE}/3/device/{token}", headers=headers, json=payload)
+            last_status = r.status_code
+            last_body = r.text[:300] if r.text else ""
+            if r.status_code == 200:
+                log.info("APNs OK %s", log_tag)
+                _emit_metric(push_type, log_tag, "ok", http_status=200)
+                return "ok"
+            # Stale token: Apple's documented codes for "this token is dead,
+            # stop sending to it." Remove it from our store rather than
+            # retrying or logging on every event.
+            try:
+                reason = (r.json().get("reason") if r.text else "") or ""
+            except Exception:
+                reason = ""
+            if r.status_code == 410 or (r.status_code == 400 and reason == "BadDeviceToken"):
+                log.warning("APNs stale token %s reason=%s — will remove", log_tag, reason or r.status_code)
+                _emit_metric(push_type, log_tag, "stale", http_status=r.status_code, error=reason)
+                return "stale"
+            # 5xx → retry with backoff. 4xx (other than the stale ones) →
+            # client error, no retry.
+            if 500 <= r.status_code < 600 and attempt < max_retries:
+                log.warning("APNs %s 5xx attempt=%d status=%d, retrying", log_tag, attempt + 1, r.status_code)
+                time.sleep(backoffs[attempt])
+                continue
+            break
+        except httpx.HTTPError as ex:
+            last_status = "exception"
+            last_body = str(ex)
+            if attempt < max_retries:
+                log.warning("APNs %s transport attempt=%d error=%s, retrying", log_tag, attempt + 1, ex)
+                time.sleep(backoffs[attempt])
+                continue
+            log.exception("APNs %s exception after retries: %s", log_tag, ex)
+            _emit_metric(push_type, log_tag, "exception", error=ex)
+            return "fail"
+        except Exception as ex:
+            log.exception("APNs %s unexpected exception: %s", log_tag, ex)
+            _emit_metric(push_type, log_tag, "exception", error=ex)
+            return "fail"
+    log.error("APNs %s status=%s body=%s", log_tag, last_status, last_body)
+    _emit_metric(push_type, log_tag, "http_fail", http_status=last_status, error=last_body)
+    return "fail"
 
 
 def push_la_ai_event(notification_type, title, msg):
@@ -340,8 +384,11 @@ def push_la_halo_offboard_2fa(slug, alarm_id, nonce, serial, expires_in,
 
 
 def push_apns_alert(title, body, data, log_tag):
-    """Regular APNs notification — works without Firebase. Fans out to all
-    of the owner's iPhones whose raw APNs tokens we have."""
+    """Regular APNs banner notification — bypasses Firebase entirely. Fans
+    out to every iPhone whose raw APNs token is registered. Tokens that come
+    back as 410 Unregistered or 400 BadDeviceToken are auto-removed from the
+    store + .env so we don't keep pushing to dead devices forever.
+    """
     if not APNS_RAW_TOKENS:
         return
     payload = {
@@ -353,8 +400,83 @@ def push_apns_alert(title, body, data, log_tag):
     }
     if data:
         payload.update({k: ("" if v is None else str(v)) for k, v in data.items()})
+    stale_tokens = []
     for tok in APNS_RAW_TOKENS:
-        _apns_post(tok, payload, "alert", BUNDLE_ID, f"alert/{log_tag} dev=...{tok[-6:]}")
+        result = _apns_post(tok, payload, "alert", BUNDLE_ID,
+                            f"alert/{log_tag} dev=...{tok[-6:]}")
+        if result == "stale":
+            stale_tokens.append(tok)
+    if stale_tokens:
+        _cleanup_stale_tokens(stale_tokens)
+
+
+TOKEN_STORE_PATH = "/root/jupyter-hub-controller/notification_tokens.json"
+_token_store_lock = threading.Lock()
+
+
+def _cleanup_stale_tokens(stale_tokens):
+    """Remove dead APNs tokens from the JSON store + .env. Decoupled from
+    Django so the publisher process doesn't need to bootstrap the framework.
+    The Django side (notifications.token_store) writes the same file with
+    the same lock semantics, so concurrent register + cleanup are safe.
+    """
+    if not stale_tokens:
+        return
+    stale_set = set(stale_tokens)
+    try:
+        with _token_store_lock:
+            try:
+                with open(TOKEN_STORE_PATH) as f:
+                    store = json.load(f)
+            except (FileNotFoundError, json.JSONDecodeError):
+                store = {}
+            keep = {dev_id: m for dev_id, m in store.items()
+                    if m.get("apns_token") not in stale_set}
+            removed = len(store) - len(keep)
+            if removed:
+                # Atomic write
+                tmp = TOKEN_STORE_PATH + ".tmp"
+                with open(tmp, "w") as f:
+                    json.dump(keep, f, indent=2, sort_keys=True)
+                os.replace(tmp, TOKEN_STORE_PATH)
+                # Sync to .env so the next refresh picks up the cleaned list
+                _write_env_var("APNS_DEVICE_TOKENS",
+                               ",".join(m["apns_token"] for m in keep.values()))
+                log.info("removed %d stale APNs tokens, %d active remaining",
+                         removed, len(keep))
+    except Exception as e:
+        log.warning("stale-token cleanup failed (will retry on next event): %s", e)
+        return
+    # Force in-process refresh so push_apns_alert in this same event-handle
+    # cycle skips the just-removed tokens.
+    try:
+        _refresh_tokens()
+    except Exception as e:
+        log.warning("token refresh after cleanup failed: %s", e)
+
+
+def _write_env_var(key, value):
+    """Update one env var atomically. Same shape as _load_env's reader so we
+    preserve other lines verbatim."""
+    if not os.path.exists(ENV_PATH):
+        return
+    with open(ENV_PATH) as f:
+        lines = f.readlines()
+    found = False
+    out = []
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith(f"{key}="):
+            out.append(f"{key}={value}\n")
+            found = True
+        else:
+            out.append(line)
+    if not found:
+        out.append(f"{key}={value}\n")
+    tmp = ENV_PATH + ".tmp"
+    with open(tmp, "w") as f:
+        f.writelines(out)
+    os.replace(tmp, ENV_PATH)
 
 
 # ---------- FCM (Android + iOS fallback) ----------
