@@ -1,0 +1,560 @@
+#!/usr/bin/env python3
+"""
+Live Activity + General Notification Publisher (hub-direct, all paths)
+
+Subscribes to local EMQX:
+  /events     AI events (CAR/PERSON/PARCEL/AUDIO)
+              → APNs Live Activity push-to-start (LiveActivityWidgetAttributes)
+              → APNs alert push (regular notification, hub-direct)
+              → FCM general notification (fallback / Android)
+
+  +/status    Halo telemetry → APNs Halo Live Activity (HaloChargingActivityAttributes)
+                              + APNs alert + FCM
+
+Bypasses the broken cloud→SQS→Django pipeline entirely.
+
+Env (from /root/jupyter-hub-controller/.env):
+  APNS_BUNDLE_ID, APNS_TEAM_ID, APNS_KEY_ID, APNS_PRIVATE_KEY_PATH
+  LIVE_ACTIVITY_START_TOKEN     — per-owner LA token, refreshed every 10 min
+  HALO_CHARGING_START_TOKEN     — per-owner Halo LA token
+  FCM_REGISTRATION_IDS          — comma-sep list of owner's FCM device tokens
+  APNS_DEVICE_TOKENS            — comma-sep list of owner's RAW APNs tokens (Plan B)
+  FIREBASE_CRED_PATH            — service-account JSON for FCM HTTP v1 send
+"""
+
+import json
+import logging
+import os
+import sys
+import threading
+import time
+from threading import Lock
+
+import httpx
+import jwt
+import paho.mqtt.client as mqtt
+
+import firebase_admin
+from firebase_admin import credentials, messaging
+
+ENV_PATH = "/root/jupyter-hub-controller/.env"
+
+
+def _load_env(path=ENV_PATH, force=False):
+    """Read .env into os.environ. Default behaviour: setdefault (don't clobber
+    already-set vars). With force=True: overwrite — used by the periodic token
+    refresh below so newly-registered device tokens get picked up without a
+    publisher restart.
+    """
+    if not os.path.exists(path):
+        return
+    with open(path) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, _, v = line.partition("=")
+            k = k.strip()
+            v = v.strip()
+            if force:
+                os.environ[k] = v
+            else:
+                os.environ.setdefault(k, v)
+
+
+_load_env()
+
+BUNDLE_ID = os.environ["APNS_BUNDLE_ID"]
+TEAM_ID = os.environ["APNS_TEAM_ID"]
+KEY_ID = os.environ["APNS_KEY_ID"]
+KEY_PATH = os.environ["APNS_PRIVATE_KEY_PATH"]
+
+LA_TOKEN = os.environ.get("LIVE_ACTIVITY_START_TOKEN", "")
+HALO_TOKEN = os.environ.get("HALO_CHARGING_START_TOKEN", "")
+FCM_TOKENS = [t for t in os.environ.get("FCM_REGISTRATION_IDS", "").split(",") if t]
+APNS_RAW_TOKENS = [t for t in os.environ.get("APNS_DEVICE_TOKENS", "").split(",") if t]
+FIREBASE_CRED_PATH = os.environ.get("FIREBASE_CRED_PATH", "")
+
+APNS_BASE = "https://api.push.apple.com"
+THROTTLE_SECONDS = 15
+SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+log = logging.getLogger("la-publisher")
+
+with open(KEY_PATH) as f:
+    PRIVATE_KEY = f.read()
+
+_firebase_app = None
+if FIREBASE_CRED_PATH and os.path.exists(FIREBASE_CRED_PATH):
+    try:
+        _firebase_app = firebase_admin.initialize_app(credentials.Certificate(FIREBASE_CRED_PATH))
+        log.info("Firebase Admin initialised")
+    except Exception as ex:
+        log.exception("Firebase Admin init failed: %s", ex)
+
+_halo_charge_state = {}
+_halo_lock = Lock()
+_throttle_lock = Lock()
+_last_event = {}
+_last_label = {}
+
+
+def _throttle_ok(event_id, label):
+    now = time.time()
+    with _throttle_lock:
+        if now - _last_label.get(label, 0) < THROTTLE_SECONDS:
+            return False, f"label-throttle {label}"
+        if event_id and now - _last_event.get(event_id, 0) < THROTTLE_SECONDS:
+            return False, f"event-throttle {event_id}"
+        if event_id:
+            _last_event[event_id] = now
+        _last_label[label] = now
+    return True, "ok"
+
+
+# ---------- Classifier ----------
+
+def classify_ai_event(msg):
+    label = msg.get("label")
+    if label not in SUPPORTED_LABELS:
+        return None, None, None
+
+    if label == "AUDIO":
+        return "unusual_sound_detected", "Unusual Sound Detected", \
+               f"{msg.get('camera_name','your camera')} heard something"
+
+    if label == "PARCEL":
+        ps = msg.get("parcel_status") or ""
+        person_id = msg.get("person_id")
+        if ps in ("parcel_theft_attempt", "parcel_theft_warning") or (ps == "picked_up" and not person_id):
+            return "parcel_theft_detected", "Parcel pickup by unknown person", \
+                   "Someone unknown is picking up your parcel"
+        if ps in ("picked_up", "parcel_pickup") and person_id:
+            who = msg.get("sub_label") or "someone"
+            return "parcel_theft_detected", f"Parcel collected by {who}", f"{who} picked up your parcel"
+        if ps in ("parcel_dropped_in", "present"):
+            return "parcel_theft_detected", "Parcel delivered", "A parcel arrived at your door"
+        if ps:
+            return "parcel_theft_detected", "Parcel activity detected", "Parcel activity at your door"
+        return None, None, None
+
+    if label == "PERSON":
+        loit = msg.get("loitering") or ""
+        if loit and loit not in ("Unknown", "No"):
+            return "loitering_detected", "Loitering Detected", \
+                   f"Someone is loitering near your {msg.get('camera_name','camera')}"
+        return None, None, None
+
+    # LoiterAI publishes label="LOITERING" with loitering field set to a
+    # score/pattern string. Distinct from FaceAI's PERSON+loitering pattern.
+    if label == "LOITERING":
+        return "loitering_detected", "Loitering Detected", \
+               f"Someone is loitering near your {msg.get('camera_name','camera')}"
+
+    if label == "CAR":
+        vs = msg.get("vehicle_status")
+        owner = (msg.get("recognized_name") or msg.get("owner") or "").strip()
+        if not owner or "unknown" in owner.lower():
+            return None, None, None
+        if vs == "Approaching":
+            return "garage_detected", f"{owner}'s vehicle arriving", f"{owner} is pulling in"
+        if vs in ("Parked", "Parked-LongTerm"):
+            return "garage_detected", f"{owner}'s vehicle parked", f"{owner} has arrived"
+        if vs == "Departing":
+            return "garage_detected", f"{owner}'s vehicle leaving", f"{owner} is heading out"
+        return None, None, None
+
+    return None, None, None
+
+
+# ---------- APNs ----------
+
+def _jwt_token():
+    return jwt.encode(
+        {"iss": TEAM_ID, "iat": int(time.time())},
+        PRIVATE_KEY,
+        algorithm="ES256",
+        headers={"kid": KEY_ID},
+    )
+
+
+METRICS_LOG = "/var/log/la-publisher-metrics.jsonl"
+
+
+def _emit_metric(push_type, log_tag, status, http_status=None, error=None):
+    """Append one structured record per push attempt. Fleet-wide schema —
+    later we can scrape these into CloudWatch / Argus. For now, ssh + jq the file."""
+    try:
+        rec = {
+            "ts": time.time(),
+            "hub_slug": os.environ.get("DEVICE_NAME", ""),
+            "push_type": push_type,        # liveactivity | alert | fcm
+            "tag": log_tag,                # e.g. "LA/garage_detected event=..." or "alert/loitering ..."
+            "status": status,              # ok | http_fail | exception | skipped
+            "http_status": http_status,
+            "error": (str(error)[:200] if error else None),
+        }
+        with open(METRICS_LOG, "a") as f:
+            f.write(json.dumps(rec) + "\n")
+    except Exception:
+        pass  # Telemetry must never break the push path
+
+
+def _apns_post(token, payload, push_type, topic, log_tag):
+    """Generic APNs send. push_type in {liveactivity, alert}; topic accordingly."""
+    if not token:
+        _emit_metric(push_type, log_tag, "skipped", error="no token")
+        return False
+    headers = {
+        "authorization": f"bearer {_jwt_token()}",
+        "apns-push-type": push_type,
+        "apns-topic": topic,
+        "apns-priority": "10",
+    }
+    try:
+        with httpx.Client(http2=True, timeout=10) as c:
+            r = c.post(f"{APNS_BASE}/3/device/{token}", headers=headers, json=payload)
+        if r.status_code == 200:
+            log.info("APNs OK %s", log_tag)
+            _emit_metric(push_type, log_tag, "ok", http_status=200)
+            return True
+        log.error("APNs %s status=%s body=%s", log_tag, r.status_code, r.text[:200])
+        _emit_metric(push_type, log_tag, "http_fail", http_status=r.status_code, error=r.text[:200])
+    except Exception as ex:
+        log.exception("APNs %s exception: %s", log_tag, ex)
+        _emit_metric(push_type, log_tag, "exception", error=ex)
+    return False
+
+
+def push_la_ai_event(notification_type, title, msg):
+    event_id = msg.get("event_id") or ""
+    state = {
+        "notificationType": notification_type,
+        "time": time.strftime("%-I:%M %p"),
+        "cameraName": msg.get("camera_name", "Camera"),
+        "title": title,
+        "label": msg.get("label", ""),
+        "isAlarmActive": False,
+        "eventId": event_id,
+        "videoPath": msg.get("video_path", "") or "",
+        "audioPath": msg.get("audio_path", "") or "",
+        "snapshotFilename": f"event_{event_id}.jpg" if event_id else "",
+        "alarmActivatedAt": 0,
+        "startedAt": time.time(),
+    }
+    label_lower = state["label"].lower() or "event"
+    payload = {
+        "aps": {
+            "timestamp": int(time.time()),
+            "event": "start",
+            "content-state": state,
+            "attributes-type": "LiveActivityWidgetAttributes",
+            "attributes": {"name": f"{label_lower}-event-{event_id}"},
+            "alert": {"title": title, "body": state["cameraName"]},
+            "sound": "default",
+        }
+    }
+    _apns_post(LA_TOKEN, payload, "liveactivity",
+               f"{BUNDLE_ID}.push-type.liveactivity",
+               f"LA/{notification_type} event={event_id}")
+
+
+def push_la_halo(halo_name, charge_percent, is_charging, charge_time_min, wifi_quality, temperature_c):
+    state = {
+        "haloName": halo_name,
+        "chargePercent": int(charge_percent),
+        "isCharging": bool(is_charging),
+        "chargeTimeRemainingMin": int(charge_time_min),
+        "wifiSignalQuality": wifi_quality or "Unknown",
+        "temperatureC": float(temperature_c or 0.0),
+    }
+    payload = {
+        "aps": {
+            "timestamp": int(time.time()),
+            "event": "start",
+            "content-state": state,
+            "attributes-type": "HaloChargingActivityAttributes",
+            "attributes": {},
+            "alert": {"title": f"{halo_name} is charging", "body": f"{int(charge_percent)}%"},
+            "sound": "default",
+        }
+    }
+    _apns_post(HALO_TOKEN, payload, "liveactivity",
+               f"{BUNDLE_ID}.push-type.liveactivity",
+               f"LA/halo halo={halo_name}")
+
+
+def push_la_halo_offboard_2fa(slug, alarm_id, nonce, serial, expires_in,
+                              expires_at, title, body):
+    """Fire iOS Live Activity push-to-start for the Halo offboard 2FA card.
+
+    Triggered by hub Django publishing to /halo_offboard_2fa_pending after
+    the Halo replies `pending` to a factory_reset request. The admin's
+    iPhone shows a Live Activity (lock screen + Dynamic Island) with
+    Confirm / Cancel buttons. If they tap Confirm, the Flutter app calls
+    /api/halo/recovery/confirm with this nonce.
+
+    Per HALO_2FA_FACTORY_RESET_BACKEND_BRIEF.md, the Halo's own internal
+    timer auto-cancels after 60s, so we don't need a hub-side watchdog.
+    """
+    state = {
+        "slug": slug,
+        "alarmId": int(alarm_id),
+        "nonce": int(nonce),
+        "serial": serial,
+        "title": title,
+        "body": body,
+        "expiresAt": int(expires_at),
+        "expiresIn": int(expires_in),
+        "startedAt": time.time(),
+    }
+    payload = {
+        "aps": {
+            "timestamp": int(time.time()),
+            "event": "start",
+            "content-state": state,
+            "attributes-type": "HaloOffboardActivityAttributes",
+            "attributes": {"slug": slug, "alarmId": int(alarm_id)},
+            "alert": {"title": title, "body": body},
+            "sound": "default",
+        }
+    }
+    _apns_post(LA_TOKEN, payload, "liveactivity",
+               f"{BUNDLE_ID}.push-type.liveactivity",
+               f"LA/halo_offboard_2fa slug={slug} nonce={nonce}")
+
+
+def push_apns_alert(title, body, data, log_tag):
+    """Regular APNs notification — works without Firebase. Fans out to all
+    of the owner's iPhones whose raw APNs tokens we have."""
+    if not APNS_RAW_TOKENS:
+        return
+    payload = {
+        "aps": {
+            "alert": {"title": title, "body": body},
+            "sound": "default",
+            "mutable-content": 1,
+        },
+    }
+    if data:
+        payload.update({k: ("" if v is None else str(v)) for k, v in data.items()})
+    for tok in APNS_RAW_TOKENS:
+        _apns_post(tok, payload, "alert", BUNDLE_ID, f"alert/{log_tag} dev=...{tok[-6:]}")
+
+
+# ---------- FCM (Android + iOS fallback) ----------
+
+def push_fcm_notification(title, body, data=None):
+    """Multicast FCM. iOS will fail until Firebase APNs key is uploaded; Android works."""
+    if _firebase_app is None or not FCM_TOKENS:
+        return
+    safe_data = {k: ("" if v is None else str(v)) for k, v in (data or {}).items()}
+    msg = messaging.MulticastMessage(
+        notification=messaging.Notification(title=title, body=body),
+        data=safe_data,
+        apns=messaging.APNSConfig(payload=messaging.APNSPayload(
+            aps=messaging.Aps(
+                alert=messaging.ApsAlert(title=title, body=body),
+                sound="default",
+                mutable_content=True,
+            ),
+        )),
+        tokens=list(FCM_TOKENS),
+    )
+    try:
+        resp = messaging.send_each_for_multicast(msg)
+        log.info("FCM sent: success=%d failed=%d", resp.success_count, resp.failure_count)
+        _emit_metric("fcm", title[:40], "ok" if resp.failure_count == 0 else "http_fail",
+                     http_status=resp.success_count, error=f"failed={resp.failure_count}" if resp.failure_count else None)
+    except Exception as ex:
+        log.exception("FCM exception: %s", ex)
+        _emit_metric("fcm", title[:40], "exception", error=ex)
+
+
+# ---------- helpers ----------
+
+def _wifi_quality(rssi):
+    if rssi is None:
+        return "Unknown"
+    try:
+        rssi = float(rssi)
+    except (TypeError, ValueError):
+        return "Unknown"
+    if rssi >= -50: return "Excellent"
+    if rssi >= -60: return "Good"
+    if rssi >= -70: return "Average"
+    return "Poor"
+
+
+# ---------- handlers ----------
+
+def _handle_ai_event(data):
+    notification_type, title, body = classify_ai_event(data)
+    if not notification_type:
+        return
+    label = data.get("label", "")
+    event_id = data.get("event_id", "")
+    ok, why = _throttle_ok(event_id, label)
+    if not ok:
+        log.info("skip: %s", why)
+        return
+    push_la_ai_event(notification_type, title, data)
+    extra = {"notificationType": notification_type, "label": label, "event_id": event_id,
+             "camera_name": data.get("camera_name", ""), "video_path": data.get("video_path", "") or ""}
+    push_apns_alert(title, body, extra, log_tag=notification_type)
+    push_fcm_notification(title, body, data=extra)
+
+
+def _handle_halo_status(topic, data):
+    parts = [p for p in topic.split("/") if p]
+    if len(parts) < 2 or parts[-1] != "status":
+        return
+    identity = parts[0]
+    if not isinstance(data, dict):
+        return
+    is_charging = bool(data.get("charging", False))
+    halo_name = data.get("device") or identity
+
+    with _halo_lock:
+        prev = _halo_charge_state.get(identity)
+        _halo_charge_state[identity] = is_charging
+    if prev is None and not is_charging: return
+    if prev == is_charging: return
+
+    log.info("halo charge edge: %s %s -> %s", identity, prev, is_charging)
+    if not is_charging: return
+
+    ok, why = _throttle_ok(f"halo-{identity}", "HALO")
+    if not ok:
+        log.info("skip halo: %s", why)
+        return
+
+    pct = int(data.get("battery_percent", 0))
+    push_la_halo(halo_name, pct, is_charging,
+                 int(data.get("charge_time_minutes", 0)),
+                 _wifi_quality(data.get("wifi_rssi")),
+                 float(data.get("temperature", 0.0)))
+    title = f"{halo_name} is charging"
+    body = f"{pct}% — placed on charger"
+    extra = {"notificationType": "halo_charging", "halo_name": halo_name, "charge_percent": str(pct)}
+    push_apns_alert(title, body, extra, log_tag="halo")
+    push_fcm_notification(title, body, data=extra)
+
+
+def _handle_halo_offboard_2fa(data):
+    """Hub Django publishes here after the Halo issues a `pending` nonce."""
+    try:
+        push_la_halo_offboard_2fa(
+            slug=data["slug"],
+            alarm_id=data.get("alarm_id", 0),
+            nonce=data["nonce"],
+            serial=data.get("serial", data["slug"]),
+            expires_in=data.get("expires_in", 60),
+            expires_at=data.get("expires_at", int(time.time()) + 60),
+            title=data.get("title", "Factory Reset Requested"),
+            body=data.get("body", "Confirm Halo factory reset"),
+        )
+    except KeyError as ex:
+        log.error("halo_offboard_2fa missing field: %s payload=%s", ex, data)
+
+
+def _on_message(client, userdata, msg):
+    try:
+        data = json.loads(msg.payload.decode("utf-8"))
+    except Exception:
+        return
+    if msg.topic == "/events":
+        _handle_ai_event(data)
+    elif msg.topic == "/halo_offboard_2fa_pending":
+        _handle_halo_offboard_2fa(data)
+    elif msg.topic.endswith("/status"):
+        _handle_halo_status(msg.topic, data)
+
+
+def _on_connect(client, userdata, flags, rc, properties=None):
+    log.info("MQTT connected rc=%s", rc)
+    client.subscribe([
+        ("/events", 0),
+        ("+/status", 0),
+        ("/halo_offboard_2fa_pending", 1),
+    ])
+    log.info("subscribed: /events  +/status  /halo_offboard_2fa_pending")
+
+
+TOKEN_REFRESH_INTERVAL_SECONDS = 60
+
+
+def _refresh_tokens():
+    """Re-read .env and update token globals. Called every 60s by a daemon
+    thread so the publisher picks up newly-registered tokens without needing
+    a process restart, AND recovers from transient empty-token states (which
+    used to crash-loop the service)."""
+    global LA_TOKEN, HALO_TOKEN, FCM_TOKENS, APNS_RAW_TOKENS
+    _load_env(force=True)
+    new_la = os.environ.get("LIVE_ACTIVITY_START_TOKEN", "")
+    new_halo = os.environ.get("HALO_CHARGING_START_TOKEN", "")
+    new_fcm = [t for t in os.environ.get("FCM_REGISTRATION_IDS", "").split(",") if t]
+    new_raw = [t for t in os.environ.get("APNS_DEVICE_TOKENS", "").split(",") if t]
+    changed = (
+        new_la != LA_TOKEN
+        or new_halo != HALO_TOKEN
+        or new_fcm != FCM_TOKENS
+        or new_raw != APNS_RAW_TOKENS
+    )
+    LA_TOKEN, HALO_TOKEN, FCM_TOKENS, APNS_RAW_TOKENS = new_la, new_halo, new_fcm, new_raw
+    if changed:
+        log.info(
+            "tokens refreshed: la=%s halo=%s fcm=%d apns_raw=%d",
+            "set" if LA_TOKEN else "EMPTY",
+            "set" if HALO_TOKEN else "EMPTY",
+            len(FCM_TOKENS),
+            len(APNS_RAW_TOKENS),
+        )
+
+
+def _token_refresh_loop():
+    while True:
+        time.sleep(TOKEN_REFRESH_INTERVAL_SECONDS)
+        try:
+            _refresh_tokens()
+        except Exception as e:
+            log.warning("token refresh failed (will retry): %s", e)
+
+
+def main():
+    log.info(
+        "starting publisher v4  bundle=%s la=%s halo=%s fcm=%d apns_raw=%d firebase=%s",
+        BUNDLE_ID,
+        "set" if LA_TOKEN else "EMPTY",
+        "set" if HALO_TOKEN else "EMPTY",
+        len(FCM_TOKENS),
+        len(APNS_RAW_TOKENS),
+        "yes" if _firebase_app else "no",
+    )
+    # Previously: sys.exit(2) here when no tokens. That caused a crash-loop
+    # under systemd whenever the .env was transiently empty (e.g., during a
+    # hub-controller restart). 310+ restarts in one day = lost notifications
+    # for ~9 hours straight. Now we keep MQTT alive and re-poll tokens every
+    # 60s so the next refresh recovers automatically.
+    if not (LA_TOKEN or HALO_TOKEN or FCM_TOKENS or APNS_RAW_TOKENS):
+        log.warning(
+            "no tokens at startup — staying alive, will re-check every %ds",
+            TOKEN_REFRESH_INTERVAL_SECONDS,
+        )
+
+    threading.Thread(target=_token_refresh_loop, daemon=True).start()
+
+    client = mqtt.Client(
+        callback_api_version=mqtt.CallbackAPIVersion.VERSION2,
+        client_id="live-activity-publisher",
+        clean_session=True,
+    )
+    client.on_connect = _on_connect
+    client.on_message = _on_message
+    client.connect("127.0.0.1", 1883, keepalive=60)
+    client.loop_forever()
+
+
+if __name__ == "__main__":
+    main()
