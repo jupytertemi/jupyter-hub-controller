@@ -8,6 +8,48 @@ import subprocess
 import uuid
 
 
+# Hub-wide camera limits enforced at onboarding to keep Frigate within its
+# CPU/memory/NPU budget. Customer hits one of these caps → clear API error
+# Flutter can render as a UI prompt with the exact remediation.
+MAX_CAMERAS_PER_HUB = 6
+MAX_HIGH_RES_CAMERAS_PER_HUB = 2     # cameras with native main >= 2560 (4K class)
+HIGH_RES_WIDTH_THRESHOLD = 2560
+
+
+def enforce_hub_camera_limits(new_main_width=None):
+    """Reject new camera onboarding if it would exceed hub-wide caps. Called
+    from RTSPCameraManager.create() / RingCameraManager.create() AFTER
+    probing the new camera's resolution so the 4K-tier check has accurate
+    input. Counts only is_enabled=True cameras — disabled cameras don't
+    consume Frigate budget."""
+    from rest_framework.exceptions import ValidationError as DRFValidationError
+    Camera = apps.get_model("camera", "Camera")
+    enabled = Camera.objects.filter(is_enabled=True)
+    total = enabled.count()
+    high_res = enabled.filter(main_stream_width__gte=HIGH_RES_WIDTH_THRESHOLD).count()
+    new_is_high_res = bool(new_main_width and new_main_width >= HIGH_RES_WIDTH_THRESHOLD)
+
+    if total + 1 > MAX_CAMERAS_PER_HUB:
+        raise DRFValidationError({
+            "code": "hub_camera_limit",
+            "detail": (
+                f"This hub already has {total} cameras. The maximum is "
+                f"{MAX_CAMERAS_PER_HUB}. Remove an existing camera before adding another."
+            ),
+        })
+
+    if new_is_high_res and high_res + 1 > MAX_HIGH_RES_CAMERAS_PER_HUB:
+        raise DRFValidationError({
+            "code": "hub_high_res_camera_limit",
+            "detail": (
+                f"This hub already has {high_res} 4K cameras. The maximum is "
+                f"{MAX_HIGH_RES_CAMERAS_PER_HUB} (4K cameras consume ~4x the resources "
+                f"of 1080p). Replace one with a 1080p camera, or lower this camera's "
+                f"streaming resolution to 1080p."
+            ),
+        })
+
+
 def read_jpeg_dimensions(path):
     """Parse JPEG SOF marker to extract (width, height) without decoding pixels.
     Used as a fallback when RTSP probe fails — the zone-drawing thumbnail saved
@@ -298,6 +340,12 @@ class RTSPCameraManager(models.Manager):
                 kwargs["main_stream_width"] = mw
                 kwargs["main_stream_height"] = mh
                 logging.info(f"main stream resolution: {mw}x{mh}")
+
+        # Hub-wide camera cap: enforce AFTER probe so 4K-tier check has accurate
+        # input. Raises DRF ValidationError → API returns structured error
+        # Flutter can render as a UI prompt with the exact remediation.
+        enforce_hub_camera_limits(new_main_width=kwargs.get("main_stream_width"))
+
         sub_url_for_probe = kwargs.get("sub_rtsp_url")
         if sub_url_for_probe and sub_url_for_probe != rtsp_url:
             # Sub stream has no dedicated thumbnail; ffprobe-only.
@@ -514,6 +562,11 @@ class RingCameraManager(models.Manager):
         # Pop fields not in the Camera model before creating
         sub_rtsp_url = kwargs.pop("sub_rtsp_url", None)
         kwargs.pop("mac_address", None)
+
+        # Hub-wide camera cap. Ring stream is always 720x720, never 4K, so the
+        # high-res check never trips on Ring — but we still enforce the total
+        # cap so users can't add a 7th camera regardless of vendor.
+        enforce_hub_camera_limits(new_main_width=720)
 
         camera = super().create(**kwargs)
         restart_service(settings.RING_STREAM_CONTAINER)
