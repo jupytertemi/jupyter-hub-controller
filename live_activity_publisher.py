@@ -141,10 +141,24 @@ def classify_ai_event(msg):
 
     if label == "PERSON":
         loit = msg.get("loitering") or ""
+        camera = msg.get("camera_name", "your camera")
         if loit and loit not in ("Unknown", "No"):
             return "loitering_detected", "Loitering Detected", \
-                   f"Someone is loitering near your {msg.get('camera_name','camera')}"
-        return None, None, None
+                   f"Someone is loitering near your {camera}"
+        # Plain person-spotted notification. Earlier this branch returned None
+        # (silently dropping every non-loitering PERSON event), which broke
+        # the customer-facing "Kevin was spotted" / "Unknown person spotted"
+        # path. Now we fire on every PERSON event; the per-event_id throttle
+        # in _handle_ai_event prevents floods from MQTT update bursts on the
+        # same track.
+        sub_label = (msg.get("sub_label") or "").strip()
+        person_id = msg.get("person_id")
+        is_named = bool(person_id) and sub_label and sub_label.lower() not in ("someone", "unknown")
+        if is_named:
+            return "person_spotted", f"{sub_label} spotted", \
+                   f"{sub_label} was spotted at your {camera}"
+        return "person_spotted", "Unknown person spotted", \
+               f"An unknown person was spotted at your {camera}"
 
     # LoiterAI publishes label="LOITERING" with loitering field set to a
     # score/pattern string. Distinct from FaceAI's PERSON+loitering pattern.
