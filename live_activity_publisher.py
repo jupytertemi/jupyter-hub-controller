@@ -236,74 +236,41 @@ def _emit_metric(push_type, log_tag, status, http_status=None, error=None):
 
 def _apns_post(token, payload, push_type, topic, log_tag,
                environment="production", max_retries=2):
-    """Generic APNs send. Returns one of:
-        "ok"      — Apple accepted (HTTP 200)
-        "stale"   — token is dead (HTTP 410 Unregistered, or 400 BadDeviceToken).
-                    Caller should remove this token from the store.
-        "fail"    — non-recoverable HTTP/transport error
-        "skipped" — no token supplied
+    """Thin wrapper over notifications.apns_client.send_apns_push that adds
+    publisher-side telemetry + log lines. The actual APNs HTTP/2 logic lives
+    in apns_client.py so the Django diagnostic endpoint and the publisher
+    exercise identical code (no drift).
 
-    push_type in {liveactivity, alert}; topic accordingly. environment in
-    {sandbox, production} routes to the matching APNs endpoint. Retries 5xx
-    responses up to max_retries times with exponential backoff (0.5s, 2s).
+    Returns the same {"ok","stale","fail","skipped"} string codes as before
+    so existing callers don't break.
     """
-    if not token:
-        _emit_metric(push_type, log_tag, "skipped", error="no token")
+    # Lazy-import so the publisher's startup doesn't depend on Django being
+    # bootstrappable. apns_client is Django-free by design.
+    sys.path.insert(0, "/root/jupyter-hub-controller")
+    from notifications.apns_client import send_apns_push  # noqa: PLC0415
+
+    result = send_apns_push(
+        token=token, payload=payload, push_type=push_type, topic=topic,
+        team_id=TEAM_ID, key_id=KEY_ID, private_key=PRIVATE_KEY,
+        environment=environment, max_retries=max_retries,
+    )
+    if result["result"] == "skipped":
+        _emit_metric(push_type, log_tag, "skipped", error=result.get("reason"))
         return "skipped"
-    headers = {
-        "authorization": f"bearer {_jwt_token()}",
-        "apns-push-type": push_type,
-        "apns-topic": topic,
-        "apns-priority": "10",
-    }
-    base_url = _apns_base_url(environment)
-    backoffs = [0.5, 2.0, 5.0]
-    last_status = None
-    last_body = ""
-    for attempt in range(max_retries + 1):
-        try:
-            with httpx.Client(http2=True, timeout=10) as c:
-                r = c.post(f"{base_url}/3/device/{token}", headers=headers, json=payload)
-            last_status = r.status_code
-            last_body = r.text[:300] if r.text else ""
-            if r.status_code == 200:
-                log.info("APNs OK %s", log_tag)
-                _emit_metric(push_type, log_tag, "ok", http_status=200)
-                return "ok"
-            # Stale token: Apple's documented codes for "this token is dead,
-            # stop sending to it." Remove it from our store rather than
-            # retrying or logging on every event.
-            try:
-                reason = (r.json().get("reason") if r.text else "") or ""
-            except Exception:
-                reason = ""
-            if r.status_code == 410 or (r.status_code == 400 and reason == "BadDeviceToken"):
-                log.warning("APNs stale token %s reason=%s — will remove", log_tag, reason or r.status_code)
-                _emit_metric(push_type, log_tag, "stale", http_status=r.status_code, error=reason)
-                return "stale"
-            # 5xx → retry with backoff. 4xx (other than the stale ones) →
-            # client error, no retry.
-            if 500 <= r.status_code < 600 and attempt < max_retries:
-                log.warning("APNs %s 5xx attempt=%d status=%d, retrying", log_tag, attempt + 1, r.status_code)
-                time.sleep(backoffs[attempt])
-                continue
-            break
-        except httpx.HTTPError as ex:
-            last_status = "exception"
-            last_body = str(ex)
-            if attempt < max_retries:
-                log.warning("APNs %s transport attempt=%d error=%s, retrying", log_tag, attempt + 1, ex)
-                time.sleep(backoffs[attempt])
-                continue
-            log.exception("APNs %s exception after retries: %s", log_tag, ex)
-            _emit_metric(push_type, log_tag, "exception", error=ex)
-            return "fail"
-        except Exception as ex:
-            log.exception("APNs %s unexpected exception: %s", log_tag, ex)
-            _emit_metric(push_type, log_tag, "exception", error=ex)
-            return "fail"
-    log.error("APNs %s status=%s body=%s", log_tag, last_status, last_body)
-    _emit_metric(push_type, log_tag, "http_fail", http_status=last_status, error=last_body)
+    if result["result"] == "ok":
+        log.info("APNs OK %s (%dms)", log_tag, result["latency_ms"])
+        _emit_metric(push_type, log_tag, "ok", http_status=200)
+        return "ok"
+    if result["result"] == "stale":
+        log.warning("APNs stale token %s reason=%s — will remove",
+                    log_tag, result.get("reason") or result.get("http_status"))
+        _emit_metric(push_type, log_tag, "stale",
+                     http_status=result["http_status"], error=result.get("reason"))
+        return "stale"
+    log.error("APNs %s status=%s reason=%s",
+              log_tag, result["http_status"], result.get("reason"))
+    _emit_metric(push_type, log_tag, "http_fail",
+                 http_status=result["http_status"], error=result.get("reason"))
     return "fail"
 
 

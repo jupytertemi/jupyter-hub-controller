@@ -100,6 +100,11 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.IsAuthenticated",
     ],
     "EXCEPTION_HANDLER": "utils.exception_handler.custom_exception_handler",
+    "DEFAULT_THROTTLE_RATES": {
+        # 12/min ≈ 1 every 5s. Diagnostic test-push endpoint abuse-protection
+        # only — see notifications/views.py _TestPushThrottle (BACKEND_TEST_PUSH_ENDPOINT.md §3).
+        "test_apns_push": "12/min",
+    },
 }
 
 # Internationalization
