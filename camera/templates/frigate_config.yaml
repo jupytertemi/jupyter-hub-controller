@@ -112,7 +112,9 @@ cameras:{% if not cameras %} {}{% endif %}
       height: {{ camera.sub_stream_height }}
 {% else %}      width: 1920
       height: 1080
-{% endif %}      fps: 5
+{% endif %}{% if camera.has_vehicle_detection %}      fps: 10
+{% else %}      fps: 5
+{% endif %}
       max_disappeared: 50
       stationary:
         interval: 50
