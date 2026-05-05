@@ -201,6 +201,25 @@ if [ -d "$ARGUS_DIR/bin" ] && [ -n "$DEVICE_NAME" ]; then
   systemctl enable --now jupyter-shell.service 2>/dev/null || true
   systemctl restart jupyter-metrics.timer jupyter-onvif.timer 2>/dev/null || true
   echo "  Argus agent onboarded as: ${DEVICE_NAME}"
+
+  # Argus brain provisions the SSH ingress rule (ssh-<slug>.<domain> → ttyd:7681)
+  # on the hub's existing CF tunnel. Idempotent: if rule already exists, no-op.
+  # Brain authenticates the call by verifying slug+secret against cloud's
+  # /hub/credential. Fails closed if misconfigured. Failure here doesn't break
+  # onboarding — it just means the dashboard SSH button won't work until next
+  # boot or manual trigger.
+  ENV_FILE="/root/jupyter-hub-controller/.env"
+  HUB_SECRET=$(grep -E "^HUB_SECRET=" "$ENV_FILE" 2>/dev/null | cut -d= -f2- | tr -d '"')
+  ARGUS_BRAIN="${ARGUS_BRAIN_URL:-http://52.62.80.197:5051}"
+  if [ -n "$HUB_SECRET" ]; then
+    echo "  Asking Argus brain to provision SSH ingress for ${DEVICE_NAME}..."
+    curl -fsS -X POST -H "Content-Type: application/json" \
+      -d "{\"slug_name\":\"${DEVICE_NAME}\",\"hub_secret\":\"${HUB_SECRET}\"}" \
+      --max-time 30 \
+      "${ARGUS_BRAIN}/api/cf/tunnel/provision" \
+      | head -c 500 || echo "    (provision failed — will retry on next boot)"
+    echo
+  fi
 else
   [ ! -d "$ARGUS_DIR/bin" ] && echo "=== Argus agent not installed, skipping ==="
   [ -z "$DEVICE_NAME" ] && echo "=== DEVICE_NAME not set, skipping Argus onboard ==="

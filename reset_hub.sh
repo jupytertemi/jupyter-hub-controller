@@ -126,8 +126,31 @@ fi
 # ===============================
 # PHASE 2: NETWORK OPS (need WiFi + credentials)
 # Must complete BEFORE credentials are wiped or WiFi disconnected.
+# Order matters here:
+#   2a. Argus brain — remove SSH ingress rule from CF tunnel
+#       (BEFORE cloud delete, because brain validates by hitting cloud's
+#        /hub/credential — once cloud deletes the hub, that validation
+#        fails and the brain can no longer authorise the cleanup.)
+#   2b. Cloud /hub/removed — deletes Hub row + the CF tunnel itself
+#   2c. Argus dashboard offboard
+#   2d. Halo factory_reset
 # ===============================
 write_progress 2 8 "in_progress" "Deregistering from jupyter cloud..."
+
+# --- Argus brain: remove SSH ingress rule from this hub's CF tunnel ---
+# Best-effort. If brain unreachable or fails, the orphan reconciler on the
+# brain (or the cloud's /hub/removed call below, which deletes the whole
+# tunnel) will eventually clean up. NEVER block reset on this.
+ARGUS_BRAIN="${ARGUS_BRAIN_URL:-http://52.62.80.197:5051}"
+if [ -n "$DEVICE_NAME" ] && [ -n "$HUB_SECRET" ]; then
+    echo "Asking Argus brain to remove SSH ingress for ${DEVICE_NAME}..."
+    curl -fsS -X DELETE -H "Content-Type: application/json" \
+        -d "{\"slug_name\":\"${DEVICE_NAME}\",\"hub_secret\":\"${HUB_SECRET}\"}" \
+        --connect-timeout 5 --max-time 15 \
+        "${ARGUS_BRAIN}/api/cf/tunnel/provision" \
+        2>&1 | head -c 400 || echo "  (brain decom failed — orphan reconciler will catch it)"
+    echo
+fi
 
 # --- Cloud delete ---
 # Cloud API authenticates with slug_name:hub_secret (Basic Auth)
