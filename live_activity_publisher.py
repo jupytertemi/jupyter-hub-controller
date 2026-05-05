@@ -186,17 +186,42 @@ def classify_ai_event(msg):
                f"Someone is loitering near your {msg.get('camera_name','camera')}"
 
     if label == "CAR":
-        vs = msg.get("vehicle_status")
+        vs = (msg.get("vehicle_status") or "").strip()
         owner = (msg.get("recognized_name") or msg.get("owner") or "").strip()
-        if not owner or "unknown" in owner.lower():
-            return None, None, None
-        if vs == "Approaching":
+        is_known = bool(owner) and "unknown" not in owner.lower()
+        cam = msg.get("camera_name", "your camera")
+
+        # Known-owner state-machine path (driveway "garage" use case) — unchanged.
+        # The "garage_detected" notification_type also drives the garage door
+        # automation downstream, so we keep this branch first and untouched.
+        if is_known and vs == "Approaching":
             return "garage_detected", f"{owner}'s vehicle arriving", f"{owner} is pulling in"
-        if vs in ("Parked", "Parked-LongTerm"):
+        if is_known and vs in ("Parked", "Parked-LongTerm"):
             return "garage_detected", f"{owner}'s vehicle parked", f"{owner} has arrived"
-        if vs == "Departing":
+        if is_known and vs == "Departing":
             return "garage_detected", f"{owner}'s vehicle leaving", f"{owner} is heading out"
-        return None, None, None
+
+        # Every other CAR event fires a generic "vehicle_spotted" banner. Body
+        # text varies with state so users get context (arriving / parked /
+        # leaving / just-spotted) without inheriting garage-automation routing.
+        # Pre-fix: this whole branch silently returned None, dropping every
+        # passing car a customer's front-door camera saw. Confirmed from a
+        # Mill Valley DB probe: 5+ Spotted CAR events all dropped.
+        state_phrase = {
+            "Approaching":     "arriving",
+            "Parked":          "parked",
+            "Parked-LongTerm": "parked",
+            "Departing":       "leaving",
+        }.get(vs, "spotted")
+
+        if is_known:
+            return "vehicle_spotted", f"{owner}'s vehicle {state_phrase}", \
+                   f"{owner}'s vehicle was {state_phrase} at your {cam}"
+        if state_phrase == "spotted":
+            return "vehicle_spotted", "Vehicle spotted", \
+                   f"A vehicle was spotted at your {cam}"
+        return "vehicle_spotted", f"Unknown vehicle {state_phrase}", \
+               f"An unknown vehicle was {state_phrase} at your {cam}"
 
     return None, None, None
 
