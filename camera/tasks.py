@@ -74,6 +74,24 @@ def get_cameras():
                 "coordinates": _zone_coords_to_pixels(flat, camera.type),
                 "objects": ["car", "truck", "motorcycle", "bus"],
             })
+        # 2026-05-05 — Adaptive detect resolution. Cameras with vehicle detection
+        # configured pull the MAIN stream at native resolution (clamped to 1920
+        # max so a 4K camera doesn't tank the NPU). Other cameras keep using the
+        # sub stream for NPU thrift. Probed at onboard via ffprobe; null fields
+        # mean we never measured native res and fall back to current behaviour.
+        has_vehicle_detection = bool(camera.vehicle_detection_zone)
+        main_w = camera.main_stream_width
+        main_h = camera.main_stream_height
+        # Clamp to 1920 max width — never upscale, proportionally scale height.
+        # For 480p (640x480) → stays 640x480. For 1080p (1920x1080) → stays 1080.
+        # For 4K (3840x2160) → caps to 1920x1080. NPU stays in budget.
+        if main_w and main_h and main_w > 1920:
+            scale = 1920.0 / main_w
+            detect_w = 1920
+            detect_h = int(main_h * scale)
+        else:
+            detect_w = main_w
+            detect_h = main_h
         camera_data.append(
             {
                 "name": camera.slug_name,
@@ -83,6 +101,13 @@ def get_cameras():
                 "type": camera.type,
                 "is_audio": camera.is_audio,
                 "zones": zones,
+                "has_vehicle_detection": has_vehicle_detection,
+                "main_stream_width": main_w,
+                "main_stream_height": main_h,
+                "sub_stream_width": camera.sub_stream_width,
+                "sub_stream_height": camera.sub_stream_height,
+                "detect_width": detect_w,
+                "detect_height": detect_h,
             }
         )
     return camera_data

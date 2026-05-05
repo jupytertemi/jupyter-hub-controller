@@ -49,6 +49,16 @@ class Camera(BaseModel):
     # config also publishes this as zones.vehicle_detection_zone for upstream filtering.
     vehicle_detection_zone = models.JSONField(null=True, blank=True)
 
+    # 2026-05-05 — Authoritative stream resolutions probed at onboard time.
+    # Captured by reading one snapshot per profile (ONVIF GetSnapshotUri or RTSP
+    # first-frame). Drives the Frigate template: detect role pulls the main stream
+    # at min(native, 1920) for vehicle-recognition cameras, else falls back to
+    # sub stream as before. Never upscale — 480p stays 480p, 720p stays 720p.
+    main_stream_width = models.PositiveIntegerField(null=True, blank=True)
+    main_stream_height = models.PositiveIntegerField(null=True, blank=True)
+    sub_stream_width = models.PositiveIntegerField(null=True, blank=True)
+    sub_stream_height = models.PositiveIntegerField(null=True, blank=True)
+
 
 class RTSPCamera(Camera):
     objects = RTSPCameraManager()

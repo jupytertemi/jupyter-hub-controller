@@ -1,9 +1,43 @@
+import json
 import logging
 import os
 import re
 import socket
+import struct
 import subprocess
 import uuid
+
+
+def read_jpeg_dimensions(path):
+    """Parse JPEG SOF marker to extract (width, height) without decoding pixels.
+    Used as a fallback when RTSP probe fails — the zone-drawing thumbnail saved
+    at onboard time is the authoritative record of what the camera streamed.
+    Returns (None, None) if the file isn't readable or isn't a JPEG.
+    """
+    try:
+        with open(path, "rb") as f:
+            data = f.read()
+        if data[:2] != b"\xff\xd8":
+            return None, None
+        i = 2
+        while i < len(data) - 9:
+            if data[i] != 0xFF:
+                i += 1
+                continue
+            marker = data[i + 1]
+            # SOF0..SOF15 except SOF4/8/12 (those are DHT/JPG/DAC)
+            if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7,
+                          0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+                h, w = struct.unpack(">HH", data[i + 5:i + 9])
+                return w, h
+            seg_len = struct.unpack(">H", data[i + 2:i + 4])[0]
+            i += 2 + seg_len
+        return None, None
+    except Exception:
+        return None, None
+
+
+THUMBNAILS_DIR = "/root/jupyter-hub-controller/media/thumbnails"
 
 from django.apps import apps
 from django.conf import settings
@@ -135,6 +169,42 @@ class RTSPCameraManager(models.Manager):
         unique_string = f"{slugify(name)}-{str(my_uuid)[0:6]}"
         return unique_string.lower()
 
+    def _probe_stream_resolution(self, rtsp_url, fallback_image_path=None, timeout=8):
+        """Read stream resolution. Two tiers:
+
+        Tier 1 — ffprobe RTSP: authoritative for the current live stream, ignores
+            any ONVIF profile lies. May fail with HTTP 429 on cheap cameras whose
+            connection slots are already taken by Frigate / go2rtc.
+        Tier 2 — JPEG header parse on fallback_image_path: reads the thumbnail
+            saved at onboard time. Bullet-proof since the file exists locally,
+            but reflects the resolution AT the moment of capture (could be stale
+            if the camera was reconfigured later).
+
+        Returns (width, height) or (None, None) if both tiers fail.
+        """
+        if rtsp_url:
+            try:
+                result = subprocess.run(
+                    ["ffprobe", "-v", "error", "-select_streams", "v:0",
+                     "-show_entries", "stream=width,height", "-of", "json",
+                     "-rtsp_transport", "tcp", rtsp_url],
+                    capture_output=True, text=True, timeout=timeout, check=False,
+                )
+                if result.returncode == 0 and result.stdout:
+                    data = json.loads(result.stdout)
+                    streams = data.get("streams", [])
+                    if streams and streams[0].get("width"):
+                        return streams[0]["width"], streams[0].get("height")
+            except (subprocess.TimeoutExpired, json.JSONDecodeError, Exception) as e:
+                logging.warning(f"ffprobe failed for {rtsp_url}: {e}")
+        # Tier 2: thumbnail JPEG header
+        if fallback_image_path and os.path.exists(fallback_image_path):
+            w, h = read_jpeg_dimensions(fallback_image_path)
+            if w and h:
+                logging.info(f"resolution from thumbnail {fallback_image_path}: {w}x{h}")
+                return w, h
+        return None, None
+
     def _capture_thumbnail(self, slug_name, rtsp_url):
         """Grab one RTSP frame via ffmpeg and save as zone-drawing thumbnail."""
         thumbnails_dir = "/root/jupyter-hub-controller/media/thumbnails"
@@ -167,9 +237,31 @@ class RTSPCameraManager(models.Manager):
         if rtsp_url and not kwargs.get("sub_rtsp_url"):
             kwargs["sub_rtsp_url"] = self._derive_sub_stream_url(rtsp_url)
 
-        # Save snapshot for zone drawing before Frigate restarts
+        # Save snapshot for zone drawing before Frigate restarts. Doubles as the
+        # Tier-2 fallback for resolution probing below.
         if rtsp_url:
             self._capture_thumbnail(slug_name, rtsp_url)
+
+        # Probe authoritative stream resolutions for both main + sub. ffprobe is
+        # cheap (~2s/stream) and runs once at onboard. Falls back to reading the
+        # thumbnail JPEG header if ffprobe fails (e.g. camera at 429 connection
+        # limit). Fields stay null only if BOTH tiers fail — template then falls
+        # through to legacy defaults so we never regress vs pre-Phase-A behavior.
+        if rtsp_url:
+            thumb_path = os.path.join(THUMBNAILS_DIR, f"{slug_name}.jpg")
+            mw, mh = self._probe_stream_resolution(rtsp_url, fallback_image_path=thumb_path)
+            if mw and mh:
+                kwargs["main_stream_width"] = mw
+                kwargs["main_stream_height"] = mh
+                logging.info(f"main stream resolution: {mw}x{mh}")
+        sub_url_for_probe = kwargs.get("sub_rtsp_url")
+        if sub_url_for_probe and sub_url_for_probe != rtsp_url:
+            # Sub stream has no dedicated thumbnail; ffprobe-only.
+            sw, sh = self._probe_stream_resolution(sub_url_for_probe)
+            if sw and sh:
+                kwargs["sub_stream_width"] = sw
+                kwargs["sub_stream_height"] = sh
+                logging.info(f"sub stream resolution: {sw}x{sh}")
 
         # Pop fields not in the Camera model before creating
         sub_rtsp_url = kwargs.pop("sub_rtsp_url", None)

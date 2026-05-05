@@ -73,6 +73,16 @@ cameras:{% if not cameras %} {}{% endif %}
       retry_interval: 5
       output_args:
         record: -f segment -segment_time 10 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c:v copy -c:a aac
+{% else %}{% if camera.has_vehicle_detection and camera.detect_width and camera.detect_height %}
+        - path: rtsp://127.0.0.1:8554/{{ camera.name }}
+          roles:
+            - detect
+            - record
+          input_args:
+            - -fflags
+            - +genpts+igndts
+            - -rtsp_transport
+            - tcp
 {% else %}
         - path: rtsp://127.0.0.1:8554/{{ camera.name }}-sub
           roles:
@@ -90,12 +100,16 @@ cameras:{% if not cameras %} {}{% endif %}
             - +genpts+igndts
             - -rtsp_transport
             - tcp
-{% endif %}
+{% endif %}{% endif %}
 
     detect:
       enabled: true
 {% if camera.type == "RING" %}      width: 720
       height: 720
+{% elif camera.has_vehicle_detection and camera.detect_width and camera.detect_height %}      width: {{ camera.detect_width }}
+      height: {{ camera.detect_height }}
+{% elif camera.sub_stream_width and camera.sub_stream_height %}      width: {{ camera.sub_stream_width }}
+      height: {{ camera.sub_stream_height }}
 {% else %}      width: 1920
       height: 1080
 {% endif %}      fps: 5
