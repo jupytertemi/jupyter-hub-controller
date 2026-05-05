@@ -314,6 +314,33 @@ class VehicleCalibrationSerializer(serializers.Serializer):
         required=False,
         allow_null=True,
     )
+    # 2026-05-06 — Car-outline (Step E.5 / PR-spec-vehicle-ai-car-outline.md).
+    # 4-corner quad matching the parked car's footprint. Drives the
+    # plate-readability verdict displayed in Step F. Free-form (no axis-
+    # alignment constraint) — user drags corners to match perspective.
+    car_outline = serializers.ListField(
+        child=serializers.ListField(
+            child=serializers.FloatField(min_value=0.0, max_value=1.0),
+            min_length=2,
+            max_length=2,
+        ),
+        min_length=4,
+        max_length=4,
+        required=False,
+        allow_null=True,
+    )
+    # Client-computed estimate of plate region width in pixels at this car
+    # position. Drives the verdict badge (>=80 green / >=40 yellow / <40 red).
+    # Persisted so the AI engine + future Helios dashboards can reason about
+    # readability without re-deriving from car_outline + frame resolution.
+    plate_readability_px = serializers.FloatField(
+        min_value=0.0, required=False, allow_null=True,
+    )
+    # When the verdict was yellow ("plate too small but proceed anyway") and
+    # the user accepted it, the wizard sets this true so VehicleAI runs bbox
+    # tracking only — skipping plate OCR for this camera. Default False keeps
+    # OCR enabled for existing cameras + green-verdict installs.
+    plate_ocr_skip = serializers.BooleanField(required=False)
 
     _LEGACY_FIELDS = (
         "entry_point_x", "entry_point_y", "approach_angle_deg", "park_polygon",
@@ -394,6 +421,9 @@ class VehicleCalibrationSerializer(serializers.Serializer):
             "approach_angle_deg": camera.vehicle_approach_angle_deg,
             "park_polygon": camera.vehicle_park_polygon,
             "detection_zone": camera.vehicle_detection_zone,
+            "car_outline": camera.vehicle_car_outline,
+            "plate_readability_px": camera.vehicle_plate_readability_px,
+            "plate_ocr_skip": camera.vehicle_plate_ocr_skip,
         }
 
     @staticmethod
@@ -407,6 +437,9 @@ class VehicleCalibrationSerializer(serializers.Serializer):
             "approach_angle_deg": "vehicle_approach_angle_deg",
             "park_polygon": "vehicle_park_polygon",
             "detection_zone": "vehicle_detection_zone",
+            "car_outline": "vehicle_car_outline",
+            "plate_readability_px": "vehicle_plate_readability_px",
+            "plate_ocr_skip": "vehicle_plate_ocr_skip",
         }
         for serializer_field, model_field in field_map.items():
             if serializer_field in validated_data:
@@ -422,11 +455,17 @@ class VehicleCalibrationSerializer(serializers.Serializer):
         camera.vehicle_approach_angle_deg = None
         camera.vehicle_park_polygon = None
         camera.vehicle_detection_zone = None
+        camera.vehicle_car_outline = None
+        camera.vehicle_plate_readability_px = None
+        camera.vehicle_plate_ocr_skip = False
         camera.save(update_fields=[
             "vehicle_entry_point_x",
             "vehicle_entry_point_y",
             "vehicle_approach_angle_deg",
             "vehicle_park_polygon",
             "vehicle_detection_zone",
+            "vehicle_car_outline",
+            "vehicle_plate_readability_px",
+            "vehicle_plate_ocr_skip",
         ])
 

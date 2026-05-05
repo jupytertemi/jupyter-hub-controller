@@ -59,6 +59,18 @@ class Camera(BaseModel):
     sub_stream_width = models.PositiveIntegerField(null=True, blank=True)
     sub_stream_height = models.PositiveIntegerField(null=True, blank=True)
 
+    # 2026-05-06 — Car-outline calibration step (PR-spec-vehicle-ai-car-outline.md).
+    # User drags a 4-corner box matching the parked car's footprint during the
+    # wizard; AI engine + verdict UI infer expected plate width in pixels from
+    # this + the existing approach-arrow direction. plate_readability_px is the
+    # client-computed estimate persisted at save time. plate_ocr_skip is set
+    # true when the verdict was yellow ("plate too small but proceed anyway")
+    # so the AI engine knows to track bbox without running OCR for this camera.
+    # NULL on pre-existing cameras → behave as today (no change).
+    vehicle_car_outline = models.JSONField(null=True, blank=True)
+    vehicle_plate_readability_px = models.FloatField(null=True, blank=True)
+    vehicle_plate_ocr_skip = models.BooleanField(default=False)
+
 
 class RTSPCamera(Camera):
     objects = RTSPCameraManager()
