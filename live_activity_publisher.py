@@ -75,7 +75,26 @@ FCM_TOKENS = [t for t in os.environ.get("FCM_REGISTRATION_IDS", "").split(",") i
 APNS_RAW_TOKENS = [t for t in os.environ.get("APNS_DEVICE_TOKENS", "").split(",") if t]
 FIREBASE_CRED_PATH = os.environ.get("FIREBASE_CRED_PATH", "")
 
-APNS_BASE = "https://api.push.apple.com"
+# APNs has two endpoints. Tokens minted by debug-build apps work ONLY against
+# sandbox; tokens minted by TestFlight/App Store builds work ONLY against
+# production. The token itself doesn't tell you which — the build does — so
+# every token in our store carries an "environment" field, and we route each
+# push accordingly. Default below covers Live Activity tokens whose
+# environment was never declared (treated as production for backwards-compat).
+APNS_BASE_PRODUCTION = "https://api.push.apple.com"
+APNS_BASE_SANDBOX = "https://api.sandbox.push.apple.com"
+LIVE_ACTIVITY_ENVIRONMENT = os.environ.get("LIVE_ACTIVITY_ENVIRONMENT", "production")
+
+
+def _apns_base_url(environment):
+    """Return the APNs endpoint base URL for a given environment string.
+    Unknown values fall back to production so we never silently drop pushes;
+    if a customer hub's env vars are misconfigured, the worst case is wrong-
+    endpoint failures (Apple returns BadDeviceToken → token is auto-cleaned)
+    rather than the publisher crashing."""
+    return APNS_BASE_SANDBOX if environment == "sandbox" else APNS_BASE_PRODUCTION
+
+
 THROTTLE_SECONDS = 15
 SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
 
@@ -215,7 +234,8 @@ def _emit_metric(push_type, log_tag, status, http_status=None, error=None):
         pass  # Telemetry must never break the push path
 
 
-def _apns_post(token, payload, push_type, topic, log_tag, max_retries=2):
+def _apns_post(token, payload, push_type, topic, log_tag,
+               environment="production", max_retries=2):
     """Generic APNs send. Returns one of:
         "ok"      — Apple accepted (HTTP 200)
         "stale"   — token is dead (HTTP 410 Unregistered, or 400 BadDeviceToken).
@@ -223,7 +243,8 @@ def _apns_post(token, payload, push_type, topic, log_tag, max_retries=2):
         "fail"    — non-recoverable HTTP/transport error
         "skipped" — no token supplied
 
-    push_type in {liveactivity, alert}; topic accordingly. Retries 5xx
+    push_type in {liveactivity, alert}; topic accordingly. environment in
+    {sandbox, production} routes to the matching APNs endpoint. Retries 5xx
     responses up to max_retries times with exponential backoff (0.5s, 2s).
     """
     if not token:
@@ -235,13 +256,14 @@ def _apns_post(token, payload, push_type, topic, log_tag, max_retries=2):
         "apns-topic": topic,
         "apns-priority": "10",
     }
+    base_url = _apns_base_url(environment)
     backoffs = [0.5, 2.0, 5.0]
     last_status = None
     last_body = ""
     for attempt in range(max_retries + 1):
         try:
             with httpx.Client(http2=True, timeout=10) as c:
-                r = c.post(f"{APNS_BASE}/3/device/{token}", headers=headers, json=payload)
+                r = c.post(f"{base_url}/3/device/{token}", headers=headers, json=payload)
             last_status = r.status_code
             last_body = r.text[:300] if r.text else ""
             if r.status_code == 200:
@@ -315,7 +337,8 @@ def push_la_ai_event(notification_type, title, msg):
     }
     _apns_post(LA_TOKEN, payload, "liveactivity",
                f"{BUNDLE_ID}.push-type.liveactivity",
-               f"LA/{notification_type} event={event_id}")
+               f"LA/{notification_type} event={event_id}",
+               environment=LIVE_ACTIVITY_ENVIRONMENT)
 
 
 def push_la_halo(halo_name, charge_percent, is_charging, charge_time_min, wifi_quality, temperature_c):
@@ -340,7 +363,8 @@ def push_la_halo(halo_name, charge_percent, is_charging, charge_time_min, wifi_q
     }
     _apns_post(HALO_TOKEN, payload, "liveactivity",
                f"{BUNDLE_ID}.push-type.liveactivity",
-               f"LA/halo halo={halo_name}")
+               f"LA/halo halo={halo_name}",
+               environment=LIVE_ACTIVITY_ENVIRONMENT)
 
 
 def push_la_halo_offboard_2fa(slug, alarm_id, nonce, serial, expires_in,
@@ -385,9 +409,11 @@ def push_la_halo_offboard_2fa(slug, alarm_id, nonce, serial, expires_in,
 
 def push_apns_alert(title, body, data, log_tag):
     """Regular APNs banner notification — bypasses Firebase entirely. Fans
-    out to every iPhone whose raw APNs token is registered. Tokens that come
-    back as 410 Unregistered or 400 BadDeviceToken are auto-removed from the
-    store + .env so we don't keep pushing to dead devices forever.
+    out to every iPhone whose raw APNs token is registered. Each token's
+    sandbox-vs-production environment is read from notification_tokens.json
+    so debug-build tokens route to api.sandbox.push.apple.com and
+    TestFlight/App-Store tokens route to api.push.apple.com. Tokens that
+    come back as 410 Unregistered or 400 BadDeviceToken are auto-removed.
     """
     if not APNS_RAW_TOKENS:
         return
@@ -400,14 +426,32 @@ def push_apns_alert(title, body, data, log_tag):
     }
     if data:
         payload.update({k: ("" if v is None else str(v)) for k, v in data.items()})
+    # Build a token → environment map from the JSON store so we route per-token.
+    # Tokens missing from the store (shouldn't happen, but defensive) fall back
+    # to production — same as legacy behaviour.
+    token_env = _read_token_environments()
     stale_tokens = []
     for tok in APNS_RAW_TOKENS:
+        env = token_env.get(tok, "production")
         result = _apns_post(tok, payload, "alert", BUNDLE_ID,
-                            f"alert/{log_tag} dev=...{tok[-6:]}")
+                            f"alert/{log_tag} dev=...{tok[-6:]} env={env}",
+                            environment=env)
         if result == "stale":
             stale_tokens.append(tok)
     if stale_tokens:
         _cleanup_stale_tokens(stale_tokens)
+
+
+def _read_token_environments():
+    """Return {apns_token: environment} from the JSON store. Empty dict on
+    any read error so we fall back to production routing."""
+    try:
+        with open(TOKEN_STORE_PATH) as f:
+            store = json.load(f)
+        return {m["apns_token"]: m.get("environment", "production")
+                for m in store.values() if "apns_token" in m}
+    except Exception:
+        return {}
 
 
 TOKEN_STORE_PATH = "/root/jupyter-hub-controller/notification_tokens.json"
