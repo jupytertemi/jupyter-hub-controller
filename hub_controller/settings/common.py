@@ -320,4 +320,13 @@ CELERY_BEAT_SCHEDULE = {
         "task": "alarm.tasks.monitor_alarm_ips",
         "schedule": 5 * 60,
     },
+    # Background self-heal for cameras with empty onvif_manufacturer / onvif_model.
+    # Inline probe in camera/managers.py only fires during RTSPDiscoverView/Create
+    # — cameras added via other paths (manual restore, cloned hub, migrated row)
+    # need this catch-up. Cheap: only walks rows where ip+creds present and
+    # manufacturer is empty. See camera/tasks.py:probe_empty_onvif_fields.
+    "probe-empty-onvif-fields-every-15m": {
+        "task": "camera.tasks.probe_empty_onvif_fields",
+        "schedule": 15 * 60,
+    },
 }

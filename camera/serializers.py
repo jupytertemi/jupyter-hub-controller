@@ -113,6 +113,17 @@ class RingCameraSerializer(BaseCameraSerializer):
             "stream_url": {"read_only": True},
         }
 
+    def create(self, validated_data):
+        # Ring cameras don't speak ONVIF (cloud-only via ring_mqtt). Auto-populate
+        # the onvif_* fields anyway so the Flutter dashboard's "Manufacturer/Model"
+        # rows render something useful instead of null. Model defaults to a generic
+        # label; once ring_mqtt's <id>/info MQTT topic is wired into a Celery task,
+        # we can swap in the precise Ring product name (Doorbell Pro / Battery
+        # Doorbell Plus / Spotlight Cam etc).
+        validated_data.setdefault("onvif_manufacturer", "Ring")
+        validated_data.setdefault("onvif_model", "Ring Camera")
+        return super().create(validated_data)
+
 
 class CameraSerializer(BaseCameraSerializer):
     vendor = serializers.SerializerMethodField()

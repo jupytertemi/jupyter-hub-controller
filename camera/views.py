@@ -753,3 +753,83 @@ class CameraVehicleCalibrationView(APIView):
             from camera.tasks import update_frigate_config
             update_frigate_config.delay()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class CameraOnvifProbeView(APIView):
+    """POST /cameras/<slug>/probe-onvif
+
+    Re-probe ONVIF metadata (manufacturer + model) for an existing camera row.
+    Useful when a camera was added without credentials initially, then the user
+    saved working creds via the settings UI and the original probe (which fires
+    inline during RTSPDiscoverView/Create) didn't run.
+
+    Body (optional):
+        {
+          "username": "...",  // override stored creds; otherwise uses Camera row's
+          "password": "..."
+        }
+
+    Response 200:
+        {"manufacturer": "Hikvision", "model": "DS-2CD..."}
+    Response 404 if camera not found, 400 if not RTSP type, 502 if ONVIF unreachable.
+    """
+
+    def post(self, request, slug):
+        try:
+            camera = Camera.objects.get(slug_name=slug)
+        except Camera.DoesNotExist:
+            return Response(
+                {"error": f"Camera with slug '{slug}' not found"},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        if camera.type != CameraType.RTSP:
+            return Response(
+                {
+                    "error": (
+                        f"ONVIF probe only applies to RTSP cameras "
+                        f"(this one is {camera.type}). "
+                        f"For Ring cameras, manufacturer/model are derived "
+                        f"from the Ring API path, not ONVIF."
+                    )
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if not camera.ip:
+            return Response(
+                {"error": "Camera has no IP address recorded — cannot probe"},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        # Allow body to override stored creds (handy if Flutter just collected
+        # them and hasn't persisted yet).
+        username = request.data.get("username") or camera.username or ""
+        password = request.data.get("password") or camera.password or ""
+
+        result = RTSPCamera.objects.get_onvif_device_info(
+            camera.ip, username=username, password=password
+        )
+        if not result:
+            return Response(
+                {
+                    "error": (
+                        f"ONVIF probe to {camera.ip} returned no device info. "
+                        f"Camera may be unreachable, ONVIF disabled, or creds wrong."
+                    )
+                },
+                status=status.HTTP_502_BAD_GATEWAY,
+            )
+
+        camera.onvif_manufacturer = result["manufacturer"]
+        camera.onvif_model = result["model"]
+        camera.save(update_fields=["onvif_manufacturer", "onvif_model", "updated_at"])
+
+        return Response(
+            {
+                "slug": slug,
+                "manufacturer": result["manufacturer"],
+                "model": result["model"],
+            },
+            status=status.HTTP_200_OK,
+        )

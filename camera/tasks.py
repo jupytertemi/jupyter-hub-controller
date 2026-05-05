@@ -783,3 +783,68 @@ def capture_camera_snapshots():
         msg += f"; failed: {','.join(failed)}"
     logging.info(msg)
     return msg
+
+
+@shared_task
+def probe_empty_onvif_fields():
+    """Background self-heal for cameras with empty onvif_manufacturer / onvif_model.
+
+    Inline ONVIF probe in camera/managers.py:323-328 only runs during the
+    RTSPDiscoverView/Create flow. Cameras added via other paths (manual restore,
+    cloned hub, migrated DB row, or restored from backup) end up with empty
+    fields forever.
+
+    This task walks RTSP cameras with non-empty IP+credentials and empty
+    manufacturer, then calls get_onvif_device_info() and persists results.
+    Skips cameras without credentials (probe always fails on those — operator
+    has to enter creds first) and skips Ring cameras (different code path,
+    handled by RingCameraSerializer.create()).
+
+    Idempotent. Safe to run on every cycle. Called by Celery beat (see
+    CELERY_BEAT_SCHEDULE in settings/common.py).
+    """
+    from camera.enums import CameraType
+    from camera.models import Camera, RTSPCamera
+
+    candidates = Camera.objects.filter(
+        type=CameraType.RTSP,
+        is_enabled=True,
+        ip__isnull=False,
+    ).exclude(ip="").exclude(
+        username__isnull=True,
+    ).exclude(username="").filter(
+        onvif_manufacturer__in=[None, ""],
+    )
+
+    if not candidates.exists():
+        return "No RTSP cameras need an ONVIF probe"
+
+    updated = 0
+    failed = []
+    for camera in candidates:
+        try:
+            result = RTSPCamera.objects.get_onvif_device_info(
+                camera.ip,
+                username=camera.username or "",
+                password=camera.password or "",
+            )
+            if result and (result.get("manufacturer") or result.get("model")):
+                camera.onvif_manufacturer = result.get("manufacturer", "")
+                camera.onvif_model = result.get("model", "")
+                camera.save(update_fields=[
+                    "onvif_manufacturer", "onvif_model", "updated_at",
+                ])
+                updated += 1
+                logging.info(
+                    f"probe_empty_onvif_fields: {camera.slug_name} → "
+                    f"{result.get('manufacturer')!r} / {result.get('model')!r}"
+                )
+            else:
+                failed.append(camera.slug_name)
+        except Exception:
+            logging.exception(
+                f"probe_empty_onvif_fields: unexpected error for {camera.slug_name}"
+            )
+            failed.append(camera.slug_name)
+
+    return f"Updated {updated}, failed {len(failed)} ({failed[:5]}{'...' if len(failed) > 5 else ''})"
