@@ -169,6 +169,50 @@ class RTSPCameraManager(models.Manager):
         unique_string = f"{slugify(name)}-{str(my_uuid)[0:6]}"
         return unique_string.lower()
 
+    def _ensure_ir_auto(self, camera_fc, profiles, ip):
+        """Set the camera's IR cut filter to AUTO so plate OCR works at night
+        without the user touching anything.
+
+        Why: a meaningful fraction of consumer cameras ship in 'OFF' (forced
+        color/day) mode — IR LEDs disabled, plate region clipped at night.
+        Setting once at onboard makes the camera's built-in light sensor swap
+        the IR cut filter automatically thereafter. Idempotent — safe to re-run.
+
+        Best-effort: cameras with no Imaging service or no IrCutFilter field
+        log a debug line and we move on. Never blocks onboard.
+        """
+        if not profiles:
+            return
+        try:
+            imaging = camera_fc.create_imaging_service()
+        except Exception as e:
+            logging.debug(f"camera {ip} has no imaging service: {e}")
+            return
+        try:
+            video_source_token = profiles[0].VideoSourceConfiguration.SourceToken
+        except Exception as e:
+            logging.debug(f"camera {ip} has no VideoSourceConfiguration: {e}")
+            return
+        try:
+            current = imaging.GetImagingSettings({"VideoSourceToken": video_source_token})
+            ir_mode = getattr(current, "IrCutFilter", None)
+            if ir_mode is None:
+                logging.info(f"camera {ip} doesn't expose IrCutFilter — skipping")
+                return
+            if str(ir_mode).upper() == "AUTO":
+                logging.info(f"camera {ip} IR mode already AUTO — leaving alone")
+                return
+            logging.info(f"camera {ip} IR mode is {ir_mode!r} — flipping to AUTO")
+            current.IrCutFilter = "AUTO"
+            imaging.SetImagingSettings({
+                "VideoSourceToken": video_source_token,
+                "ImagingSettings": current,
+                "ForcePersistence": True,
+            })
+            logging.info(f"camera {ip} IR mode now AUTO (night plate OCR enabled)")
+        except Exception as e:
+            logging.warning(f"camera {ip} IR mode set failed: {e}")
+
     def _probe_stream_resolution(self, rtsp_url, fallback_image_path=None, timeout=8):
         """Read stream resolution. Two tiers:
 
@@ -418,6 +462,15 @@ class RTSPCameraManager(models.Manager):
                 onvif_model = getattr(device_info, 'Model', '') or ''
             except Exception as e:
                 logging.warning(f"ONVIF GetDeviceInformation failed for {ip}: {e}")
+
+            # Auto-fix IR cut filter to AUTO so night plate detection works without
+            # any user action. Many cheap cameras ship with IrCutFilter='OFF'
+            # (forced day mode = no IR LEDs at night) which silently kills LPR
+            # accuracy for nighttime arrivals. We flip it to AUTO once at onboard
+            # — the camera's built-in light sensor then drives day/night mode
+            # correctly forever. Catches & logs any failure so a camera without
+            # imaging service support never blocks onboard.
+            self._ensure_ir_auto(camera_fc, profiles, ip)
 
             return {
                 'rtsp_url': url,
