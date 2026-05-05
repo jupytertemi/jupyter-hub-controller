@@ -17,7 +17,7 @@ from django.test import SimpleTestCase
 # APNS_* vars, so it must be imported INSIDE the test environment where
 # those vars are present (i.e., on a real hub or a test runner with the
 # env preloaded). See module docstring above for the run command.
-from live_activity_publisher import classify_ai_event
+from live_activity_publisher import LA_SKIP_TYPES, classify_ai_event
 
 
 class CarClassifierTests(SimpleTestCase):
@@ -70,28 +70,36 @@ class CarClassifierTests(SimpleTestCase):
 
 
 class CarLiveActivityRoutingTests(SimpleTestCase):
-    """LA cards persist with action buttons (garage open/close). They should
-    fire ONLY for actionable events. Passing "Vehicle spotted" is
-    informational — banner only, no LA. These tests pin the routing rule
-    in _handle_ai_event by checking which notification_types should
-    trigger push_la_ai_event."""
+    """LA cards persist with action buttons (garage open/close). They fire
+    ONLY for actionable notification_types. Non-actionable types are
+    enumerated in the module-level LA_SKIP_TYPES set; _handle_ai_event
+    short-circuits push_la_ai_event when notification_type is in that set."""
 
-    def test_vehicle_spotted_is_excluded_from_LA(self):
+    def test_vehicle_spotted_is_in_LA_skip_set(self):
+        """Pin the LA-skip set membership so a refactor that drops it from
+        the set fails this test rather than silently re-introducing
+        unwanted Live Activity cards for passing cars."""
+        self.assertIn("vehicle_spotted", LA_SKIP_TYPES)
+
+    def test_garage_detected_NOT_in_LA_skip_set(self):
+        """Known-owner driveway path must keep firing LA — that's where
+        the Open/Close Garage button lives in the iOS widget."""
+        self.assertNotIn("garage_detected", LA_SKIP_TYPES)
+
+    def test_vehicle_spotted_classification_for_unactionable_cars(self):
         """The classifier returns vehicle_spotted for non-actionable cars
-        (Spotted, Parked-without-known-owner, etc.). _handle_ai_event must
-        skip the Live Activity push for this notification_type."""
-        # Re-derive the gate by reading the publisher's flow inline. If we
-        # ever add per-type LA routing, this test will need to be updated.
+        (Spotted, Parked-without-known-owner, etc.) — the type that maps
+        into LA_SKIP_TYPES."""
         nt, _, _ = classify_ai_event({
             "label": "CAR", "vehicle_status": "Spotted",
             "camera_name": "Front Door",
         })
-        self.assertEqual(nt, "vehicle_spotted",
-                         "vehicle_spotted must be the type for non-actionable CARs")
+        self.assertEqual(nt, "vehicle_spotted")
 
-    def test_garage_detected_still_triggers_LA(self):
-        """Known owner + Approaching/Parked/Departing keeps the LA card so
-        the Open/Close Garage button surface is preserved."""
+    def test_garage_detected_classification_for_known_driveway_states(self):
+        """Known owner + Approaching/Parked/Departing keeps producing
+        garage_detected so the LA card + Open/Close Garage button surface
+        is preserved."""
         for vs in ("Approaching", "Parked", "Parked-LongTerm", "Departing"):
             nt, _, _ = classify_ai_event({
                 "label": "CAR", "vehicle_status": vs,

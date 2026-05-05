@@ -98,6 +98,14 @@ def _apns_base_url(environment):
 THROTTLE_SECONDS = 15
 SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
 
+# Notification types that fire a banner-only push (no Live Activity card).
+# Live Activity cards persist on the lock screen with action buttons (e.g.
+# the Open/Close Garage button on garage_detected widgets) and should only
+# fire for actionable events. Non-actionable notification_types listed here
+# get the alert banner but skip push_la_ai_event entirely. Easy to extend
+# without touching _handle_ai_event control flow.
+LA_SKIP_TYPES = {"vehicle_spotted"}
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger("la-publisher")
 
@@ -577,13 +585,11 @@ def _handle_ai_event(data):
     if not ok:
         log.info("skip: %s", why)
         return
-    # Live Activity cards persist on the lock screen with action buttons
-    # (garage open/close, etc.) and should fire ONLY for actionable events.
-    # Per product owner 2026-05-06: a passing "Vehicle spotted" with no
-    # known owner is informational, not actionable — banner only, no LA.
-    # Known owner Approaching/Parked/Departing keeps the LA card because it
-    # carries the garage open/close button (notification_type=garage_detected).
-    if notification_type != "vehicle_spotted":
+    # LA_SKIP_TYPES (defined at module level) lists notification_types that
+    # are banner-only — no Live Activity card. Live Activity cards persist
+    # on the lock screen with action buttons (e.g. Open/Close Garage on
+    # garage_detected widgets) and should only fire for actionable events.
+    if notification_type not in LA_SKIP_TYPES:
         push_la_ai_event(notification_type, title, data)
     extra = {"notificationType": notification_type, "label": label, "event_id": event_id,
              "camera_name": data.get("camera_name", ""), "video_path": data.get("video_path", "") or ""}
