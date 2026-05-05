@@ -518,7 +518,13 @@ def _write_env_var(key, value):
 # ---------- FCM (Android + iOS fallback) ----------
 
 def push_fcm_notification(title, body, data=None):
-    """Multicast FCM. iOS will fail until Firebase APNs key is uploaded; Android works."""
+    """Multicast FCM. Disabled by default since 2026-05-06 because direct-APNs
+    is now proven end-to-end on iOS and the Firebase round-trip is wasted
+    bandwidth (FCM project has no .p8 → iOS deliveries fail anyway). Set
+    ENABLE_FCM_FALLBACK=1 in .env to re-enable, e.g. when shipping Android.
+    """
+    if os.environ.get("ENABLE_FCM_FALLBACK", "0") != "1":
+        return
     if _firebase_app is None or not FCM_TOKENS:
         return
     safe_data = {k: ("" if v is None else str(v)) for k, v in (data or {}).items()}
