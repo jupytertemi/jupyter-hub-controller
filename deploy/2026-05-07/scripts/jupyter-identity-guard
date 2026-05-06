@@ -1,0 +1,168 @@
+#!/bin/bash
+# SecureProtect Identity Guard v3.1
+# Protects hub identity and docker-compose.yml immutability:
+# 1. .env identity (ALL identity vars — full backup + full restore)
+# 2. docker-compose.yml immutability (chattr +i to block OTA overwrites)
+#
+# v3.1 CHANGES (2026-03-05):
+# - Removed check_compose() — was reverting legitimate docker-compose.yml updates
+# - Removed check_settings() — was reverting production.py hotfixes 141x/day
+# - Kept check_identity() — .env identity protection is still critical
+# - Kept chattr +i on docker-compose.yml — prevents OTA overwrites without content checks
+# - production.py now comes from hub-controller tarball (correct at bake time)
+#
+# v3.0 CHANGES (2026-02-28):
+# - NEVER delete .env.identity backup in setup mode (keeps for 7 days)
+# - Backup ALL identity vars (was only 4, now 8)
+# - Restore ALL identity vars from backup (was only DEVICE_NAME)
+# - Redundant backup at /root/.env.identity.bak
+# - Reset-intent flag file: only reset_hub.sh can clear backups
+
+BACKUP_DIR="/root/.jupyter-identity-backup"
+BACKUP_REDUNDANT="/root/.env.identity.bak"
+RESET_INTENT_FLAG="/var/lib/jupyter/.reset-intent"
+COMPOSE_FILE="/root/jupyter-container/docker-compose.yml"
+ENV_FILE="/root/jupyter-hub-controller/.env"
+CONTAINER_ENV="/root/jupyter-container/.env"
+LOG_TAG="identity-guard"
+
+# All identity vars that must be backed up and restored
+IDENTITY_VARS="DEVICE_NAME HUB_USER_ID HUB_SECRET DEVICE_SECRET REMOTE_HOST TUNNEL_TOKEN HUB_NAME HUB_BASIC_AUTH"
+
+log() { logger -t "$LOG_TAG" "$1"; echo "$(date '+%Y-%m-%d %H:%M:%S') $1"; }
+
+# --- Create backup dir ---
+mkdir -p "$BACKUP_DIR"
+
+# --- Ensure docker-compose.yml is immutable (prevents OTA overwrites) ---
+if [ -f "$COMPOSE_FILE" ]; then
+    chattr +i "$COMPOSE_FILE" 2>/dev/null || true
+fi
+
+# --- Check 3: .env identity ---
+check_identity() {
+    if [ ! -f "$ENV_FILE" ]; then
+        log "WARN: .env file missing!"
+        return 1
+    fi
+
+    local device_name=$(grep "^DEVICE_NAME=" "$ENV_FILE" | cut -d= -f2)
+    local hub_user_id=$(grep "^HUB_USER_ID=" "$ENV_FILE" | cut -d= -f2)
+
+    # SETUP MODE: HUB_USER_ID=0 or missing + no DEVICE_NAME
+    if { [ "$hub_user_id" = "0" ] || [ -z "$hub_user_id" ]; } && [ -z "$device_name" ]; then
+
+        # Check if reset_hub.sh explicitly requested this (flag file)
+        if [ -f "$RESET_INTENT_FLAG" ]; then
+            log "Hub in setup mode — reset was INTENTIONAL (flag file exists)"
+            rm -f "$RESET_INTENT_FLAG"
+            # Only delete backup on INTENTIONAL reset
+            rm -f "$BACKUP_DIR/.env.identity" 2>/dev/null
+            rm -f "$BACKUP_REDUNDANT" 2>/dev/null
+            return 0
+        fi
+
+        # NO reset intent flag — this may be accidental corruption
+        # Try to restore from backup
+        local backup_file=""
+        if [ -f "$BACKUP_DIR/.env.identity" ]; then
+            backup_file="$BACKUP_DIR/.env.identity"
+        elif [ -f "$BACKUP_REDUNDANT" ]; then
+            backup_file="$BACKUP_REDUNDANT"
+            log "Primary backup missing, using redundant backup"
+        fi
+
+        if [ -n "$backup_file" ]; then
+            local backup_name=$(grep "^DEVICE_NAME=" "$backup_file" | cut -d= -f2)
+            local backup_uid=$(grep "^HUB_USER_ID=" "$backup_file" | cut -d= -f2)
+
+            if [ -n "$backup_name" ] && [ -n "$backup_uid" ] && [ "$backup_uid" != "0" ]; then
+                log "RECOVERY: .env identity lost (HUB_USER_ID=0, no DEVICE_NAME) but backup exists"
+                log "RECOVERY: Restoring identity from backup: DEVICE_NAME=$backup_name, HUB_USER_ID=$backup_uid"
+
+                # Restore ALL identity vars from backup
+                while IFS='=' read -r key value; do
+                    [ -z "$key" ] && continue
+                    # Remove existing line if present, then append
+                    sed -i "/^${key}=/d" "$ENV_FILE"
+                    echo "${key}=${value}" >> "$ENV_FILE"
+                    # Also restore to container .env
+                    if [ -f "$CONTAINER_ENV" ]; then
+                        sed -i "/^${key}=/d" "$CONTAINER_ENV"
+                        echo "${key}=${value}" >> "$CONTAINER_ENV"
+                    fi
+                done < "$backup_file"
+
+                log "RECOVERY: All identity vars restored from backup"
+                return 2
+            else
+                log "Hub in setup mode — backup exists but incomplete (name=$backup_name, uid=$backup_uid)"
+                # NEVER delete the backup — keep it for manual recovery
+                return 0
+            fi
+        fi
+
+        log "Hub in setup mode (HUB_USER_ID=$hub_user_id, no DEVICE_NAME) — no backup available"
+        # v3: NEVER delete backup here. It might appear later (e.g., from manual recovery)
+        return 0
+    fi
+
+    # PARTIAL CORRUPTION: DEVICE_NAME missing but HUB_USER_ID is set
+    if [ -z "$device_name" ] && [ -n "$hub_user_id" ] && [ "$hub_user_id" != "0" ]; then
+        log "ALERT: DEVICE_NAME missing but HUB_USER_ID=$hub_user_id — OTA corruption detected"
+
+        local backup_file=""
+        if [ -f "$BACKUP_DIR/.env.identity" ]; then
+            backup_file="$BACKUP_DIR/.env.identity"
+        elif [ -f "$BACKUP_REDUNDANT" ]; then
+            backup_file="$BACKUP_REDUNDANT"
+        fi
+
+        if [ -n "$backup_file" ]; then
+            log "Restoring ALL identity vars from backup"
+            while IFS='=' read -r key value; do
+                [ -z "$key" ] && continue
+                local current=$(grep "^${key}=" "$ENV_FILE" | cut -d= -f2)
+                # Only restore if missing or empty
+                if [ -z "$current" ]; then
+                    echo "${key}=${value}" >> "$ENV_FILE"
+                    if [ -f "$CONTAINER_ENV" ]; then
+                        sed -i "/^${key}=/d" "$CONTAINER_ENV"
+                        echo "${key}=${value}" >> "$CONTAINER_ENV"
+                    fi
+                    log "Restored ${key}"
+                fi
+            done < "$backup_file"
+            return 2
+        fi
+    fi
+
+    # NORMAL MODE: Fully onboarded — save backup for future recovery
+    if [ -n "$device_name" ] && [ -n "$hub_user_id" ] && [ "$hub_user_id" != "0" ]; then
+        # Backup ALL identity vars (v3: was only 4, now all 8)
+        local tmp_backup=$(mktemp)
+        for var in $IDENTITY_VARS; do
+            grep "^${var}=" "$ENV_FILE" >> "$tmp_backup" 2>/dev/null || true
+        done
+        # Atomic write to primary backup
+        mv "$tmp_backup" "$BACKUP_DIR/.env.identity"
+        # Redundant backup at separate location
+        cp "$BACKUP_DIR/.env.identity" "$BACKUP_REDUNDANT"
+        chmod 600 "$BACKUP_DIR/.env.identity" "$BACKUP_REDUNDANT"
+    fi
+    return 0
+}
+
+# --- Run identity check ---
+restored=0
+
+check_identity
+[ $? -eq 2 ] && restored=1
+
+if [ "$restored" -eq 1 ]; then
+    log "Identity vars were restored — restarting services"
+    systemctl restart jupyter-hub-controller.service
+    systemctl restart jupyter-hub-celery-camera.service
+fi
+
+log "Identity guard v3.1 check complete"

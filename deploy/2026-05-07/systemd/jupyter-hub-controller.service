@@ -1,0 +1,30 @@
+[Unit]
+Description=Jupyter Hub.
+After=jupyter-hub-migrate.service
+Requires=jupyter-hub-migrate.service
+Wants=jupyter-hub-celery-camera.service
+Wants=jupyter-hub-celery-automation.service
+Wants=jupyter-hub-celery-restart-ring.service
+Wants=jupyter-hub-celery-beat.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/jupyter-container
+EnvironmentFile=/root/jupyter-container/.env
+# NOTE 2026-05-07: GOOGLE_CLIENT_ID + GOOGLE_CLIENT_SECRET are currently
+# hardcoded in the live hub unit file (this redacted copy strips them per
+# GitHub secret-scanning policy). Should migrate to .env-based reference:
+#   EnvironmentFile=/root/jupyter-container/.env  (already present)
+# Then remove these two lines from the unit file. Tracked as a post-pilot
+# follow-up. Live hub /etc/systemd/system/jupyter-hub-controller.service
+# retains the actual values until that migration.
+# Environment=GOOGLE_CLIENT_ID=<REDACTED>
+# Environment=GOOGLE_CLIENT_SECRET=<REDACTED>
+ExecStart=/root/jupyter-container/start_hub_controller.sh
+Restart=on-failure
+RestartSec=10s
+StartLimitIntervalSec=600
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

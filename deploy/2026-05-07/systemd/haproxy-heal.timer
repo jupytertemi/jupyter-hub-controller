@@ -1,0 +1,9 @@
+[Unit]
+Description=Check HAProxy env vars every 10 seconds
+
+[Timer]
+OnBootSec=15
+OnUnitActiveSec=60
+
+[Install]
+WantedBy=timers.target
