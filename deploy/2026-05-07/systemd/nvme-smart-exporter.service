@@ -1,0 +1,6 @@
+[Unit]
+Description=NVMe SMART exporter (textfile collector for node-exporter)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/nvme-smart-exporter.sh

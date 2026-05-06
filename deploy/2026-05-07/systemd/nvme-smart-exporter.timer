@@ -1,0 +1,9 @@
+[Unit]
+Description=Run nvme-smart-exporter every hour
+
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target
