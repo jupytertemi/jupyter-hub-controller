@@ -1,9 +1,13 @@
+import json
 import logging
 
+from django.conf import settings
+from rest_framework import serializers, status
 from rest_framework.exceptions import ValidationError
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.generics import DestroyAPIView, ListCreateAPIView, UpdateAPIView
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from core.pagination import Pagination
 from meross.models import MerossCloudAccount, MerossDevice
@@ -16,6 +20,7 @@ from meross.serializers import (
     UpdateMerossDeviceSerializer,
 )
 from utils.hass_client import InterfaceHASSView
+from utils.mqtt_client import MQTTClient
 
 
 class ListCreateMerossDeviceView(ListCreateAPIView):
@@ -180,3 +185,60 @@ class TurnOnOffMerossManualView(InterfaceHASSView):
         except Exception as err:
             logging.error(err)
             raise ValidationError({"error": err})
+
+
+class _GarageControlSerializer(serializers.Serializer):
+    state = serializers.ChoiceField(choices=["open", "closing"])
+
+
+class MerossControlView(APIView):
+    """POST /api/meross/{id}/control (Helios Tier 1 §3.2).
+
+    Thin REST wrapper over the existing control_garage MQTT publish so web
+    clients (Helios) don't need to bundle an MQTT library. Body:
+        {"state": "open" | "closing"}
+
+    The HASS automation listening on settings.HASS_MQTT_TOPIC_CONTROL_GARAGE_DEVICE
+    expects payload {garage_id, states} (see automation_garage/managers.py).
+    Returns 202 Accepted; the cover physically actuates a few seconds later
+    when HASS's automation fires.
+    """
+    permission_classes = []  # match project convention; HAProxy guards perimeter
+
+    def post(self, request, id):
+        # 404 if the device id isn't a registered Meross garage on this hub
+        # — prevents a stray POST from publishing arbitrary garage_ids.
+        if not MerossDevice.objects.filter(id=id).exists():
+            return Response(
+                {"error": "Garage device not registered."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        ser = _GarageControlSerializer(data=request.data)
+        ser.is_valid(raise_exception=True)
+        state = ser.validated_data["state"]
+
+        payload = json.dumps({"garage_id": str(id), "states": state})
+        topic = settings.HASS_MQTT_TOPIC_CONTROL_GARAGE_DEVICE
+        try:
+            mqtt_client = MQTTClient(
+                host=settings.MQTT_HOST,
+                port=settings.MQTT_PORT,
+                username=settings.MQTT_USERNAME,
+                password=settings.MQTT_PASSWORD,
+                client_id=f"helios-garage-{id}",
+            )
+            mqtt_client.connect()
+            mqtt_client.publish(topic, payload, qos=1)
+            mqtt_client.close()
+        except Exception as e:
+            logging.exception("garage MQTT publish failed: %s", e)
+            return Response(
+                {"error": "Failed to publish garage control message."},
+                status=status.HTTP_502_BAD_GATEWAY,
+            )
+
+        return Response(
+            {"queued": True, "state": state},
+            status=status.HTTP_202_ACCEPTED,
+        )

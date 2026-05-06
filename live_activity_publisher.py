@@ -96,6 +96,18 @@ def _apns_base_url(environment):
 
 
 THROTTLE_SECONDS = 15
+# Per-named-person, per-camera, per-notification_type cooldown — suppresses
+# floods of "Kevin spotted" when the same recognised person walks past the
+# same camera repeatedly inside the window. Different camera, different
+# notification_type, or different person → fires normally. Loitering is a
+# distinct notification_type so it's never suppressed by spotting events
+# (and vice versa). See feedback memory: notification cooldown design 2026-05-06.
+PERSON_COOLDOWN_SECONDS = int(os.getenv("PERSON_COOLDOWN_SECONDS", "60"))
+# Looser cooldown for unknown persons since we can't dedup by person_id.
+# Tightens the existing label-throttle for PERSON+unknown to 60s instead
+# of the global 15s. Loses some detail; massively cuts noise during a
+# stranger lingering near a door.
+UNKNOWN_PERSON_COOLDOWN_SECONDS = int(os.getenv("UNKNOWN_PERSON_COOLDOWN_SECONDS", "60"))
 SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
 
 # Notification types that fire a banner-only push (no Live Activity card).
@@ -125,6 +137,11 @@ _halo_lock = Lock()
 _throttle_lock = Lock()
 _last_event = {}
 _last_label = {}
+# (person_id, camera_slug, notification_type) -> ts of last fire
+_last_person = {}
+# (camera_slug,) -> ts of last unknown-PERSON fire (replaces label-throttle
+# scope for unknown persons; per-camera so different rooms still fire)
+_last_unknown_per_cam = {}
 
 
 def _throttle_ok(event_id, label):
@@ -137,6 +154,57 @@ def _throttle_ok(event_id, label):
         if event_id:
             _last_event[event_id] = now
         _last_label[label] = now
+
+
+def _person_cooldown_ok(notification_type, msg):
+    """Per-named-person + per-camera + per-notification_type cooldown gate.
+
+    Stacks BELOW the existing event_id throttle. Catches the case where the
+    same recognised person triggers multiple distinct Frigate events on the
+    same camera within the window (Kevin walks past Front Door 3x in 30s).
+
+    For unknown persons (no person_id, or sub_label is "Unknown"/"someone"),
+    falls back to a per-camera tightened cooldown so a stranger lingering
+    doesn't fire every 15s.
+
+    Returns (True, "ok") to allow the notification, (False, reason) to
+    suppress it with a logged reason.
+    """
+    if msg.get("label") != "PERSON" and notification_type != "loitering_detected":
+        # only gate person-flavoured notifications; vehicle/parcel/audio paths
+        # use their own throttling upstream
+        return True, "ok"
+    person_id = msg.get("person_id")
+    sub_label = (msg.get("sub_label") or "").strip().lower()
+    camera = msg.get("camera_name") or "*"
+    is_unknown = (not person_id) or sub_label in ("", "unknown", "someone")
+    now = time.time()
+    with _throttle_lock:
+        # lazy eviction — drop entries older than 5x the cooldown window so
+        # the maps don't grow unbounded on long-running publishers
+        evict_before = now - PERSON_COOLDOWN_SECONDS * 5
+        for k in [k for k, v in _last_person.items() if v < evict_before]:
+            _last_person.pop(k, None)
+        for k in [k for k, v in _last_unknown_per_cam.items() if v < evict_before]:
+            _last_unknown_per_cam.pop(k, None)
+        if is_unknown:
+            key = (camera,)
+            last = _last_unknown_per_cam.get(key, 0)
+            if now - last < UNKNOWN_PERSON_COOLDOWN_SECONDS:
+                return False, (f"unknown-cooldown cam={camera} "
+                               f"elapsed={now-last:.0f}s "
+                               f"limit={UNKNOWN_PERSON_COOLDOWN_SECONDS}s")
+            _last_unknown_per_cam[key] = now
+            return True, "ok"
+        # named person
+        key = (person_id, camera, notification_type)
+        last = _last_person.get(key, 0)
+        if now - last < PERSON_COOLDOWN_SECONDS:
+            return False, (f"person-cooldown person_id={person_id} cam={camera} "
+                           f"type={notification_type} elapsed={now-last:.0f}s "
+                           f"limit={PERSON_COOLDOWN_SECONDS}s")
+        _last_person[key] = now
+        return True, "ok"
     return True, "ok"
 
 
@@ -584,6 +652,14 @@ def _handle_ai_event(data):
     ok, why = _throttle_ok(event_id, label)
     if not ok:
         log.info("skip: %s", why)
+        return
+    # Per-person / per-camera / per-notification_type cooldown — stacks
+    # below event_id throttle. Catches the "Kevin spotted 3x in 30s on the
+    # same camera across 3 distinct Frigate events" case that event_id
+    # alone misses. See _person_cooldown_ok docstring for full design.
+    ok2, why2 = _person_cooldown_ok(notification_type, data)
+    if not ok2:
+        log.info("skip: %s", why2)
         return
     # LA_SKIP_TYPES (defined at module level) lists notification_types that
     # are banner-only — no Live Activity card. Live Activity cards persist

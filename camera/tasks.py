@@ -31,6 +31,125 @@ def render_and_write_config(template_name, context, output_path):
     return True
 
 
+def safely_render_and_swap_frigate_config(template_name, context, output_path,
+                                           container_name, health_timeout_s=30):
+    """Render Frigate config with atomic-swap + auto-rollback.
+
+    Pattern (the structural fix that prevents 'render breaks streams' incidents):
+      1. Render new YAML in memory.
+      2. If unchanged from current → return False, no restart.
+      3. Backup current config → ``<output_path>.previous``.
+      4. Write new config to ``output_path``.
+      5. Restart Frigate container.
+      6. Poll docker inspect for healthy state, max ``health_timeout_s``.
+      7. If healthy → delete .previous, return True (success).
+      8. If not healthy → restore .previous to output_path, restart Frigate
+         (back onto known-good config), raise RuntimeError so caller knows.
+
+    Worst-case impact of a bad render: ~30 s of stream interruption while we
+    detect the failure + roll back, vs indefinite crash-loop with the old
+    pattern. Streams stay up on the previous good config until next attempt.
+
+    Always-restart-but-only-on-actual-change semantics preserved (step 2).
+    """
+    import os
+    import time
+    import logging as _logging
+
+    log = _logging.getLogger(__name__)
+
+    config = render_to_string(template_name, context)
+    if os.path.exists(output_path):
+        try:
+            with open(output_path, "r", encoding="UTF-8") as f:
+                if f.read() == config:
+                    return False  # no-op
+        except Exception:
+            pass
+
+    previous_path = output_path + ".previous"
+    backed_up = False
+    if os.path.exists(output_path):
+        try:
+            with open(output_path, "r", encoding="UTF-8") as src, \
+                 open(previous_path, "w", encoding="UTF-8") as dst:
+                dst.write(src.read())
+            backed_up = True
+        except Exception as e:
+            log.error(f"safe-swap: failed to back up current config: {e}; aborting render")
+            raise
+
+    with open(output_path, "w", encoding="UTF-8") as f:
+        f.write(config)
+
+    try:
+        restart_service(container_name)
+    except Exception as e:
+        log.error(f"safe-swap: restart_service raised: {e}")
+        if backed_up:
+            _rollback_frigate_config(previous_path, output_path, container_name)
+        raise
+
+    deadline = time.time() + health_timeout_s
+    healthy = False
+    while time.time() < deadline:
+        try:
+            out = subprocess.run(
+                ["sudo", "docker", "inspect", container_name,
+                 "--format", "{{.State.Health.Status}}"],
+                capture_output=True, text=True, timeout=5,
+            )
+            status = (out.stdout or "").strip().lower()
+            if status == "healthy":
+                healthy = True
+                break
+            if status == "unhealthy":
+                # fail fast — don't wait full deadline
+                break
+        except Exception:
+            pass
+        time.sleep(2)
+
+    if not healthy:
+        log.error(f"safe-swap: Frigate did not become healthy within "
+                  f"{health_timeout_s}s; rolling back")
+        if backed_up:
+            _rollback_frigate_config(previous_path, output_path, container_name)
+        raise RuntimeError(
+            f"Frigate failed health check after config render. "
+            f"Rolled back to previous config; streams should resume shortly."
+        )
+
+    # Success — Frigate is healthy on the new config
+    if backed_up:
+        try:
+            os.unlink(previous_path)
+        except Exception:
+            pass
+    log.info(f"safe-swap: Frigate validated healthy on new config")
+    return True
+
+
+def _rollback_frigate_config(previous_path, output_path, container_name):
+    """Restore .previous → output_path and restart Frigate. Best-effort."""
+    import os
+    import logging as _logging
+    log = _logging.getLogger(__name__)
+    try:
+        if os.path.exists(previous_path):
+            with open(previous_path, "r", encoding="UTF-8") as src, \
+                 open(output_path, "w", encoding="UTF-8") as dst:
+                dst.write(src.read())
+            os.unlink(previous_path)
+            log.warning(f"safe-swap: rolled back to previous config at {output_path}")
+        try:
+            restart_service(container_name)
+        except Exception as e:
+            log.error(f"safe-swap: rollback restart failed: {e}")
+    except Exception as e:
+        log.exception(f"safe-swap: rollback itself failed: {e}")
+
+
 
 def _zone_coords_to_pixels(coords, camera_type):
     """Convert normalized 0-1 zone coordinates to Frigate detect pixel coordinates."""
@@ -72,7 +191,12 @@ def get_cameras():
             zones.append({
                 "name": "vehicle_detection_zone",
                 "coordinates": _zone_coords_to_pixels(flat, camera.type),
-                "objects": ["car", "truck", "motorcycle", "bus"],
+                # Only "car" — the loaded RKNN object detector doesn't produce
+                # truck/motorcycle/bus classes. Frigate rejects zone configs
+                # that reference labels not present in objects.track. If the
+                # detector swaps to a model that produces those classes,
+                # extend this list AND the template's objects.track.
+                "objects": ["car"],
             })
         # 2026-05-05 — Adaptive detect resolution. Cameras with vehicle detection
         # configured pull the MAIN stream at native resolution (clamped to 1920
@@ -108,6 +232,12 @@ def get_cameras():
                 "sub_stream_height": camera.sub_stream_height,
                 "detect_width": detect_w,
                 "detect_height": detect_h,
+                # MotionIQ — per-camera Frigate sensitivity profile.
+                # `motion_settings` already returns the AWARE baseline for
+                # vehicle cameras, so the template can render unconditionally.
+                "motion_iq_profile": camera.motion_profile,
+                "motion_iq_applicable": camera.motion_iq_applicable,
+                "motion_settings": camera.motion_settings,
             }
         )
 
@@ -227,24 +357,35 @@ def _get_turn_credentials():
 
 @shared_task
 def update_frigate_config():
+    """Render Frigate config with atomic-swap + auto-rollback.
+
+    On a bad render (Frigate fails to start healthy on the new config), the
+    task rolls the file back to the last known-good copy and restarts Frigate
+    onto it. Streams interrupt for ~30 s during detection + rollback instead
+    of indefinitely crash-looping. Caller (Celery beat) sees the raised error
+    in the worker logs but doesn't propagate to the user-facing API.
+    """
     camera_data = get_cameras()
-
-    # Fetch TURN credentials for go2rtc WebRTC
     ice_data = _get_turn_credentials()
-
-    changed = render_and_write_config(
-        "frigate_config.yaml",
-        {
-            "cameras": camera_data,
-            "mqtt_user": settings.MQTT_FRIGATE_USERNAME,
-            "mqtt_password": settings.MQTT_FRIGATE_PASSWORD,
-            **ice_data,
-        },
-        settings.FRIGATE_CONFIG_PATH,
-    )
-
+    try:
+        changed = safely_render_and_swap_frigate_config(
+            "frigate_config.yaml",
+            {
+                "cameras": camera_data,
+                "mqtt_user": settings.MQTT_FRIGATE_USERNAME,
+                "mqtt_password": settings.MQTT_FRIGATE_PASSWORD,
+                **ice_data,
+            },
+            settings.FRIGATE_CONFIG_PATH,
+            settings.FRIGATE_CONTAINER_NAME,
+        )
+    except RuntimeError as e:
+        # Bad render. safely_render_and_swap_frigate_config has already
+        # rolled back to .previous and restarted Frigate. Bubble up so
+        # operators see the failure in Celery worker logs.
+        logging.error(f"update_frigate_config: render rejected, rolled back: {e}")
+        return f"Frigate config render failed; rolled back: {e}"
     if changed:
-        restart_service(settings.FRIGATE_CONTAINER_NAME)
         return "Frigate config updated successfully."
     return "Frigate config unchanged - no restart needed."
 

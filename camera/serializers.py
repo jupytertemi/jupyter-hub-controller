@@ -127,6 +127,10 @@ class RingCameraSerializer(BaseCameraSerializer):
 
 class CameraSerializer(BaseCameraSerializer):
     vendor = serializers.SerializerMethodField()
+    # MotionIQ — surface the per-camera profile on every list/detail response
+    # so the Flutter Camera section can show the picker pre-selected. Read-only
+    # here; updates go through PATCH /api/cameras/<slug>/motion-profile.
+    motion_iq_applicable = serializers.BooleanField(read_only=True)
 
     CHIPSET_VENDORS = {
         "espressif", "realtek", "hisilicon", "ingenic", "mediatek",
@@ -163,6 +167,7 @@ class CameraSerializer(BaseCameraSerializer):
             "last_seen_at", "created_at", "updated_at",
             "stream_url", "ring_refresh_token", "vendor",
             "onvif_manufacturer", "onvif_model",
+            "motion_profile", "motion_iq_applicable",
         ]
         extra_kwargs = {
             "id": {"read_only": True},

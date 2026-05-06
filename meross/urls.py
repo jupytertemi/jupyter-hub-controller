@@ -7,6 +7,7 @@ from meross.views import (
     GetStatesEntityView,
     ListCreateMerossDeviceView,
     ListMerossDeviceDiscoveryView,
+    MerossControlView,
     SendMessagesWebSocketView,
     TurnOnOffMerossManualView,
     UpdateDestroyMerossDeviceView,
@@ -43,6 +44,11 @@ urlpatterns = [
     path(
         "meross/manual",
         TurnOnOffMerossManualView.as_view(),
+    ),
+    path(
+        "meross/<str:id>/control",
+        MerossControlView.as_view(),
+        name="meross-control",
     ),
     path(
         "meross/<str:id>", UpdateDestroyMerossDeviceView.as_view(), name="meross-device"

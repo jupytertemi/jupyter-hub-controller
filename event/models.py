@@ -40,6 +40,27 @@ class Event(BaseModel):
         blank=True,
     )
     vehicle_plate = models.CharField(max_length=256, default="")
+
+    # 2026-05-06 — Helios Tier 1 §3.1: forensic verdicts.
+    # Owner-operators mark events as resolved/watch/false_alarm with an
+    # optional note. Helios renders the verdict chip on the events list
+    # using these fields directly (so no per-row lookup). PATCH semantics:
+    # passing verdict=null clears all four fields. verdict_by_name is a
+    # caller-asserted display name (Helios knows the logged-in user
+    # client-side); we don't hard-link to Django's User model so the field
+    # works without a project-wide auth deployment.
+    VERDICT_CHOICES = [
+        ("resolved", "Resolved"),
+        ("watch", "Watch"),
+        ("false_alarm", "False alarm"),
+    ]
+    verdict = models.CharField(
+        max_length=16, choices=VERDICT_CHOICES, null=True, blank=True,
+    )
+    verdict_note = models.TextField(null=True, blank=True)
+    verdict_by_name = models.CharField(max_length=120, null=True, blank=True)
+    verdict_at = models.DateTimeField(null=True, blank=True)
+
     objects = EventManager()
 
     class Meta:
@@ -48,4 +69,7 @@ class Event(BaseModel):
             models.Index(fields=["start_time"]),
             models.Index(fields=["end_time"]),
             models.Index(fields=["created_at"]),
+            # 2026-05-06 — Helios verdict-list filters
+            models.Index(fields=["verdict"]),
+            models.Index(fields=["verdict_at"]),
         ]

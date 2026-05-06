@@ -1,0 +1,28 @@
+[Unit]
+Description=Watch jupyter-hub-controller source for .py changes — trigger Celery reload
+# Eliminates the stale-bytecode trap: any .py change in /root/jupyter-hub-controller automatically restarts all 4 Celery worker services + HUPs gunicorn. No human discipline required.
+
+[Path]
+# Watch the entire app source tree. PathChanged fires on close-after-write
+# (the typical scp / rsync / git checkout pattern), debounced to one trigger
+# even if multiple files land in quick succession.
+PathChanged=/root/jupyter-hub-controller/camera
+PathChanged=/root/jupyter-hub-controller/event
+PathChanged=/root/jupyter-hub-controller/alarm
+PathChanged=/root/jupyter-hub-controller/automation_garage
+PathChanged=/root/jupyter-hub-controller/facial
+PathChanged=/root/jupyter-hub-controller/parcel_detect
+PathChanged=/root/jupyter-hub-controller/loitering
+PathChanged=/root/jupyter-hub-controller/system
+PathChanged=/root/jupyter-hub-controller/notifications
+PathChanged=/root/jupyter-hub-controller/hub_operations
+PathChanged=/root/jupyter-hub-controller/hub_controller
+PathChanged=/root/jupyter-hub-controller/utils
+PathChanged=/root/jupyter-hub-controller/meross
+PathChanged=/root/jupyter-hub-controller/hub_controller/settings
+PathChanged=/root/jupyter-hub-controller/camera/templates
+PathChanged=/root/jupyter-hub-controller/suggested_facial
+Unit=jupyter-hub-controller-reload.service
+
+[Install]
+WantedBy=multi-user.target

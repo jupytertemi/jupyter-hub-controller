@@ -1,0 +1,15 @@
+[Unit]
+Description=Reload jupyter-hub-controller — restart Celery workers + HUP gunicorn
+# Triggered by jupyter-hub-controller-reload.path on .py file change. Closes the stale-bytecode trap where a model property change broke Frigate render because Celery workers had cached the old class. See feedback memory: feedback-celery-stale-bytecode.md
+After=jupyter-hub-controller.service
+
+[Service]
+Type=oneshot
+# Restart all four Celery workers so they reload Django models / shared tasks.
+# `--no-block` avoids serialising — they restart in parallel.
+ExecStart=/bin/systemctl --no-block restart jupyter-hub-celery-camera.service
+ExecStart=/bin/systemctl --no-block restart jupyter-hub-celery-beat.service
+ExecStart=/bin/systemctl --no-block restart jupyter-hub-celery-automation.service
+ExecStart=/bin/systemctl --no-block restart jupyter-hub-celery-restart-ring.service
+# HUP gunicorn so Django views also reload. Best-effort; don't fail if absent.
+ExecStart=/bin/sh -c 'kill -HUP $(pgrep -f "gunicorn.*hub_controller" | head -1) 2>/dev/null || true'

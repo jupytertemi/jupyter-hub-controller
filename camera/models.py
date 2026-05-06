@@ -71,6 +71,42 @@ class Camera(BaseModel):
     vehicle_plate_readability_px = models.FloatField(null=True, blank=True)
     vehicle_plate_ocr_skip = models.BooleanField(default=False)
 
+    # MotionIQ — per-camera Frigate sensitivity profile. The Frigate config
+    # template renders the per-profile motion / detect / objects / review
+    # blocks from camera.motion_settings (computed property below). Default
+    # AWARE matches today's stock-Frigate-defaults baseline so existing hubs
+    # see no behavioural change on first render after migration. See
+    # camera/constants.py for the three profile definitions.
+    MOTION_PROFILE_CHOICES = [
+        ("guardian", "Guardian"),
+        ("aware", "Aware"),
+        ("quiet", "Quiet"),
+    ]
+    motion_profile = models.CharField(
+        max_length=16, choices=MOTION_PROFILE_CHOICES, default="aware",
+    )
+
+    @property
+    def motion_iq_applicable(self):
+        """MotionIQ profiles only apply to face / passive-view cameras. Vehicle
+        cameras need full sensitivity for plate detection — tightening the
+        motion gate would starve VehicleAI of frames at the exact moment a
+        plate is readable. A camera is considered a vehicle camera when it has
+        a configured vehicle_detection_zone."""
+        return not bool(self.vehicle_detection_zone)
+
+    @property
+    def motion_settings(self):
+        """Resolve this camera's MotionIQ profile to a settings dict for the
+        Frigate template renderer. Vehicle cameras force-return the AWARE
+        baseline regardless of stored profile (see motion_iq_applicable).
+        Falls back to AWARE if the stored value is somehow invalid. Never raises."""
+        from camera.constants import MOTION_PROFILES, DEFAULT_PROFILE
+        if not self.motion_iq_applicable:
+            return MOTION_PROFILES[DEFAULT_PROFILE]
+        return MOTION_PROFILES.get(self.motion_profile) \
+            or MOTION_PROFILES[DEFAULT_PROFILE]
+
 
 class RTSPCamera(Camera):
     objects = RTSPCameraManager()

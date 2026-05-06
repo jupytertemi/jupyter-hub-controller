@@ -104,6 +104,9 @@ REST_FRAMEWORK = {
         # 12/min ≈ 1 every 5s. Diagnostic test-push endpoint abuse-protection
         # only — see notifications/views.py _TestPushThrottle (BACKEND_TEST_PUSH_ENDPOINT.md §3).
         "test_apns_push": "12/min",
+        # Helios Tier 1 §3.3: hub restart endpoint hard cap. One legitimate
+        # restart per minute is plenty; anything more is an accident or abuse.
+        "system_restart": "1/min",
     },
 }
 
@@ -272,6 +275,10 @@ CELERY_TASK_ROUTES = {
         "queue": "hub_operations_queue",
         "routing_key": "hub_operations.task",
     },
+    "suggested_facial.tasks.trigger_suggested_faces_run": {
+        "queue": "facial_queue",
+        "routing_key": "facial_queue.task",
+    },
 }
 
 # Camera thumbnail cache — proactively refreshed by camera.tasks.capture_camera_snapshots
@@ -334,5 +341,13 @@ CELERY_BEAT_SCHEDULE = {
     "probe-empty-onvif-fields-every-15m": {
         "task": "camera.tasks.probe_empty_onvif_fields",
         "schedule": 15 * 60,
+    },
+    # Re-cluster face embeddings hourly so the "Frequently seen" panel
+    # doesn't ship with stale data on cloned hubs. The container is
+    # one-shot (entrypoint runs and exits), so without this the panel only
+    # refreshes on manual restart or boot. See suggested_facial/tasks.py.
+    "trigger-suggested-faces-hourly": {
+        "task": "suggested_facial.tasks.trigger_suggested_faces_run",
+        "schedule": 60 * 60,
     },
 }

@@ -35,8 +35,14 @@ def restart_service(container_name: str):
 
         logging.info("Starting service again...")
 
+        # --force-recreate guards against the "Container '/X' already in use"
+        # race that fired on rapid double-renders (two MotionIQ PATCHes within
+        # ~30s). Without this flag, compose's "container already exists" check
+        # raced with our just-issued `down`, leaving Frigate in a half-stopped
+        # state. With it, compose deletes any stale container record before
+        # creating the new one. Idempotent — no-op when no race exists.
         subprocess.run(
-            ["docker", "compose", "up", "-d", container_name],
+            ["docker", "compose", "up", "-d", "--force-recreate", container_name],
             cwd=compose_dir,
             check=True
         )

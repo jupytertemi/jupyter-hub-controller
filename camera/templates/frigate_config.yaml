@@ -113,24 +113,20 @@ cameras:{% if not cameras %} {}{% endif %}
 {% else %}      width: 1920
       height: 1080
 {% endif %}{% if camera.has_vehicle_detection %}      fps: 10
-{% else %}      fps: 5
+{% else %}      fps: {{ camera.motion_settings.detect.fps }}
 {% endif %}
-      max_disappeared: 50
+      max_disappeared: {{ camera.motion_settings.detect.max_disappeared }}
       stationary:
-        interval: 50
-        threshold: 50
+        interval: {{ camera.motion_settings.detect.stationary.interval }}
+        threshold: {{ camera.motion_settings.detect.stationary.threshold }}{% if camera.motion_settings.detect.stationary.max_frames %}
+        max_frames:
+          default: {{ camera.motion_settings.detect.stationary.max_frames }}{% endif %}
 
     record:
       enabled: true
       retain:
         days: 0
         mode: motion
-      alerts:
-        retain:
-          days: 30
-      detections:
-        retain:
-          days: 30
 
     snapshots:
       enabled: true
@@ -145,13 +141,17 @@ cameras:{% if not cameras %} {}{% endif %}
       retain:
         default: 30
 
+    # MotionIQ profile: {{ camera.motion_iq_profile }}
+    # (vehicle cameras force-render the AWARE baseline regardless of
+    # stored profile — see Camera.motion_settings)
     motion:
-      threshold: 35
-      contour_area: 30
-      frame_alpha: 0.02
-      frame_height: 100
-      improve_contrast: true
-      mqtt_off_delay: 30
+      threshold: {{ camera.motion_settings.motion.threshold }}
+      contour_area: {{ camera.motion_settings.motion.contour_area }}
+      frame_alpha: {{ camera.motion_settings.motion.frame_alpha }}
+      frame_height: {{ camera.motion_settings.motion.frame_height }}
+      improve_contrast: {{ camera.motion_settings.motion.improve_contrast|lower }}
+      lightning_threshold: {{ camera.motion_settings.motion.lightning_threshold }}
+      mqtt_off_delay: {{ camera.motion_settings.motion.mqtt_off_delay }}
 
     mqtt:
       bounding_box: true
@@ -163,18 +163,28 @@ cameras:{% if not cameras %} {}{% endif %}
     objects:
       filters:
         person:
-          min_score: 0.55
-          threshold: 0.7
-          min_area: 1500
+          min_score: {{ camera.motion_settings.objects.person.min_score }}
+          threshold: {{ camera.motion_settings.objects.person.threshold }}
+          min_area: {{ camera.motion_settings.objects.person.min_area }}
         car:
-          min_score: 0.65
-          threshold: 0.7
+          min_score: {{ camera.motion_settings.objects.car.min_score }}
+          threshold: {{ camera.motion_settings.objects.car.threshold }}
+          min_area: {{ camera.motion_settings.objects.car.min_area }}
+      # Limited to classes the loaded RKNN object detector produces.
+      # Adding truck/bus/motorcycle here logs "not supported by the current
+      # model" and Frigate silently drops them. If the detector ever swaps
+      # to a model with those classes, expand this list.
       track:
         - person
         - car
-        - motorcycle
-        - truck
-        - bus
+
+    review:
+      alerts:
+        labels:{% for lbl in camera.motion_settings.review.alerts_labels %}
+          - {{ lbl }}{% endfor %}
+      detections:
+        labels:{% for lbl in camera.motion_settings.review.detections_labels %}
+          - {{ lbl }}{% endfor %}
 {% if camera.zones %}
     zones:
 {% for zone in camera.zones %}

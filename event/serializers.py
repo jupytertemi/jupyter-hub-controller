@@ -15,6 +15,36 @@ class EventSerializer(serializers.ModelSerializer):
         }
 
 
+class EventVerdictSerializer(serializers.Serializer):
+    """PATCH /api/events/{event_id}/verdict (Helios Tier 1 §3.1).
+
+    Caller-supplied identity (`verdict_by_name`) per the project's no-Django-
+    auth convention — Helios knows its logged-in user client-side and we
+    record whatever string they pass. To CLEAR an existing verdict, PATCH
+    with verdict=null; the view nulls all four columns including timestamp
+    and actor name. Note has a 240-char ceiling per spec.
+    """
+    verdict = serializers.ChoiceField(
+        choices=["resolved", "watch", "false_alarm"],
+        required=False, allow_null=True,
+    )
+    note = serializers.CharField(
+        required=False, allow_null=True, allow_blank=True, max_length=240,
+    )
+    by_name = serializers.CharField(
+        required=False, allow_null=True, allow_blank=True, max_length=120,
+    )
+
+    def validate(self, attrs):
+        # Reject empty body — must include at least verdict (even verdict=null
+        # to clear). Forces the caller to be explicit about intent.
+        if "verdict" not in attrs:
+            raise serializers.ValidationError(
+                "Body must include 'verdict' (use null to clear)."
+            )
+        return attrs
+
+
 class EventDetailSerializer(EventSerializer):
     hls_url = serializers.SerializerMethodField()
     local_url = serializers.SerializerMethodField()

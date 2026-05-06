@@ -833,3 +833,123 @@ class CameraOnvifProbeView(APIView):
             },
             status=status.HTTP_200_OK,
         )
+
+
+class MotionProfilesListView(APIView):
+    """GET /api/motioniq/profiles — returns the 3 MotionIQ profiles for the
+    Flutter Camera section's profile-picker. Drives the user-facing card UI.
+
+    Response shape: {profiles: [{id, label, description, default}]} sourced
+    from camera.constants.MOTION_PROFILES. Stable order: guardian, aware, quiet.
+    Older hubs (pre-migration 0027) would 404 — Flutter detects that and hides
+    the section gracefully without an app rev.
+    """
+    permission_classes = []  # match project convention; HAProxy guards perimeter
+
+    def get(self, request):
+        from camera.constants import list_profiles
+        return Response({"profiles": list_profiles()}, status=status.HTTP_200_OK)
+
+
+class BulkMotionProfileView(APIView):
+    """PATCH /api/motioniq/profile {profile: "guardian"|"aware"|"quiet"}
+
+    Apply a MotionIQ profile to every eligible camera in one call. Vehicle
+    cameras (those with vehicle_detection_zone configured) are skipped
+    server-side — their motion_iq_applicable is False and forcing them onto
+    a non-Aware profile would silently degrade plate detection. The skipped
+    list is returned so the Flutter "Applied to N cameras · M vehicle cameras
+    kept on Aware" UX can show the user exactly what happened.
+
+    Single Frigate config re-render at the end (not one per camera) — N
+    cameras = 1 restart cycle, not N. Streams hiccup once instead of N times.
+    """
+    permission_classes = []
+
+    def patch(self, request):
+        from camera.models import Camera
+        from camera.constants import MOTION_PROFILES
+        profile = (request.data.get("profile") or "").strip().lower()
+        if profile not in MOTION_PROFILES:
+            return Response(
+                {"error": f"Invalid profile '{profile}'. Valid: {sorted(MOTION_PROFILES.keys())}."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        applied, skipped = [], []
+        for camera in Camera.objects.all():
+            if not camera.motion_iq_applicable:
+                skipped.append({
+                    "slug": camera.slug_name,
+                    "name": camera.name,
+                    "reason": "vehicle_lock",
+                })
+                continue
+            camera.motion_profile = profile
+            camera.save(update_fields=["motion_profile", "updated_at"])
+            applied.append({"slug": camera.slug_name, "name": camera.name})
+
+        # Single render+restart at the end. Even if the per-camera saves
+        # above each tried to queue their own render, Celery dedupes by
+        # task signature within the beat window — but explicit is clearer
+        # and we control the firing here.
+        from camera.tasks import update_frigate_config
+        update_frigate_config.delay()
+
+        return Response(
+            {
+                "profile": profile,
+                "applied": applied,
+                "skipped": skipped,
+                "render_queued": True,
+            },
+            status=status.HTTP_200_OK,
+        )
+
+
+class CameraMotionProfileView(APIView):
+    """PATCH /api/cameras/<slug>/motion-profile {profile: "guardian"|"aware"|"quiet"}
+
+    Sets the per-camera MotionIQ profile. Triggers an async Frigate config
+    re-render (camera.tasks.update_frigate_config). The render writes the new
+    motion / detect / objects / review values from the template to
+    /root/jupyter-container/frigate/config/config.yaml — direct edits to
+    that file get overwritten on the next render (CW#172).
+
+    Vehicle cameras accept the field but Camera.motion_settings forces the
+    AWARE baseline regardless of stored profile, to keep plate detection
+    intact. Response includes motion_iq_applicable so the Flutter UI can
+    show a tooltip explaining why the profile selector is disabled there.
+    """
+    permission_classes = []
+
+    def patch(self, request, slug):
+        from camera.models import Camera
+        from camera.constants import MOTION_PROFILES
+        try:
+            camera = Camera.objects.get(slug_name=slug)
+        except Camera.DoesNotExist:
+            return Response(
+                {"error": "Camera not found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+        profile = (request.data.get("profile") or "").strip().lower()
+        if profile not in MOTION_PROFILES:
+            return Response(
+                {"error": f"Invalid profile '{profile}'. Valid: {sorted(MOTION_PROFILES.keys())}."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        camera.motion_profile = profile
+        camera.save(update_fields=["motion_profile", "updated_at"])
+
+        from camera.tasks import update_frigate_config
+        update_frigate_config.delay()
+
+        return Response(
+            {
+                "slug": slug,
+                "motion_profile": camera.motion_profile,
+                "motion_iq_applicable": camera.motion_iq_applicable,
+                "render_queued": True,
+            },
+            status=status.HTTP_200_OK,
+        )
