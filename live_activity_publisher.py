@@ -116,7 +116,7 @@ SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
 # fire for actionable events. Non-actionable notification_types listed here
 # get the alert banner but skip push_la_ai_event entirely. Easy to extend
 # without touching _handle_ai_event control flow.
-LA_SKIP_TYPES = {"vehicle_spotted"}
+LA_SKIP_TYPES = {"vehicle_spotted", "person_spotted", "loitering_watch"}
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger("la-publisher")
@@ -238,7 +238,7 @@ def classify_ai_event(msg):
         loit = msg.get("loitering") or ""
         camera = msg.get("camera_name", "your camera")
         if loit and loit not in ("Unknown", "No"):
-            return "loitering_detected", "Loitering Detected", \
+            return "loitering_watch", "Loitering Detected", \
                    f"Someone is loitering near your {camera}"
         # Plain person-spotted notification. Earlier this branch returned None
         # (silently dropping every non-loitering PERSON event), which broke
@@ -255,11 +255,19 @@ def classify_ai_event(msg):
         return "person_spotted", "Unknown person spotted", \
                f"An unknown person was spotted at your {camera}"
 
-    # LoiterAI publishes label="LOITERING" with loitering field set to a
-    # score/pattern string. Distinct from FaceAI's PERSON+loitering pattern.
+    # LoiterAI publishes label="LOITERING" with tier info in loitering field.
+    # Tier 1+2: push banner only (loitering_watch → in LA_SKIP_TYPES).
+    # Tier 3: Live Activity card with alarm button (loitering_detected).
     if label == "LOITERING":
-        return "loitering_detected", "Loitering Detected", \
-               f"Someone is loitering near your {msg.get('camera_name','camera')}"
+        cam = msg.get("camera_name", "camera")
+        title_text = msg.get("title", "")
+        loit_field = msg.get("loitering") or ""
+        is_tier3 = "tier=3" in loit_field
+        if is_tier3:
+            return "loitering_detected", title_text or "Loiterer detected", \
+                   f"Unknown person still present near your {cam}"
+        return "loitering_watch", title_text or "Someone lingering", \
+               f"Someone lingering near your {cam}"
 
     if label == "CAR":
         vs = (msg.get("vehicle_status") or "").strip()
