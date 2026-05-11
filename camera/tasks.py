@@ -662,7 +662,9 @@ def get_ice_server():
         return {}
 
 
-CAMERA_FAILURE_THRESHOLD = 3  # 3 × 5 min = 15 min before auto-disable
+CAMERA_FAILURE_THRESHOLD = 3  # threshold for emitting camera_offline MQTT health event
+CAMERA_PROBE_PORT = 554  # RTSP — the actual service signal we care about
+CAMERA_PROBE_TIMEOUT = 3  # seconds; TCP handshake is fast
 
 
 def _publish_camera_health_event(camera_slug, event_type):
@@ -691,22 +693,30 @@ def _publish_camera_health_event(camera_slug, event_type):
 
 @shared_task
 def monitor_camera_ips():
-    """Check each RTSP camera IP. Auto-disable after sustained failure, re-enable on recovery."""
+    """
+    Observe-only health watchdog for RTSP cameras. Re-configures streaming
+    ONLY on definitive signals (IP move via DHCP). Probe failures emit MQTT
+    health events for the UI but never strip cameras from the streaming
+    config — MediaMTX/Frigate handle reconnect natively.
+
+    For unattended remote hubs, "is this camera unreachable right now" is
+    an observation, not authority to mutate streaming state. Only the user
+    (via the app) decides whether a camera should exist.
+    """
     from camera.enums import CameraType
     from camera.models import Camera
-    from alarm.network import find_ip_by_mac, get_mac_address, ping_host
+    from alarm.network import find_ip_by_mac, get_mac_address, tcp_check
 
-    # Iterate ALL RTSP cameras (including disabled) so we detect recovery
     cameras = Camera.objects.filter(type=CameraType.RTSP)
     if not cameras.exists():
         return "No RTSP cameras"
 
-    config_changed = False
+    config_changed = False  # only flips when IP actually moves
     results = []
     now = timezone.now()
 
     for camera in cameras:
-        # Step 1: Backfill MAC if missing
+        # Step 1: Backfill MAC if missing — needed for IP-follow logic
         if not camera.mac_address and camera.ip:
             mac = get_mac_address(camera.ip)
             if mac:
@@ -714,11 +724,12 @@ def monitor_camera_ips():
                 camera.save(update_fields=["mac_address"])
                 logging.info(f"Backfilled MAC for {camera.slug_name}: {mac}")
 
-        # Step 2: Ping stored IP (5s timeout — some cameras respond slowly)
-        reachable = camera.ip and ping_host(camera.ip, timeout=5)
+        # Step 2: TCP probe on RTSP port — the service signal we actually care about
+        reachable = bool(camera.ip) and tcp_check(
+            camera.ip, CAMERA_PROBE_PORT, timeout=CAMERA_PROBE_TIMEOUT
+        )
 
-        # Step 3: If unreachable, ARP sweep to find new IP
-        new_ip = None
+        # Step 3: If unreachable, ARP sweep to find new IP (DHCP renewal etc.)
         if not reachable and camera.mac_address:
             new_ip = find_ip_by_mac(camera.mac_address, populate_arp=True)
             if new_ip and new_ip != camera.ip:
@@ -728,54 +739,41 @@ def monitor_camera_ips():
                 if camera.sub_rtsp_url and old_ip:
                     camera.sub_rtsp_url = camera.sub_rtsp_url.replace(old_ip, new_ip)
                 camera.ip = new_ip
-                update_fields = ["ip", "rtsp_url", "sub_rtsp_url"]
-                if not camera.mac_address:
-                    mac = get_mac_address(new_ip)
-                    if mac:
-                        camera.mac_address = mac
-                        update_fields.append("mac_address")
-                camera.save(update_fields=update_fields)
-                config_changed = True
-                reachable = True
+                camera.save(update_fields=["ip", "rtsp_url", "sub_rtsp_url"])
+                config_changed = True  # definitive signal — IP genuinely moved
+                reachable = tcp_check(new_ip, CAMERA_PROBE_PORT, timeout=CAMERA_PROBE_TIMEOUT)
                 logging.info(f"Camera {camera.slug_name} IP updated: {old_ip} -> {new_ip}")
                 results.append(f"{camera.slug_name}: moved {old_ip} -> {new_ip}")
-            elif new_ip:
-                reachable = True
 
-        # Step 4: Health watchdog — track failures, auto-disable/enable
+        # Step 4: Observe. Track stats, emit MQTT health events. NEVER touch is_enabled.
         if reachable:
-            was_disabled = not camera.is_enabled
+            previously_offline = camera.consecutive_failures >= CAMERA_FAILURE_THRESHOLD
             camera.consecutive_failures = 0
             camera.last_seen_at = now
-            update_fields = ["consecutive_failures", "last_seen_at"]
-            if was_disabled:
-                camera.is_enabled = True
-                update_fields.append("is_enabled")
-                config_changed = True
-                logging.info(f"Camera {camera.slug_name} back online — re-enabled")
+            camera.save(update_fields=["consecutive_failures", "last_seen_at"])
+            if previously_offline:
+                logging.info(f"Camera {camera.slug_name} back online (was offline)")
                 _publish_camera_health_event(camera.slug_name, "camera_online")
-            camera.save(update_fields=update_fields)
             if not any(camera.slug_name in r for r in results):
                 results.append(f"{camera.slug_name}: OK at {camera.ip}")
         else:
+            was_below_threshold = camera.consecutive_failures < CAMERA_FAILURE_THRESHOLD
             camera.consecutive_failures += 1
-            update_fields = ["consecutive_failures"]
-            if camera.consecutive_failures >= CAMERA_FAILURE_THRESHOLD and camera.is_enabled:
-                camera.is_enabled = False
-                update_fields.append("is_enabled")
-                config_changed = True
+            camera.save(update_fields=["consecutive_failures"])
+            # Emit MQTT offline event once when crossing threshold — for app UI/alerting
+            if was_below_threshold and camera.consecutive_failures >= CAMERA_FAILURE_THRESHOLD:
                 logging.warning(
-                    f"Camera {camera.slug_name} disabled after "
-                    f"{camera.consecutive_failures} consecutive failures"
+                    f"Camera {camera.slug_name} crossed offline threshold "
+                    f"({camera.consecutive_failures} consecutive probe failures). "
+                    f"Streaming config preserved; MediaMTX will retry."
                 )
                 _publish_camera_health_event(camera.slug_name, "camera_offline")
-            camera.save(update_fields=update_fields)
             results.append(
                 f"{camera.slug_name}: OFFLINE "
                 f"({camera.consecutive_failures}/{CAMERA_FAILURE_THRESHOLD})"
             )
 
-    # Batch config regeneration — one call covers all changes
+    # Re-render only on IP-change — never on transient reachability blips
     if config_changed:
         update_camera_config.delay()
 

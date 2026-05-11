@@ -1,7 +1,24 @@
 """Network utility functions for IP and MAC address operations."""
 import re
+import socket
 import subprocess
 import logging
+
+
+def tcp_check(host, port, timeout=3):
+    """
+    TCP connect probe — fastest reliable signal that a service is reachable.
+
+    Preferred over ICMP ping for service-level health (RTSP, MQTT, HTTP) because:
+      - cameras/routers can silently drop ICMP while accepting TCP
+      - ICMP can be rate-limited or routed differently than TCP
+      - a TCP handshake confirms the service port is actually accepting
+    """
+    try:
+        with socket.create_connection((host, port), timeout=timeout):
+            return True
+    except (OSError, socket.timeout):
+        return False
 
 
 def ping_host(ip, timeout=1):
