@@ -30,6 +30,8 @@ import threading
 import time
 from threading import Lock
 
+import psycopg2
+
 import httpx
 import jwt
 import paho.mqtt.client as mqtt
@@ -72,7 +74,18 @@ KEY_PATH = os.environ["APNS_PRIVATE_KEY_PATH"]
 LA_TOKEN = os.environ.get("LIVE_ACTIVITY_START_TOKEN", "")
 HALO_TOKEN = os.environ.get("HALO_CHARGING_START_TOKEN", "")
 FCM_TOKENS = [t for t in os.environ.get("FCM_REGISTRATION_IDS", "").split(",") if t]
-APNS_RAW_TOKENS = [t for t in os.environ.get("APNS_DEVICE_TOKENS", "").split(",") if t]
+def _initial_apns_tokens():
+    try:
+        with open(TOKEN_STORE_PATH) as f:
+            store = json.load(f)
+        tokens = [m["apns_token"] for m in store.values() if "apns_token" in m]
+        if tokens:
+            return tokens
+    except Exception:
+        pass
+    return [t for t in os.environ.get("APNS_DEVICE_TOKENS", "").split(",") if t]
+
+APNS_RAW_TOKENS = _initial_apns_tokens()
 FIREBASE_CRED_PATH = os.environ.get("FIREBASE_CRED_PATH", "")
 
 # APNs has two endpoints. Tokens minted by debug-build apps work ONLY against
@@ -116,7 +129,71 @@ SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
 # fire for actionable events. Non-actionable notification_types listed here
 # get the alert banner but skip push_la_ai_event entirely. Easy to extend
 # without touching _handle_ai_event control flow.
-LA_SKIP_TYPES = {"vehicle_spotted", "person_spotted", "loitering_watch"}
+LA_SKIP_TYPES = {"vehicle_spotted", "person_spotted", "parcel_delivered", "parcel_pickup"}
+
+# ---------- outdoor Halo alarm trigger ----------
+ALARM_TRIGGER_TYPES = {"parcel_theft_detected", "loitering_detected", "unusual_sound_detected"}
+ALARM_COOLDOWN_SECONDS = int(os.getenv("ALARM_COOLDOWN_SECONDS", "60"))
+_alarm_last_triggered = 0.0
+_outdoor_halo_cache = []
+_outdoor_halo_cache_ts = 0.0
+OUTDOOR_HALO_CACHE_TTL = 300
+_mqtt_client_ref = None
+
+DB_HOST = "127.0.0.1"
+DB_PORT = 5433
+DB_NAME = "hub_controller"
+DB_USER = os.environ.get("DB_USERNAME", "postgres")
+DB_PASS = os.environ.get("DB_PASSWORD", os.environ.get("POSTGRES_PASSWORD", ""))
+
+
+def _get_outdoor_halo_identities():
+    global _outdoor_halo_cache, _outdoor_halo_cache_ts
+    now = time.time()
+    if _outdoor_halo_cache and (now - _outdoor_halo_cache_ts) < OUTDOOR_HALO_CACHE_TTL:
+        return _outdoor_halo_cache
+    try:
+        conn = psycopg2.connect(
+            host=DB_HOST, port=DB_PORT, dbname=DB_NAME,
+            user=DB_USER, password=DB_PASS, connect_timeout=3,
+        )
+        cur = conn.cursor()
+        cur.execute("SELECT identity_name FROM alarm_alarmdevice WHERE type = %s", ("OUTDOOR",))
+        _outdoor_halo_cache = [row[0] for row in cur.fetchall()]
+        _outdoor_halo_cache_ts = now
+        conn.close()
+        log.info("outdoor Halos: %s", _outdoor_halo_cache)
+    except Exception as e:
+        log.warning("failed to query outdoor Halos: %s", e)
+    return _outdoor_halo_cache
+
+
+def _trigger_outdoor_alarms(notification_type):
+    global _alarm_last_triggered
+    if notification_type not in ALARM_TRIGGER_TYPES:
+        return
+    now = time.time()
+    if (now - _alarm_last_triggered) < ALARM_COOLDOWN_SECONDS:
+        log.info("alarm cooldown active, skipping trigger for %s", notification_type)
+        return
+    client = _mqtt_client_ref
+    if client is None:
+        log.warning("no MQTT client ref, cannot trigger alarm")
+        return
+    identities = _get_outdoor_halo_identities()
+    if not identities:
+        log.info("no outdoor Halos found, skipping alarm trigger")
+        return
+    _alarm_last_triggered = now
+    for identity in identities:
+        topic = "/%s/mode" % identity
+        disarm = json.dumps({"device_name": identity, "mode": "disarm"})
+        alarm = json.dumps({"device_name": identity, "mode": "alarm"})
+        client.publish(topic, disarm, qos=1)
+        time.sleep(0.2)
+        client.publish(topic, alarm, qos=1)
+        log.info("ALARM TRIGGERED on %s for %s", identity, notification_type)
+
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger("la-publisher")
@@ -133,6 +210,11 @@ if FIREBASE_CRED_PATH and os.path.exists(FIREBASE_CRED_PATH):
         log.exception("Firebase Admin init failed: %s", ex)
 
 _halo_charge_state = {}
+# Tracks the last LA push per Halo so we can throttle updates without
+# silently dropping meaningful state changes. {identity: {"pct": int, "ts": float}}
+_halo_last_la = {}
+HALO_LA_UPDATE_PCT_DELTA = 5      # push if battery moved by >= 5%
+HALO_LA_UPDATE_INTERVAL = 300     # or if 5 minutes elapsed since last push
 _halo_lock = Lock()
 _throttle_lock = Lock()
 _last_event = {}
@@ -142,6 +224,29 @@ _last_person = {}
 # (camera_slug,) -> ts of last unknown-PERSON fire (replaces label-throttle
 # scope for unknown persons; per-camera so different rooms still fire)
 _last_unknown_per_cam = {}
+
+# CDC: per-category activity tokens from phone. When the phone creates a
+# Live Activity via push-to-start, it relays the per-activity push token
+# back here tagged with the notificationType. Subsequent events of the
+# same category UPDATE the existing card instead of creating a new one.
+# {notificationType: {"token": str, "ts": float}}
+_cdc_tokens = {}
+_cdc_lock = Lock()
+CDC_TOKEN_TTL = 300  # 5 minutes — stale tokens fall back to START
+
+
+def _on_cdc_token(client, userdata, msg):
+    """Handle activity push token from phone for CDC updates."""
+    try:
+        data = json.loads(msg.payload)
+        ntype = data.get("notificationType", "")
+        token = data.get("token", "")
+        if ntype and token:
+            with _cdc_lock:
+                _cdc_tokens[ntype] = {"token": token, "ts": time.time()}
+            log.info("CDC: stored activity token for %s (%s...)", ntype, token[:20])
+    except Exception as e:
+        log.warning("CDC: failed to parse token msg: %s", e)
 
 
 def _throttle_ok(event_id, label):
@@ -154,6 +259,11 @@ def _throttle_ok(event_id, label):
         if event_id:
             _last_event[event_id] = now
         _last_label[label] = now
+        # 2026-05-07 BUG FIX: success path was falling through with implicit
+        # None return — caller did ok, why = _throttle_ok(...) and got
+        # TypeError on every passing event. Live Activity push has been
+        # broken since the throttle was introduced. Now returns explicit ok.
+        return True, "ok"
 
 
 def _person_cooldown_ok(notification_type, msg):
@@ -223,22 +333,22 @@ def classify_ai_event(msg):
         ps = msg.get("parcel_status") or ""
         person_id = msg.get("person_id")
         if ps in ("parcel_theft_attempt", "parcel_theft_warning") or (ps == "picked_up" and not person_id):
-            return "parcel_theft_detected", "Parcel pickup by unknown person", \
-                   "Someone unknown is picking up your parcel"
+            return "parcel_theft_detected", "Suspicious Parcel Activity", \
+                   "Suspicious activity detected near your parcel"
         if ps in ("picked_up", "parcel_pickup") and person_id:
             who = msg.get("sub_label") or "someone"
-            return "parcel_theft_detected", f"Parcel collected by {who}", f"{who} picked up your parcel"
-        if ps in ("parcel_dropped_in", "present"):
-            return "parcel_theft_detected", "Parcel delivered", "A parcel arrived at your door"
+            return "parcel_pickup", f"Parcel collected by {who}", f"{who} picked up your parcel"
+        if ps in ("parcel_dropped_in", "present", "dropped"):
+            return "parcel_delivered", "Parcel delivered", "A parcel arrived at your door"
         if ps:
-            return "parcel_theft_detected", "Parcel activity detected", "Parcel activity at your door"
+            return "parcel_delivered", "Parcel activity detected", "Parcel activity at your door"
         return None, None, None
 
     if label == "PERSON":
         loit = msg.get("loitering") or ""
         camera = msg.get("camera_name", "your camera")
         if loit and loit not in ("Unknown", "No"):
-            return "loitering_watch", "Loitering Detected", \
+            return "loitering_detected", "Loitering Detected", \
                    f"Someone is loitering near your {camera}"
         # Plain person-spotted notification. Earlier this branch returned None
         # (silently dropping every non-loitering PERSON event), which broke
@@ -255,19 +365,11 @@ def classify_ai_event(msg):
         return "person_spotted", "Unknown person spotted", \
                f"An unknown person was spotted at your {camera}"
 
-    # LoiterAI publishes label="LOITERING" with tier info in loitering field.
-    # Tier 1+2: push banner only (loitering_watch → in LA_SKIP_TYPES).
-    # Tier 3: Live Activity card with alarm button (loitering_detected).
+    # LoiterAI publishes label="LOITERING" with loitering field set to a
+    # score/pattern string. Distinct from FaceAI's PERSON+loitering pattern.
     if label == "LOITERING":
-        cam = msg.get("camera_name", "camera")
-        title_text = msg.get("title", "")
-        loit_field = msg.get("loitering") or ""
-        is_tier3 = "tier=3" in loit_field
-        if is_tier3:
-            return "loitering_detected", title_text or "Loiterer detected", \
-                   f"Unknown person still present near your {cam}"
-        return "loitering_watch", title_text or "Someone lingering", \
-               f"Someone lingering near your {cam}"
+        return "loitering_detected", "Loitering Detected", \
+               f"Someone is loitering near your {msg.get('camera_name','camera')}"
 
     if label == "CAR":
         vs = (msg.get("vehicle_status") or "").strip()
@@ -400,6 +502,34 @@ def push_la_ai_event(notification_type, title, msg):
         "startedAt": time.time(),
     }
     label_lower = state["label"].lower() or "event"
+    la_topic = f"{BUNDLE_ID}.push-type.liveactivity"
+
+    # CDC: try UPDATE if we have a recent activity token for this category
+    with _cdc_lock:
+        cat = _cdc_tokens.get(notification_type)
+    if cat and time.time() - cat["ts"] < CDC_TOKEN_TTL:
+        update_payload = {
+            "aps": {
+                "timestamp": int(time.time()),
+                "event": "update",
+                "content-state": state,
+                "alert": {"title": title, "body": state["cameraName"]},
+                "sound": "default",
+            }
+        }
+        result = _apns_post(cat["token"], update_payload, "liveactivity",
+                            la_topic,
+                            f"LA/CDC-UPDATE/{notification_type} event={event_id}",
+                            environment=LIVE_ACTIVITY_ENVIRONMENT)
+        if result == "ok":
+            log.info("CDC: updated %s card in-place (event=%s)", notification_type, event_id)
+            return
+        # Stale or failed — clear token and fall through to START
+        log.info("CDC: update %s for %s, falling back to START", result, notification_type)
+        with _cdc_lock:
+            _cdc_tokens.pop(notification_type, None)
+
+    # START: no CDC token or update failed — create new card
     payload = {
         "aps": {
             "timestamp": int(time.time()),
@@ -411,13 +541,23 @@ def push_la_ai_event(notification_type, title, msg):
             "sound": "default",
         }
     }
-    _apns_post(LA_TOKEN, payload, "liveactivity",
-               f"{BUNDLE_ID}.push-type.liveactivity",
+    _apns_post(LA_TOKEN, payload, "liveactivity", la_topic,
                f"LA/{notification_type} event={event_id}",
                environment=LIVE_ACTIVITY_ENVIRONMENT)
 
 
-def push_la_halo(halo_name, charge_percent, is_charging, charge_time_min, wifi_quality, temperature_c):
+def push_la_halo(halo_name, charge_percent, is_charging, charge_time_min,
+                 wifi_quality, temperature_c, event="start", silent_update=False):
+    """Push a Halo charging Live Activity.
+
+    event:
+      - "start": initial card creation (lock screen + Dynamic Island appear)
+      - "update": periodic state push while charging — every ~5min or 5% delta
+      - "end": battery full, card auto-dismisses (dismissal-date = now)
+
+    silent_update=True suppresses the alert banner for periodic updates so
+    iOS doesn't pop a banner every 5 minutes.
+    """
     state = {
         "haloName": halo_name,
         "chargePercent": int(charge_percent),
@@ -426,20 +566,34 @@ def push_la_halo(halo_name, charge_percent, is_charging, charge_time_min, wifi_q
         "wifiSignalQuality": wifi_quality or "Unknown",
         "temperatureC": float(temperature_c or 0.0),
     }
-    payload = {
-        "aps": {
-            "timestamp": int(time.time()),
-            "event": "start",
-            "content-state": state,
-            "attributes-type": "HaloChargingActivityAttributes",
-            "attributes": {},
-            "alert": {"title": f"{halo_name} is charging", "body": f"{int(charge_percent)}%"},
-            "sound": "default",
-        }
+    aps = {
+        "timestamp": int(time.time()),
+        "event": event,
+        "content-state": state,
+        "attributes-type": "HaloChargingActivityAttributes",
+        "attributes": {},
+        "sound": "default",
     }
+    if event == "end":
+        # Tell iOS to dismiss the card immediately.
+        aps["dismissal-date"] = int(time.time())
+        aps["alert"] = {
+            "title": f"{halo_name} fully charged",
+            "body": "100% — safe to unplug",
+        }
+    elif silent_update:
+        # Live Activity content-state push without a banner. APNs priority
+        # is 5 for non-alerting LA updates per Apple guidance.
+        aps["alert"] = None
+    else:
+        aps["alert"] = {
+            "title": f"{halo_name} is charging",
+            "body": f"{int(charge_percent)}%",
+        }
+    payload = {"aps": aps}
     _apns_post(HALO_TOKEN, payload, "liveactivity",
                f"{BUNDLE_ID}.push-type.liveactivity",
-               f"LA/halo halo={halo_name}",
+               f"LA/halo halo={halo_name} event={event}",
                environment=LIVE_ACTIVITY_ENVIRONMENT)
 
 
@@ -679,6 +833,7 @@ def _handle_ai_event(data):
              "camera_name": data.get("camera_name", ""), "video_path": data.get("video_path", "") or ""}
     push_apns_alert(title, body, extra, log_tag=notification_type)
     push_fcm_notification(title, body, data=extra)
+    _trigger_outdoor_alarms(notification_type)
 
 
 def _handle_halo_status(topic, data):
@@ -690,31 +845,70 @@ def _handle_halo_status(topic, data):
         return
     is_charging = bool(data.get("charging", False))
     halo_name = data.get("device") or identity
+    pct = int(data.get("battery_percent", 0))
+    charge_time_min = int(data.get("charge_time_minutes", 0))
+    wifi_quality = _wifi_quality(data.get("wifi_rssi"))
+    temperature = float(data.get("temperature", 0.0))
 
     with _halo_lock:
         prev = _halo_charge_state.get(identity)
         _halo_charge_state[identity] = is_charging
-    if prev is None and not is_charging: return
-    if prev == is_charging: return
+        last_la = _halo_last_la.get(identity)
 
-    log.info("halo charge edge: %s %s -> %s", identity, prev, is_charging)
-    if not is_charging: return
+    now = time.time()
 
-    ok, why = _throttle_ok(f"halo-{identity}", "HALO")
-    if not ok:
-        log.info("skip halo: %s", why)
+    # Edge: not charging -> charging. Emit START + banner.
+    if is_charging and (prev is None or not prev):
+        log.info("halo charge start: %s pct=%d", identity, pct)
+        push_la_halo(halo_name, pct, True, charge_time_min,
+                     wifi_quality, temperature, event="start")
+        with _halo_lock:
+            _halo_last_la[identity] = {"pct": pct, "ts": now}
+        title = f"{halo_name} is charging"
+        body = f"{pct}% — placed on charger"
+        extra = {"notificationType": "halo_charging",
+                 "halo_name": halo_name, "charge_percent": str(pct)}
+        push_apns_alert(title, body, extra, log_tag="halo")
+        push_fcm_notification(title, body, data=extra)
         return
 
-    pct = int(data.get("battery_percent", 0))
-    push_la_halo(halo_name, pct, is_charging,
-                 int(data.get("charge_time_minutes", 0)),
-                 _wifi_quality(data.get("wifi_rssi")),
-                 float(data.get("temperature", 0.0)))
-    title = f"{halo_name} is charging"
-    body = f"{pct}% — placed on charger"
-    extra = {"notificationType": "halo_charging", "halo_name": halo_name, "charge_percent": str(pct)}
-    push_apns_alert(title, body, extra, log_tag="halo")
-    push_fcm_notification(title, body, data=extra)
+    # Edge: charging -> not charging. Dismiss the card (user unplugged).
+    if prev and not is_charging:
+        log.info("halo charge stop (unplugged): %s pct=%d", identity, pct)
+        push_la_halo(halo_name, pct, False, charge_time_min,
+                     wifi_quality, temperature, event="end")
+        with _halo_lock:
+            _halo_last_la.pop(identity, None)
+        return
+
+    # Steady-state while charging. Decide UPDATE or END.
+    if is_charging:
+        if pct >= 100:
+            if last_la is None or last_la.get("pct", 0) < 100:
+                log.info("halo charge full: %s — ending LA", identity)
+                push_la_halo(halo_name, 100, True, 0,
+                             wifi_quality, temperature, event="end")
+                with _halo_lock:
+                    _halo_last_la.pop(identity, None)
+            return
+        if last_la is None:
+            # Charging without a prior start edge (publisher restart mid-charge).
+            log.info("halo charge resync: %s pct=%d (no prior LA)", identity, pct)
+            push_la_halo(halo_name, pct, True, charge_time_min,
+                         wifi_quality, temperature, event="start")
+            with _halo_lock:
+                _halo_last_la[identity] = {"pct": pct, "ts": now}
+            return
+        pct_delta = abs(pct - int(last_la.get("pct", pct)))
+        time_delta = now - float(last_la.get("ts", 0))
+        if pct_delta >= HALO_LA_UPDATE_PCT_DELTA or time_delta >= HALO_LA_UPDATE_INTERVAL:
+            log.info("halo charge update: %s pct=%d (delta=%d t=%.0fs)",
+                     identity, pct, pct_delta, time_delta)
+            push_la_halo(halo_name, pct, True, charge_time_min,
+                         wifi_quality, temperature,
+                         event="update", silent_update=True)
+            with _halo_lock:
+                _halo_last_la[identity] = {"pct": pct, "ts": now}
 
 
 def _handle_halo_offboard_2fa(data):
@@ -735,6 +929,8 @@ def _handle_halo_offboard_2fa(data):
 
 
 def _on_message(client, userdata, msg):
+    global _mqtt_client_ref
+    _mqtt_client_ref = client
     try:
         data = json.loads(msg.payload.decode("utf-8"))
     except Exception:
@@ -753,15 +949,31 @@ def _on_connect(client, userdata, flags, rc, properties=None):
         ("/events", 0),
         ("+/status", 0),
         ("/halo_offboard_2fa_pending", 1),
+        ("/la_activity_tokens", 0),
     ])
-    log.info("subscribed: /events  +/status  /halo_offboard_2fa_pending")
+    client.message_callback_add("/la_activity_tokens", _on_cdc_token)
+    log.info("subscribed: /events  +/status  /halo_offboard_2fa_pending  /la_activity_tokens")
 
 
 TOKEN_REFRESH_INTERVAL_SECONDS = 60
 
 
+def _read_tokens_from_store():
+    """Read APNs tokens directly from notification_tokens.json (source of truth).
+    Falls back to .env if JSON store is missing or corrupt."""
+    try:
+        with open(TOKEN_STORE_PATH) as f:
+            store = json.load(f)
+        tokens = [m["apns_token"] for m in store.values() if "apns_token" in m]
+        if tokens:
+            return tokens
+    except Exception:
+        pass
+    return [t for t in os.environ.get("APNS_DEVICE_TOKENS", "").split(",") if t]
+
+
 def _refresh_tokens():
-    """Re-read .env and update token globals. Called every 60s by a daemon
+    """Re-read tokens from JSON store + .env. Called every 60s by a daemon
     thread so the publisher picks up newly-registered tokens without needing
     a process restart, AND recovers from transient empty-token states (which
     used to crash-loop the service)."""
@@ -770,7 +982,7 @@ def _refresh_tokens():
     new_la = os.environ.get("LIVE_ACTIVITY_START_TOKEN", "")
     new_halo = os.environ.get("HALO_CHARGING_START_TOKEN", "")
     new_fcm = [t for t in os.environ.get("FCM_REGISTRATION_IDS", "").split(",") if t]
-    new_raw = [t for t in os.environ.get("APNS_DEVICE_TOKENS", "").split(",") if t]
+    new_raw = _read_tokens_from_store()
     changed = (
         new_la != LA_TOKEN
         or new_halo != HALO_TOKEN
