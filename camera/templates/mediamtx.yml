@@ -41,9 +41,13 @@ srt: no
 ###############################################
 # WebRTC settings
 # MediaMTX serves as the WHEP endpoint for Flutter.
-# STUN (Google) listed FIRST for fast P2P srflx (~34ms).
-# TURN (Cloudflare) as relay fallback when P2P fails.
-# Aggressive timeouts from proven hubtemi deployment.
+# STUN listed FIRST so P2P srflx candidates are gathered fast (~200ms).
+# TURN (Cloudflare) as relay fallback — trimmed to 2 URLs (UDP + TURNS/TCP).
+# 5+ TURN URLs cause combinatorial candidate-pair explosion (Mozilla #1322659).
+# Gather timeouts per RFC 8445 best practices + mobile production data:
+#   STUN 3s  — covers 100ms+ mobile latency to STUN with margin
+#   Track 3s — TURN allocation 200-500ms + headroom for lossy networks
+#   Handshake 15s — carrier-grade NAT + Cloudflare tunnel + slow wireless cams
 ###############################################
 webrtc: yes
 webrtcAddress: :8889
@@ -52,13 +56,12 @@ webrtcTrustedProxies: []
 webrtcLocalTCPAddress: :8189
 webrtcIPsFromInterfaces: yes
 webrtcIPsFromInterfacesList: ['wl*', 'en*', 'eth*']
-webrtcHandshakeTimeout: 5s
-webrtcTrackGatherTimeout: 200ms
-webrtcSTUNGatherTimeout: 200ms
+webrtcHandshakeTimeout: 15s
+webrtcTrackGatherTimeout: 3s
+webrtcSTUNGatherTimeout: 3s
 
 webrtcICEServers2:
   - url: stun:stun.l.google.com:19302
-  - url: stun:stun1.l.google.com:19302
   - url: stun:stun.cloudflare.com:3478
 {% for url in turn_server %}
   - url: {{ url }}
