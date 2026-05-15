@@ -22,20 +22,18 @@ MOTION_PROFILES = {
         },
         "detect": {
             "fps": 5, "max_disappeared": 25,
-            # interval must be >0 (Frigate 0.17 schema). 50 = previously-working
-            # baseline; controls how often a stationary object's bbox is refreshed.
-            "stationary": {"threshold": 50, "interval": 50},
+            "stationary": {"threshold": 50, "interval": 50, "max_frames": 3000},
         },
         "objects": {
             "person": {"min_score": 0.5, "threshold": 0.7, "min_area": 3000},
             "car": {"min_score": 0.6, "threshold": 0.7, "min_area": 10000},
+            "dog": {"min_score": 0.5, "threshold": 0.65, "min_area": 2000},
+            "cat": {"min_score": 0.5, "threshold": 0.65, "min_area": 1000},
+            "bird": {"min_score": 0.45, "threshold": 0.6, "min_area": 500},
         },
         "review": {
-            "alerts_labels": ["person", "car"],
-            # Limited to labels the loaded RKNN model produces. Adding
-            # truck/bus/motorcycle here causes Frigate to log a warning
-            # ("not supported by the current model") and drop them silently.
-            "detections_labels": ["person", "car"],
+            "alerts_labels": ["person", "car", "dog", "cat"],
+            "detections_labels": ["person", "car", "dog", "cat", "bird"],
         },
     },
     AWARE: {
@@ -48,18 +46,18 @@ MOTION_PROFILES = {
         },
         "detect": {
             "fps": 5, "max_disappeared": 25,
-            "stationary": {"threshold": 30, "interval": 50},
+            "stationary": {"threshold": 30, "interval": 50, "max_frames": 2000},
         },
         "objects": {
             "person": {"min_score": 0.55, "threshold": 0.7, "min_area": 5000},
             "car": {"min_score": 0.65, "threshold": 0.7, "min_area": 15000},
+            "dog": {"min_score": 0.55, "threshold": 0.7, "min_area": 3000},
+            "cat": {"min_score": 0.55, "threshold": 0.7, "min_area": 1500},
+            "bird": {"min_score": 0.5, "threshold": 0.65, "min_area": 800},
         },
         "review": {
-            "alerts_labels": ["person", "car"],
-            # Limited to labels the loaded RKNN model produces. Adding
-            # truck/bus/motorcycle here causes Frigate to log a warning
-            # ("not supported by the current model") and drop them silently.
-            "detections_labels": ["person", "car"],
+            "alerts_labels": ["person", "car", "dog", "cat"],
+            "detections_labels": ["person", "car", "dog", "cat", "bird"],
         },
     },
     QUIET: {
@@ -77,10 +75,13 @@ MOTION_PROFILES = {
         "objects": {
             "person": {"min_score": 0.6, "threshold": 0.75, "min_area": 8000},
             "car": {"min_score": 0.7, "threshold": 0.75, "min_area": 20000},
+            "dog": {"min_score": 0.6, "threshold": 0.75, "min_area": 5000},
+            "cat": {"min_score": 0.6, "threshold": 0.75, "min_area": 3000},
+            "bird": {"min_score": 0.55, "threshold": 0.7, "min_area": 1500},
         },
         "review": {
             "alerts_labels": ["person", "car"],
-            "detections_labels": ["person", "car"],
+            "detections_labels": ["person", "car", "dog", "cat"],
         },
     },
 }

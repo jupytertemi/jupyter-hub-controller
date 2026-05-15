@@ -35,7 +35,7 @@ go2rtc:
 {% if camera.sub_rtsp_url %}      - {{ camera.sub_rtsp_url }}
 {% else %}      - "ffmpeg:{{ camera.name }}#video=copy"
 {% endif %}    {{ camera.name }}-live:
-      - "ffmpeg:{{ camera.name }}#video=h264"
+      - "ffmpeg:{{ camera.name }}#video=h264#audio=copy"
 {% endif %}{% endfor %}
   webrtc:
     candidates:
@@ -131,12 +131,9 @@ cameras:{% if not cameras %} {}{% endif %}
     snapshots:
       enabled: true
       timestamp: false
-      # Disabled — burned-in bounding-box overlay was being detected by
-      # the plate detector as a fake "license plate" on event-snapshot
-      # fetches and producing high-confidence false positives (CCT-S OCR
-      # returned "7D2235" from the rendered "car: 70% 22659" label). The
-      # clean_copy below still saves a parallel annotated image for debug.
       bounding_box: false
+      crop: true
+      height: 175
       clean_copy: true
       retain:
         default: 30
@@ -170,13 +167,24 @@ cameras:{% if not cameras %} {}{% endif %}
           min_score: {{ camera.motion_settings.objects.car.min_score }}
           threshold: {{ camera.motion_settings.objects.car.threshold }}
           min_area: {{ camera.motion_settings.objects.car.min_area }}
-      # Limited to classes the loaded RKNN object detector produces.
-      # Adding truck/bus/motorcycle here logs "not supported by the current
-      # model" and Frigate silently drops them. If the detector ever swaps
-      # to a model with those classes, expand this list.
+        dog:
+          min_score: {{ camera.motion_settings.objects.dog.min_score }}
+          threshold: {{ camera.motion_settings.objects.dog.threshold }}
+          min_area: {{ camera.motion_settings.objects.dog.min_area }}
+        cat:
+          min_score: {{ camera.motion_settings.objects.cat.min_score }}
+          threshold: {{ camera.motion_settings.objects.cat.threshold }}
+          min_area: {{ camera.motion_settings.objects.cat.min_area }}
+        bird:
+          min_score: {{ camera.motion_settings.objects.bird.min_score }}
+          threshold: {{ camera.motion_settings.objects.bird.threshold }}
+          min_area: {{ camera.motion_settings.objects.bird.min_area }}
       track:
         - person
         - car
+        - dog
+        - cat
+        - bird
 
     review:
       alerts:

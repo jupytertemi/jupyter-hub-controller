@@ -121,7 +121,7 @@ PERSON_COOLDOWN_SECONDS = int(os.getenv("PERSON_COOLDOWN_SECONDS", "60"))
 # of the global 15s. Loses some detail; massively cuts noise during a
 # stranger lingering near a door.
 UNKNOWN_PERSON_COOLDOWN_SECONDS = int(os.getenv("UNKNOWN_PERSON_COOLDOWN_SECONDS", "60"))
-SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
+SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING", "ANIMAL"}
 
 # Notification types that fire a banner-only push (no Live Activity card).
 # Live Activity cards persist on the lock screen with action buttons (e.g.
@@ -129,7 +129,7 @@ SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
 # fire for actionable events. Non-actionable notification_types listed here
 # get the alert banner but skip push_la_ai_event entirely. Easy to extend
 # without touching _handle_ai_event control flow.
-LA_SKIP_TYPES = {"vehicle_spotted", "person_spotted", "parcel_delivered", "parcel_pickup"}
+LA_SKIP_TYPES = {"vehicle_spotted", "person_spotted", "parcel_delivered", "parcel_pickup", "animal_spotted"}
 
 # ---------- outdoor Halo alarm trigger ----------
 ALARM_TRIGGER_TYPES = {"parcel_theft_detected", "loitering_detected", "unusual_sound_detected", "blacklist_detected"}
@@ -374,6 +374,13 @@ def classify_ai_event(msg):
     if label == "LOITERING":
         return "loitering_detected", "Loitering Detected", \
                f"Someone is loitering near your {msg.get('camera_name','camera')}"
+
+    if label == "ANIMAL":
+        camera = msg.get("camera_name", "your camera")
+        sub_label = (msg.get("sub_label") or "").strip()
+        animal_name = sub_label if sub_label and sub_label.lower() not in ("someone", "unknown", "") else "An animal"
+        return "animal_spotted", f"{animal_name} spotted", \
+               f"{animal_name} was spotted at your {camera}"
 
     if label == "CAR":
         vs = (msg.get("vehicle_status") or "").strip()
@@ -932,6 +939,80 @@ def _handle_halo_offboard_2fa(data):
         log.error("halo_offboard_2fa missing field: %s payload=%s", ex, data)
 
 
+ANIMAL_LABELS = {"dog", "cat", "bird"}
+_animal_seen = {}
+ANIMAL_DEDUP_SECONDS = 30
+
+
+def _handle_frigate_animal(client, data):
+    """Forward animal detections from Frigate into the event DB + /events MQTT.
+
+    No dedicated AI container processes animals, so the publisher bridges
+    Frigate's raw MQTT topic directly into the jupyter event pipeline.
+    Only fires on 'end' events (complete tracks) to avoid duplicates.
+    """
+    event_type = data.get("type", "")
+    event_data = data.get("after", {})
+    label = event_data.get("label", "")
+    if label not in ANIMAL_LABELS:
+        return
+    if event_type != "end":
+        return
+    event_id = event_data.get("id", "")
+    if not event_id:
+        return
+    now = time.time()
+    if now - _animal_seen.get(event_id, 0) < ANIMAL_DEDUP_SECONDS:
+        return
+    _animal_seen[event_id] = now
+    # Lazy eviction
+    for k in [k for k, v in _animal_seen.items() if now - v > 300]:
+        _animal_seen.pop(k, None)
+
+    camera = event_data.get("camera", "unknown")
+    start_ts = event_data.get("start_time")
+    end_ts = event_data.get("end_time")
+    score = event_data.get("top_score", 0)
+    snapshot_path = f"http://frigate:5000/api/events/{event_id}/snapshot.jpg"
+    video_path = f"http://frigate:5000/api/events/{event_id}/clip.mp4"
+
+    try:
+        conn = psycopg2.connect(
+            host=DB_HOST, port=DB_PORT, dbname=DB_NAME,
+            user=DB_USER, password=DB_PASS, connect_timeout=3,
+        )
+        cur = conn.cursor()
+        cur.execute(
+            """INSERT INTO event_event
+               (event_id, label, camera_name, snapshot_path, video_path,
+                sub_label, confidence_score, start_time, end_time,
+                created_at, updated_at)
+               VALUES (%s, %s, %s, %s, %s, %s, %s,
+                       to_timestamp(%s), to_timestamp(%s),
+                       NOW(), NOW())
+               ON CONFLICT (event_id) DO NOTHING""",
+            (event_id, "ANIMAL", camera, snapshot_path, video_path,
+             label, score, start_ts, end_ts),
+        )
+        conn.commit()
+        conn.close()
+        log.info("animal event inserted: %s %s cam=%s score=%.2f", label, event_id, camera, score)
+    except Exception as e:
+        log.warning("animal event DB insert failed: %s", e)
+
+    mqtt_payload = {
+        "event_id": event_id,
+        "label": "ANIMAL",
+        "sub_label": label,
+        "camera_name": camera,
+        "snapshot_path": snapshot_path,
+        "video_path": video_path,
+        "confidence_score": score,
+    }
+    client.publish("/events", json.dumps(mqtt_payload), qos=0)
+    log.info("animal event published to /events: %s %s", label, event_id)
+
+
 def _on_message(client, userdata, msg):
     global _mqtt_client_ref
     _mqtt_client_ref = client
@@ -941,6 +1022,8 @@ def _on_message(client, userdata, msg):
         return
     if msg.topic == "/events":
         _handle_ai_event(data)
+    elif msg.topic == "frigate/events":
+        _handle_frigate_animal(client, data)
     elif msg.topic == "/halo_offboard_2fa_pending":
         _handle_halo_offboard_2fa(data)
     elif msg.topic.endswith("/status"):
@@ -951,12 +1034,13 @@ def _on_connect(client, userdata, flags, rc, properties=None):
     log.info("MQTT connected rc=%s", rc)
     client.subscribe([
         ("/events", 0),
+        ("frigate/events", 0),
         ("+/status", 0),
         ("/halo_offboard_2fa_pending", 1),
         ("/la_activity_tokens", 0),
     ])
     client.message_callback_add("/la_activity_tokens", _on_cdc_token)
-    log.info("subscribed: /events  +/status  /halo_offboard_2fa_pending  /la_activity_tokens")
+    log.info("subscribed: /events  frigate/events  +/status  /halo_offboard_2fa_pending  /la_activity_tokens")
 
 
 TOKEN_REFRESH_INTERVAL_SECONDS = 60
