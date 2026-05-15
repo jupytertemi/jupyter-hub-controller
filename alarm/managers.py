@@ -1,3 +1,4 @@
+import json
 import logging
 import random
 import socket
@@ -10,6 +11,7 @@ from alarm.enums import AlarmType
 from alarm.tasks import alarm_unusual_sound_config, alarm_voice_ai_config
 from automation.tasks import create_manual_alarm_automations
 from utils.hass_client import HassClient
+from utils.mqtt_client import MQTTClient
 
 
 class AlarmDeviceManager(models.Manager):
@@ -202,6 +204,30 @@ class AlarmDeviceConfigManager(models.Manager):
 
         except Exception as exc:
             logging.warning("set_volume failed for %s: %s", identity, exc)
+
+    def publish_audio_settings(self, identity, payload):
+        # Direct MQTT publish to /{identity}/audio_settings so firmware
+        # applies EQ presets live. identity uses the same dashed slug the
+        # firmware subscribes on; do not run replace("-", "_") here.
+        topic = f"/{identity}/audio_settings"
+        try:
+            mqtt_client = MQTTClient(
+                host=settings.MQTT_HOST,
+                port=settings.MQTT_PORT,
+                username=settings.MQTT_USERNAME,
+                password=settings.MQTT_PASSWORD,
+            )
+            mqtt_client.connect()
+            mqtt_client.publish(topic, json.dumps(payload))
+            mqtt_client.close()
+        except Exception as exc:
+            logging.warning(
+                "publish_audio_settings failed for %s payload=%s err=%s",
+                identity,
+                payload,
+                exc,
+            )
+
     # def _get_entity_ids(self, hass_entry_id):
     #     client = self.getHassClient()
     #     speaker_entity = client.get_media_player_entity(hass_entry_id)

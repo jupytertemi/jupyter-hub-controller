@@ -28,6 +28,8 @@ class VolumeEqualizer(models.TextChoices):
     FLAT = "flat", _("Flat")
     VOICE = "voice", _("Voice")
     BASS = "bass", _("Bass")
+    TREBLE = "treble", _("Treble")
+    WARM = "warm", _("Warm")
 
 
 class PowerEqualizer(models.TextChoices):

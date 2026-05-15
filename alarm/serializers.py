@@ -29,7 +29,18 @@ class AlarmDeviceSerializer(serializers.ModelSerializer):
         }
 
     def update(self, instance, validated_data):
-        config_data = validated_data.pop("alarm_device", None)
+        config_data = validated_data.pop("alarm_device", None) or {}
+        # Build 199 — accept top-level volume from the Flutter slider's
+        # flat PUT body ({"volume": N}) and fold it into config_data so
+        # the existing settings_payload + AlarmSettings.update_instance
+        # path runs. Without this the field was silently dropped because
+        # AlarmDevice has no `volume` attr.
+        raw_volume = self.initial_data.get("volume") if hasattr(self, "initial_data") else None
+        if raw_volume is not None and "volume" not in config_data:
+            try:
+                config_data["volume"] = int(raw_volume)
+            except (TypeError, ValueError):
+                pass
         OCCUPANCY_TO_SOUND_MAP = {
             OccupancyIllusion.PEOPLE.value: AlarmSound.PEOPLE_HOME.value,
             OccupancyIllusion.RUNNING_APPLIANCES.value: AlarmSound.RUNNING_APPLIANCES.value,
@@ -44,6 +55,22 @@ class AlarmDeviceSerializer(serializers.ModelSerializer):
             config, _ = AlarmDeviceConfig.objects.get_or_create(device=instance)
             for attr, value in config_data.items():
                 setattr(config, attr, value)
+
+            # Audio settings (volume_equalizer / audio_mode / power_equalizer)
+            # push direct to firmware via /{slug}/audio_settings — bypasses
+            # HA media_player.volume_set path because those are EQ presets,
+            # not media volume. Indoor halos only; outdoor has no DSP.
+            audio_payload = {}
+            if "volume_equalizer" in config_data:
+                audio_payload["volume_equalizer"] = config_data["volume_equalizer"]
+            if "audio_mode" in config_data:
+                audio_payload["audio_mode"] = config_data["audio_mode"]
+            if "power_equalizer" in config_data:
+                audio_payload["power_equalizer"] = config_data["power_equalizer"]
+            if audio_payload:
+                AlarmDeviceConfig.objects.publish_audio_settings(
+                    instance.identity_name, audio_payload
+                )
 
             alarm_settings = AlarmSettings.objects.get(device=config.device)
             settings_payload = {}
