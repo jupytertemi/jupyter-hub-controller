@@ -132,7 +132,7 @@ SUPPORTED_LABELS = {"AUDIO", "PARCEL", "PERSON", "CAR", "LOITERING"}
 LA_SKIP_TYPES = {"vehicle_spotted", "person_spotted", "parcel_delivered", "parcel_pickup"}
 
 # ---------- outdoor Halo alarm trigger ----------
-ALARM_TRIGGER_TYPES = {"parcel_theft_detected", "loitering_detected", "unusual_sound_detected"}
+ALARM_TRIGGER_TYPES = {"parcel_theft_detected", "loitering_detected", "unusual_sound_detected", "blacklist_detected"}
 ALARM_COOLDOWN_SECONDS = int(os.getenv("ALARM_COOLDOWN_SECONDS", "60"))
 _alarm_last_triggered = 0.0
 _outdoor_halo_cache = []
@@ -347,6 +347,10 @@ def classify_ai_event(msg):
     if label == "PERSON":
         loit = msg.get("loitering") or ""
         camera = msg.get("camera_name", "your camera")
+        if msg.get("is_blacklisted"):
+            sub = (msg.get("sub_label") or "").strip() or "A blacklisted person"
+            return "blacklist_detected", f"Blacklisted: {sub}", \
+                   f"{sub} was spotted at your {camera}"
         if loit and loit not in ("Unknown", "No"):
             return "loitering_detected", "Loitering Detected", \
                    f"Someone is loitering near your {camera}"

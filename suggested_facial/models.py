@@ -21,6 +21,7 @@ class SuggestedFacial(BaseModel):
     title = models.CharField(max_length=256, default="")
     is_ignore = models.BooleanField(default=False)
     is_almost = models.BooleanField(default=False)
+    is_blacklisted = models.BooleanField(default=False)
     objects = SuggestedFacialManager()
 
     def __str__(self):
