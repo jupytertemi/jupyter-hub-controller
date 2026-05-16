@@ -611,6 +611,7 @@ DEFAULT_SVC_PASSWORD=$(python3 -c 'import secrets; print(secrets.token_urlsafe(2
 for envfile in "$ENV_FILE" "$CONTAINER_ENV_FILE"; do
     [ -f "$envfile" ] || continue
     sed -i "s/^DB_PASSWORD=.*/DB_PASSWORD=${DEFAULT_DB_PASSWORD}/" "$envfile"
+    sed -i "s/^DB_HOST=.*/DB_HOST=127.0.0.1/" "$envfile"
     sed -i "s/^SECRET_KEY=.*/SECRET_KEY=${DEFAULT_SECRET_KEY}/" "$envfile"
     for svc_var in MQTT_PASSWORD MQTT_CONTROLLER_PASSWORD MQTT_AI_CONTROLLER_PASSWORD \
                    MQTT_FRIGATE_PASSWORD MQTT_HASS_PASSWORD MQTT_RING_CAMERA_PASSWORD \
