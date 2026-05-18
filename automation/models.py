@@ -56,6 +56,7 @@ class AlarmSettings(BaseModel):
     known_face_disarm = models.BooleanField(default=False)
     live_activity_prompt = models.BooleanField(default=False)
     parcel_theft_activate = models.BooleanField(default=False)
+    blacklisted_face_activate = models.BooleanField(default=False)
     entry_door_activate = models.BooleanField(default=False)
     entry_door_all_sensors = models.BooleanField(default=True)
     entry_door_exit_delay_seconds = models.IntegerField(

@@ -764,6 +764,9 @@ class AlarmSettingsManager(models.Manager):
             "loitering_detected": (
                 settings.HASS_MQTT_TOPIC_LISTEN_LOITERING_AUTOMATION
             ),
+            "blacklisted_face_detected": (
+                settings.HASS_MQTT_TOPIC_LISTEN_BLACKLISTED_FACE_AUTOMATION
+            ),
         }
 
         if settings_data.entry_door_activate:

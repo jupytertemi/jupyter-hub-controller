@@ -873,6 +873,28 @@ def _handle_ai_event(data):
     push_apns_alert(title, body, extra, log_tag=notification_type)
     push_fcm_notification(title, body, data=extra)
     _trigger_outdoor_alarms(notification_type)
+    _republish_alarm_trigger(notification_type, data)
+
+
+# Bridge: republish alarm-trigger events to dedicated per-type MQTT topics
+# so that Home Assistant automations (set up by Django AlarmSettingsManager)
+# can subscribe and fire alarm actions.
+_ALARM_TYPE_TO_TOPIC = {
+    "blacklist_detected": "/events_blacklisted_face",
+}
+
+def _republish_alarm_trigger(notification_type, data):
+    topic = _ALARM_TYPE_TO_TOPIC.get(notification_type)
+    if not topic:
+        return
+    client = _mqtt_client_ref
+    if client is None:
+        return
+    try:
+        client.publish(topic, json.dumps(data), qos=1)
+        log.info("republished %s to %s", notification_type, topic)
+    except Exception as e:
+        log.warning("republish failed for %s: %s", notification_type, e)
 
 
 def _handle_halo_status(topic, data):

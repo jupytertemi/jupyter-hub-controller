@@ -235,6 +235,10 @@ CELERY_TASK_ROUTES = {
         "queue": "automation_queue",
         "routing_key": "automation.fallback",
     },
+    "automation.tasks.check_alarm_schedules": {
+        "queue": "automation_queue",
+        "routing_key": "automation.task",
+    },
     "alarm.tasks.alarm_unusual_sound_config": {
         "queue": "automation_queue",
         "routing_key": "alarm.task",
@@ -349,5 +353,9 @@ CELERY_BEAT_SCHEDULE = {
     "trigger-suggested-faces-hourly": {
         "task": "suggested_facial.tasks.trigger_suggested_faces_run",
         "schedule": 60 * 60,
+    },
+    "check-alarm-schedules-every-60s": {
+        "task": "automation.tasks.check_alarm_schedules",
+        "schedule": 60,
     },
 }

@@ -1,12 +1,90 @@
 import logging
 import subprocess
+from datetime import datetime
 
 from celery import shared_task
 from celery.exceptions import MaxRetriesExceededError
 from django.conf import settings
+from django.utils import timezone
 
 from utils.hass_client import HassClient
 from utils.restarting_service import restart_service
+
+log = logging.getLogger(__name__)
+
+_last_schedule_action = {}
+
+
+@shared_task
+def check_alarm_schedules():
+    from automation.enums import AlarmScheduleRepeatType, AlarmSettingsMode
+    from automation.models import AlarmSettings
+
+    now = timezone.localtime()
+    current_weekday = now.strftime("%A")
+    current_minutes = now.hour * 60 + now.minute
+
+    scheduled = AlarmSettings.objects.filter(schedule=True).select_related("device")
+    for s in scheduled:
+        if not _should_run_today(s, current_weekday):
+            continue
+
+        start_minutes = _epoch_to_minutes(s.schedule_start)
+        end_minutes = _epoch_to_minutes(s.schedule_end)
+
+        if start_minutes is None or end_minutes is None:
+            continue
+
+        cache_key = f"alarm_{s.pk}"
+
+        if current_minutes == start_minutes:
+            if _last_schedule_action.get(cache_key) == ("arm", current_minutes):
+                continue
+            if s.mode == AlarmSettingsMode.NONE.value:
+                target_mode = AlarmSettingsMode.AWAY.value
+            else:
+                target_mode = s.mode
+            log.info(
+                "schedule arm: alarm=%s mode=%s at %02d:%02d",
+                s.pk, target_mode, now.hour, now.minute,
+            )
+            AlarmSettings.objects.update_instance(s, mode=target_mode)
+            _last_schedule_action[cache_key] = ("arm", current_minutes)
+
+        elif current_minutes == end_minutes:
+            if _last_schedule_action.get(cache_key) == ("disarm", current_minutes):
+                continue
+            log.info(
+                "schedule disarm: alarm=%s at %02d:%02d",
+                s.pk, now.hour, now.minute,
+            )
+            AlarmSettings.objects.update_instance(
+                s, mode=AlarmSettingsMode.NONE.value
+            )
+            _last_schedule_action[cache_key] = ("disarm", current_minutes)
+
+
+def _epoch_to_minutes(epoch_seconds):
+    if not epoch_seconds:
+        return None
+    try:
+        dt = datetime.fromtimestamp(epoch_seconds, tz=timezone.get_current_timezone())
+        return dt.hour * 60 + dt.minute
+    except (OSError, ValueError, OverflowError):
+        return None
+
+
+def _should_run_today(settings_obj, current_weekday):
+    from automation.enums import AlarmScheduleRepeatType
+
+    rt = settings_obj.repeat_type
+    if rt == AlarmScheduleRepeatType.EVERY_DAY.value:
+        return True
+    if rt == AlarmScheduleRepeatType.CUSTOM.value:
+        return current_weekday in (settings_obj.schedule_repeat or [])
+    if rt == AlarmScheduleRepeatType.NEVER.value:
+        return True
+    return True
 
 
 @shared_task
