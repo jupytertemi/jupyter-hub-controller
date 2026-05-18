@@ -1,0 +1,11 @@
+[Unit]
+Description=Run jupyter-onvif inventory every 5 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+RandomizedDelaySec=15s
+Unit=jupyter-onvif.service
+
+[Install]
+WantedBy=timers.target

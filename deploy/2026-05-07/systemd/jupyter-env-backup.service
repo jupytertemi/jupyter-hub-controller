@@ -1,0 +1,6 @@
+[Unit]
+Description=SecureProtect Hub .env Auto-Backup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/backup-hub-env.sh

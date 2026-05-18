@@ -1,0 +1,14 @@
+[Unit]
+Description=SecureProtect Hub Environment Guard
+Before=jupyter-hub-controller.service jupyter-hub-celery-camera.service jupyter-hub-celery-beat.service jupyter-hub-celery-automation.service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/validate-hub-env.sh
+RemainAfterExit=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

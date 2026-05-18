@@ -1,0 +1,16 @@
+[Unit]
+Description=Jupyter hub canonical-state self-heal
+Documentation=man:systemd.service(5)
+After=local-fs.target
+Before=cloudflared.service jupyter-hub-controller.service jupyter-ble.service
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/jupyter-hub-self-heal.sh
+RemainAfterExit=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

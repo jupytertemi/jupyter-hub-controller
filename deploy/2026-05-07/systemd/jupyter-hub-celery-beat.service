@@ -1,0 +1,18 @@
+[Unit]
+Description=Celery Starting Celery  Beat
+After=network.target jupyter-hub-controller.service
+Requires=jupyter-hub-controller.service
+PartOf=jupyter-hub-controller.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/jupyter-hub-controller
+EnvironmentFile=/root/jupyter-hub-controller/.env
+Environment=GOOGLE_CLIENT_ID=<REDACTED>
+Environment=GOOGLE_CLIENT_SECRET=<REDACTED>
+Environment="PATH=/root/jupyter-hub-controller/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/root/jupyter-hub-controller/.venv/bin/celery -A hub_controller beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+Restart=always
+
+[Install]
+WantedBy=jupyter-hub-controller.service

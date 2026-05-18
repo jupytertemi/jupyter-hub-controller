@@ -74,6 +74,8 @@ KEY_PATH = os.environ["APNS_PRIVATE_KEY_PATH"]
 LA_TOKEN = os.environ.get("LIVE_ACTIVITY_START_TOKEN", "")
 HALO_TOKEN = os.environ.get("HALO_CHARGING_START_TOKEN", "")
 FCM_TOKENS = [t for t in os.environ.get("FCM_REGISTRATION_IDS", "").split(",") if t]
+TOKEN_STORE_PATH = "/root/jupyter-hub-controller/notification_tokens.json"
+
 def _initial_apns_tokens():
     try:
         with open(TOKEN_STORE_PATH) as f:
@@ -139,6 +141,32 @@ _outdoor_halo_cache = []
 _outdoor_halo_cache_ts = 0.0
 OUTDOOR_HALO_CACHE_TTL = 300
 _mqtt_client_ref = None
+
+# Camera slug -> friendly name cache
+_camera_name_cache = {}
+_camera_name_cache_ts = 0
+CAMERA_NAME_CACHE_TTL = 600
+
+def _resolve_camera_name(slug):
+    global _camera_name_cache, _camera_name_cache_ts
+    now = time.time()
+    if not _camera_name_cache or (now - _camera_name_cache_ts) > CAMERA_NAME_CACHE_TTL:
+        try:
+            conn = psycopg2.connect(
+                host=DB_HOST, port=DB_PORT, dbname=DB_NAME,
+                user=DB_USER, password=DB_PASS, connect_timeout=3,
+            )
+            cur = conn.cursor()
+            cur.execute("SELECT slug_name, name FROM camera_camera")
+            _camera_name_cache = {row[0]: row[1] for row in cur.fetchall()}
+            _camera_name_cache_ts = now
+            conn.close()
+        except Exception as e:
+            log.warning("camera name cache refresh failed: %s", e)
+    if slug in _camera_name_cache:
+        return _camera_name_cache[slug]
+    clean = slug.replace("-", " ").replace("_", " ").rsplit(" ", 1)[0].title()
+    return clean
 
 DB_HOST = "127.0.0.1"
 DB_PORT = 5433
@@ -695,7 +723,7 @@ def _read_token_environments():
         return {}
 
 
-TOKEN_STORE_PATH = "/root/jupyter-hub-controller/notification_tokens.json"
+
 _token_store_lock = threading.Lock()
 
 
@@ -965,16 +993,16 @@ def _handle_frigate_animal(client, data):
     if now - _animal_seen.get(event_id, 0) < ANIMAL_DEDUP_SECONDS:
         return
     _animal_seen[event_id] = now
-    # Lazy eviction
     for k in [k for k, v in _animal_seen.items() if now - v > 300]:
         _animal_seen.pop(k, None)
 
-    camera = event_data.get("camera", "unknown")
+    camera_slug = event_data.get("camera", "unknown")
+    camera_name = _resolve_camera_name(camera_slug)
     start_ts = event_data.get("start_time")
     end_ts = event_data.get("end_time")
     score = event_data.get("top_score", 0)
-    snapshot_path = f"http://frigate:5000/api/events/{event_id}/snapshot.jpg"
-    video_path = f"http://frigate:5000/api/events/{event_id}/clip.mp4"
+    snapshot_path = f"/media/frigate/clips/{camera_slug}-{event_id}.jpg"
+    video_path = f"/media/frigate/clips/{camera_slug}-{event_id}.mp4"
 
     try:
         conn = psycopg2.connect(
@@ -991,12 +1019,12 @@ def _handle_frigate_animal(client, data):
                        to_timestamp(%s), to_timestamp(%s),
                        NOW(), NOW())
                ON CONFLICT (event_id) DO NOTHING""",
-            (event_id, "ANIMAL", camera, snapshot_path, video_path,
+            (event_id, "ANIMAL", camera_name, snapshot_path, video_path,
              label, score, start_ts, end_ts),
         )
         conn.commit()
         conn.close()
-        log.info("animal event inserted: %s %s cam=%s score=%.2f", label, event_id, camera, score)
+        log.info("animal event inserted: %s %s cam=%s score=%.2f", label, event_id, camera_name, score)
     except Exception as e:
         log.warning("animal event DB insert failed: %s", e)
 
@@ -1004,13 +1032,15 @@ def _handle_frigate_animal(client, data):
         "event_id": event_id,
         "label": "ANIMAL",
         "sub_label": label,
-        "camera_name": camera,
+        "camera_name": camera_name,
         "snapshot_path": snapshot_path,
         "video_path": video_path,
         "confidence_score": score,
+        "start_time": str(start_ts) if start_ts else "",
+        "end_time": str(end_ts) if end_ts else "",
     }
     client.publish("/events", json.dumps(mqtt_payload), qos=0)
-    log.info("animal event published to /events: %s %s", label, event_id)
+    log.info("animal event published to /events: %s %s cam=%s", label, event_id, camera_name)
 
 
 def _on_message(client, userdata, msg):

@@ -1,0 +1,15 @@
+[Unit]
+Description=Jupyter Hub Django Migrate
+After=network-online.target docker.service
+Wants=network-online.target
+Before=jupyter-hub-controller.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/jupyter-hub-controller
+ExecStart=/root/jupyter-hub-controller/entrypoint_migrate.sh
+RemainAfterExit=no
+TimeoutStartSec=0
+
+[Install]
+WantedBy=jupyter-hub-controller.service

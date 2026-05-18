@@ -1,0 +1,11 @@
+[Unit]
+Description=Jupyter ONVIF / camera inventory exporter
+After=docker.service
+Wants=docker.service
+ConditionPathExists=/usr/local/bin/jupyter-onvif-discovery.sh
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/jupyter-onvif-discovery.sh
+TimeoutStartSec=30s
+Nice=10

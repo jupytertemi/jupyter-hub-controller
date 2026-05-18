@@ -1,0 +1,18 @@
+[Unit]
+Description=Hub Manager Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment="JUPYTER_HUB_API_HOST=https://api.dev.jupyter.com.au"
+Environment="MANIFEST_CDN_URL=https://ota.dev.jupyter.com.au/manifest.json"
+Environment="JUPYTER_HUB_PATH=/root"
+ExecStart=/usr/local/bin/hub-manager
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

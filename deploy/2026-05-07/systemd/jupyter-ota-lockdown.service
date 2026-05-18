@@ -1,0 +1,14 @@
+[Unit]
+Description=SecureProtect OTA Lockdown - Protect baked files from OTA overwrites
+After=docker.service
+Before=hub-manager.service jupyter-hub-controller.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/ota-lockdown.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

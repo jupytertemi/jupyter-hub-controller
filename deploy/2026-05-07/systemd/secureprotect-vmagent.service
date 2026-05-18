@@ -1,0 +1,12 @@
+[Unit]
+Description=SecureProtect Metrics Agent
+After=network.target secureprotect-node-exporter.service
+[Service]
+Type=simple
+EnvironmentFile=-/opt/secureprotect/config/cf-access.env
+Environment=PUSH_URL=http://52.62.80.197:8428
+ExecStart=/opt/secureprotect/bin/vmagent -promscrape.config=/opt/secureprotect/config/scrape.yml -remoteWrite.url=${PUSH_URL}/api/v1/write -remoteWrite.label=location=__RESET__ -remoteWrite.tmpDataPath=/opt/secureprotect/data/vmagent-remotewrite-data -remoteWrite.maxDiskUsagePerURL=100MB $VMAGENT_EXTRA_ARGS
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=multi-user.target

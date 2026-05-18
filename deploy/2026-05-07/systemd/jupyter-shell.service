@@ -1,0 +1,10 @@
+[Unit]
+Description=Jupyter web terminal (ttyd) for remote management
+After=network-online.target
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ttyd -W -p 7681 -t titleFixed=jupyter-hub bash
+Restart=always
+RestartSec=5s
+[Install]
+WantedBy=multi-user.target

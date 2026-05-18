@@ -1,0 +1,17 @@
+[Unit]
+Description=Live Activity APNs Publisher (hub-direct push-to-start)
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/root/jupyter-hub-controller/.env
+WorkingDirectory=/root/jupyter-hub-controller
+ExecStart=/root/jupyter-hub-controller/.venv/bin/python /root/jupyter-hub-controller/live_activity_publisher.py
+Restart=always
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

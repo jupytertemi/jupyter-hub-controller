@@ -1,0 +1,9 @@
+[Unit]
+Description=SecureProtect Identity Guard v2.1
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/jupyter-identity-guard
+StandardOutput=journal
+StandardError=journal

@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto-detect and set timezone from IP geolocation
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/auto-timezone.sh
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=jupyter SecureProtect Self-Healing Watchdog
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/jupyter-watchdog.sh
+StandardOutput=journal
+StandardError=journal

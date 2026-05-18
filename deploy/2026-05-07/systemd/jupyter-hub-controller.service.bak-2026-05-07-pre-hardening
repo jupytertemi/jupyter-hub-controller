@@ -14,10 +14,7 @@ EnvironmentFile=/root/jupyter-container/.env
 Environment=GOOGLE_CLIENT_ID=<REDACTED>
 Environment=GOOGLE_CLIENT_SECRET=<REDACTED>
 ExecStart=/root/jupyter-container/start_hub_controller.sh
-Restart=always
-RestartSec=10s
-StartLimitIntervalSec=600
-StartLimitBurst=5
+Restart=no
 
 [Install]
 WantedBy=multi-user.target

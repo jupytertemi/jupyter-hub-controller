@@ -1,0 +1,14 @@
+[Unit]
+Description=SecureProtect Boot-time Configuration Validator
+After=docker.service
+Wants=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/jupyter-health/validate-on-boot.sh
+StandardOutput=journal
+StandardError=journal
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target

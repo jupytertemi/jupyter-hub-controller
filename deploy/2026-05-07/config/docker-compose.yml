@@ -398,6 +398,7 @@ services:
     - ./voice_ai_data:/app/data
     ports:
     - 8002:8002
+    - 5555:5555
     restart: on-failure
     links:
     - frigate
@@ -416,6 +417,12 @@ services:
     - MQTT_USERNAME=ai_controller
     - MQTT_PASSWORD=${MQTT_AI_CONTROLLER_PASSWORD}
     - MQTT_TOPIC=/events_alarm
+    # Build 206 — AGC + silence-detect tuning per firmware PR #16
+    - MIC_AGC_TARGET_RMS=4000
+    - HALO_DEVICE_NAME=jupyter-alarm-e935b8
+    - MIC_AGC_MAX_GAIN=6.0
+    - SILENCE_THRESHOLD=400
+    - SILENCE_DURATION_SEC=0.8
     tty: true
     privileged: true
     depends_on:
@@ -642,8 +649,6 @@ services:
     - ./pilot_parcel_theft_AI/constants.py:/usr/src/app/constants.py:ro
     - /dev/shm:/dev/shm
     - /usr/lib/librknnrt.so:/usr/lib/librknnrt.so:ro
-    - /usr/lib/aarch64-linux-gnu/librknn_api.so:/usr/lib/aarch64-linux-gnu/librknn_api.so:ro
-    - /usr/lib/aarch64-linux-gnu/librknn_api.so.2.3.0:/usr/lib/aarch64-linux-gnu/librknn_api.so.2.3.0:ro
     - /usr/lib/aarch64-linux-gnu/librknnrt.so:/usr/lib/aarch64-linux-gnu/librknnrt.so:ro
     - /usr/lib/aarch64-linux-gnu/librknnrt.so.2.3.0:/usr/lib/aarch64-linux-gnu/librknnrt.so.2.3.0:ro
     links:
@@ -669,8 +674,6 @@ services:
     image: ${IMAGE_AUDIO_SERVER:-jupytertemi/audio_server:dev}
     pull_policy: never
     restart: always
-    ports:
-    - 5555:5555
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - /etc/timezone:/etc/timezone:ro

@@ -1,0 +1,9 @@
+[Unit]
+Description=SecureProtect Docker Disk Hygiene — logs, caches, temp files
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/jupyter-disk-cleanup/docker-disk-hygiene.sh
+StandardOutput=journal
+StandardError=journal

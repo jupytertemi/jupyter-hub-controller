@@ -1,0 +1,5 @@
+[Unit]
+Description=Jupyter custom metrics emitter
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/jupyter-metrics-collector.sh

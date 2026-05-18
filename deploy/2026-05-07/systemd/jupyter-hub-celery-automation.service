@@ -1,0 +1,17 @@
+[Unit]
+Description=Celery Starting Celery Worker Automation
+After=network.target jupyter-hub-controller.service
+PartOf=jupyter-hub-controller.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/jupyter-hub-controller
+EnvironmentFile=/root/jupyter-hub-controller/.env
+Environment=GOOGLE_CLIENT_ID=<REDACTED>
+Environment=GOOGLE_CLIENT_SECRET=<REDACTED>
+Environment="PATH=/root/jupyter-hub-controller/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/root/jupyter-hub-controller/.venv/bin/celery -A hub_controller worker --loglevel=info --queues=facial_queue,automation_queue,hub_operations_queue --concurrency=1 --hostname=worker_automation@%h --max-memory-per-child=500
+Restart=always
+
+[Install]
+WantedBy=jupyter-hub-controller.service

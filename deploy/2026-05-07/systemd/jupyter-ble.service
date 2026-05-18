@@ -1,0 +1,18 @@
+[Unit]
+Description=Jupyter BLE Controller
+After=dev-ttyUSB0.device multi-user.target bluetooth.service
+
+[Service]
+ExecStart=/root/jupyter-ble-controller/.venv/bin/python3 /root/jupyter-ble-controller/ble_server.py
+WorkingDirectory=/root/jupyter-ble-controller
+Environment=VIRTUAL_ENV=/root/jupyter-ble-controller/.venv
+Environment=PATH=/root/jupyter-ble-controller/.venv/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/usr/lib/python3/dist-packages
+Environment=GI_TYPELIB_PATH=/usr/lib/aarch64-linux-gnu/girepository-1.0
+Environment="JUPYTER_HUB_API_HOST=https://api.hub.jupyter.com.au"
+
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+[Unit]
+Description=Report Public IP every 5 minutes
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=5min
+[Install]
+WantedBy=timers.target

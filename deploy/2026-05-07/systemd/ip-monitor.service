@@ -1,0 +1,20 @@
+[Unit]
+Description=Camera IP Monitor Service
+After=jupyter-hub-controller.service
+
+[Service]
+ExecStart=/root/ip-monitor/.venv/bin/python3 /root/ip-monitor/monitor.py
+WorkingDirectory=/root/ip-monitor
+
+EnvironmentFile=/root/jupyter-hub-controller/.env
+
+Environment=VIRTUAL_ENV=/root/ip-monitor/.venv
+Environment=PATH=/root/ip-monitor/.venv/bin:/usr/bin:/bin
+
+Restart=always
+RestartSec=5
+
+User=root
+
+[Install]
+WantedBy=multi-user.target

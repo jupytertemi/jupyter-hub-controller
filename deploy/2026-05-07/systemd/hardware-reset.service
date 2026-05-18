@@ -1,0 +1,16 @@
+[Unit]
+Description=Hardware Button Reset Service
+After=multi-user.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /root/hardware_reset/hardware_reset.sh
+Restart=always
+RestartSec=1
+User=root
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

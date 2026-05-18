@@ -1,0 +1,9 @@
+[Unit]
+Description=SecureProtect IP Reporter
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=oneshot
+EnvironmentFile=-/opt/secureprotect/config/cf-access.env
+Environment=HUB_NAME=
+ExecStart=/opt/secureprotect/bin/report-public-ip.sh

@@ -1,0 +1,10 @@
+[Unit]
+Description=Jupyter Hub reset.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c "cd /root && ./reset_hub.sh"
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

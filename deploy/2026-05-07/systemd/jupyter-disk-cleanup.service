@@ -1,0 +1,9 @@
+[Unit]
+Description=SecureProtect Disk Cleanup — oldest recordings first at 90%% disk
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/jupyter-disk-cleanup/disk-cleanup.sh
+StandardOutput=journal
+StandardError=journal
