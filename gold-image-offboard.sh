@@ -1,12 +1,17 @@
 #!/bin/bash
 # gold-image-offboard.sh
-# Modified offboard for gold image creation.
-# SKIPS all cloud/remote phases so 1beachhouse's Django record is untouched.
+# Modified offboard for gold image creation and hub cloning.
+# SKIPS cloud/remote phases so the master hub's Django record is untouched.
+#
+# CRITICAL: This script MUST purge ALL Cloudflare tunnel credentials.
+# Without this, a cloned image boots with the master hub's tunnel token
+# and hijacks all Cloudflare traffic meant for the master hub.
+# Incident: Seattle clone hijacked 1beachhouse traffic (2026-05).
 #
 # What's SKIPPED (vs reset_hub.sh):
-#   - Phase 2a: Argus brain SSH removal (would affect 1beachhouse's tunnel)
-#   - Phase 2b: Cloud DELETE /hub/removed (would delete 1beachhouse's record!)
-#   - Phase 2c: Argus dashboard offboard (same identity as 1beachhouse)
+#   - Phase 2a: Argus brain SSH removal (would affect master's tunnel)
+#   - Phase 2b: Cloud DELETE /hub/removed (would delete master's record!)
+#   - Phase 2c: Argus dashboard offboard (same identity as master)
 #   - Phase 2d: Halo factory reset (no Halos on replica)
 #   - Phase 8: WiFi disconnect + reboot (we want to keep SSH alive for imaging)
 #
@@ -18,7 +23,7 @@
 #   - Phase 4.5: Gold-image hygiene
 #   - Phase 5: Docker volume cleanup + secret regeneration
 #   - Phase 6: Restart BLE for setup mode
-#   - Phase 7: Stop tunnel (already stopped by isolate script)
+#   - Phase 7: Tunnel isolation (stop + disable + purge credentials)
 #
 # PRE-REQUISITE: Run gold-image-isolate.sh first!
 #
@@ -384,7 +389,25 @@ rm -f /root/jupyter-ble-controller/wifi_credentials.json 2>/dev/null || true
 rm -f /root/jupyter-ble-controller/iot_credentials.json 2>/dev/null || true
 
 # ===============================
-# PHASE 7+8: SKIPPED (no tunnel kill, no WiFi disconnect, no reboot)
+# PHASE 7: TUNNEL ISOLATION (CRITICAL — prevents tunnel hijack on clone)
+# Without this, a cloned image boots with the master hub's tunnel token
+# and hijacks all Cloudflare traffic meant for the master.
+# ===============================
+echo "PHASE 7: Purging Cloudflare tunnel credentials..."
+sudo systemctl stop cloudflared.service 2>/dev/null || true
+sudo systemctl disable cloudflared.service 2>/dev/null || true
+rm -f /etc/cloudflared/token /etc/cloudflared/*.json /etc/cloudflared/*.pem 2>/dev/null || true
+echo "  cloudflared stopped + disabled + credentials purged"
+
+# Delete identity guard backups ENTIRELY (not just strip vars).
+# If any backup survives, identity guard v4.0 will auto-restore
+# TUNNEL_TOKEN on next boot when it detects setup mode.
+rm -f /root/.jupyter-identity-backup/.env.identity 2>/dev/null || true
+rm -f /root/.env.identity.bak 2>/dev/null || true
+echo "  Identity guard backups deleted (prevents tunnel token resurrection)"
+
+# ===============================
+# PHASE 8: SKIPPED (no WiFi disconnect, no reboot)
 # ===============================
 echo ""
 echo "========================================="
@@ -394,7 +417,9 @@ echo ""
 echo "  Identity vars: WIPED"
 echo "  User data: WIPED"
 echo "  Docker volumes: REMOVED"
-echo "  1beachhouse cloud record: UNTOUCHED"
+echo "  Cloudflare tunnel: PURGED (disabled + credentials deleted)"
+echo "  Identity guard backups: DELETED (prevents tunnel token resurrection)"
+echo "  Master hub cloud record: UNTOUCHED"
 echo "  BLE: ADVERTISING (setup mode)"
 echo ""
 echo "  SSH is still alive. Next steps:"

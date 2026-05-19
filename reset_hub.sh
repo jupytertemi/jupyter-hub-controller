@@ -714,7 +714,9 @@ done
 write_progress 7 8 "in_progress" "Preparing hub for new owner..."
 echo "Stopping Cloudflare tunnel (reset signal to app)..."
 sudo systemctl stop cloudflared.service 2>/dev/null || true
-echo "  Tunnel stopped — app will detect disconnect"
+sudo systemctl disable cloudflared.service 2>/dev/null || true
+rm -f /etc/cloudflared/token /etc/cloudflared/*.json /etc/cloudflared/*.pem 2>/dev/null || true
+echo "  Tunnel stopped + credentials purged"
 # Brief pause so the app has time to detect tunnel loss before reboot
 sleep 3
 

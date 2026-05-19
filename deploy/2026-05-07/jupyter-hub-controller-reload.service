@@ -12,4 +12,4 @@ ExecStart=/bin/systemctl --no-block restart jupyter-hub-celery-beat.service
 ExecStart=/bin/systemctl --no-block restart jupyter-hub-celery-automation.service
 ExecStart=/bin/systemctl --no-block restart jupyter-hub-celery-restart-ring.service
 # HUP gunicorn so Django views also reload. Best-effort; don't fail if absent.
-ExecStart=/bin/sh -c 'kill -HUP $(pgrep -f "gunicorn.*hub_controller" | head -1) 2>/dev/null || true'
+ExecStart=/bin/sh -c 'kill -HUP $(pgrep -x gunicorn | head -1) 2>/dev/null || true'
