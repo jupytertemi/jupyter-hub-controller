@@ -7,6 +7,7 @@ DST_ENV="/root/jupyter-container/.env"
 echo "=== Syncing .env file ==="
 
 if [ -f "$ENV_FILE" ]; then
+  chattr -i "$DST_ENV" 2>/dev/null || true
   cp "$ENV_FILE" "$DST_ENV"
   echo "✅ Copied .env to jupyter-container"
 else
