@@ -227,7 +227,7 @@ else
 fi
 
 echo "=== Starting application services ==="
-docker compose up -d event_listener face_training jupyter_voice_ai sound_detection jupyter_homeassistant face_recognition transfer_server audio_server ring-webrtc ring_mqtt video_server parcel_detection number_plate_detection loiter_detection suggested_faces clip_transcoder node-exporter
+docker compose up -d event_listener face_training jupyter_voice_ai sound_detection jupyter_homeassistant face_recognition transfer_server audio_server ring-webrtc ring_mqtt video_server parcel_detection number_plate_detection loiter_detection suggested_faces clip_transcoder
 sleep ${START_WAIT}
 
 docker compose up -d hass_setting
