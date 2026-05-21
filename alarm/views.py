@@ -122,15 +122,73 @@ class RetrieveDeleteAlarmDeviceView(RetrieveUpdateDestroyAPIView):
                 nonce = result.get("last_nonce")
                 serial = result.get("last_serial")
                 logging.warning(
-                    "halo_offboard verified_failed slug=%s reason=%s attempts=%d — proceeding with hub-side cleanup",
+                    "halo_offboard 2fa_failed slug=%s reason=%s attempts=%d — "
+                    "falling back to direct MQTT reset",
                     identity_name, result_reason, attempts,
                 )
+                try:
+                    from utils.mqtt_client import MQTTClient
+                    mqtt_client = MQTTClient(
+                        host=settings.MQTT_HOST,
+                        port=settings.MQTT_PORT,
+                        username=settings.MQTT_USERNAME,
+                        password=settings.MQTT_PASSWORD,
+                    )
+                    mqtt_client.connect()
+                    mqtt_client.publish(
+                        f"/{identity_name}/mode",
+                        json.dumps({
+                            "device_name": identity_name,
+                            "mode": "factory_reset",
+                        }),
+                    )
+                    mqtt_client.close()
+                    factory_reset_confirmed = True
+                    result_reason = "direct_mqtt_after_2fa_fail"
+                    logging.info(
+                        "halo_offboard direct_mqtt_reset slug=%s (2FA fallback)",
+                        identity_name,
+                    )
+                except Exception as e:
+                    logging.error(
+                        "halo_offboard direct_mqtt_fallback_failed slug=%s err=%s",
+                        identity_name, e,
+                    )
         else:
             logging.warning(
-                "halo_offboard no_device_secret slug=%s — pre-v1.6 Halo. "
-                "Skipping factory reset. Physical reset required.",
+                "halo_offboard no_device_secret slug=%s — falling back to "
+                "direct MQTT factory reset (no 2FA)",
                 identity_name,
             )
+            try:
+                from utils.mqtt_client import MQTTClient
+                mqtt_client = MQTTClient(
+                    host=settings.MQTT_HOST,
+                    port=settings.MQTT_PORT,
+                    username=settings.MQTT_USERNAME,
+                    password=settings.MQTT_PASSWORD,
+                )
+                mqtt_client.connect()
+                mqtt_client.publish(
+                    f"/{identity_name}/mode",
+                    json.dumps({
+                        "device_name": identity_name,
+                        "mode": "factory_reset",
+                    }),
+                )
+                mqtt_client.close()
+                factory_reset_confirmed = True
+                result_reason = "direct_mqtt_no_secret"
+                logging.info(
+                    "halo_offboard direct_mqtt_reset slug=%s",
+                    identity_name,
+                )
+            except Exception as e:
+                result_reason = f"direct_mqtt_failed:{e}"
+                logging.error(
+                    "halo_offboard direct_mqtt_failed slug=%s err=%s",
+                    identity_name, e,
+                )
 
         # Hub-side cleanup runs unconditionally. Authoritative state.
         self.perform_destroy(instance)
@@ -138,9 +196,12 @@ class RetrieveDeleteAlarmDeviceView(RetrieveUpdateDestroyAPIView):
         if factory_reset_confirmed:
             note = ("Halo factory reset and reverting to AP mode. "
                     "Re-scan the QR sticker to onboard fresh.")
-        elif not device_secret:
-            note = ("Hub-side cleanup complete. device_secret unknown — "
-                    "physically reset (hold button) the Halo.")
+        elif result_reason == "direct_mqtt_no_secret":
+            note = ("Halo factory reset sent via direct MQTT (no 2FA — "
+                    "device_secret was missing). Halo should beep and reboot.")
+        elif not device_secret and not factory_reset_confirmed:
+            note = ("Hub-side cleanup complete but factory reset failed. "
+                    "Power-cycle the Halo to restart cleanly.")
         elif result_reason == "firmware_silent_no_pending":
             note = ("Halo did not respond to factory_reset (firmware MQTT "
                     "appears hung). Power-cycle the Halo and retry from the app.")

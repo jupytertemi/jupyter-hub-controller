@@ -107,9 +107,12 @@ class MQTTClient:
         payload: str,
         qos: int = 1,
         retain: bool = False,
+        wait_timeout: float = 2.0,
     ):
         logger.info(f"Publishing to {topic}: {payload}")
-        self.client.publish(topic, payload, qos=qos, retain=retain)
+        info = self.client.publish(topic, payload, qos=qos, retain=retain)
+        if qos > 0 and wait_timeout > 0:
+            info.wait_for_publish(timeout=wait_timeout)
 
     def close(self):
         self.client.loop_stop()
